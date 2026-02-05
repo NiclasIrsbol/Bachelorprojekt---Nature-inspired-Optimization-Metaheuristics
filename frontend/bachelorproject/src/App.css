@@ -1,0 +1,14 @@
+.screen {
+  margin: 0;
+  padding: 0;
+}
+
+.left-container {
+  background-color: aqua;
+  float: left;
+}
+
+.right-container {
+  background-color: blue;
+  float: right;
+}

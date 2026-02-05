@@ -1,0 +1,18 @@
+{
+  "problem": "tsp",
+  "algorithm": "simulated_annealing",
+  "history": [
+    {
+      "iteration": 0,
+      "cost": 100
+    },
+    {
+      "iteration": 1,
+      "cost": 90
+    },
+    {
+      "iteration": 2,
+      "cost": 80
+    }
+  ]
+}
