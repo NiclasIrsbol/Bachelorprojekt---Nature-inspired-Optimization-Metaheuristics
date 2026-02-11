@@ -1,14 +1,16 @@
+from optimization_framework.problems import onemax
 import json
 from pathlib import Path
 
 def main():
+    population = onemax.generateBitstrings(5)
     result = {
-        "problem": "tsp",
-        "algorithm": "simulated_annealing",
+        "problem": "onemax",
+        "algorithm": "genetic algorithm",
         "history": [
-            { "iteration": 0, "cost": 100 },
-            { "iteration": 1, "cost": 90 },
-            { "iteration": 2, "cost": 80 }
+            { 
+                "Population": population
+            },
         ]
     }
 

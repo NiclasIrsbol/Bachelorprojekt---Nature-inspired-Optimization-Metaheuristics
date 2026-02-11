@@ -1,36 +1,30 @@
-import { useEffect, useState } from "react";
-import './app.css'
+import { useEffect, useState } from "react"
 
 function App() {
-  const [run, setRun] = useState<any>(null);
+  const [data, setData] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("/data/latest_run.json")
-      .then(res => res.json())
-      .then(data => setRun(data));
-  }, []);
+    fetch("http://localhost:8000/latest-run")
+      .then(r => r.json())
+      .then(json => {
+        setData(json)
+        setLoading(false)
+      })
+      .catch(err => {
+        console.error(err)
+        setLoading(false)
+      })
+  }, [])
 
-  if (!run) return <div>Loading…</div>;
+  if (loading) return <p>Loading...</p>
 
   return (
-    <div className="screen">
-      <div className="left-container">
-        <h3>Problem</h3>
-        <h3>Algorithms</h3>
-        <h3>Metrics</h3>
-      </div>
-      <div className="right-container">
-      <h1>{run.problem} - {run.algorithm}</h1>
-      <ul>
-        {run.history.map((step: any) => (
-          <li key={step.iteration}>
-            Iter {step.iteration}: cost {step.cost}
-          </li>
-        ))}
-      </ul>
-      </div>
+    <div>
+      <h1>Latest experiment run</h1>
+      <span>{JSON.stringify(data)}</span>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
