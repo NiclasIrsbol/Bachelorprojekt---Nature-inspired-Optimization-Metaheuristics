@@ -4,7 +4,7 @@ def generateBitstrings(length):
     bitstrings = {}
     size = 20
     for i in range(size):
-        bit = "".join(random.choice("01") for _ in range(5))
+        bit = "".join(random.choice("01") for _ in range(length))
         fitness = fitnessOnemax(bit)
         bitstrings[f"Bitstring{i}"] = {"bit": bit, "fitness": fitness}
     return bitstrings

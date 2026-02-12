@@ -17,7 +17,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 OUTPUT_FILE = Path("output/latest_run.json")
 
 @app.get("/latest-run")
