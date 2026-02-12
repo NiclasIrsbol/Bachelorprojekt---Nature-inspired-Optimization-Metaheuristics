@@ -1,13 +1,5 @@
 import random
-
-def generateBitstrings(length):
-    bitstrings = {}
-    size = 20
-    for i in range(size):
-        bit = "".join(random.choice("01") for _ in range(length))
-        fitness = fitnessOnemax(bit)
-        bitstrings[f"Bitstring{i}"] = {"bit": bit, "fitness": fitness}
-    return bitstrings
+from optimization_framework.operators import gaoperators
 
 def fitnessOnemax(bitstring):
     fitness = 0
@@ -16,5 +8,19 @@ def fitnessOnemax(bitstring):
             fitness += 1
     return fitness
 
-intial_population = generateBitstrings(5)
-bitstring, fitness = random.choice(list(intial_population.items()))
+def onemaxAlgorithm():
+    bit_length = 20
+    iterations = 0
+    tournament_k = 3
+    mutation_prob = 0.05
+    population = gaoperators.generatePopulation(bit_length)
+    best = max(population.values(), key=lambda ind: ind["fitness"])
+
+    while best["fitness"] != bit_length:
+        population = gaoperators.createNextGeneration(population, fitnessOnemax, tournament_k=tournament_k, mutation_prob=mutation_prob)
+        best = max(population.values(), key=lambda ind: ind["fitness"])
+        iterations += 1
+    return best, iterations
+
+if __name__ == "__main__":
+    print(onemaxAlgorithm())

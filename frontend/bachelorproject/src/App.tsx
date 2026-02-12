@@ -38,7 +38,6 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [theme, setTheme] = useState<Theme>(getStoredTheme);
 
-  // Apply theme to <html> element
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
@@ -68,7 +67,6 @@ export default function App() {
       });
   }, []);
 
-  // Fetch on mount
   useEffect(() => {
     fetchData();
   }, [fetchData]);
@@ -76,7 +74,6 @@ export default function App() {
   const toggleTheme = () =>
     setTheme((t) => (t === "dark" ? "light" : "dark"));
 
-  // Loading state
   if (loading && !data) {
     return (
       <div className="page">
@@ -87,7 +84,6 @@ export default function App() {
     );
   }
 
-  // Current generation (latest in history)
   const generation =
     data && data.history.length > 0
       ? data.history[data.history.length - 1]
@@ -96,7 +92,6 @@ export default function App() {
 
   return (
     <div className="page">
-      {/* ── Top bar ───────────────────── */}
       <div className="topBar">
         <div className="topBarLeft">
           <h1 className="title">Optimization Dashboard</h1>
@@ -113,10 +108,8 @@ export default function App() {
         </button>
       </div>
 
-      {/* ── Controls ──────────────────── */}
       <ControlPanel onRun={fetchData} loading={loading} />
 
-      {/* ── Main content ──────────────── */}
       {error ? (
         <div className="emptyState">
           <h2>No Data Available</h2>

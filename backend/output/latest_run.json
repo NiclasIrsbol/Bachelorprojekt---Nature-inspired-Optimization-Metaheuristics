@@ -5,84 +5,84 @@
     {
       "Population": {
         "Bitstring0": {
-          "bit": "10010",
-          "fitness": 2
-        },
-        "Bitstring1": {
-          "bit": "10101",
+          "bit": "11001",
           "fitness": 3
         },
-        "Bitstring2": {
+        "Bitstring1": {
           "bit": "11101",
           "fitness": 4
         },
+        "Bitstring2": {
+          "bit": "10110",
+          "fitness": 3
+        },
         "Bitstring3": {
-          "bit": "01000",
+          "bit": "00010",
           "fitness": 1
         },
         "Bitstring4": {
-          "bit": "00110",
+          "bit": "00101",
           "fitness": 2
         },
         "Bitstring5": {
-          "bit": "10100",
-          "fitness": 2
+          "bit": "11011",
+          "fitness": 4
         },
         "Bitstring6": {
-          "bit": "01100",
-          "fitness": 2
+          "bit": "11001",
+          "fitness": 3
         },
         "Bitstring7": {
-          "bit": "01011",
-          "fitness": 3
+          "bit": "11101",
+          "fitness": 4
         },
         "Bitstring8": {
           "bit": "11001",
           "fitness": 3
         },
         "Bitstring9": {
-          "bit": "11011",
-          "fitness": 4
+          "bit": "01100",
+          "fitness": 2
         },
         "Bitstring10": {
-          "bit": "01001",
+          "bit": "11000",
           "fitness": 2
         },
         "Bitstring11": {
-          "bit": "01001",
+          "bit": "10001",
           "fitness": 2
         },
         "Bitstring12": {
-          "bit": "01001",
-          "fitness": 2
-        },
-        "Bitstring13": {
-          "bit": "11111",
-          "fitness": 5
-        },
-        "Bitstring14": {
-          "bit": "11100",
-          "fitness": 3
-        },
-        "Bitstring15": {
-          "bit": "00010",
+          "bit": "01000",
           "fitness": 1
         },
-        "Bitstring16": {
-          "bit": "11000",
+        "Bitstring13": {
+          "bit": "00110",
           "fitness": 2
         },
-        "Bitstring17": {
+        "Bitstring14": {
           "bit": "10110",
           "fitness": 3
         },
+        "Bitstring15": {
+          "bit": "01011",
+          "fitness": 3
+        },
+        "Bitstring16": {
+          "bit": "11101",
+          "fitness": 4
+        },
+        "Bitstring17": {
+          "bit": "01000",
+          "fitness": 1
+        },
         "Bitstring18": {
-          "bit": "11000",
-          "fitness": 2
+          "bit": "11101",
+          "fitness": 4
         },
         "Bitstring19": {
-          "bit": "10111",
-          "fitness": 4
+          "bit": "00101",
+          "fitness": 2
         }
       }
     }
