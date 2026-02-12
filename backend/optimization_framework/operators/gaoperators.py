@@ -1,24 +1,17 @@
 import random
 from optimization_framework.problems import onemax
 
-def generatePopulation(length):
+def generatePopulation(length, fitness_fn):
     bitstrings = {}
     size = 20
     for i in range(size):
         bit = "".join(random.choice("01") for _ in range(length))
-        fitness = onemax.fitnessOnemax(bit)
+        fitness = fitness_fn(bit)
         bitstrings[f"Bitstring{i}"] = {"bit": bit, "fitness": fitness}
     return bitstrings
 
 
 def selectparents(population: dict, tournament_k: int):
-    """Tournament selection over a population dict.
-
-    population is expected to be {id: {"bit": str, "fitness": number}, ...}
-    """
-    if not population:
-        raise ValueError("population must be non-empty")
-
     individuals = list(population.values())
     k = min(max(1, tournament_k), len(individuals))
     competitors = random.sample(individuals, k)
