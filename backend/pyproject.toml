@@ -9,6 +9,9 @@ dependencies = [
   "uvicorn[standard]",
 ]
 
+[tool.setuptools.packages.find]
+include = ["optimization_framework*"]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"

@@ -3,3 +3,5 @@ Name: optimization-framework
 Version: 0.1.0
 Requires-Python: >=3.10
 Requires-Dist: numpy
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
