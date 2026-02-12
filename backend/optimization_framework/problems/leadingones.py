@@ -22,7 +22,7 @@ def leadingones():
         population = gaoperators.createNextGeneration(population, fitnessLeadingOnes, tournament_k=tournament_k, mutation_prob=mutation_prob)
         best = max(population.values(), key=lambda ind: ind["fitness"])
         iterations += 1
-    return best, iterations
+    return best, iterations, population
 
 if __name__ == "__main__":
     print(leadingones())

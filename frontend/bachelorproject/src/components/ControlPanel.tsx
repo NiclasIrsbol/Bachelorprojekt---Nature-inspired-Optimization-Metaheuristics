@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 interface ControlPanelProps {
-  onRun: () => void;
+  onRun: (problem: string) => void;
   loading: boolean;
 }
 
 export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
+  const [problem, setProblem] = useState("onemax");
+
   return (
     <div className="card controlPanel">
       <div className="controlRow">
@@ -16,12 +20,21 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
 
         <div className="field">
           <span className="label">Problem</span>
-          <select className="select" defaultValue="onemax">
+          <select
+            className="select"
+            value={problem}
+            onChange={(e) => setProblem(e.target.value)}
+          >
             <option value="onemax">OneMax</option>
+            <option value="leadingones">LeadingOnes</option>
           </select>
         </div>
 
-        <button className="button" onClick={onRun} disabled={loading}>
+        <button
+          className="button"
+          onClick={() => onRun(problem)}
+          disabled={loading}
+        >
           {loading ? "Loading..." : "Run"}
         </button>
       </div>

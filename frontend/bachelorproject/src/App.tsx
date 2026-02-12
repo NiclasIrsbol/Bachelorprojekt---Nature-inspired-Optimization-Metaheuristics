@@ -25,6 +25,7 @@ interface Generation {
 interface ExperimentData {
   problem: string;
   algorithm: string;
+  iterations: number;
   history: Generation[];
 }
 
@@ -34,7 +35,7 @@ function getStoredTheme(): Theme {
 
 export default function App() {
   const [data, setData] = useState<ExperimentData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [theme, setTheme] = useState<Theme>(getStoredTheme);
 
@@ -43,10 +44,14 @@ export default function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const fetchData = useCallback(() => {
+  const runExperiment = useCallback((problem: string) => {
     setLoading(true);
     setError(null);
-    fetch(`${API_BASE}/latest-run`)
+    fetch(`${API_BASE}/run`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ problem }),
+    })
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -67,22 +72,8 @@ export default function App() {
       });
   }, []);
 
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
   const toggleTheme = () =>
     setTheme((t) => (t === "dark" ? "light" : "dark"));
-
-  if (loading && !data) {
-    return (
-      <div className="page">
-        <div className="loadingWrap">
-          <div className="spinner" />
-        </div>
-      </div>
-    );
-  }
 
   const generation =
     data && data.history.length > 0
@@ -108,9 +99,13 @@ export default function App() {
         </button>
       </div>
 
-      <ControlPanel onRun={fetchData} loading={loading} />
+      <ControlPanel onRun={runExperiment} loading={loading} />
 
-      {error ? (
+      {loading ? (
+        <div className="loadingWrap">
+          <div className="spinner" />
+        </div>
+      ) : error ? (
         <div className="emptyState">
           <h2>No Data Available</h2>
           <p>{error}</p>
@@ -128,7 +123,7 @@ export default function App() {
       ) : (
         <div className="emptyState">
           <h2>No Experiment Data</h2>
-          <p>Run an experiment to see results here.</p>
+          <p>Select a problem and click Run to see results.</p>
         </div>
       )}
     </div>
