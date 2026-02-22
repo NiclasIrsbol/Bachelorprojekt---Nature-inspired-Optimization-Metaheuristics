@@ -1,89 +1,89 @@
 {
-  "problem": "leadingones",
+  "problem": "onemax",
   "algorithm": "genetic algorithm",
-  "iterations": 91,
+  "iterations": 13,
   "history": [
     {
       "Population": {
         "Bitstring0": {
-          "bit": "01111111111111111111",
-          "fitness": 19
+          "bit": "01111111111111111101",
+          "fitness": 18
         },
         "Bitstring1": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111110111111110",
+          "fitness": 18
         },
         "Bitstring2": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111101",
+          "fitness": 19
         },
         "Bitstring3": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111110",
+          "fitness": 19
         },
         "Bitstring4": {
-          "bit": "01111111111111111111",
+          "bit": "11111111111111111110",
           "fitness": 19
         },
         "Bitstring5": {
-          "bit": "01111111111111111111",
+          "bit": "11111111111111111101",
           "fitness": 19
         },
         "Bitstring6": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111101",
+          "fitness": 19
         },
         "Bitstring7": {
-          "bit": "01111111111111111111",
+          "bit": "11111111111111111101",
           "fitness": 19
         },
         "Bitstring8": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111110",
+          "fitness": 19
         },
         "Bitstring9": {
-          "bit": "01111111111111111111",
+          "bit": "11111111111111111110",
           "fitness": 19
         },
         "Bitstring10": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111101",
+          "fitness": 19
         },
         "Bitstring11": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111101",
+          "fitness": 19
         },
         "Bitstring12": {
-          "bit": "01111111111111111111",
+          "bit": "11111111111111111101",
           "fitness": 19
         },
         "Bitstring13": {
-          "bit": "01011111111111111111",
-          "fitness": 17
-        },
-        "Bitstring14": {
-          "bit": "01111111111111111111",
+          "bit": "11111111111111111110",
           "fitness": 19
         },
-        "Bitstring15": {
-          "bit": "01011111111111111111",
-          "fitness": 17
-        },
-        "Bitstring16": {
-          "bit": "01011111111111111111",
-          "fitness": 17
-        },
-        "Bitstring17": {
-          "bit": "01011111111111111111",
-          "fitness": 17
-        },
-        "Bitstring18": {
+        "Bitstring14": {
           "bit": "11111111111111111111",
           "fitness": 20
         },
+        "Bitstring15": {
+          "bit": "11111111111111111100",
+          "fitness": 18
+        },
+        "Bitstring16": {
+          "bit": "11111111111111111101",
+          "fitness": 19
+        },
+        "Bitstring17": {
+          "bit": "11111111111111111110",
+          "fitness": 19
+        },
+        "Bitstring18": {
+          "bit": "11111111111111111110",
+          "fitness": 19
+        },
         "Bitstring19": {
-          "bit": "01011111111111111111",
-          "fitness": 17
+          "bit": "11111111111111111110",
+          "fitness": 19
         }
       }
     }

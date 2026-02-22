@@ -116,6 +116,7 @@ export default function App() {
             population={population}
             algorithm={data!.algorithm}
             problem={data!.problem}
+            iterations={data!.iterations}
           />
           <FitnessChart population={population} />
           <PopulationPanel population={population} />

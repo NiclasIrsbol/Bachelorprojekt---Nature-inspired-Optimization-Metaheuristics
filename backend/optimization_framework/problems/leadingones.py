@@ -1,4 +1,3 @@
-import random
 from optimization_framework.operators import gaoperators
 
 def fitnessLeadingOnes(bitstring):
