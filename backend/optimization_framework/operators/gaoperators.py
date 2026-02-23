@@ -1,6 +1,10 @@
 import random
 from optimization_framework.problems import onemax
 
+def generateSingleBitstring(length):
+    bit = "".join(random.choice("01") for _ in range(length))
+    return bit
+
 def generatePopulation(length, fitness_fn):
     bitstrings = {}
     size = 20
@@ -9,7 +13,6 @@ def generatePopulation(length, fitness_fn):
         fitness = fitness_fn(bit)
         bitstrings[f"Bitstring{i}"] = {"bit": bit, "fitness": fitness}
     return bitstrings
-
 
 def selectparents(population: dict, tournament_k: int):
     individuals = list(population.values())

@@ -6,10 +6,10 @@ def fitnessLeadingOnes(bitstring):
         if (bitstring[i] == "1"):
             fitness +=1
         else:
-            fitness = 0
+            break
     return fitness
 
-def leadingones():
+def leadingonesEA():
     bit_length = 20
     iterations = 0
     tournament_k = 3
@@ -23,5 +23,21 @@ def leadingones():
         iterations += 1
     return best, iterations, population
 
+def leadingonesOnePlusOneEA():
+    bit_length = 20
+    iterations = 0
+    prob = 1/bit_length
+    parent = gaoperators.generateSingleBitstring(bit_length)
+
+    fitnessparent = fitnessLeadingOnes(parent)
+    while fitnessparent != bit_length:
+        offspring = gaoperators.mutation(parent, prob)
+        fitnessoffspring = fitnessLeadingOnes(offspring)
+        if fitnessoffspring>=fitnessparent:
+            parent = offspring
+            fitnessparent = fitnessoffspring
+            iterations+=1
+    return parent, offspring, fitnessoffspring, fitnessoffspring, iterations
+
 if __name__ == "__main__":
-    print(leadingones())
+    print(leadingonesOnePlusOneEA())

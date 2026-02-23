@@ -7,7 +7,7 @@ def fitnessOnemax(bitstring):
             fitness += 1
     return fitness
 
-def onemax():
+def onemaxEA():
     bit_length = 20
     iterations = 0
     tournament_k = 3
@@ -21,5 +21,21 @@ def onemax():
         iterations += 1
     return best, iterations, population
 
+def onemaxOnePlusOneEA():
+    bit_length = 20
+    iterations = 0
+    prob = 1/bit_length
+    parent = gaoperators.generateSingleBitstring(bit_length)
+
+    fitnessparent = fitnessOnemax(parent)
+    while fitnessparent != bit_length:
+        iterations+=1
+        offspring = gaoperators.mutation(parent, prob)
+        fitnessoffspring = fitnessOnemax(offspring)
+        if fitnessoffspring>=fitnessparent:
+            parent = offspring
+            fitnessparent = fitnessoffspring
+    return parent, offspring, fitnessoffspring, fitnessoffspring, iterations
+
 if __name__ == "__main__":
-    print(onemax())
+    print(onemaxOnePlusOneEA())

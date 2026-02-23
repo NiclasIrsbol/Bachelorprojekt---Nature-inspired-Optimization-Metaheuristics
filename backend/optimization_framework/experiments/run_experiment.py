@@ -3,8 +3,8 @@ import json
 from pathlib import Path
 
 PROBLEMS = {
-    "onemax": onemax.onemax,
-    "leadingones": leadingones.leadingones,
+    "onemax": onemax.onemaxEA,
+    "leadingones": leadingones.leadingonesEA,
 }
 
 def main(problem_name="onemax"):
