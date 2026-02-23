@@ -12,30 +12,37 @@ def onemaxEA():
     iterations = 0
     tournament_k = 3
     mutation_prob = 1/bit_length
+    pop_size = 20
     population = gaoperators.generatePopulation(bit_length, fitnessOnemax)
     best = max(population.values(), key=lambda ind: ind["fitness"])
+    fitness_evaluations = pop_size
 
     while best["fitness"] != bit_length:
         population = gaoperators.createNextGeneration(population, fitnessOnemax, tournament_k=tournament_k, mutation_prob=mutation_prob)
         best = max(population.values(), key=lambda ind: ind["fitness"])
+        fitness_evaluations += len(population)
         iterations += 1
-    return best, iterations, population
+
+    return best, iterations, population, fitness_evaluations
 
 def onemaxOnePlusOneEA():
     bit_length = 20
     iterations = 0
     prob = 1/bit_length
     parent = gaoperators.generateSingleBitstring(bit_length)
-
     fitnessparent = fitnessOnemax(parent)
+    fitness_evaluations = 1
+
     while fitnessparent != bit_length:
         iterations+=1
         offspring = gaoperators.mutation(parent, prob)
         fitnessoffspring = fitnessOnemax(offspring)
+        fitness_evaluations += 1
         if fitnessoffspring>=fitnessparent:
             parent = offspring
             fitnessparent = fitnessoffspring
-    return parent, offspring, fitnessoffspring, fitnessoffspring, iterations
+
+    return parent, iterations, {}, fitness_evaluations
 
 if __name__ == "__main__":
     print(onemaxOnePlusOneEA())

@@ -2,22 +2,43 @@ from optimization_framework.problems import onemax, leadingones
 import json
 from pathlib import Path
 
-PROBLEMS = {
-    "onemax": onemax.onemaxEA,
-    "leadingones": leadingones.leadingonesEA,
+SOLVERS = {
+    ("onemax", "ga"):            onemax.onemaxEA,
+    ("onemax", "(1+1) EA"):      onemax.onemaxOnePlusOneEA,
+    ("leadingones", "ga"):       leadingones.leadingonesEA,
+    ("leadingones", "(1+1) EA"): leadingones.leadingonesOnePlusOneEA,
 }
 
-def main(problem_name="onemax"):
-    solver = PROBLEMS.get(problem_name)
-    if not solver:
-        raise ValueError(f"Unknown problem: {problem_name}")
+DISPLAY_NAMES = {
+    "ga": "Genetic Algorithm",
+    "(1+1) EA": "(1+1) EA",
+}
 
-    best, iterations, population = solver()
+THEORETICAL_RUNTIME = {
+    ("onemax", "Genetic Algorithm"):  "O(n log n)",
+    ("onemax", "(1+1) EA"):           "O(n log n)",
+    ("leadingones", "Genetic Algorithm"): "O(n\u00b2)",
+    ("leadingones", "(1+1) EA"):         "O(n\u00b2)",
+}
+
+def main(problem_name="onemax", algorithm_name="ga"):
+    solver = SOLVERS.get((problem_name, algorithm_name))
+    if not solver:
+        raise ValueError(f"Unknown combination: {problem_name} + {algorithm_name}")
+
+    best, iterations, population, fitness_evaluations = solver()
+
+    display_name = DISPLAY_NAMES.get(algorithm_name, algorithm_name)
+    theoretical = THEORETICAL_RUNTIME.get(
+        (problem_name, display_name), "unknown"
+    )
 
     result = {
         "problem": problem_name,
-        "algorithm": "genetic algorithm",
+        "algorithm": display_name,
         "iterations": iterations,
+        "fitness_evaluations": fitness_evaluations,
+        "theoretical_runtime": theoretical,
         "history": [
             {
                 "Population": population
@@ -37,5 +58,6 @@ def main(problem_name="onemax"):
 if __name__ == "__main__":
     import sys
     problem = sys.argv[1] if len(sys.argv) > 1 else "onemax"
-    result = main(problem)
-    print(f"Solved {result['problem']} in {result['iterations']} iterations")
+    algorithm = sys.argv[2] if len(sys.argv) > 2 else "ga"
+    result = main(problem, algorithm)
+    print(f"Solved {result['problem']} with {result['algorithm']} in {result['iterations']} iterations, {result['fitness_evaluations']} fitness evaluations")

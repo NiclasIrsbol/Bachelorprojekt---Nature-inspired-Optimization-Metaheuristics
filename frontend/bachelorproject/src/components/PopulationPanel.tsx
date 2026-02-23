@@ -13,6 +13,20 @@ interface PopulationPanelProps {
 
 export default function PopulationPanel({ population }: PopulationPanelProps) {
   const entries = Object.entries(population);
+
+  if (entries.length === 0) {
+    return (
+      <div className="card">
+        <div className="cardHeader">
+          <h3 className="cardTitle">Population</h3>
+        </div>
+        <p style={{ color: "var(--text-muted)", fontStyle: "italic", padding: "1rem" }}>
+          Single-individual algorithm — no population to display
+        </p>
+      </div>
+    );
+  }
+
   const sorted = [...entries].sort(([, a], [, b]) => b.fitness - a.fitness);
   const [, best] = sorted[0];
 

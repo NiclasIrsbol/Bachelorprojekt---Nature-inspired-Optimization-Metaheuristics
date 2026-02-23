@@ -29,6 +29,22 @@ interface ChartItem {
 
 export default function FitnessChart({ population }: FitnessChartProps) {
   const entries = Object.entries(population);
+
+  if (entries.length === 0) {
+    return (
+      <div className="card viz">
+        <div className="cardHeader">
+          <h3 className="cardTitle">Fitness Distribution</h3>
+        </div>
+        <div className="vizBody" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <p style={{ color: "var(--text-muted)", fontStyle: "italic" }}>
+            Single-individual algorithm — no population to display
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   const maxFitness = Math.max(...entries.map(([, v]) => v.fitness));
 
   const data: ChartItem[] = entries.map(([key, val], i) => ({

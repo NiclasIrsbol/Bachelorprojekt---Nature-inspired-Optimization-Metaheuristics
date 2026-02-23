@@ -26,6 +26,8 @@ interface ExperimentData {
   problem: string;
   algorithm: string;
   iterations: number;
+  fitness_evaluations: number;
+  theoretical_runtime: string;
   history: Generation[];
 }
 
@@ -44,13 +46,13 @@ export default function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const runExperiment = useCallback((problem: string) => {
+  const runExperiment = useCallback((problem: string, algorithm: string) => {
     setLoading(true);
     setError(null);
     fetch(`${API_BASE}/run`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ problem }),
+      body: JSON.stringify({ problem, algorithm }),
     })
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -117,6 +119,8 @@ export default function App() {
             algorithm={data!.algorithm}
             problem={data!.problem}
             iterations={data!.iterations}
+            fitnessEvaluations={data!.fitness_evaluations}
+            theoreticalRuntime={data!.theoretical_runtime}
           />
           <FitnessChart population={population} />
           <PopulationPanel population={population} />

@@ -1,20 +1,26 @@
 import { useState } from "react";
 
 interface ControlPanelProps {
-  onRun: (problem: string) => void;
+  onRun: (problem: string, algorithm: string) => void;
   loading: boolean;
 }
 
 export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
   const [problem, setProblem] = useState("onemax");
+  const [algorithm, setAlgorithm] = useState("ga");
 
   return (
     <div className="card controlPanel">
       <div className="controlRow">
         <div className="field">
           <span className="label">Algorithm</span>
-          <select className="select" defaultValue="ga">
+          <select
+            className="select"
+            value={algorithm}
+            onChange={(e) => setAlgorithm(e.target.value)}
+          >
             <option value="ga">Genetic Algorithm</option>
+            <option value="(1+1) EA">(1+1) EA</option>
           </select>
         </div>
 
@@ -32,7 +38,7 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
 
         <button
           className="button"
-          onClick={() => onRun(problem)}
+          onClick={() => onRun(problem, algorithm)}
           disabled={loading}
         >
           {loading ? "Loading..." : "Run"}

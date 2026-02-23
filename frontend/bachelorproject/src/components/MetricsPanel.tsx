@@ -11,18 +11,21 @@ interface MetricsPanelProps {
   population: Population;
   algorithm: string;
   problem: string;
-  iterations: number
+  iterations: number;
+  fitnessEvaluations: number;
+  theoreticalRuntime: string;
 }
 
 export default function MetricsPanel({
   population,
   algorithm,
   problem,
-  iterations
+  iterations,
+  fitnessEvaluations,
+  theoreticalRuntime,
 }: MetricsPanelProps) {
   const entries = Object.values(population);
   const fitnesses = entries.map((e) => e.fitness);
-  const iterationnums = iterations
 
   const best = Math.max(...fitnesses);
   const avg = fitnesses.reduce((a, b) => a + b, 0) / fitnesses.length;
@@ -35,7 +38,9 @@ export default function MetricsPanel({
     { label: "Bitstring Length", value: bitLength },
     { label: "Best Fitness", value: best },
     { label: "Average Fitness", value: avg.toFixed(2) },
-    { label: "Iterations", value: iterationnums},
+    { label: "Iterations", value: iterations },
+    { label: "Fitness Evaluations", value: fitnessEvaluations.toLocaleString() },
+    { label: "Theoretical Complexity", value: theoreticalRuntime },
   ];
 
   return (
