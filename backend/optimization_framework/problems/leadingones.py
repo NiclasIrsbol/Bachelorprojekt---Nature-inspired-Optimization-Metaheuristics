@@ -31,12 +31,12 @@ def leadingonesOnePlusOneEA():
 
     fitnessparent = fitnessLeadingOnes(parent)
     while fitnessparent != bit_length:
+        iterations+=1
         offspring = gaoperators.mutation(parent, prob)
         fitnessoffspring = fitnessLeadingOnes(offspring)
         if fitnessoffspring>=fitnessparent:
             parent = offspring
             fitnessparent = fitnessoffspring
-            iterations+=1
     return parent, offspring, fitnessoffspring, fitnessoffspring, iterations
 
 if __name__ == "__main__":
