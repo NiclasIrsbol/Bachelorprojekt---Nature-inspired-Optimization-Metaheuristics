@@ -7,7 +7,7 @@ interface ControlPanelProps {
 
 export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
   const [problem, setProblem] = useState("onemax");
-  const [algorithm, setAlgorithm] = useState("ga");
+  const [algorithm, setAlgorithm] = useState("(μ+λ) EA");
 
   return (
     <div className="card controlPanel">
@@ -19,7 +19,7 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
             value={algorithm}
             onChange={(e) => setAlgorithm(e.target.value)}
           >
-            <option value="ga">Genetic Algorithm</option>
+            <option value="(μ+λ) EA">(μ+λ) EA</option>
             <option value="(1+1) EA">(1+1) EA</option>
           </select>
         </div>

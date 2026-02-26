@@ -23,7 +23,7 @@ OUTPUT_FILE = Path("output/latest_run.json")
 
 class RunRequest(BaseModel):
     problem: str = "onemax"
-    algorithm: str = "ga"
+    algorithm: str = "(μ+λ) EA"
 
 @app.get("/latest-run")
 def get_latest_run():

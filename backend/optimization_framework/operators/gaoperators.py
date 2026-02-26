@@ -5,9 +5,9 @@ def generateSingleBitstring(length):
     bit = "".join(random.choice("01") for _ in range(length))
     return bit
 
-def generatePopulation(length, fitness_fn):
+def generatePopulation(length, fitness_fn, size: int = 20):
+    """Create an initial population of `size` individuals."""
     bitstrings = {}
-    size = 20
     for i in range(size):
         bit = "".join(random.choice("01") for _ in range(length))
         fitness = fitness_fn(bit)
@@ -33,23 +33,33 @@ def mutation(bit, prob):
         bit = bit[:index] + new_char + bit[index+1:]
     return bit
 
-def createNextGeneration(population, fitness_fn ,tournament_k, mutation_prob):
-    generation_size = len(population)
-    next_generation = {}
+def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutation_prob, lambda_size=None):
+    lambda_size = len(population)
+    offsprings = {}
+    created = 0
 
-    pair_count = (generation_size + 1) // 2 # number of parents pairs needed to create the next generation
-    for pair_index in range(pair_count):
+    pair_count = (lambda_size + 1) // 2 # number of parents pairs needed to create the next generation
+    for _ in range(pair_count):
         parent1 = selectparents(population, tournament_k)
         parent2 = selectparents(population, tournament_k)
-
         offspring1, offspring2 = crossover(parent1["bit"], parent2["bit"])
         offspring1 = mutation(offspring1, mutation_prob)
         offspring2 = mutation(offspring2, mutation_prob)
 
-        i1 = 2 * pair_index # index/key for the 1st child from this parent pair (0,2,4,...)
-        i2 = i1 + 1 # index/key for the 2nd child from this parent pair (1,3,5,...)
-        next_generation[f"Bitstring{i1}"] = {"bit": offspring1, "fitness": fitness_fn(offspring1)}
-        if i2 < generation_size:
-            next_generation[f"Bitstring{i2}"] = {"bit": offspring2, "fitness": fitness_fn(offspring2)}
+        offsprings[f"Offspring{created}"] = {"bit": offspring1, "fitness": fitness_fn(offspring1)}
+        created += 1
+        if created < lambda_size:
+            offsprings[f"Offspring{created}"] = {"bit": offspring2, "fitness": fitness_fn(offspring2)}
+            created += 1
+    return offsprings
 
-    return next_generation
+def selectMuBest(parents, offsprings, mu):
+    combined = list(parents.values()) + list(offsprings.values())
+    combined.sort(key=lambda ind: ind["fitness"], reverse=True)
+    survivors = combined[:mu]
+    return {f"Bitstring{i}": ind for i, ind in enumerate(survivors)}
+
+def createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_size, tournament_k, mutation_prob):
+    offspring = createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutation_prob, lambda_size=lambda_size,)
+    next_population = selectMuBest(population, offspring, mu=mu_size)
+    return next_population, offspring

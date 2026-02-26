@@ -3,25 +3,25 @@ import json
 from pathlib import Path
 
 SOLVERS = {
-    ("onemax", "ga"):            onemax.onemaxEA,
+    ("onemax", "(μ+λ) EA"):            onemax.onemaxMuPlusLambdaEA,
     ("onemax", "(1+1) EA"):      onemax.onemaxOnePlusOneEA,
-    ("leadingones", "ga"):       leadingones.leadingonesEA,
+    ("leadingones", "(μ+λ) EA"):       leadingones.leadingonesMuPlusLambdaEA,
     ("leadingones", "(1+1) EA"): leadingones.leadingonesOnePlusOneEA,
 }
 
 DISPLAY_NAMES = {
-    "ga": "Genetic Algorithm",
+    "(μ+λ) EA": "(μ+λ) EA",
     "(1+1) EA": "(1+1) EA",
 }
 
 THEORETICAL_RUNTIME = {
-    ("onemax", "Genetic Algorithm"):  "O(n log n)",
+    ("onemax", "(μ+λ) EA"):  "O(n log n)",
     ("onemax", "(1+1) EA"):           "O(n log n)",
-    ("leadingones", "Genetic Algorithm"): "O(n\u00b2)",
+    ("leadingones", "(μ+λ) EA"): "O(n\u00b2)",
     ("leadingones", "(1+1) EA"):         "O(n\u00b2)",
 }
 
-def main(problem_name="onemax", algorithm_name="ga"):
+def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
     solver = SOLVERS.get((problem_name, algorithm_name))
     if not solver:
         raise ValueError(f"Unknown combination: {problem_name} + {algorithm_name}")
@@ -58,6 +58,6 @@ def main(problem_name="onemax", algorithm_name="ga"):
 if __name__ == "__main__":
     import sys
     problem = sys.argv[1] if len(sys.argv) > 1 else "onemax"
-    algorithm = sys.argv[2] if len(sys.argv) > 2 else "ga"
+    algorithm = sys.argv[2] if len(sys.argv) > 2 else "(μ+λ) EA"
     result = main(problem, algorithm)
     print(f"Solved {result['problem']} with {result['algorithm']} in {result['iterations']} iterations, {result['fitness_evaluations']} fitness evaluations")

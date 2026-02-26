@@ -9,20 +9,21 @@ def fitnessLeadingOnes(bitstring):
             break
     return fitness
 
-def leadingonesEA():
+def leadingonesMuPlusLambdaEA():
     bit_length = 20
     iterations = 0
     tournament_k = 3
     mutation_prob = 1/bit_length
-    pop_size = 20
-    population = gaoperators.generatePopulation(bit_length, fitnessLeadingOnes)
+    mu_size = 20
+    lambda_size = 40
+    population = gaoperators.generatePopulation(bit_length, fitnessLeadingOnes, size=mu_size)
     best = max(population.values(), key=lambda ind: ind["fitness"])
-    fitness_evaluations = pop_size
+    fitness_evaluations = len(population)
 
     while best["fitness"] != bit_length:
-        population = gaoperators.createNextGeneration(population, fitnessLeadingOnes, tournament_k=tournament_k, mutation_prob=mutation_prob)
+        population, offspring = gaoperators.createNextGenerationMuPlusLambda(population, fitnessLeadingOnes, mu_size, lambda_size, tournament_k, mutation_prob,)
         best = max(population.values(), key=lambda ind: ind["fitness"])
-        fitness_evaluations += len(population)
+        fitness_evaluations += len(offspring)
         iterations += 1
 
     return best, iterations, population, fitness_evaluations
@@ -47,4 +48,4 @@ def leadingonesOnePlusOneEA():
     return parent, iterations, {}, fitness_evaluations
 
 if __name__ == "__main__":
-    print(leadingonesOnePlusOneEA())
+    print(leadingonesMuPlusLambdaEA())
