@@ -1,8 +1,8 @@
 {
   "problem": "onemax",
   "algorithm": "(\u03bc+\u03bb) EA",
-  "iterations": 19,
-  "fitness_evaluations": 400,
+  "iterations": 25,
+  "fitness_evaluations": 520,
   "theoretical_runtime": "O(n log n)",
   "history": [
     {
@@ -12,80 +12,80 @@
           "fitness": 20
         },
         "Bitstring1": {
-          "bit": "11111101111111111111",
+          "bit": "11111111111011111111",
           "fitness": 19
         },
         "Bitstring2": {
-          "bit": "11111101111111111111",
+          "bit": "11111111111011111111",
           "fitness": 19
         },
         "Bitstring3": {
-          "bit": "11111101111111111111",
+          "bit": "11111111111011111111",
           "fitness": 19
         },
         "Bitstring4": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring5": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring6": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring7": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring8": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring9": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring10": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring11": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring12": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring13": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring14": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring15": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring16": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring17": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring18": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         },
         "Bitstring19": {
-          "bit": "11111101111111111111",
-          "fitness": 19
+          "bit": "11101111111011111111",
+          "fitness": 18
         }
       }
     }
