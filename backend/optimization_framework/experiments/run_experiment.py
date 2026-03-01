@@ -1,5 +1,5 @@
 from optimization_framework.problems import onemax, leadingones
-from optimization_framework.algorithms import simulated_annealing, mu_plus_lambda_EA, one_plus_one_EA
+from optimization_framework.algorithms import simulated_annealing, mu_plus_lambda_EA, one_plus_one_EA, ant_optimization_problem
 import json
 from pathlib import Path
 from functools import partial
@@ -16,12 +16,15 @@ SOLVERS = {
     ("leadingones", "(μ+λ) EA"): partial(mu_plus_lambda_EA.MuPlusLambdaEA, leadingones.fitnessLeadingOnes),
     ("leadingones", "(1+1) EA"): partial(one_plus_one_EA.OnePlusOneEA, leadingones.fitnessLeadingOnes),
     ("leadingones", "Simulated Annealing"): partial(simulated_annealing.simulated_annealing, leadingones.fitnessLeadingOnes),
+    ("onemax", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, onemax.fitnessOnemax),
+    ("leadingones", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, leadingones.fitnessLeadingOnes),
 }
 
 DISPLAY_NAMES = {
     "(μ+λ) EA": "(μ+λ) EA",
     "(1+1) EA": "(1+1) EA",
-    "Simulated Annealing": "Simulated Annealing"
+    "Simulated Annealing": "Simulated Annealing",
+    "ACO": "ACO"
 }
 
 THEORETICAL_RUNTIME = {
@@ -31,6 +34,8 @@ THEORETICAL_RUNTIME = {
     ("leadingones", "(μ+λ) EA"): "O(n\u00b2)",
     ("leadingones", "(1+1) EA"): "O(n\u00b2)",
     ("leadingones", "Simulated Annealing"): "O(n\u00b2)",
+    ("onemax", "ACO"): "O(n log n)",
+    ("leadingones", "ACO"): "O(n\u00b2 log n)",
 }
 
 def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
