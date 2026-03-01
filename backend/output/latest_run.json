@@ -1,92 +1,92 @@
 {
   "problem": "onemax",
-  "algorithm": "(\u03bc+\u03bb) EA",
-  "iterations": 9,
+  "algorithm": "ACO",
+  "iterations": 10000,
   "temp": 0.0,
-  "fitness_evaluations": 200,
+  "fitness_evaluations": 200000,
   "theoretical_runtime": "O(n log n)",
   "history": [
     {
       "Population": {
-        "Bitstring0": {
-          "bit": "11111111111111111111",
-          "fitness": 20
+        "Ant0": {
+          "bit": "11010011001000011000",
+          "fitness": 8
         },
-        "Bitstring1": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant1": {
+          "bit": "11010110001000001100",
+          "fitness": 8
         },
-        "Bitstring2": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant2": {
+          "bit": "10010100010010000100",
+          "fitness": 6
         },
-        "Bitstring3": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant3": {
+          "bit": "11000011011011010100",
+          "fitness": 10
         },
-        "Bitstring4": {
-          "bit": "11111111011111111111",
-          "fitness": 19
+        "Ant4": {
+          "bit": "11010111011010010100",
+          "fitness": 11
         },
-        "Bitstring5": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant5": {
+          "bit": "10000110010000011000",
+          "fitness": 6
         },
-        "Bitstring6": {
-          "bit": "11111111011111111111",
-          "fitness": 19
+        "Ant6": {
+          "bit": "00000000001000011000",
+          "fitness": 3
         },
-        "Bitstring7": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant7": {
+          "bit": "01010000010011000000",
+          "fitness": 5
         },
-        "Bitstring8": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant8": {
+          "bit": "10010001010011011100",
+          "fitness": 9
         },
-        "Bitstring9": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant9": {
+          "bit": "11010110010001000000",
+          "fitness": 7
         },
-        "Bitstring10": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant10": {
+          "bit": "11010101000001011100",
+          "fitness": 9
         },
-        "Bitstring11": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant11": {
+          "bit": "01010110000011011100",
+          "fitness": 9
         },
-        "Bitstring12": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant12": {
+          "bit": "01000111010001011100",
+          "fitness": 9
         },
-        "Bitstring13": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant13": {
+          "bit": "11000001010001001000",
+          "fitness": 6
         },
-        "Bitstring14": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant14": {
+          "bit": "01010110010010010100",
+          "fitness": 8
         },
-        "Bitstring15": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant15": {
+          "bit": "10010101011001011100",
+          "fitness": 10
         },
-        "Bitstring16": {
-          "bit": "11111111011111111111",
-          "fitness": 19
+        "Ant16": {
+          "bit": "01010110001011011100",
+          "fitness": 10
         },
-        "Bitstring17": {
-          "bit": "11111111011111111111",
-          "fitness": 19
+        "Ant17": {
+          "bit": "01010010010011010000",
+          "fitness": 7
         },
-        "Bitstring18": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant18": {
+          "bit": "00000010000011001100",
+          "fitness": 5
         },
-        "Bitstring19": {
-          "bit": "11111111101111111111",
-          "fitness": 19
+        "Ant19": {
+          "bit": "11010111001001011000",
+          "fitness": 10
         }
       }
     }

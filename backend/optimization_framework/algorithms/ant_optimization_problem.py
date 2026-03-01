@@ -15,7 +15,9 @@ def ant_colony_optimization(fitness_fn):
     fitness_evaluations = 0
     population = {}
 
-    while best_fit != bit_length:
+    max_iterations = 10_000
+
+    while best_fit != bit_length and iterations < max_iterations:
         iterations += 1
         ants = []
 
@@ -37,11 +39,10 @@ def ant_colony_optimization(fitness_fn):
         for j in range(bit_length):
             pheromone[j] *= (1 - evaporation_rate)
 
-        # Deposit pheromone from the iteration-best ant
-        iter_best = max(ants, key=lambda ant: ant["fitness"])
-        deposit = iter_best["fitness"] / bit_length
+        # Deposit pheromone from the global best
+        deposit = best_fit / bit_length
         for j in range(bit_length):
-            if iter_best["bit"][j] == "1":
+            if best[j] == "1":
                 pheromone[j] += deposit
 
         population = {f"Ant{i}": ant for i, ant in enumerate(ants)}
