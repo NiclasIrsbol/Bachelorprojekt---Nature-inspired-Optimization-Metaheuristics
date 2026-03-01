@@ -26,6 +26,7 @@ interface ExperimentData {
   problem: string;
   algorithm: string;
   iterations: number;
+  temp: number;
   fitness_evaluations: number;
   theoretical_runtime: string;
   history: Generation[];
@@ -119,6 +120,7 @@ export default function App() {
             algorithm={data!.algorithm}
             problem={data!.problem}
             iterations={data!.iterations}
+            temp={data!.temp}
             fitnessEvaluations={data!.fitness_evaluations}
             theoreticalRuntime={data!.theoretical_runtime}
           />

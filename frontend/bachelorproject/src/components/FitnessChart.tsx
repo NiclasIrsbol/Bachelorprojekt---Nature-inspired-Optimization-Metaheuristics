@@ -58,7 +58,6 @@ export default function FitnessChart({ population }: FitnessChartProps) {
     <div className="card viz">
       <div className="cardHeader">
         <h3 className="cardTitle">Fitness Distribution</h3>
-        <span className="pill mono">Gen 1</span>
       </div>
       <div className="vizBody">
         <ResponsiveContainer width="100%" height="100%">

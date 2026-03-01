@@ -1,10 +1,6 @@
 import random
 from optimization_framework.problems import onemax
 
-def generateRandomInt(lower_bound, upper_bound):
-    r = random.randint(lower_bound, upper_bound)
-    return r
-
 def generateSingleBitstring(length):
     bit = "".join(random.choice("01") for _ in range(length))
     return bit

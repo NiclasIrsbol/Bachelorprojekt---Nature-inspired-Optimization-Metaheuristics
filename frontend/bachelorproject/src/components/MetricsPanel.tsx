@@ -11,6 +11,7 @@ interface MetricsPanelProps {
   population: Population;
   algorithm: string;
   problem: string;
+  temp: number,
   iterations: number;
   fitnessEvaluations: number;
   theoreticalRuntime: string;
@@ -20,6 +21,7 @@ export default function MetricsPanel({
   population,
   algorithm,
   problem,
+  temp,
   iterations,
   fitnessEvaluations,
   theoreticalRuntime,
@@ -38,6 +40,7 @@ export default function MetricsPanel({
     { label: "Bitstring Length", value: bitLength },
     { label: "Best Fitness", value: best },
     { label: "Average Fitness", value: avg.toFixed(2) },
+    { label: "Temperature", value: temp },
     { label: "Iterations", value: iterations },
     { label: "Fitness Evaluations", value: fitnessEvaluations.toLocaleString() },
     { label: "Theoretical Complexity", value: theoreticalRuntime },

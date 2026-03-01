@@ -1,35 +1,39 @@
 from optimization_framework.operators import gaoperators
-from optimization_framework.problems import onemax
-from optimization_framework.problems import leadingones
 import math
+import random
 
 def simulated_annealing(fitness_fn):
+    cooling = 0.99
     iterations = 0
+    T0 = 100.0
     bit_length = 20
-    prob = 1/bit_length
-    bit = gaoperators.generateSingleBitstring(bit_length)
-    temp = 100
-    fitnessparent = fitness_fn(bit)
+    prob = 1 / bit_length
 
-    while (fitnessparent != bit_length and temp>0):
+    current = gaoperators.generateSingleBitstring(bit_length)
+    current_fit = fitness_fn(current)
+    fitness_evaluations = 1
+    best = current
+    best_fit = current_fit
+    T = float(T0)
+
+    while best_fit != bit_length:
         iterations += 1
-        neighbor = gaoperators.mutation(bit, prob)
-        fitness_neighbor = fitness_fn(neighbor)
-        delta = fitness_neighbor-fitnessparent
-
-        if delta <= 0:
-            bit = neighbor
-            fitnessparent = fitness_neighbor
+        neighbor = gaoperators.mutation(current, prob)
+        neighbor_fit = fitness_fn(neighbor)
+        fitness_evaluations += 1
+        delta = neighbor_fit - current_fit
+        if delta >= 0:
+            accept = True
         else:
-            if (temp == 0):
-                p = 0
+            if T <= 0.0:
+                accept = False
             else:
-                p = math.exp(-delta/temp)
-                r = gaoperators.generateRandomInt(0,1)
-            if (r<=p):
-                bit = neighbor
-                fitnessparent = fitness_neighbor
-        temp -= 1
-    return bit, iterations, temp
-
-print(simulated_annealing(onemax.fitnessOnemax))
+                accept = (random.random() < math.exp(delta / T))
+        if accept:
+            current = neighbor 
+            current_fit = neighbor_fit
+            if current_fit > best_fit:
+                best = current 
+                best_fit = current_fit
+        T *= cooling
+    return best, iterations, T, {}, fitness_evaluations

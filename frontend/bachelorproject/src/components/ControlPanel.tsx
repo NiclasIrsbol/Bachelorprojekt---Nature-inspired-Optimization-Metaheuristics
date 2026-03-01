@@ -21,6 +21,7 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
           >
             <option value="(μ+λ) EA">(μ+λ) EA</option>
             <option value="(1+1) EA">(1+1) EA</option>
+            <option value="Simulated Annealing">Simulated annealing</option>
           </select>
         </div>
 
