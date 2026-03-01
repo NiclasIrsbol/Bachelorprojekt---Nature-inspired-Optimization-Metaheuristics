@@ -2,6 +2,7 @@ import random
 from optimization_framework.problems import onemax
 
 def generateSingleBitstring(length):
+    """Create a single bitstring of size length."""
     bit = "".join(random.choice("01") for _ in range(length))
     return bit
 
@@ -15,18 +16,21 @@ def generatePopulation(length, fitness_fn, size: int = 20):
     return bitstrings
 
 def selectparents(population: dict, tournament_k: int):
+    """Select k parents with best fitness and add to dict."""
     individuals = list(population.values())
     k = min(max(1, tournament_k), len(individuals))
     competitors = random.sample(individuals, k)
     return max(competitors, key=lambda ind: ind["fitness"])
 
 def crossover(parent1, parent2):
+    """Perform single point crossover to generate offsprings."""
     crossover_point = random.randint(1, len(parent1) - 1)
     offspring1 = parent1[:crossover_point] + parent2[crossover_point:]
     offspring2 = parent2[:crossover_point] + parent1[crossover_point:]
     return offspring1, offspring2
 
 def mutation(bit, prob):
+    """Mutate individual by flipping random bit"""
     if random.random() < prob:
         index = random.randint(0, len(bit) - 1)
         new_char = "0" if bit[index] == "1" else "1"
@@ -34,6 +38,7 @@ def mutation(bit, prob):
     return bit
 
 def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutation_prob, lambda_size=None):
+    """Creates the next generation of offsprings using crossover and mutation"""
     lambda_size = len(population)
     offsprings = {}
     created = 0
@@ -54,12 +59,14 @@ def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutatio
     return offsprings
 
 def selectMuBest(parents, offsprings, mu):
+    """Select mu best parents based on fitness"""
     combined = list(parents.values()) + list(offsprings.values())
     combined.sort(key=lambda ind: ind["fitness"], reverse=True)
     survivors = combined[:mu]
     return {f"Bitstring{i}": ind for i, ind in enumerate(survivors)}
 
 def createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_size, tournament_k, mutation_prob):
+    """Create the next generation"""
     offspring = createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutation_prob, lambda_size=lambda_size,)
     next_population = selectMuBest(population, offspring, mu=mu_size)
     return next_population, offspring

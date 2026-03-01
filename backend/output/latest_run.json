@@ -1,10 +1,10 @@
 {
-  "problem": "leadingones",
+  "problem": "onemax",
   "algorithm": "Simulated Annealing",
-  "iterations": 5409,
-  "temp": 2.4590512387996936e-22,
-  "fitness_evaluations": 5410,
-  "theoretical_runtime": "O(n\u00b2)",
+  "iterations": 904,
+  "temp": 0.01132963493475702,
+  "fitness_evaluations": 905,
+  "theoretical_runtime": "O(n log n)",
   "history": [
     {
       "Population": {

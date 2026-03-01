@@ -1,4 +1,3 @@
-# Add algorithm here instead of in leadingones.py and onemax.py
 from optimization_framework.operators import gaoperators
 
 def MuPlusLambdaEA(fitness_fn):
