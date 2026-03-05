@@ -30,6 +30,7 @@ interface ExperimentData {
   fitness_evaluations: number;
   theoretical_runtime: string;
   history: Generation[];
+  coords?: { x: number; y: number }[];
 }
 
 function getStoredTheme(): Theme {
@@ -124,7 +125,7 @@ export default function App() {
             fitnessEvaluations={data!.fitness_evaluations}
             theoreticalRuntime={data!.theoretical_runtime}
           />
-          <FitnessChart population={population} />
+          <FitnessChart population={population} coords={data!.coords} />
           <PopulationPanel population={population} />
         </div>
       ) : (

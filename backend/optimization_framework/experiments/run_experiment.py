@@ -43,19 +43,20 @@ def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
     if not solver:
         raise ValueError(f"Unknown combination: {problem_name} + {algorithm_name}")
 
-    # Prefer storing callables in SOLVERS, but be defensive in case a refactor
-    # accidentally stores a precomputed result tuple.
     raw = solver() if callable(solver) else solver
     if not isinstance(raw, tuple):
         raise TypeError(f"Solver must return a tuple, got {type(raw).__name__}")
 
-    if len(raw) == 5:
+    coords = None
+    if len(raw) == 6:
+        best, iterations, temp, population, fitness_evaluations, coords = raw
+    elif len(raw) == 5:
         best, iterations, temp, population, fitness_evaluations = raw
     elif len(raw) == 4:
         best, iterations, population, fitness_evaluations = raw
         temp = 0.0
     else:
-        raise ValueError(f"Unexpected solver return arity: expected 4 or 5 values, got {len(raw)}")
+        raise ValueError(f"Unexpected solver return arity: expected 4-6 values, got {len(raw)}")
 
     if not population:
         fitness_fn = FITNESS_FNS.get(problem_name)
@@ -85,8 +86,11 @@ def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
             {
                 "Population": population
             },
-        ]
+        ],
     }
+
+    if coords is not None:
+        result["coords"] = [{"x": x, "y": y} for x, y in coords]
 
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
