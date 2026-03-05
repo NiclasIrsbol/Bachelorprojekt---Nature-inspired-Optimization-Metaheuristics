@@ -1,6 +1,6 @@
 from optimization_framework.operators import gaoperators
 
-def MuPlusLambdaEA(fitness_fn):
+def MuPlusLambdaEA(fitness_fn, bit_length=20):
     bit_length = 20
     iterations = 0
     tournament_k = 3
@@ -11,10 +11,14 @@ def MuPlusLambdaEA(fitness_fn):
     best = max(population.values(), key=lambda ind: ind["fitness"])
     fitness_evaluations = len(population)
 
+    coords = [gaoperators.map_bitstring(best["bit"])]
+
+
     while best["fitness"] != bit_length:
         population, offspring = gaoperators.createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_size, tournament_k, mutation_prob,)
         best = max(population.values(), key=lambda ind: ind["fitness"])
         fitness_evaluations += len(offspring)
         iterations += 1
+        coords.append(gaoperators.map_bitstring(best["bit"]))
 
-    return best, iterations, population, fitness_evaluations
+    return best, iterations, 0.0, population, fitness_evaluations, coords

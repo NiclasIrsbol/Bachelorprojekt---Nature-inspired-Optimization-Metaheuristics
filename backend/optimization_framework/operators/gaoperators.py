@@ -1,5 +1,37 @@
 import random
-from optimization_framework.problems import onemax
+import math
+
+def map_bitstring(x):
+    if isinstance(x, str):
+        bits = [1 if c == "1" else 0 for c in x]
+    else:
+
+        bits = []
+        for v in x:
+            if isinstance(v, str):
+                if v not in ("0", "1"):
+                    raise ValueError(f"Expected bits '0'/'1', got {v!r}")
+                bits.append(1 if v == "1" else 0)
+            else:
+                bits.append(1 if int(v) == 1 else 0)
+
+    n = len(bits)
+    o = sum(bits)
+    Y = 2 * (o / n) - 1
+    score = sum(i * bits[i] for i in range(n))
+    if o == 0:
+        lowestScore = 0
+        highestScore = 0
+    else:
+        lowestScore = sum(range(o))
+        highestScore = sum(range(n-o, n))
+    b = math.sqrt(1 - Y**2)
+    a = -b
+    if lowestScore == highestScore:
+        X = 0
+    else:
+        X = (b - a) * (score - lowestScore) / (highestScore - lowestScore) + a
+    return (X, Y)
 
 def generateSingleBitstring(length):
     """Create a single bitstring of size length."""

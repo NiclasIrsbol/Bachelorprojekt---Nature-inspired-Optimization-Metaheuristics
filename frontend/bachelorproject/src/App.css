@@ -70,6 +70,30 @@
   font-weight: 650;
 }
 
+.dropDown {
+  margin-left: auto;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.dropDown:hover {
+  border-color: var(--accent);
+}
+
+.dropDown:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+
 .controlPanel {
   padding: 14px;
 }

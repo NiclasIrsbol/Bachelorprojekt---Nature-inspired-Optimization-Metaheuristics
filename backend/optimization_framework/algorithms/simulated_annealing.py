@@ -2,7 +2,7 @@ from optimization_framework.operators import gaoperators
 import math
 import random
 
-def simulated_annealing(fitness_fn):
+def simulated_annealing(fitness_fn, bit_length=20):
     cooling = 0.99
     iterations = 0
     T0 = 100.0
@@ -16,6 +16,7 @@ def simulated_annealing(fitness_fn):
     best_fit = current_fit
     T = float(T0)
 
+    coords = [gaoperators.map_bitstring(best)]
     while best_fit != bit_length:
         iterations += 1
         neighbor = gaoperators.mutation(current, prob)
@@ -35,5 +36,6 @@ def simulated_annealing(fitness_fn):
             if current_fit > best_fit:
                 best = current 
                 best_fit = current_fit
+                coords.append(gaoperators.map_bitstring(best))
         T *= cooling
-    return best, iterations, T, {}, fitness_evaluations
+    return best, iterations, T, {}, fitness_evaluations, coords
