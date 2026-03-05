@@ -17,11 +17,12 @@ def simulated_annealing(fitness_fn, bit_length=20):
     T = float(T0)
 
     coords = [gaoperators.map_bitstring(best)]
+    fitness_over_time = [best_fit]
+
     while best_fit != bit_length:
         iterations += 1
         neighbor = gaoperators.mutation(current, prob)
         neighbor_fit = fitness_fn(neighbor)
-        fitness_evaluations += 1
         delta = neighbor_fit - current_fit
         if delta >= 0:
             accept = True
@@ -36,6 +37,8 @@ def simulated_annealing(fitness_fn, bit_length=20):
             if current_fit > best_fit:
                 best = current 
                 best_fit = current_fit
+                fitness_evaluations += 1
                 coords.append(gaoperators.map_bitstring(best))
+        fitness_over_time.append(best_fit)
         T *= cooling
-    return best, iterations, T, {}, fitness_evaluations, coords
+    return best, iterations, T, {}, fitness_evaluations, coords, fitness_over_time

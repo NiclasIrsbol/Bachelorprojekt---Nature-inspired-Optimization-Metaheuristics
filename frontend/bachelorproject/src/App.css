@@ -326,6 +326,44 @@
   font-size: 0.95rem;
 }
 
+.paramGrid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+
+.paramTitle {
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+.paramField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 120px;
+}
+
+.paramInput {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  width: 130px;
+}
+
+.paramInput:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
 @media (max-width: 980px) {
   .grid {
     grid-template-columns: 1fr;

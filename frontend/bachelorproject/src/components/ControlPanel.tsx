@@ -1,13 +1,20 @@
-import { useState } from "react";
-
 interface ControlPanelProps {
-  onRun: (problem: string, algorithm: string) => void;
+  problem: string;
+  algorithm: string;
+  onProblemChange: (p: string) => void;
+  onAlgorithmChange: (a: string) => void;
+  onRun: () => void;
   loading: boolean;
 }
 
-export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
-  const [problem, setProblem] = useState("onemax");
-  const [algorithm, setAlgorithm] = useState("(μ+λ) EA");
+export default function ControlPanel({
+  problem,
+  algorithm,
+  onProblemChange,
+  onAlgorithmChange,
+  onRun,
+  loading,
+}: ControlPanelProps) {
 
   return (
     <div className="card controlPanel">
@@ -17,7 +24,7 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
           <select
             className="select"
             value={algorithm}
-            onChange={(e) => setAlgorithm(e.target.value)}
+            onChange={(e) => onAlgorithmChange(e.target.value)}
           >
             <option value="(μ+λ) EA">(μ+λ) EA</option>
             <option value="(1+1) EA">(1+1) EA</option>
@@ -31,7 +38,7 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
           <select
             className="select"
             value={problem}
-            onChange={(e) => setProblem(e.target.value)}
+            onChange={(e) => onProblemChange(e.target.value)}
           >
             <option value="onemax">OneMax</option>
             <option value="leadingones">LeadingOnes</option>
@@ -40,7 +47,7 @@ export default function ControlPanel({ onRun, loading }: ControlPanelProps) {
 
         <button
           className="button"
-          onClick={() => onRun(problem, algorithm)}
+          onClick={onRun}
           disabled={loading}
         >
           {loading ? "Loading..." : "Run"}

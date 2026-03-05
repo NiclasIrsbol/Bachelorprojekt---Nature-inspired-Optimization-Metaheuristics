@@ -1,6 +1,10 @@
+import { useState } from "react";
 import {
   BarChart,
   Bar,
+  LineChart,
+  Line,
+  CartesianGrid,
   XAxis,
   YAxis,
   Tooltip,
@@ -22,9 +26,15 @@ interface Coord {
   y: number;
 }
 
+interface FitnessOverTimeEntry {
+  generation: number;
+  fitness: number;
+}
+
 interface FitnessChartProps {
   population: Population;
   coords?: Coord[];
+  fitnessOverTime?: FitnessOverTimeEntry[];
 }
 
 interface ChartItem {
@@ -78,18 +88,64 @@ function CirclePlotInner({ coords }: { coords: Coord[] }) {
   );
 }
 
-export default function FitnessChart({ population, coords }: FitnessChartProps) {
-  if (coords && coords.length > 0) {
+function FitnessLineChart({ data }: { data: FitnessOverTimeEntry[] }) {
+  return (
+    <div className="vizBody">
+      <ResponsiveContainer width="100%" height={360}>
+        <LineChart data={data} margin={{ top: 8, right: 12, bottom: 24, left: 0 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--card-border)" />
+          <XAxis
+            dataKey="generation"
+            tick={{ fontSize: 11 }}
+            label={{ value: "Generation", position: "insideBottom", offset: -16, fontSize: 12 }}
+          />
+          <YAxis
+            tick={{ fontSize: 11 }}
+            label={{ value: "Fitness", angle: -90, position: "insideLeft", offset: 10, fontSize: 12 }}
+          />
+          <Tooltip
+            contentStyle={{
+              background: "var(--bg-surface)",
+              border: "1px solid var(--card-border)",
+              borderRadius: 8,
+              fontSize: "0.85rem",
+            }}
+          />
+          <Line
+            type="monotone"
+            dataKey="fitness"
+            stroke="var(--accent)"
+            strokeWidth={2}
+            dot={false}
+            activeDot={{ r: 4, fill: "var(--accent)" }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+export default function FitnessChart({ population, coords, fitnessOverTime }: FitnessChartProps) {
+  const hasCoords = coords && coords.length > 0;
+  const hasFot = fitnessOverTime && fitnessOverTime.length > 0;
+  const [view, setView] = useState<"search-path" | "fitness-chart">(hasCoords ? "search-path" : "fitness-chart");
+
+  if (hasCoords || hasFot) {
     return (
       <div className="card viz">
         <div className="cardHeader">
           <h3 className="cardTitle">Visualizations</h3>
-          <select className="dropDown">
-          <option value="search-path">Search path</option>
-          <option value="fitness-chart">Fitness-chart</option>
-        </select>
+          <select
+            className="dropDown"
+            value={view}
+            onChange={(e) => setView(e.target.value as "search-path" | "fitness-chart")}
+          >
+            {hasCoords && <option value="search-path">Search path</option>}
+            {hasFot && <option value="fitness-chart">Fitness chart</option>}
+          </select>
         </div>
-        <CirclePlotInner coords={coords} />
+        {view === "search-path" && hasCoords && <CirclePlotInner coords={coords} />}
+        {view === "fitness-chart" && hasFot && <FitnessLineChart data={fitnessOverTime} />}
       </div>
     );
   }

@@ -12,6 +12,7 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20):
     fitness_evaluations = len(population)
 
     coords = [gaoperators.map_bitstring(best["bit"])]
+    fitness_over_time = [best["fitness"]]
 
 
     while best["fitness"] != bit_length:
@@ -20,5 +21,6 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20):
         fitness_evaluations += len(offspring)
         iterations += 1
         coords.append(gaoperators.map_bitstring(best["bit"]))
+        fitness_over_time.append(best["fitness"])
 
-    return best, iterations, 0.0, population, fitness_evaluations, coords
+    return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time

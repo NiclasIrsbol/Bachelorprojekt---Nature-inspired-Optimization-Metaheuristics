@@ -4,6 +4,7 @@ import ControlPanel from "./components/ControlPanel";
 import FitnessChart from "./components/FitnessChart";
 import MetricsPanel from "./components/MetricsPanel";
 import PopulationPanel from "./components/PopulationPanel";
+import ParametersPanel, { getDefaultParams } from "./components/ParametersPanel";
 
 const API_BASE = "http://localhost:8000";
 
@@ -31,6 +32,7 @@ interface ExperimentData {
   theoretical_runtime: string;
   history: Generation[];
   coords?: { x: number; y: number }[];
+  fitness_over_time?: { generation: number; fitness: number }[];
 }
 
 function getStoredTheme(): Theme {
@@ -42,19 +44,22 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [theme, setTheme] = useState<Theme>(getStoredTheme);
+  const [algorithm, setAlgorithm] = useState("(μ+λ) EA");
+  const [problem, setProblem] = useState("onemax");
+  const [params, setParams] = useState<Record<string, number>>(() => getDefaultParams("(μ+λ) EA"));
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const runExperiment = useCallback((problem: string, algorithm: string) => {
+  const runExperiment = useCallback(() => {
     setLoading(true);
     setError(null);
     fetch(`${API_BASE}/run`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ problem, algorithm }),
+      body: JSON.stringify({ problem, algorithm, params }),
     })
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -74,7 +79,7 @@ export default function App() {
         setError("Could not connect to backend. Is the server running?");
         setLoading(false);
       });
-  }, []);
+  }, [problem, algorithm, params]);
 
   const toggleTheme = () =>
     setTheme((t) => (t === "dark" ? "light" : "dark"));
@@ -103,7 +108,16 @@ export default function App() {
         </button>
       </div>
 
-      <ControlPanel onRun={runExperiment} loading={loading} />
+      <ControlPanel
+        problem={problem}
+        algorithm={algorithm}
+        onProblemChange={setProblem}
+        onAlgorithmChange={setAlgorithm}
+        onRun={runExperiment}
+        loading={loading}
+      />
+
+      <ParametersPanel algorithm={algorithm} params={params} onChange={setParams} />
 
       {loading ? (
         <div className="loadingWrap">
@@ -125,7 +139,7 @@ export default function App() {
             fitnessEvaluations={data!.fitness_evaluations}
             theoreticalRuntime={data!.theoretical_runtime}
           />
-          <FitnessChart population={population} coords={data!.coords} />
+          <FitnessChart population={population} coords={data!.coords} fitnessOverTime={data!.fitness_over_time} />
           <PopulationPanel population={population} />
         </div>
       ) : (

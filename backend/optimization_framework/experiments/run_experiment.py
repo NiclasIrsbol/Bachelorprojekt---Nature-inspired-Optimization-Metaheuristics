@@ -48,15 +48,19 @@ def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
         raise TypeError(f"Solver must return a tuple, got {type(raw).__name__}")
 
     coords = None
-    if len(raw) == 6:
+    fitness_over_time = None
+    if len(raw) == 7:
+        best, iterations, temp, population, fitness_evaluations, coords, fitness_over_time = raw
+    elif len(raw) == 6:
         best, iterations, temp, population, fitness_evaluations, coords = raw
     elif len(raw) == 5:
-        best, iterations, temp, population, fitness_evaluations = raw
+        best, iterations, population, fitness_evaluations, fitness_over_time = raw
+        temp = 0.0
     elif len(raw) == 4:
         best, iterations, population, fitness_evaluations = raw
         temp = 0.0
     else:
-        raise ValueError(f"Unexpected solver return arity: expected 4-6 values, got {len(raw)}")
+        raise ValueError(f"Unexpected solver return arity: expected 4-7 values, got {len(raw)}")
 
     if not population:
         fitness_fn = FITNESS_FNS.get(problem_name)
@@ -91,6 +95,11 @@ def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
 
     if coords is not None:
         result["coords"] = [{"x": x, "y": y} for x, y in coords]
+
+    if fitness_over_time is not None:
+        result["fitness_over_time"] = [
+            {"generation": i, "fitness": f} for i, f in enumerate(fitness_over_time)
+        ]
 
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)

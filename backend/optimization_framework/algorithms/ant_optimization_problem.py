@@ -1,4 +1,5 @@
 import random
+from optimization_framework.operators.gaoperators import map_bitstring
 
 
 def ant_colony_optimization(fitness_fn):
@@ -25,6 +26,7 @@ def ant_colony_optimization(fitness_fn):
     iterations = 0
     fitness_evaluations = 0
     max_iterations = 10_000
+    coords = []
 
     def construct():
         bits = []
@@ -43,6 +45,8 @@ def ant_colony_optimization(fitness_fn):
     best = construct()
     best_fit = fitness_fn(best)
     fitness_evaluations += 1
+    fitness_over_time = [best_fit]
+    coords.append(map_bitstring(best))
 
     # Lines 3-5: initial pheromone update using x*
     update_pheromone(best)
@@ -63,6 +67,8 @@ def ant_colony_optimization(fitness_fn):
 
         # Lines 9-10: update pheromone using x*
         update_pheromone(best)
+        fitness_over_time.append(best_fit)
+        coords.append(map_bitstring(best))
 
     population = {"Solution": {"bit": best, "fitness": best_fit}}
-    return best, iterations, population, fitness_evaluations
+    return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time

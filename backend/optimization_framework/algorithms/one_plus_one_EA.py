@@ -9,6 +9,7 @@ def OnePlusOneEA(fitness_fn, bit_length=20):
     fitness_evaluations = 1
 
     coords = [gaoperators.map_bitstring(parent)]
+    fitness_over_time = [fitness_parent]
 
     while fitness_parent != bit_length:
         iterations += 1
@@ -21,4 +22,6 @@ def OnePlusOneEA(fitness_fn, bit_length=20):
             fitness_parent = fitness_offspring
             coords.append(gaoperators.map_bitstring(parent))
 
-    return parent, iterations, 0.0, {}, fitness_evaluations, coords
+        fitness_over_time.append(fitness_parent)
+
+    return parent, iterations, 0.0, {}, fitness_evaluations, coords, fitness_over_time
