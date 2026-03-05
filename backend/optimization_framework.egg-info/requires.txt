@@ -1,3 +1,6 @@
 numpy
 fastapi
 uvicorn[standard]
+
+[test]
+pytest

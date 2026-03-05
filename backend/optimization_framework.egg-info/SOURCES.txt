@@ -6,7 +6,12 @@ optimization_framework.egg-info/SOURCES.txt
 optimization_framework.egg-info/dependency_links.txt
 optimization_framework.egg-info/requires.txt
 optimization_framework.egg-info/top_level.txt
+optimization_framework/algorithms/ant_optimization_problem.py
+optimization_framework/algorithms/mu_plus_lambda_EA.py
+optimization_framework/algorithms/one_plus_one_EA.py
+optimization_framework/algorithms/simulated_annealing.py
 optimization_framework/experiments/__init__.py
 optimization_framework/experiments/run_experiment.py
-optimization_framework/operators/ga-operators.py
+optimization_framework/operators/gaoperators.py
+optimization_framework/problems/leadingones.py
 optimization_framework/problems/onemax.py

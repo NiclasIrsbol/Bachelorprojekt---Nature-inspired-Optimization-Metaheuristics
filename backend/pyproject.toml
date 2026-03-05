@@ -12,6 +12,9 @@ dependencies = [
 [tool.setuptools.packages.find]
 include = ["optimization_framework*"]
 
+[project.optional-dependencies]
+test = ["pytest"]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
