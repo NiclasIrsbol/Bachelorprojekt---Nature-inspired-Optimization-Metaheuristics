@@ -2,49 +2,67 @@ import random
 
 
 def ant_colony_optimization(fitness_fn):
-    bit_length = 20
-    num_ants = 20
-    evaporation_rate = 0.5
-    initial_pheromone = 1.0
+    """MMAS (Max-Min Ant System) for pseudo-Boolean optimisation.
 
-    pheromone = [initial_pheromone] * bit_length
+    1-to-1 implementation of the MMAS pseudocode (Algorithm 4):
+      1: τ_j = 1/2 for all j
+      2: x* = CONSTRUCT(C, τ)
+      3: update pheromone using x*
+      6: repeat
+      7:   y = CONSTRUCT(C, τ)
+      8:   if f(y) >= f(x*) then x* = y
+      9:   update pheromone using x*
+     10: until stop
+    """
+    bit_length = 100
+    rho = 0.1
+    tau_min = 1 / bit_length
+    tau_max = 1 - 1 / bit_length
 
-    best = None
-    best_fit = -1
+    # Line 1: Set τ = 1/2 for all bits
+    pheromone = [0.5] * bit_length
+
     iterations = 0
     fitness_evaluations = 0
-    population = {}
-
     max_iterations = 10_000
 
+    def construct():
+        bits = []
+        for j in range(bit_length):
+            bits.append("1" if random.random() < pheromone[j] else "0")
+        return "".join(bits)
+
+    def update_pheromone(x_star):
+        for j in range(bit_length):
+            if x_star[j] == "1":
+                pheromone[j] = min((1 - rho) * pheromone[j] + rho, tau_max)
+            else:
+                pheromone[j] = max((1 - rho) * pheromone[j], tau_min)
+
+    # Line 2: x* = CONSTRUCT(C, τ)
+    best = construct()
+    best_fit = fitness_fn(best)
+    fitness_evaluations += 1
+
+    # Lines 3-5: initial pheromone update using x*
+    update_pheromone(best)
+
+    # Line 6: repeat
     while best_fit != bit_length and iterations < max_iterations:
         iterations += 1
-        ants = []
 
-        for a in range(num_ants):
-            bits = []
-            for j in range(bit_length):
-                prob_one = pheromone[j] / (pheromone[j] + 1.0)
-                bits.append("1" if random.random() < prob_one else "0")
-            bitstring = "".join(bits)
-            fitness = fitness_fn(bitstring)
-            fitness_evaluations += 1
-            ants.append({"bit": bitstring, "fitness": fitness})
+        # Line 7: y = CONSTRUCT(C, τ)
+        y = construct()
+        y_fit = fitness_fn(y)
+        fitness_evaluations += 1
 
-            if fitness > best_fit:
-                best = bitstring
-                best_fit = fitness
+        # Line 8: if f(y) >= f(x*) then x* = y
+        if y_fit >= best_fit:
+            best = y
+            best_fit = y_fit
 
-        # Evaporate
-        for j in range(bit_length):
-            pheromone[j] *= (1 - evaporation_rate)
+        # Lines 9-10: update pheromone using x*
+        update_pheromone(best)
 
-        # Deposit pheromone from the global best
-        deposit = best_fit / bit_length
-        for j in range(bit_length):
-            if best[j] == "1":
-                pheromone[j] += deposit
-
-        population = {f"Ant{i}": ant for i, ant in enumerate(ants)}
-
+    population = {"Solution": {"bit": best, "fitness": best_fit}}
     return best, iterations, population, fitness_evaluations
