@@ -24,6 +24,7 @@ OUTPUT_FILE = Path("output/latest_run.json")
 class RunRequest(BaseModel):
     problem: str = "onemax"
     algorithm: str = "(μ+λ) EA"
+    params: dict = {}
 
 @app.get("/latest-run")
 def get_latest_run():
@@ -34,5 +35,5 @@ def get_latest_run():
 
 @app.post("/run")
 def run_experiment(request: RunRequest):
-    result = main(request.problem, request.algorithm)
+    result = main(request.problem, request.algorithm, request.params)
     return result

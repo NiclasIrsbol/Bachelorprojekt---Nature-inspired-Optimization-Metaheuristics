@@ -2,12 +2,10 @@ from optimization_framework.operators import gaoperators
 import math
 import random
 
-def simulated_annealing(fitness_fn, bit_length=20):
-    cooling = 0.99
+def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=None):
+    if prob is None:
+        prob = 1 / bit_length
     iterations = 0
-    T0 = 100.0
-    bit_length = 20
-    prob = 1 / bit_length
 
     current = gaoperators.generateSingleBitstring(bit_length)
     current_fit = fitness_fn(current)

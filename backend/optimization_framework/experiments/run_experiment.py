@@ -38,12 +38,14 @@ THEORETICAL_RUNTIME = {
     ("leadingones", "ACO"): "O(n\u00b2 log n)",
 }
 
-def main(problem_name="onemax", algorithm_name="(μ+λ) EA"):
+def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params={}):
+    if params is None:
+        params = {}
     solver = SOLVERS.get((problem_name, algorithm_name))
     if not solver:
         raise ValueError(f"Unknown combination: {problem_name} + {algorithm_name}")
 
-    raw = solver() if callable(solver) else solver
+    raw = solver(**params) if callable(solver) else solver
     if not isinstance(raw, tuple):
         raise TypeError(f"Solver must return a tuple, got {type(raw).__name__}")
 

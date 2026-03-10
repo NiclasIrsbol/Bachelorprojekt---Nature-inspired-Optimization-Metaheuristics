@@ -1,12 +1,9 @@
 from optimization_framework.operators import gaoperators
 
-def MuPlusLambdaEA(fitness_fn, bit_length=20):
-    bit_length = 20
+def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tournament_k=3, mutation_prob=None):
+    if mutation_prob is None:
+        mutation_prob = 1 / bit_length
     iterations = 0
-    tournament_k = 3
-    mutation_prob = 1/bit_length
-    mu_size = 20
-    lambda_size = 40
     population = gaoperators.generatePopulation(bit_length, fitness_fn, size=mu_size)
     best = max(population.values(), key=lambda ind: ind["fitness"])
     fitness_evaluations = len(population)

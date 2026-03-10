@@ -2,7 +2,7 @@ import random
 from optimization_framework.operators.gaoperators import map_bitstring
 
 
-def ant_colony_optimization(fitness_fn):
+def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=10000):
     """MMAS (Max-Min Ant System) for pseudo-Boolean optimisation.
 
     1-to-1 implementation of the MMAS pseudocode (Algorithm 4):
@@ -15,8 +15,6 @@ def ant_colony_optimization(fitness_fn):
       9:   update pheromone using x*
      10: until stop
     """
-    bit_length = 100
-    rho = 0.1
     tau_min = 1 / bit_length
     tau_max = 1 - 1 / bit_length
 
@@ -25,7 +23,6 @@ def ant_colony_optimization(fitness_fn):
 
     iterations = 0
     fitness_evaluations = 0
-    max_iterations = 10_000
     coords = []
 
     def construct():
