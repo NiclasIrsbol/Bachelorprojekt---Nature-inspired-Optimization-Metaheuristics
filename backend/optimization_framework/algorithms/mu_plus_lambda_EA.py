@@ -1,5 +1,6 @@
 from optimization_framework.operators import gaoperators
 
+# Bitstrings
 def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tournament_k=3, mutation_prob=None):
     if mutation_prob is None:
         mutation_prob = 1 / bit_length
@@ -21,3 +22,8 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tourna
         fitness_over_time.append(best["fitness"])
 
     return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time
+
+# TSP
+def MuPlusLambdaEATSP():
+    return "tsp"
+

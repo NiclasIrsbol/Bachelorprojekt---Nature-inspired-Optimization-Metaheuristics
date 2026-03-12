@@ -1,6 +1,6 @@
 from optimization_framework.operators import gaoperators
 
-
+# Bitstrings
 def OnePlusOneEA(fitness_fn, bit_length=20, prob=None):
     if prob is None:
         prob = 1 / bit_length
@@ -26,3 +26,7 @@ def OnePlusOneEA(fitness_fn, bit_length=20, prob=None):
         fitness_over_time.append(fitness_parent)
 
     return parent, iterations, 0.0, {}, fitness_evaluations, coords, fitness_over_time
+
+# TSP
+def OnePlusOneEATSP():
+    return "tsp"

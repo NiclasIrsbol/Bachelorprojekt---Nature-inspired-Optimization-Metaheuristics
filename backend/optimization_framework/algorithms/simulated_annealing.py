@@ -2,6 +2,7 @@ from optimization_framework.operators import gaoperators
 import math
 import random
 
+# Bitstrings
 def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=None):
     if prob is None:
         prob = 1 / bit_length
@@ -40,3 +41,6 @@ def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=
         fitness_over_time.append(best_fit)
         T *= cooling
     return best, iterations, T, {}, fitness_evaluations, coords, fitness_over_time
+
+def simulated_annealingTSP():
+    return "tsp"

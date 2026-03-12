@@ -1,5 +1,3 @@
-from optimization_framework.operators import gaoperators
-
 def fitnessLeadingOnes(bitstring):
     fitness = 0
     for i in range(len(bitstring)):

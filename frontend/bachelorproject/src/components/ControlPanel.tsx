@@ -42,6 +42,7 @@ export default function ControlPanel({
           >
             <option value="onemax">OneMax</option>
             <option value="leadingones">LeadingOnes</option>
+            <option value="tsp">TSP</option>
           </select>
         </div>
 

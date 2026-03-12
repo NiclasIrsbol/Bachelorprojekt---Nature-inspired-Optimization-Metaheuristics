@@ -1,7 +1,7 @@
 import random
 from optimization_framework.operators.gaoperators import map_bitstring
 
-
+# Bitstrings
 def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=10000):
     """MMAS (Max-Min Ant System) for pseudo-Boolean optimisation.
 
@@ -69,3 +69,7 @@ def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=
 
     population = {"Solution": {"bit": best, "fitness": best_fit}}
     return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time
+
+# TSP
+def ant_colony_optimizationTSP():
+    return "tsp"
