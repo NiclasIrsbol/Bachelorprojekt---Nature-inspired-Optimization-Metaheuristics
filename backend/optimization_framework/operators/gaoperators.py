@@ -1,6 +1,7 @@
 import random
 import math
 
+# Bitstrings
 def map_bitstring(x):
     if isinstance(x, str):
         bits = [1 if c == "1" else 0 for c in x]
@@ -102,3 +103,49 @@ def createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_siz
     offspring = createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutation_prob, lambda_size=lambda_size,)
     next_population = selectMuBest(population, offspring, mu=mu_size)
     return next_population, offspring
+
+#TSP
+def generate_random_ham_cycle(distance_matrix): 
+    nodes = list(range(len(distance_matrix)))
+    tour = nodes[:]
+    random.shuffle(tour)
+    return tour
+
+def two_opt_mutation(ham_cycle):
+    n = len(ham_cycle)
+    i = random.randint(0, n - 1)
+    k = random.randint(0, n - 1)
+    while k == i:
+        k = random.randint(0, n - 1)
+    if i > k:
+        i, k = k, i
+    new_tour = ham_cycle[:i+1] + ham_cycle[i+1:k+1][::-1] + ham_cycle[k+1:]
+    return new_tour
+
+def three_opt_mutation(ham_cycle, distance_matrix):
+    n = len(ham_cycle)
+    positions = sorted(random.sample(range(n), 3))
+    i, j, k = positions
+    A = ham_cycle[i+1:j+1]
+    B = ham_cycle[j+1:k+1]
+    C = ham_cycle[k+1:] + ham_cycle[:i+1]
+
+    candidates = [
+        C + A + B,               # original
+        C + A + B[::-1],         # reverse B
+        C + A[::-1] + B,         # reverse A
+        C + A[::-1] + B[::-1],   # reverse both
+        C + B + A,               # swap A and B
+        C + B + A[::-1],         # swap, reverse A
+        C + B[::-1] + A,         # swap, reverse B
+        C + B[::-1] + A[::-1],   # swap, reverse both
+    ]
+
+    def tour_cost(tour):
+        return sum(
+            distance_matrix[tour[idx]][tour[(idx + 1) % n]]
+            for idx in range(n)
+        )
+
+    best_tour = min(candidates, key=tour_cost)
+    return best_tour

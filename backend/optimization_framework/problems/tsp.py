@@ -1,6 +1,7 @@
 import random
 import requests
 import tsplib95
+from optimization_framework.operators import gaoperators
 
 # List of TSPLIB instances from the repo
 TSPLIB_INSTANCES = [
@@ -32,13 +33,10 @@ def fetch_random_tsp_instance():
     url = f"{BASE_URL}/{name}.tsp"
     response = requests.get(url, timeout=10)
     problem = tsplib95.parse(response.text)
-    return name, problem
+    coords = problem.node_coords
+    nodes = list(problem.get_nodes())
+    distance_matrix = [
+    [problem.get_weight(i, j) for j in nodes] for i in nodes]
+    return gaoperators.two_opt_mutation(distance_matrix)
 
-name, problem = fetch_random_tsp_instance()
-coords = problem.node_coords
-
-nodes = list(problem.get_nodes())
-distance_matrix = [
-    [problem.get_weight(i, j) for j in nodes] for i in nodes
-]
-print(f"Instance: {name}, Dimension: {problem.dimension}, coords {coords}")
+print(fetch_random_tsp_instance())
