@@ -13,8 +13,10 @@ import {
 } from "recharts";
 
 interface Individual {
-  bit: string;
-  fitness: number;
+  bit?: string;
+  fitness?: number;
+  tour?: number[];
+  cost?: number;
 }
 
 interface Population {
@@ -167,12 +169,12 @@ export default function FitnessChart({ population, coords, fitnessOverTime }: Fi
     );
   }
 
-  const maxFitness = Math.max(...entries.map(([, v]) => v.fitness));
+  const maxFitness = Math.max(...entries.map(([, v]) => v.fitness ?? 0));
 
   const data: ChartItem[] = entries.map(([key, val], i) => ({
     index: i,
-    bitstring: val.bit,
-    fitness: val.fitness,
+    bitstring: val.bit ?? "",
+    fitness: val.fitness ?? 0,
     name: key,
   }));
 

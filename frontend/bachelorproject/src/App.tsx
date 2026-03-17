@@ -11,8 +11,10 @@ const API_BASE = "http://localhost:8000";
 type Theme = "dark" | "light";
 
 interface Individual {
-  bit: string;
-  fitness: number;
+  bit?: string;
+  fitness?: number;
+  tour?: number[];
+  cost?: number;
 }
 
 interface Population {
@@ -33,6 +35,10 @@ interface ExperimentData {
   history: Generation[];
   coords?: { x: number; y: number }[];
   fitness_over_time?: { generation: number; fitness: number }[];
+  tsp_instance?: string;
+  num_cities?: number;
+  best_cost?: number;
+  best_tour?: number[];
 }
 
 function getStoredTheme(): Theme {
@@ -117,7 +123,7 @@ export default function App() {
         loading={loading}
       />
 
-      <ParametersPanel algorithm={algorithm} params={params} onChange={setParams} />
+      <ParametersPanel algorithm={algorithm} problem={problem} params={params} onChange={setParams} />
 
       {loading ? (
         <div className="loadingWrap">
@@ -138,9 +144,16 @@ export default function App() {
             temp={data!.temp}
             fitnessEvaluations={data!.fitness_evaluations}
             theoreticalRuntime={data!.theoretical_runtime}
+            tspInstance={data!.tsp_instance}
+            numCities={data!.num_cities}
+            bestCost={data!.best_cost}
           />
-          <FitnessChart population={population} coords={data!.coords} fitnessOverTime={data!.fitness_over_time} />
-          <PopulationPanel population={population} />
+          <FitnessChart
+            population={population}
+            coords={data!.coords}
+            fitnessOverTime={data!.fitness_over_time}
+          />
+          <PopulationPanel population={population} problem={data!.problem} />
         </div>
       ) : (
         <div className="emptyState">

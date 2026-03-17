@@ -9,7 +9,7 @@ interface ParamDef {
   step: number;
 }
 
-const ALGORITHM_PARAMS: Record<string, ParamDef[]> = {
+const BITSTRING_PARAMS: Record<string, ParamDef[]> = {
   "(1+1) EA": [
     { key: "bit_length", label: "Bit length", default: 20, min: 2, max: 1000, step: 1 },
     { key: "prob", label: "Mutation prob", default: 0.05, min: 0.001, max: 1, step: 0.001 },
@@ -28,7 +28,7 @@ const ALGORITHM_PARAMS: Record<string, ParamDef[]> = {
     { key: "cooling", label: "Cooling rate", default: 0.99, min: 0.01, max: 0.999, step: 0.001 },
     { key: "T0", label: "Initial temp (T₀)", default: 100, min: 1, max: 10000, step: 1 },
   ],
-  
+
   "ACO": [
     { key: "bit_length", label: "Bit length", default: 100, min: 2, max: 1000, step: 1 },
     { key: "rho", label: "Evaporation (ρ)", default: 0.1, min: 0.01, max: 1, step: 0.01 },
@@ -36,8 +36,41 @@ const ALGORITHM_PARAMS: Record<string, ParamDef[]> = {
   ],
 };
 
-export function getDefaultParams(algorithm: string): Record<string, number> {
-  const defs = ALGORITHM_PARAMS[algorithm] ?? [];
+const TSP_PARAMS: Record<string, ParamDef[]> = {
+  "(1+1) EA": [
+    { key: "max_iterations", label: "Max iterations", default: 10000, min: 100, max: 200000, step: 100 },
+  ],
+
+  "(μ+λ) EA": [
+    { key: "max_iterations", label: "Max iterations", default: 5000, min: 100, max: 50000, step: 100 },
+    { key: "mu_size", label: "μ (parents)", default: 20, min: 2, max: 200, step: 1 },
+    { key: "lambda_size", label: "λ (offspring)", default: 40, min: 2, max: 400, step: 1 },
+    { key: "tournament_k", label: "Tournament k", default: 3, min: 2, max: 20, step: 1 },
+  ],
+
+  "Simulated Annealing": [
+    { key: "max_iterations", label: "Max iterations", default: 100000, min: 1000, max: 500000, step: 1000 },
+    { key: "cooling", label: "Cooling rate", default: 0.9995, min: 0.9, max: 0.99999, step: 0.0001 },
+    { key: "T0", label: "Initial temp (T₀)", default: 1000, min: 1, max: 100000, step: 1 },
+  ],
+
+  "ACO": [
+    { key: "max_iterations", label: "Max iterations", default: 1000, min: 100, max: 50000, step: 100 },
+    { key: "rho", label: "Evaporation (ρ)", default: 0.1, min: 0.01, max: 1, step: 0.01 },
+    { key: "alpha", label: "α (pheromone)", default: 1, min: 0.1, max: 5, step: 0.1 },
+    { key: "beta", label: "β (heuristic)", default: 2, min: 0.1, max: 10, step: 0.1 },
+  ],
+};
+
+function getParamDefs(algorithm: string, problem: string): ParamDef[] {
+  if (problem === "tsp") {
+    return TSP_PARAMS[algorithm] ?? [];
+  }
+  return BITSTRING_PARAMS[algorithm] ?? [];
+}
+
+export function getDefaultParams(algorithm: string, problem = "onemax"): Record<string, number> {
+  const defs = getParamDefs(algorithm, problem);
   const out: Record<string, number> = {};
   for (const d of defs) out[d.key] = d.default;
   return out;
@@ -45,22 +78,23 @@ export function getDefaultParams(algorithm: string): Record<string, number> {
 
 interface ParametersPanelProps {
   algorithm: string;
+  problem: string;
   params: Record<string, number>;
   onChange: (params: Record<string, number>) => void;
 }
 
 export default function ParametersPanel({
   algorithm,
+  problem,
   params,
   onChange,
 }: ParametersPanelProps) {
-  const defs = useMemo(() => ALGORITHM_PARAMS[algorithm] ?? [], [algorithm]);
+  const defs = useMemo(() => getParamDefs(algorithm, problem), [algorithm, problem]);
 
-  // Reset params to defaults when algorithm changes
   useEffect(() => {
-    onChange(getDefaultParams(algorithm));
+    onChange(getDefaultParams(algorithm, problem));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [algorithm]);
+  }, [algorithm, problem]);
 
   if (defs.length === 0) return null;
 

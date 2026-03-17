@@ -104,7 +104,21 @@ def createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_siz
     next_population = selectMuBest(population, offspring, mu=mu_size)
     return next_population, offspring
 
-#TSP
+# TSP
+def order_crossover(parent1, parent2):
+    """Order Crossover (OX) for permutation-based representations."""
+    n = len(parent1)
+    i, j = sorted(random.sample(range(n), 2))
+    child = [None] * n
+    child[i:j+1] = parent1[i:j+1]
+    fill = [x for x in parent2 if x not in child[i:j+1]]
+    pos = 0
+    for k in range(n):
+        if child[k] is None:
+            child[k] = fill[pos]
+            pos += 1
+    return child
+
 def generate_random_ham_cycle(distance_matrix): 
     nodes = list(range(len(distance_matrix)))
     tour = nodes[:]

@@ -2,27 +2,14 @@ import random
 import requests
 import tsplib95
 
-# List of TSPLIB instances from the repo
+# Small TSPLIB instances with EUC_2D coordinates (fast to solve, have city coords)
 TSPLIB_INSTANCES = [
-    "a280", "ali535", "att48", "att532", "bayg29", "bays29",
-    "berlin52", "bier127", "brazil58", "brd14051", "brg180",
-    "burma14", "ch130", "ch150", "d1291", "d15112", "d1655",
-    "d18512", "d198", "d2103", "d493", "d657", "dantzig42",
-    "dsj1000", "eil101", "eil51", "eil76", "fl1400", "fl1577",
-    "fl3795", "fl417", "fnl4461", "fri26", "gil262", "gr120",
-    "gr137", "gr17", "gr202", "gr21", "gr229", "gr24", "gr431",
-    "gr48", "gr666", "gr96", "hk48", "kroA100", "kroA150",
-    "kroA200", "kroB100", "kroB150", "kroB200", "kroC100",
-    "kroD100", "kroE100", "lin105", "lin318", "linhp318",
-    "nrw1379", "p654", "pa561", "pcb1173", "pcb3038", "pcb442",
-    "pla33810", "pla7397", "pla85900", "pr1002", "pr107", "pr124",
-    "pr136", "pr144", "pr152", "pr226", "pr2392", "pr264", "pr299",
-    "pr439", "pr76", "rat195", "rat575", "rat783", "rat99", "rd100",
-    "rd400", "rl11849", "rl1304", "rl1323", "rl1889", "rl5915",
-    "rl5934", "si1032", "si175", "si535", "st70", "swiss42",
-    "ts225", "tsp225", "u1060", "u1432", "u159", "u1817", "u2152",
-    "u2319", "u574", "u724", "ulysses16", "ulysses22", "usa13509",
-    "vm1084", "vm1748",
+    "att48", "berlin52", "burma14", "ch130", "ch150",
+    "eil51", "eil76", "eil101", "fri26", "gr17", "gr21",
+    "gr24", "gr48", "gr96", "gr120", "kroA100", "kroB100",
+    "kroC100", "kroD100", "kroE100", "lin105", "pr76",
+    "pr107", "pr124", "pr136", "pr144", "pr152",
+    "rat99", "rd100", "st70", "ulysses16", "ulysses22",
 ]
 
 BASE_URL = "https://raw.githubusercontent.com/mastqe/tsplib/master"
@@ -37,3 +24,8 @@ def fetch_random_tsp_instance():
     distance_matrix = [
     [problem.get_weight(i, j) for j in nodes] for i in nodes]
     return name, problem, coords, nodes, distance_matrix
+
+
+def tour_cost(tour, distance_matrix):
+    n = len(tour)
+    return sum(distance_matrix[tour[i]][tour[(i + 1) % n]] for i in range(n))

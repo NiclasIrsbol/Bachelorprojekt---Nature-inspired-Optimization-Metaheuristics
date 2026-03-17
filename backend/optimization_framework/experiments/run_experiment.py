@@ -1,5 +1,7 @@
-from optimization_framework.problems import onemax, leadingones
-from optimization_framework.algorithms import simulated_annealing, mu_plus_lambda_EA, one_plus_one_EA, ant_optimization_problem
+from optimization_framework.problems import onemax, leadingones, tsp
+from optimization_framework.algorithms import (
+    simulated_annealing, mu_plus_lambda_EA, one_plus_one_EA, ant_optimization_problem,
+)
 import json
 from pathlib import Path
 from functools import partial
@@ -20,27 +22,85 @@ SOLVERS = {
     ("leadingones", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, leadingones.fitnessLeadingOnes),
 }
 
+TSP_SOLVERS = {
+    "(1+1) EA": one_plus_one_EA.OnePlusOneEATSP,
+    "Simulated Annealing": simulated_annealing.simulated_annealingTSP,
+    "(μ+λ) EA": mu_plus_lambda_EA.MuPlusLambdaEATSP,
+    "ACO": ant_optimization_problem.ant_colony_optimizationTSP,
+}
+
 DISPLAY_NAMES = {
     "(μ+λ) EA": "(μ+λ) EA",
     "(1+1) EA": "(1+1) EA",
     "Simulated Annealing": "Simulated Annealing",
-    "ACO": "ACO"
+    "ACO": "ACO",
 }
 
 THEORETICAL_RUNTIME = {
     ("onemax", "(μ+λ) EA"): "O(n log n)",
     ("onemax", "(1+1) EA"): "O(n log n)",
     ("onemax", "Simulated Annealing"): "O(n log n)",
-    ("leadingones", "(μ+λ) EA"): "O(n\u00b2)",
-    ("leadingones", "(1+1) EA"): "O(n\u00b2)",
-    ("leadingones", "Simulated Annealing"): "O(n\u00b2)",
+    ("leadingones", "(μ+λ) EA"): "O(n²)",
+    ("leadingones", "(1+1) EA"): "O(n²)",
+    ("leadingones", "Simulated Annealing"): "O(n²)",
     ("onemax", "ACO"): "O(n log n)",
-    ("leadingones", "ACO"): "O(n\u00b2 log n)",
+    ("leadingones", "ACO"): "O(n² log n)",
 }
 
-def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params={}):
-    if params is None:
-        params = {}
+
+def _run_tsp(algorithm_name, params):
+    solver = TSP_SOLVERS.get(algorithm_name)
+    if not solver:
+        raise ValueError(f"Unknown TSP algorithm: {algorithm_name}")
+
+    instance_name, _problem, city_coords, _nodes, distance_matrix = tsp.fetch_random_tsp_instance()
+    raw = solver(distance_matrix, city_coords, **params)
+
+    if not isinstance(raw, tuple):
+        raise TypeError(f"TSP solver must return a tuple, got {type(raw).__name__}")
+
+    best_tour, iterations, temp, population, fitness_evaluations, tour_coords, cost_over_time = raw
+
+    best_cost = tsp.tour_cost(best_tour, distance_matrix)
+
+    if not population:
+        population = {"Best": {"tour": best_tour, "cost": best_cost}}
+
+    display_name = DISPLAY_NAMES.get(algorithm_name, algorithm_name)
+
+    result = {
+        "problem": "tsp",
+        "algorithm": display_name,
+        "tsp_instance": instance_name,
+        "num_cities": len(distance_matrix),
+        "iterations": iterations,
+        "temp": temp,
+        "fitness_evaluations": fitness_evaluations,
+        "theoretical_runtime": "NP-hard",
+        "best_cost": best_cost,
+        "best_tour": best_tour,
+        "history": [{"Population": population}],
+    }
+
+    if tour_coords is not None:
+        result["coords"] = [{"x": x, "y": y} for x, y in tour_coords]
+
+    city_coords_list = {}
+    node_ids = sorted(city_coords.keys())
+    for idx, nid in enumerate(node_ids):
+        city_coords_list[str(idx)] = city_coords[nid]
+    result["city_coords"] = city_coords_list
+
+    if cost_over_time is not None:
+        result["fitness_over_time"] = [
+            {"generation": i, "fitness": c} for i, c in enumerate(cost_over_time)
+        ]
+
+    _save_result(result)
+    return result
+
+
+def _run_bitstring(problem_name, algorithm_name, params):
     solver = SOLVERS.get((problem_name, algorithm_name))
     if not solver:
         raise ValueError(f"Unknown combination: {problem_name} + {algorithm_name}")
@@ -88,11 +148,7 @@ def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params={}):
         "temp": temp,
         "fitness_evaluations": fitness_evaluations,
         "theoretical_runtime": theoretical,
-        "history": [
-            {
-                "Population": population
-            },
-        ],
+        "history": [{"Population": population}],
     }
 
     if coords is not None:
@@ -103,14 +159,27 @@ def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params={}):
             {"generation": i, "fitness": f} for i, f in enumerate(fitness_over_time)
         ]
 
+    _save_result(result)
+    return result
+
+
+def _save_result(result):
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
-
     output_file = output_dir / "latest_run.json"
     with open(output_file, "w") as f:
         json.dump(result, f, indent=2)
 
-    return result
+
+def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params=None):
+    if params is None:
+        params = {}
+
+    if problem_name == "tsp":
+        return _run_tsp(algorithm_name, params)
+
+    return _run_bitstring(problem_name, algorithm_name, params)
+
 
 if __name__ == "__main__":
     import sys
