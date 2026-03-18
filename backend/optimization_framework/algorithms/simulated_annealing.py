@@ -1,6 +1,8 @@
 from optimization_framework.operators import gaoperators
 import math
 import random
+from optimization_framework.problems.tsp import tour_cost
+
 
 # Bitstrings
 def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=None):
@@ -43,11 +45,8 @@ def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=
     return best, iterations, T, {}, fitness_evaluations, coords, fitness_over_time
 
 # TSP
-def simulated_annealingTSP(distance_matrix, city_coords,
-                           cooling=0.9995, T0=1000.0, max_iterations=100000):
-    from optimization_framework.problems.tsp import tour_cost
+def simulated_annealingTSP(distance_matrix, city_coords, cooling=0.9995, T0=1000.0, max_iterations=100000):
 
-    n = len(distance_matrix)
     current = gaoperators.generate_random_ham_cycle(distance_matrix)
     current_cost = tour_cost(current, distance_matrix)
     best = current[:]
@@ -59,7 +58,7 @@ def simulated_annealingTSP(distance_matrix, city_coords,
     tour_coords = _tour_to_coords(best, city_coords)
     cost_over_time = [best_cost]
 
-    for iteration in range(max_iterations):
+    for _ in range(max_iterations):
         iterations += 1
         neighbor = gaoperators.two_opt_mutation(current)
         neighbor_cost = tour_cost(neighbor, distance_matrix)
@@ -85,7 +84,6 @@ def simulated_annealingTSP(distance_matrix, city_coords,
         T *= cooling
 
     return best, iterations, T, {}, fitness_evaluations, tour_coords, cost_over_time
-
 
 def _tour_to_coords(tour, city_coords):
     """Convert a tour (list of 0-based indices) to (x, y) in tour order."""

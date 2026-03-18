@@ -1,5 +1,6 @@
 import random
 from optimization_framework.operators.gaoperators import map_bitstring
+from optimization_framework.problems.tsp import tour_cost
 
 # Bitstrings
 def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=10000):
@@ -71,9 +72,7 @@ def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=
     return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time
 
 # TSP
-def ant_colony_optimizationTSP(distance_matrix, city_coords,
-                                rho=0.1, max_iterations=1000,
-                                alpha=1, beta=2):
+def ant_colony_optimizationTSP(distance_matrix, city_coords, rho=0.1, max_iterations=1000, alpha=1, beta=2):
     """MMAS* for TSP (Kötzing, Neumann, Röglin, Witt).
 
     Algorithm 1 — MMAS* on G = (V, E):
@@ -88,7 +87,6 @@ def ant_colony_optimizationTSP(distance_matrix, city_coords,
     Algorithm 2 — construct: choose edges with prob ∝ τ^α · η^β
     Update: τ'(e) = min{(1-ρ)·τ(e)+ρ, τ_max} if e ∈ E(x*), else max{(1-ρ)·τ(e), τ_min}
     """
-    from optimization_framework.problems.tsp import tour_cost
 
     n = len(distance_matrix)
     tau_min = 1 / n
@@ -153,7 +151,7 @@ def ant_colony_optimizationTSP(distance_matrix, city_coords,
     cost_over_time = [best_cost]
     iterations = 0
 
-    for iteration in range(max_iterations):
+    for _ in range(max_iterations):
         iterations += 1
         x = construct()
         x_cost = tour_cost(x, distance_matrix)
@@ -169,7 +167,6 @@ def ant_colony_optimizationTSP(distance_matrix, city_coords,
     tour_coords = _tour_to_coords(best_tour, city_coords)
     population = {"Solution": {"tour": best_tour, "cost": best_cost}}
     return best_tour, iterations, 0.0, population, fitness_evaluations, tour_coords, cost_over_time
-
 
 def _tour_to_coords(tour, city_coords):
     """Convert a tour (list of 0-based indices) to (x, y) in tour order."""

@@ -1,4 +1,5 @@
 from optimization_framework.operators import gaoperators
+from optimization_framework.problems.tsp import tour_cost
 
 # Bitstrings
 def OnePlusOneEA(fitness_fn, bit_length=20, prob=None):
@@ -29,7 +30,6 @@ def OnePlusOneEA(fitness_fn, bit_length=20, prob=None):
 
 # TSP
 def OnePlusOneEATSP(distance_matrix, city_coords, max_iterations=10000):
-    from optimization_framework.problems.tsp import tour_cost
 
     n = len(distance_matrix)
     current = gaoperators.generate_random_ham_cycle(distance_matrix)
@@ -42,7 +42,7 @@ def OnePlusOneEATSP(distance_matrix, city_coords, max_iterations=10000):
     tour_coords = _tour_to_coords(best, city_coords)
     cost_over_time = [best_cost]
 
-    for iteration in range(max_iterations):
+    for _ in range(max_iterations):
         iterations += 1
         neighbor = gaoperators.two_opt_mutation(current)
         neighbor_cost = tour_cost(neighbor, distance_matrix)
@@ -59,7 +59,6 @@ def OnePlusOneEATSP(distance_matrix, city_coords, max_iterations=10000):
         cost_over_time.append(best_cost)
 
     return best, iterations, 0.0, {}, fitness_evaluations, tour_coords, cost_over_time
-
 
 def _tour_to_coords(tour, city_coords):
     """Convert a tour (list of 0-based indices) to (x, y) in tour order."""

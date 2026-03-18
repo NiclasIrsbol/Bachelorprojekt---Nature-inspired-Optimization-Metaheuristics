@@ -1,4 +1,7 @@
 from optimization_framework.operators import gaoperators
+import random
+from optimization_framework.problems.tsp import tour_cost
+
 
 # Bitstrings
 def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tournament_k=3, mutation_prob=None):
@@ -24,13 +27,7 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tourna
     return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time
 
 # TSP
-def MuPlusLambdaEATSP(distance_matrix, city_coords,
-                       mu_size=20, lambda_size=40, tournament_k=3,
-                       max_iterations=5000):
-    import random
-    from optimization_framework.problems.tsp import tour_cost
-
-    n = len(distance_matrix)
+def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, tournament_k=3, max_iterations=5000):
 
     population = []
     for _ in range(mu_size):
@@ -44,7 +41,7 @@ def MuPlusLambdaEATSP(distance_matrix, city_coords,
     cost_over_time = [best["cost"]]
     iterations = 0
 
-    for iteration in range(max_iterations):
+    for _ in range(max_iterations):
         iterations += 1
         offspring = []
         for _ in range(lambda_size):
@@ -71,7 +68,6 @@ def MuPlusLambdaEATSP(distance_matrix, city_coords,
         for i, ind in enumerate(population)
     }
     return best["tour"], iterations, 0.0, pop_dict, fitness_evaluations, tour_coords, cost_over_time
-
 
 def _tour_to_coords(tour, city_coords):
     """Convert a tour (list of 0-based indices) to (x, y) in tour order."""
