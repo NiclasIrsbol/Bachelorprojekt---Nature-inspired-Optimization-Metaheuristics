@@ -35,8 +35,12 @@ interface FitnessOverTimeEntry {
 
 interface FitnessChartProps {
   population: Population;
+  problem?: string;
   coords?: Coord[];
   fitnessOverTime?: FitnessOverTimeEntry[];
+  cityCoords?: Record<string, [number, number]>;
+  bestTour?: number[];
+  tourMapImage?: string;
 }
 
 interface ChartItem {
@@ -90,6 +94,104 @@ function CirclePlotInner({ coords }: { coords: Coord[] }) {
   );
 }
 
+const TOUR_SIZE = 400;
+const TOUR_PAD = 30;
+
+function TspTourMap({
+  cityCoords,
+  bestTour,
+}: {
+  cityCoords: Record<string, [number, number]>;
+  bestTour: number[];
+}) {
+  const allPts = Object.values(cityCoords);
+  if (allPts.length === 0) return null;
+
+  const xs = allPts.map((p) => p[0]);
+  const ys = allPts.map((p) => p[1]);
+  const minX = Math.min(...xs);
+  const maxX = Math.max(...xs);
+  const minY = Math.min(...ys);
+  const maxY = Math.max(...ys);
+
+  const rangeX = maxX - minX || 1;
+  const rangeY = maxY - minY || 1;
+  const scale = (TOUR_SIZE - 2 * TOUR_PAD) / Math.max(rangeX, rangeY);
+
+  const norm = (x: number, y: number) => ({
+    sx: TOUR_PAD + (x - minX) * scale,
+    sy: TOUR_PAD + (y - minY) * scale,
+  });
+
+  const tourPts = bestTour.map((i) => {
+    const c = cityCoords[String(i)];
+    return c ? norm(c[0], c[1]) : null;
+  }).filter(Boolean) as { sx: number; sy: number }[];
+
+  const polyline =
+    tourPts.length > 0
+      ? [...tourPts, tourPts[0]].map((p) => `${p.sx},${p.sy}`).join(" ")
+      : "";
+
+  const allNormed = Object.entries(cityCoords).map(([, c]) => norm(c[0], c[1]));
+
+  return (
+    <div
+      className="vizBody"
+      style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
+    >
+      <svg
+        width={TOUR_SIZE}
+        height={TOUR_SIZE}
+        viewBox={`0 0 ${TOUR_SIZE} ${TOUR_SIZE}`}
+        style={{ overflow: "visible" }}
+      >
+        {polyline && (
+          <polyline
+            points={polyline}
+            fill="none"
+            stroke="var(--accent)"
+            strokeWidth={1.5}
+            strokeLinejoin="round"
+            opacity={0.8}
+          />
+        )}
+
+        {allNormed.map((p, i) => (
+          <circle
+            key={i}
+            cx={p.sx}
+            cy={p.sy}
+            r={3}
+            fill="var(--text-muted)"
+            opacity={0.5}
+          />
+        ))}
+
+        {tourPts.length > 0 && (
+          <>
+            <circle
+              cx={tourPts[0].sx}
+              cy={tourPts[0].sy}
+              r={6}
+              fill="var(--accent)"
+            />
+            <text
+              x={tourPts[0].sx}
+              y={tourPts[0].sy - 10}
+              textAnchor="middle"
+              fontSize={10}
+              fill="var(--accent)"
+            >
+              start
+            </text>
+          </>
+        )}
+      </svg>
+    </div>
+  );
+}
+
 function FitnessLineChart({ data }: { data: FitnessOverTimeEntry[] }) {
   return (
     <div className="vizBody">
@@ -127,12 +229,17 @@ function FitnessLineChart({ data }: { data: FitnessOverTimeEntry[] }) {
   );
 }
 
-export default function FitnessChart({ population, coords, fitnessOverTime }: FitnessChartProps) {
-  const hasCoords = coords && coords.length > 0;
+export default function FitnessChart({ population, problem, coords, fitnessOverTime, cityCoords, bestTour, tourMapImage }: FitnessChartProps) {
+  const isTsp = problem === "tsp";
+  const hasTourMap = isTsp && (tourMapImage || (cityCoords && bestTour && bestTour.length > 0));
+  const hasCoords = !isTsp && coords && coords.length > 0;
   const hasFot = fitnessOverTime && fitnessOverTime.length > 0;
-  const [view, setView] = useState<"search-path" | "fitness-chart">(hasCoords ? "search-path" : "fitness-chart");
 
-  if (hasCoords || hasFot) {
+  type ViewType = "tour-map" | "search-path" | "fitness-chart";
+  const defaultView: ViewType = hasTourMap ? "tour-map" : hasCoords ? "search-path" : "fitness-chart";
+  const [view, setView] = useState<ViewType>(defaultView);
+
+  if (hasTourMap || hasCoords || hasFot) {
     return (
       <div className="card viz">
         <div className="cardHeader">
@@ -140,12 +247,26 @@ export default function FitnessChart({ population, coords, fitnessOverTime }: Fi
           <select
             className="dropDown"
             value={view}
-            onChange={(e) => setView(e.target.value as "search-path" | "fitness-chart")}
+            onChange={(e) => setView(e.target.value as ViewType)}
           >
+            {hasTourMap && <option value="tour-map">Tour map</option>}
             {hasCoords && <option value="search-path">Search path</option>}
             {hasFot && <option value="fitness-chart">Fitness chart</option>}
           </select>
         </div>
+        {view === "tour-map" && hasTourMap && (
+          tourMapImage ? (
+            <div className="vizBody" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img
+                src={`data:image/png;base64,${tourMapImage}`}
+                alt="TSP Tour Map"
+                style={{ maxWidth: "100%", maxHeight: 500, borderRadius: 8 }}
+              />
+            </div>
+          ) : (
+            <TspTourMap cityCoords={cityCoords!} bestTour={bestTour!} />
+          )
+        )}
         {view === "search-path" && hasCoords && <CirclePlotInner coords={coords} />}
         {view === "fitness-chart" && hasFot && <FitnessLineChart data={fitnessOverTime} />}
       </div>

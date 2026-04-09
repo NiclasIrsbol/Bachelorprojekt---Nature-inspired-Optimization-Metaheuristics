@@ -3,7 +3,11 @@ Name: optimization-framework
 Version: 0.1.0
 Requires-Python: >=3.10
 Requires-Dist: numpy
+Requires-Dist: matplotlib
 Requires-Dist: fastapi
 Requires-Dist: uvicorn[standard]
+Requires-Dist: requests
+Requires-Dist: tsplib95
+Requires-Dist: networkx
 Provides-Extra: test
 Requires-Dist: pytest; extra == "test"

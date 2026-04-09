@@ -2,6 +2,7 @@ from optimization_framework.problems import onemax, leadingones, tsp
 from optimization_framework.algorithms import (
     simulated_annealing, mu_plus_lambda_EA, one_plus_one_EA, ant_optimization_problem,
 )
+from optimization_framework.experiments.tsp_visualization import generate_tour_map
 import json
 from pathlib import Path
 from functools import partial
@@ -95,6 +96,15 @@ def _run_tsp(algorithm_name, params):
         result["fitness_over_time"] = [
             {"generation": i, "fitness": c} for i, c in enumerate(cost_over_time)
         ]
+
+    try:
+        tour_image = generate_tour_map(
+            city_coords_list, best_tour, distance_matrix, instance_name,
+        )
+        if tour_image:
+            result["tour_map_image"] = tour_image
+    except Exception:
+        pass
 
     _save_result(result)
     return result

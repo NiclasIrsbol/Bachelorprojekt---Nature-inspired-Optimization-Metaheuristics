@@ -1,6 +1,10 @@
 numpy
+matplotlib
 fastapi
 uvicorn[standard]
+requests
+tsplib95
+networkx
 
 [test]
 pytest

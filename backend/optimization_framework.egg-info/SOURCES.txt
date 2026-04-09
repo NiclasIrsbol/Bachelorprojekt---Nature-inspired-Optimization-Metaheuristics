@@ -12,6 +12,12 @@ optimization_framework/algorithms/one_plus_one_EA.py
 optimization_framework/algorithms/simulated_annealing.py
 optimization_framework/experiments/__init__.py
 optimization_framework/experiments/run_experiment.py
+optimization_framework/experiments/tsp_visualization.py
 optimization_framework/operators/gaoperators.py
 optimization_framework/problems/leadingones.py
 optimization_framework/problems/onemax.py
+optimization_framework/problems/tsp.py
+tests/test_ACO.py
+tests/test_SA.py
+tests/test_leadingones.py
+tests/test_onemax.py

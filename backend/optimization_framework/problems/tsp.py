@@ -1,28 +1,50 @@
+import os
 import random
-import requests
 import tsplib95
 
-# Small TSPLIB instances with EUC_2D coordinates (fast to solve, have city coords)
+TSPLIB_DIR = os.path.join(os.path.dirname(__file__), "tsplib")
+
+# TSPLIB instances with NODE_COORD_SECTION and <= 300 cities
 TSPLIB_INSTANCES = [
-    "att48", "berlin52", "burma14", "ch130", "ch150",
-    "eil51", "eil76", "eil101", "fri26", "gr17", "gr21",
-    "gr24", "gr48", "gr96", "gr120", "kroA100", "kroB100",
-    "kroC100", "kroD100", "kroE100", "lin105", "pr76",
-    "pr107", "pr124", "pr136", "pr144", "pr152",
-    "rat99", "rd100", "st70", "ulysses16", "ulysses22",
+    "a280", "att48", "berlin52", "bier127", "burma14",
+    "ch130", "ch150", "d198", "eil101", "eil51", "eil76",
+    "gil262", "gr137", "gr202", "gr229", "gr96",
+    "kroA100", "kroA150", "kroA200", "kroB100", "kroB150",
+    "kroB200", "kroC100", "kroD100", "kroE100", "lin105",
+    "pr107", "pr124", "pr136", "pr144", "pr152", "pr226",
+    "pr264", "pr299", "pr76", "rat195", "rat99", "rd100",
+    "st70", "ts225", "tsp225", "u159", "ulysses16", "ulysses22",
 ]
 
-BASE_URL = "https://raw.githubusercontent.com/mastqe/tsplib/master"
+# --- Commented out for now: large instances (> 300 cities) for benchmarking later ---
+# "ali535", "att532", "d1291", "d1655", "d2103", "d493", "d657",
+# "dsj1000", "fl1400", "fl1577", "fl3795", "fl417", "fnl4461",
+# "gr431", "gr666", "lin318", "linhp318", "nrw1379", "p654",
+# "pcb1173", "pcb3038", "pcb442", "pr1002", "pr2392", "pr439",
+# "rat575", "rat783", "rd400", "rl1304", "rl1323", "rl1889",
+# "rl5915", "rl5934", "rl11849", "u574", "u724", "u1060",
+# "u1432", "u1817", "u2152", "u2319", "vm1084", "vm1748",
+# "brd14051", "d15112", "d18512", "pla7397", "pla33810",
+# "pla85900", "usa13509"
+#
+# --- Commented out: no NODE_COORD_SECTION (can't visualize) ---
+# "bayg29", "bays29", "brazil58", "brg180", "dantzig42",
+# "fri26", "gr17", "gr21", "gr24", "gr48", "gr120",
+# "hk48", "swiss42", "pa561", "si175", "si535", "si1032"
 
 def fetch_random_tsp_instance():
     name = random.choice(TSPLIB_INSTANCES)
-    url = f"{BASE_URL}/{name}.tsp"
-    response = requests.get(url, timeout=10)
-    problem = tsplib95.parse(response.text)
+    filepath = os.path.join(TSPLIB_DIR, f"{name}.tsp")
+
+    with open(filepath) as f:
+        text = f.read()
+
+    problem = tsplib95.parse(text)
     coords = problem.node_coords
     nodes = list(problem.get_nodes())
     distance_matrix = [
-    [problem.get_weight(i, j) for j in nodes] for i in nodes]
+        [problem.get_weight(i, j) for j in nodes] for i in nodes
+    ]
     return name, problem, coords, nodes, distance_matrix
 
 

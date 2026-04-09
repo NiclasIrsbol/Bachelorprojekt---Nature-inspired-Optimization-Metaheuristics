@@ -10,6 +10,7 @@ dependencies = [
   "uvicorn[standard]",
   "requests",
   "tsplib95",
+  "networkx",
 ]
 
 [tool.setuptools.packages.find]

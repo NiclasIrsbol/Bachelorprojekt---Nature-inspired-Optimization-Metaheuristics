@@ -39,6 +39,8 @@ interface ExperimentData {
   num_cities?: number;
   best_cost?: number;
   best_tour?: number[];
+  city_coords?: Record<string, [number, number]>;
+  tour_map_image?: string;
 }
 
 function getStoredTheme(): Theme {
@@ -150,8 +152,12 @@ export default function App() {
           />
           <FitnessChart
             population={population}
+            problem={data!.problem}
             coords={data!.coords}
             fitnessOverTime={data!.fitness_over_time}
+            cityCoords={data!.city_coords}
+            bestTour={data!.best_tour}
+            tourMapImage={data!.tour_map_image}
           />
           <PopulationPanel population={population} problem={data!.problem} />
         </div>
