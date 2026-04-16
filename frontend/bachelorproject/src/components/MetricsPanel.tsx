@@ -13,7 +13,7 @@ interface MetricsPanelProps {
   population: Population;
   algorithm: string;
   problem: string;
-  temp: number;
+  temp?: number;
   iterations: number;
   fitnessEvaluations: number;
   theoreticalRuntime: string;
@@ -62,7 +62,9 @@ export default function MetricsPanel({
     metrics.push({ label: "Average Fitness", value: avg.toFixed(2) });
   }
 
-  metrics.push({ label: "Temperature", value: temp });
+  if (algorithm === "Simulated Annealing" && temp !== undefined) {
+    metrics.push({ label: "Temperature", value: temp });
+  }
   metrics.push({ label: "Iterations", value: iterations });
   metrics.push({ label: "Fitness Evaluations", value: fitnessEvaluations.toLocaleString() });
   metrics.push({ label: "Theoretical Complexity", value: theoreticalRuntime });

@@ -34,6 +34,14 @@ const BITSTRING_PARAMS: Record<string, ParamDef[]> = {
     { key: "rho", label: "Evaporation (ρ)", default: 0.1, min: 0.01, max: 1, step: 0.01 },
     { key: "max_iterations", label: "Max iterations", default: 10000, min: 100, max: 100000, step: 100 },
   ],
+
+  "PACO": [
+    { key: "bit_length", label: "Bit length", default: 100, min: 2, max: 1000, step: 1 },
+    { key: "archive_size", label: "Archive size (K)", default: 10, min: 2, max: 100, step: 1 },
+    { key: "num_ants", label: "Number of ants", default: 30, min: 1, max: 200, step: 1 },
+    { key: "q0", label: "Greedy prob (q₀)", default: 0.9, min: 0, max: 1, step: 0.05 },
+    { key: "max_iterations", label: "Max iterations", default: 10000, min: 100, max: 100000, step: 100 },
+  ],
 };
 
 const TSP_PARAMS: Record<string, ParamDef[]> = {
@@ -59,6 +67,15 @@ const TSP_PARAMS: Record<string, ParamDef[]> = {
     { key: "rho", label: "Evaporation (ρ)", default: 0.1, min: 0.01, max: 1, step: 0.01 },
     { key: "alpha", label: "α (pheromone)", default: 1, min: 0.1, max: 5, step: 0.1 },
     { key: "beta", label: "β (heuristic)", default: 2, min: 0.1, max: 10, step: 0.1 },
+  ],
+
+  "PACO": [
+    { key: "max_iterations", label: "Max iterations", default: 1000, min: 100, max: 50000, step: 100 },
+    { key: "archive_size", label: "Archive size (K)", default: 10, min: 2, max: 100, step: 1 },
+    { key: "num_ants", label: "Number of ants", default: 30, min: 1, max: 200, step: 1 },
+    { key: "alpha", label: "α (pheromone)", default: 1, min: 0.1, max: 5, step: 0.1 },
+    { key: "beta", label: "β (heuristic)", default: 2, min: 0.1, max: 10, step: 0.1 },
+    { key: "q0", label: "Greedy prob (q₀)", default: 0.9, min: 0, max: 1, step: 0.05 },
   ],
 };
 

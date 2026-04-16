@@ -16,11 +16,13 @@ SOLVERS = {
     ("onemax", "(μ+λ) EA"): partial(mu_plus_lambda_EA.MuPlusLambdaEA, onemax.fitnessOnemax),
     ("onemax", "(1+1) EA"): partial(one_plus_one_EA.OnePlusOneEA, onemax.fitnessOnemax),
     ("onemax", "Simulated Annealing"): partial(simulated_annealing.simulated_annealing, onemax.fitnessOnemax),
+    ("onemax", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, onemax.fitnessOnemax),
+    ("onemax", "PACO"): partial(ant_optimization_problem.population_based_aco, onemax.fitnessOnemax),
     ("leadingones", "(μ+λ) EA"): partial(mu_plus_lambda_EA.MuPlusLambdaEA, leadingones.fitnessLeadingOnes),
     ("leadingones", "(1+1) EA"): partial(one_plus_one_EA.OnePlusOneEA, leadingones.fitnessLeadingOnes),
     ("leadingones", "Simulated Annealing"): partial(simulated_annealing.simulated_annealing, leadingones.fitnessLeadingOnes),
-    ("onemax", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, onemax.fitnessOnemax),
     ("leadingones", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, leadingones.fitnessLeadingOnes),
+    ("leadingones", "PACO"): partial(ant_optimization_problem.population_based_aco, leadingones.fitnessLeadingOnes),
 }
 
 TSP_SOLVERS = {
@@ -28,6 +30,7 @@ TSP_SOLVERS = {
     "Simulated Annealing": simulated_annealing.simulated_annealingTSP,
     "(μ+λ) EA": mu_plus_lambda_EA.MuPlusLambdaEATSP,
     "ACO": ant_optimization_problem.ant_colony_optimizationTSP,
+    "PACO": ant_optimization_problem.population_based_acoTSP,
 }
 
 DISPLAY_NAMES = {
@@ -35,17 +38,20 @@ DISPLAY_NAMES = {
     "(1+1) EA": "(1+1) EA",
     "Simulated Annealing": "Simulated Annealing",
     "ACO": "ACO",
+    "PACO": "PACO",
 }
 
 THEORETICAL_RUNTIME = {
     ("onemax", "(μ+λ) EA"): "O(n log n)",
     ("onemax", "(1+1) EA"): "O(n log n)",
     ("onemax", "Simulated Annealing"): "O(n log n)",
+    ("onemax", "ACO"): "O(n log n)",
+    ("onemax", "PACO"): "O(n log n)",
     ("leadingones", "(μ+λ) EA"): "O(n²)",
     ("leadingones", "(1+1) EA"): "O(n²)",
     ("leadingones", "Simulated Annealing"): "O(n²)",
-    ("onemax", "ACO"): "O(n log n)",
     ("leadingones", "ACO"): "O(n² log n)",
+    ("leadingones", "PACO"): "O(n² log n)",
 }
 
 
@@ -75,13 +81,15 @@ def _run_tsp(algorithm_name, params):
         "tsp_instance": instance_name,
         "num_cities": len(distance_matrix),
         "iterations": iterations,
-        "temp": temp,
         "fitness_evaluations": fitness_evaluations,
         "theoretical_runtime": "NP-hard",
         "best_cost": best_cost,
         "best_tour": best_tour,
         "history": [{"Population": population}],
     }
+    
+    if algorithm_name == "Simulated Annealing":
+        result["temp"] = temp
 
     if tour_coords is not None:
         result["coords"] = [{"x": x, "y": y} for x, y in tour_coords]
@@ -155,11 +163,13 @@ def _run_bitstring(problem_name, algorithm_name, params):
         "problem": problem_name,
         "algorithm": display_name,
         "iterations": iterations,
-        "temp": temp,
         "fitness_evaluations": fitness_evaluations,
         "theoretical_runtime": theoretical,
         "history": [{"Population": population}],
     }
+    
+    if algorithm_name == "Simulated Annealing":
+        result["temp"] = temp
 
     if coords is not None:
         result["coords"] = [{"x": x, "y": y} for x, y in coords]

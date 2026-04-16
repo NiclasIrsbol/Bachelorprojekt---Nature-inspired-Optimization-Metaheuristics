@@ -29,7 +29,7 @@ interface ExperimentData {
   problem: string;
   algorithm: string;
   iterations: number;
-  temp: number;
+  temp?: number;
   fitness_evaluations: number;
   theoretical_runtime: string;
   history: Generation[];
@@ -143,7 +143,7 @@ export default function App() {
             algorithm={data!.algorithm}
             problem={data!.problem}
             iterations={data!.iterations}
-            temp={data!.temp}
+            temp={data!.temp ?? 0}
             fitnessEvaluations={data!.fitness_evaluations}
             theoreticalRuntime={data!.theoretical_runtime}
             tspInstance={data!.tsp_instance}
