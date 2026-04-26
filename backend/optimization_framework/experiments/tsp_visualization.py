@@ -74,7 +74,7 @@ def generate_tour_map(city_coords, best_tour, distance_matrix, instance_name="")
     )
 
     # -- draw regular nodes -------------------------------------------------
-    regular_nodes = [node for node in best_tour[1:]]
+    regular_nodes = [node for node in best_tour[1:-1]]
     nx.draw_networkx_nodes(
         G, pos, nodelist=regular_nodes,
         node_size=20, node_color="white", alpha=0.55, ax=ax,
@@ -91,6 +91,19 @@ def generate_tour_map(city_coords, best_tour, distance_matrix, instance_name="")
         "start", (start_x, start_y),
         textcoords="offset points", xytext=(0, 10),
         ha="center", fontsize=9, color="#646cff", fontweight="bold",
+    )
+
+    # -- draw end node -------------------------------------------------------
+    nx.draw_networkx_nodes(
+        G, pos, nodelist=[best_tour[-1]],
+        node_size=100, node_color="#34d399", edgecolors="white",
+        linewidths=1.2, ax=ax,
+    )
+    end_x, end_y = pos[best_tour[-1]]
+    ax.annotate(
+        "end", (end_x, end_y),
+        textcoords="offset points", xytext=(0, -15),
+        ha="center", fontsize=9, color="#34d399", fontweight="bold",
     )
 
     # -- city labels (small instances only) ---------------------------------

@@ -185,6 +185,21 @@ function TspTourMap({
             >
               start
             </text>
+            <circle
+              cx={tourPts[tourPts.length - 1].sx}
+              cy={tourPts[tourPts.length - 1].sy}
+              r={6}
+              fill="#34d399"
+            />
+            <text
+              x={tourPts[tourPts.length - 1].sx}
+              y={tourPts[tourPts.length - 1].sy + 16}
+              textAnchor="middle"
+              fontSize={10}
+              fill="#34d399"
+            >
+              end
+            </text>
           </>
         )}
       </svg>
