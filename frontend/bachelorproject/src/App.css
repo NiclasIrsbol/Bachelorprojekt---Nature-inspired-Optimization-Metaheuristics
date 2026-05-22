@@ -3,7 +3,7 @@
   margin: 24px auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
 .topBar {
@@ -53,7 +53,7 @@
   border: 1px solid var(--card-border);
   background: var(--card-bg);
   border-radius: 14px;
-  padding: 14px;
+  padding: 10px;
 }
 
 .cardHeader {
@@ -68,6 +68,28 @@
   margin: 0;
   font-size: 1rem;
   font-weight: 650;
+}
+
+.downloadButton {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: border-color 0.2s, background 0.2s;
+  padding: 0;
+}
+
+.downloadButton:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 .dropDown {
@@ -95,7 +117,7 @@
 
 
 .controlPanel {
-  padding: 14px;
+  padding: 10px;
 }
 
 .controlRow {
@@ -153,7 +175,7 @@
 .grid {
   display: grid;
   grid-template-columns: 280px 1fr 300px;
-  gap: 16px;
+  gap: 8px;
   align-items: start;
 }
 
@@ -330,33 +352,36 @@
   display: flex;
   flex-wrap: wrap;
   align-items: end;
-  gap: 12px;
+  gap: 8px;
 }
 
 .paramTitle {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 650;
   color: var(--text-muted);
   width: 100%;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .paramField {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  min-width: 120px;
+  gap: 3px;
+  min-width: 100px;
 }
 
 .paramInput {
-  height: 40px;
-  border-radius: 10px;
+  height: 32px;
+  border-radius: 8px;
   border: 1px solid var(--input-border);
   background: var(--input-bg);
   color: var(--text);
-  padding: 0 10px;
+  padding: 0 8px;
   font-family: inherit;
-  font-size: 0.9rem;
-  width: 130px;
+  font-size: 0.8rem;
+  width: 110px;
 }
 
 .paramInput:focus {
@@ -372,4 +397,113 @@
   .controlRow {
     grid-template-columns: 1fr;
   }
+}
+
+.paramAndTspWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+@media (max-width: 980px) {
+  .paramAndTspWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TSP Instance Selector Styles */
+.tspSelectorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.searchInput {
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.instanceList {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--input-bg);
+}
+
+.instanceList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.instanceList::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+.instanceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--card-border);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.instanceItem:last-child {
+  border-bottom: none;
+}
+
+.instanceItem:hover {
+  background-color: var(--metric-bg);
+}
+
+.instanceItem.selected {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.instanceItem.selected .instanceName,
+.instanceItem.selected .instanceCities {
+  color: #fff;
+}
+
+.instanceName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.instanceCities {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.noResults {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.selectedInstance {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--metric-bg);
+  border: 1px solid var(--metric-border);
+  font-size: 0.85rem;
+  color: var(--text);
+  text-align: center;
 }

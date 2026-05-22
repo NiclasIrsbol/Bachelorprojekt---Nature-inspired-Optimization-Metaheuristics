@@ -37,6 +37,27 @@ export default function MetricsPanel({
   const entries = Object.values(population);
   const isTsp = problem === "tsp";
 
+  const handleDownloadCSV = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/export-csv");
+      if (!response.ok) throw new Error("Failed to download");
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      const contentDisposition = response.headers.get("content-disposition");
+      const filename = contentDisposition?.split("filename=")[1]?.replace(/"/g, "") || "results.csv";
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Error downloading CSV:", err);
+      alert("Failed to download CSV");
+    }
+  };
+
   const metrics: { label: string; value: string | number }[] = [
     { label: "Algorithm", value: algorithm },
     { label: "Problem", value: isTsp ? `TSP (${tspInstance ?? "?"})` : problem },
@@ -73,6 +94,9 @@ export default function MetricsPanel({
     <div className="card">
       <div className="cardHeader">
         <h3 className="cardTitle">Metrics</h3>
+        <button className="downloadButton" onClick={handleDownloadCSV} title="Download results as CSV">
+          📋
+        </button>
       </div>
       <div className="metricsGrid">
         {metrics.map((m) => (

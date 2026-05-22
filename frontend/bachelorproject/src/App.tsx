@@ -5,6 +5,7 @@ import FitnessChart from "./components/FitnessChart";
 import MetricsPanel from "./components/MetricsPanel";
 import PopulationPanel from "./components/PopulationPanel";
 import ParametersPanel, { getDefaultParams } from "./components/ParametersPanel";
+import TSPInstanceSelector from "./components/TSPInstanceSelector";
 
 const API_BASE = "http://localhost:8000";
 
@@ -55,6 +56,7 @@ export default function App() {
   const [algorithm, setAlgorithm] = useState("(μ+λ) EA");
   const [problem, setProblem] = useState("onemax");
   const [params, setParams] = useState<Record<string, number>>(() => getDefaultParams("(μ+λ) EA"));
+  const [tspInstance, setTspInstance] = useState<string | null>(null);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -64,10 +66,14 @@ export default function App() {
   const runExperiment = useCallback(() => {
     setLoading(true);
     setError(null);
+    const payload: any = { problem, algorithm, params };
+    if (problem === "tsp" && tspInstance) {
+      payload.tsp_instance = tspInstance;
+    }
     fetch(`${API_BASE}/run`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ problem, algorithm, params }),
+      body: JSON.stringify(payload),
     })
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -87,7 +93,7 @@ export default function App() {
         setError("Could not connect to backend. Is the server running?");
         setLoading(false);
       });
-  }, [problem, algorithm, params]);
+  }, [problem, algorithm, params, tspInstance]);
 
   const toggleTheme = () =>
     setTheme((t) => (t === "dark" ? "light" : "dark"));
@@ -125,7 +131,16 @@ export default function App() {
         loading={loading}
       />
 
-      <ParametersPanel algorithm={algorithm} problem={problem} params={params} onChange={setParams} />
+      <div className={problem === "tsp" ? "paramAndTspWrapper" : ""}>
+        <ParametersPanel algorithm={algorithm} problem={problem} params={params} onChange={setParams} />
+
+        {problem === "tsp" && (
+          <TSPInstanceSelector
+            selectedInstance={tspInstance}
+            onInstanceChange={setTspInstance}
+          />
+        )}
+      </div>
 
       {loading ? (
         <div className="loadingWrap">

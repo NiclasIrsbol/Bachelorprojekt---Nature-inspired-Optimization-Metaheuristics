@@ -55,12 +55,12 @@ THEORETICAL_RUNTIME = {
 }
 
 
-def _run_tsp(algorithm_name, params):
+def _run_tsp(algorithm_name, params, tsp_instance=None):
     solver = TSP_SOLVERS.get(algorithm_name)
     if not solver:
         raise ValueError(f"Unknown TSP algorithm: {algorithm_name}")
 
-    instance_name, _problem, city_coords, _nodes, distance_matrix = tsp.fetch_random_tsp_instance()
+    instance_name, _problem, city_coords, _nodes, distance_matrix = tsp.fetch_tsp_instance(tsp_instance)
     raw = solver(distance_matrix, city_coords, **params)
 
     if not isinstance(raw, tuple):
@@ -191,12 +191,12 @@ def _save_result(result):
         json.dump(result, f, indent=2)
 
 
-def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params=None):
+def main(problem_name="onemax", algorithm_name="(μ+λ) EA", params=None, tsp_instance=None):
     if params is None:
         params = {}
 
     if problem_name == "tsp":
-        return _run_tsp(algorithm_name, params)
+        return _run_tsp(algorithm_name, params, tsp_instance)
 
     return _run_bitstring(problem_name, algorithm_name, params)
 

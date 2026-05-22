@@ -32,8 +32,24 @@ TSPLIB_INSTANCES = [
 # "fri26", "gr17", "gr21", "gr24", "gr48", "gr120",
 # "hk48", "swiss42", "pa561", "si175", "si535", "si1032"
 
-def fetch_random_tsp_instance():
-    name = random.choice(TSPLIB_INSTANCES)
+def fetch_tsp_instance(instance_name: str = None):
+    """
+    Fetch a specific TSP instance or a random one if instance_name is None.
+    
+    Args:
+        instance_name: Name of the TSP instance (without .tsp extension). 
+                      If None, a random instance is chosen.
+    
+    Returns:
+        Tuple of (name, problem, coords, nodes, distance_matrix)
+    """
+    if instance_name is None:
+        name = random.choice(TSPLIB_INSTANCES)
+    else:
+        if instance_name not in TSPLIB_INSTANCES:
+            raise ValueError(f"Unknown TSP instance: {instance_name}")
+        name = instance_name
+    
     filepath = os.path.join(TSPLIB_DIR, f"{name}.tsp")
 
     with open(filepath) as f:
@@ -46,6 +62,40 @@ def fetch_random_tsp_instance():
         [problem.get_weight(i, j) for j in nodes] for i in nodes
     ]
     return name, problem, coords, nodes, distance_matrix
+
+
+def fetch_random_tsp_instance():
+    """Fetch a random TSP instance (deprecated - use fetch_tsp_instance instead)"""
+    return fetch_tsp_instance(None)
+
+
+def get_tsp_instances_metadata():
+    """
+    Get metadata for all available TSP instances.
+    
+    Returns:
+        List of dicts with 'name' and 'num_cities' for each instance.
+    """
+    metadata = []
+    for instance_name in TSPLIB_INSTANCES:
+        try:
+            filepath = os.path.join(TSPLIB_DIR, f"{instance_name}.tsp")
+            with open(filepath) as f:
+                text = f.read()
+            problem = tsplib95.parse(text)
+            num_cities = len(list(problem.get_nodes()))
+            metadata.append({
+                "name": instance_name,
+                "num_cities": num_cities
+            })
+        except Exception as e:
+            # Skip instances that can't be parsed
+            print(f"Warning: Could not parse {instance_name}: {e}")
+            continue
+    
+    # Sort by number of cities, then by name
+    metadata.sort(key=lambda x: (x["num_cities"], x["name"]))
+    return metadata
 
 
 def tour_cost(tour, distance_matrix):
