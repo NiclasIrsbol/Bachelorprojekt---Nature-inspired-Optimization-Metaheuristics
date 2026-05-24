@@ -30,7 +30,7 @@ export default function ControlPanel({
             <option value="(1+1) EA">(1+1) EA</option>
             <option value="Simulated Annealing">Simulated annealing</option>
             <option value="ACO">Max-min ant system</option>
-            <option value="PACO">Population-Based ACO</option>
+            <option value="P-ACO">Population-Based ACO</option>
           </select>
         </div>
 

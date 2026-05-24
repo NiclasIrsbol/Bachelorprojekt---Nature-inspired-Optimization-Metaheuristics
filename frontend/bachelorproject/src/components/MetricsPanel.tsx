@@ -66,21 +66,10 @@ export default function MetricsPanel({
   if (isTsp) {
     metrics.push({ label: "Cities", value: numCities ?? "?" });
     metrics.push({ label: "Best Cost", value: bestCost?.toLocaleString() ?? "?" });
-    if (entries.length > 1) {
-      const costs = entries.map((e) => e.cost ?? 0);
-      const avg = costs.reduce((a, b) => a + b, 0) / costs.length;
-      metrics.push({ label: "Average Cost", value: avg.toFixed(0) });
-    }
   } else {
     const fitnesses = entries.map((e) => e.fitness ?? 0);
     const best = Math.max(...fitnesses);
-    const avg = fitnesses.reduce((a, b) => a + b, 0) / fitnesses.length;
-    const bitLength = entries[0]?.bit?.length ?? 0;
-
-    metrics.push({ label: "Population Size", value: entries.length });
-    metrics.push({ label: "Bitstring Length", value: bitLength });
     metrics.push({ label: "Best Fitness", value: best });
-    metrics.push({ label: "Average Fitness", value: avg.toFixed(2) });
   }
 
   if (algorithm === "Simulated Annealing" && temp !== undefined) {

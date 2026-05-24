@@ -35,7 +35,7 @@ const BITSTRING_PARAMS: Record<string, ParamDef[]> = {
     { key: "max_iterations", label: "Max iterations", default: 10000, min: 100, max: 100000, step: 100 },
   ],
 
-  "PACO": [
+  "P-ACO": [
     { key: "bit_length", label: "Bit length", default: 100, min: 2, max: 1000, step: 1 },
     { key: "archive_size", label: "Archive size (K)", default: 10, min: 2, max: 100, step: 1 },
     { key: "num_ants", label: "Number of ants", default: 30, min: 1, max: 200, step: 1 },
@@ -69,7 +69,7 @@ const TSP_PARAMS: Record<string, ParamDef[]> = {
     { key: "beta", label: "β (heuristic)", default: 2, min: 0.1, max: 10, step: 0.1 },
   ],
 
-  "PACO": [
+  "P-ACO": [
     { key: "max_iterations", label: "Max iterations", default: 1000, min: 100, max: 50000, step: 100 },
     { key: "archive_size", label: "Archive size (K)", default: 10, min: 2, max: 100, step: 1 },
     { key: "num_ants", label: "Number of ants", default: 30, min: 1, max: 200, step: 1 },

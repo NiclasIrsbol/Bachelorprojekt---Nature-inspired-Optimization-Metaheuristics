@@ -89,14 +89,6 @@ def export_csv():
         
         writer.writerow([])
         
-        # Write fitness over time if available
-        if data.get("fitness_over_time"):
-            writer.writerow(["Fitness Over Time"])
-            writer.writerow(["Generation", "Fitness"])
-            for entry in data.get("fitness_over_time", []):
-                writer.writerow([entry.get("generation"), entry.get("fitness")])
-            writer.writerow([])
-        
         # Write population/best solution
         if data.get("history") and len(data["history"]) > 0:
             population = data["history"][-1].get("Population", {})
