@@ -63,12 +63,15 @@ def crossover(parent1, parent2):
     return offspring1, offspring2
 
 def mutation(bit, prob):
-    """Mutate individual by flipping random bit"""
-    if random.random() < prob:
-        index = random.randint(0, len(bit) - 1)
-        new_char = "0" if bit[index] == "1" else "1"
-        bit = bit[:index] + new_char + bit[index+1:]
-    return bit
+    """Standard bit-flip mutation: flip each bit independently with probability prob.
+
+    With prob = 1/n this flips one bit in expectation (the canonical (1+1) EA
+    operator), unlike flipping a single bit only with probability prob.
+    """
+    return "".join(
+        ("0" if c == "1" else "1") if random.random() < prob else c
+        for c in bit
+    )
 
 def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutation_prob, lambda_size=None):
     """Creates the next generation of offsprings using crossover and mutation"""

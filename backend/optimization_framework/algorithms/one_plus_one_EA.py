@@ -2,7 +2,7 @@ from optimization_framework.operators import gaoperators
 from optimization_framework.problems.tsp import tour_cost
 
 # Bitstrings
-def OnePlusOneEA(fitness_fn, bit_length=20, prob=None):
+def OnePlusOneEA(fitness_fn, bit_length=20, prob=None, max_iterations=None):
     if prob is None:
         prob = 1 / bit_length
     iterations = 0
@@ -14,6 +14,8 @@ def OnePlusOneEA(fitness_fn, bit_length=20, prob=None):
     fitness_over_time = [fitness_parent]
 
     while fitness_parent != bit_length:
+        if max_iterations is not None and iterations >= max_iterations:
+            break
         iterations += 1
         offspring = gaoperators.mutation(parent, prob)
         fitness_offspring = fitness_fn(offspring)

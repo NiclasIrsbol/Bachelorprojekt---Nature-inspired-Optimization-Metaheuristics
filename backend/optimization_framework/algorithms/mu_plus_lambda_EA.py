@@ -4,7 +4,7 @@ from optimization_framework.problems.tsp import tour_cost
 
 
 # Bitstrings
-def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tournament_k=3, mutation_prob=None):
+def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tournament_k=3, mutation_prob=None, max_iterations=None):
     if mutation_prob is None:
         mutation_prob = 1 / bit_length
     iterations = 0
@@ -17,6 +17,8 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tourna
 
 
     while best["fitness"] != bit_length:
+        if max_iterations is not None and iterations >= max_iterations:
+            break
         population, offspring = gaoperators.createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_size, tournament_k, mutation_prob,)
         best = max(population.values(), key=lambda ind: ind["fitness"])
         fitness_evaluations += len(offspring)
