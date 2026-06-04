@@ -46,6 +46,7 @@ RAW_FIELDNAMES = [
     "instance",
     "seed",
     "best_value",
+    "gap_percent",
     "reached_optimum",
     "iterations",
     "fitness_evaluations",
@@ -106,6 +107,7 @@ def _run_bitstring(problem, algorithm, bit_length, seed, extra_params=None):
         "instance": "",
         "seed": seed,
         "best_value": best_value,
+        "gap_percent": "",  # not applicable for bitstring problems
         "reached_optimum": reached_optimum,
         "iterations": iterations,
         "fitness_evaluations": fitness_evaluations,
@@ -126,12 +128,14 @@ def _run_tsp(algorithm, instance_name, distance_matrix, city_coords, tsp_params,
 
     best_value, iterations, fitness_evaluations, curve = _extract(raw)
 
+    gap = tsp.gap_percent(best_value, instance_name) if best_value is not None else None
     row = {
         "problem": "tsp",
         "algorithm": algorithm,
         "instance": instance_name,
         "seed": seed,
         "best_value": best_value,
+        "gap_percent": "" if gap is None else round(gap, 3),
         "reached_optimum": "",  # not applicable for TSP
         "iterations": iterations,
         "fitness_evaluations": fitness_evaluations,

@@ -1,8 +1,12 @@
+export type ExperimentType = "single" | "convergence" | "scaling";
+
 interface ControlPanelProps {
   problem: string;
   algorithm: string;
+  experimentType: ExperimentType;
   onProblemChange: (p: string) => void;
   onAlgorithmChange: (a: string) => void;
+  onExperimentTypeChange: (t: ExperimentType) => void;
   onRun: () => void;
   loading: boolean;
 }
@@ -10,8 +14,10 @@ interface ControlPanelProps {
 export default function ControlPanel({
   problem,
   algorithm,
+  experimentType,
   onProblemChange,
   onAlgorithmChange,
+  onExperimentTypeChange,
   onRun,
   loading,
 }: ControlPanelProps) {
@@ -19,6 +25,21 @@ export default function ControlPanel({
   return (
     <div className="card controlPanel">
       <div className="controlRow">
+        <div className="field">
+          <span className="label">Experiment</span>
+          <select
+            className="select"
+            value={experimentType}
+            onChange={(e) => onExperimentTypeChange(e.target.value as ExperimentType)}
+          >
+            <option value="single">Single run</option>
+            <option value="convergence">Convergence comparison</option>
+            <option value="scaling" disabled={problem === "tsp"}>
+              Performance comparison (scaling)
+            </option>
+          </select>
+        </div>
+
         <div className="field">
           <span className="label">Algorithm</span>
           <select
@@ -55,6 +76,13 @@ export default function ControlPanel({
           {loading ? "Loading..." : "Run"}
         </button>
       </div>
+      {experimentType !== "single" && (
+        <p className="subtitle" style={{ marginTop: 8 }}>
+          {experimentType === "convergence"
+            ? "Runs all algorithms over multiple seeds at a fixed size; the selected algorithm is highlighted."
+            : "Averages each algorithm over multiple seeds across increasing problem sizes (bitstring only)."}
+        </p>
+      )}
     </div>
   );
 }

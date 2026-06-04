@@ -33,7 +33,6 @@ Usage:
 
 import argparse
 import csv
-import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -67,11 +66,7 @@ RESULT_FIELDNAMES = [
     "reached_optimum",
 ]
 
-# Theoretical growth shapes for the optional reference curve.
-THEORY = {
-    "onemax": (lambda n: n * math.log(n), "O(n log n)"),
-    "leadingones": (lambda n: n * n, "O(n^2)"),
-}
+from optimization_framework.experiments.theory_curves import CURVES_BY_PROBLEM
 
 
 def run_scaling(
@@ -124,7 +119,7 @@ def _write_results(rows, output_dir):
     print(f"\nWrote {len(rows)} runs to {path}")
 
 
-def _plot(rows, y_metric, show_theory, output_dir):
+def _plot(rows, y_metric, show_theory, log_log, output_dir):
     # (size_set, problem) -> algorithm -> size -> {"vals": [...], "opt": [...]}
     data = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: {"vals": [], "opt": []})))
     for r in rows:
@@ -137,9 +132,6 @@ def _plot(rows, y_metric, show_theory, output_dir):
     for (set_name, problem), algos in sorted(data.items()):
         fig, ax = plt.subplots(figsize=(8, 5))
 
-        # track the largest fully-solved size for theory normalization
-        fully_solved_sizes = []
-
         for algo in sorted(algos.keys()):
             size_map = algos[algo]
             # origin point (n=0 -> 0 iterations), like the reference tables
@@ -149,44 +141,42 @@ def _plot(rows, y_metric, show_theory, output_dir):
                 xs.append(size)
                 means.append(float(np.mean(vals)))
                 stds.append(float(np.std(vals, ddof=1)) if len(vals) > 1 else 0.0)
-                if all(size_map[size]["opt"]):
-                    fully_solved_sizes.append(size)
-
             xs = np.array(xs)
             means = np.array(means)
             stds = np.array(stds)
             ax.plot(xs, means, marker="o", label=algo)
             ax.fill_between(xs, means - stds, means + stds, alpha=0.15)
 
-        if show_theory and problem in THEORY and fully_solved_sizes:
-            shape_fn, shape_label = THEORY[problem]
-            ref_size = max(fully_solved_sizes)
-            # mean y across algorithms at the reference (non-capped) size
-            ref_vals = [
-                v
-                for algo in algos
-                for v in algos[algo].get(ref_size, {"vals": []})["vals"]
-            ]
-            if ref_vals:
-                all_sizes = sorted({r["size"] for r in rows
-                                    if r["size_set"] == set_name and r["problem"] == problem})
-                xs = np.array([0] + all_sizes, dtype=float)
-                shape = np.array([0.0] + [shape_fn(n) for n in all_sizes])
-                scale = np.mean(ref_vals) / shape_fn(ref_size)
+        if show_theory and problem in CURVES_BY_PROBLEM:
+            all_sizes = sorted(
+                {
+                    r["size"]
+                    for r in rows
+                    if r["size_set"] == set_name and r["problem"] == problem
+                }
+            )
+            xs = np.array([0] + all_sizes, dtype=float)
+            for i, (label, fn) in enumerate(CURVES_BY_PROBLEM[problem]):
+                ys = np.array([0.0] + [fn(n) for n in all_sizes])
                 ax.plot(
                     xs,
-                    shape * scale,
+                    ys,
                     linestyle="--",
-                    color="black",
-                    alpha=0.6,
-                    label=f"theory: {shape_label} (normalized)",
+                    color="black" if i == 0 else "#666666",
+                    alpha=0.75,
+                    linewidth=1.5,
+                    label=label,
                 )
 
         ax.set_title(f"{problem} ({set_name}): {ylabel} vs. problem size")
         ax.set_xlabel("problem size n (bit length)")
         ax.set_ylabel(ylabel)
-        ax.set_ylim(bottom=0)
-        ax.set_xlim(left=0)
+        if log_log:
+            ax.set_xscale("log")
+            ax.set_yscale("log")
+        else:
+            ax.set_ylim(bottom=0)
+            ax.set_xlim(left=0)
         ax.legend()
         ax.grid(True, linestyle="--", alpha=0.4)
         fig.tight_layout()
@@ -237,12 +227,19 @@ def _parse_args():
     parser.add_argument(
         "--y-metric",
         choices=["iterations", "fitness_evaluations"],
-        default="iterations",
+        default="fitness_evaluations",
+        help="Comparison metric. Default is fitness_evaluations, which is fair "
+        "across algorithms (\u03bc+\u03bb EA and P-ACO do many evaluations per iteration).",
     )
     parser.add_argument(
         "--no-theory",
         action="store_true",
-        help="Disable the normalized theoretical reference curve.",
+        help="Disable exact theoretical reference curves.",
+    )
+    parser.add_argument(
+        "--log-log",
+        action="store_true",
+        help="Use log-log axes (useful for polynomial growth).",
     )
     parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR)
     return parser.parse_args()
@@ -260,7 +257,7 @@ def main():
         max_iterations=args.max_iterations,
         output_dir=args.output_dir,
     )
-    _plot(rows, args.y_metric, not args.no_theory, args.output_dir)
+    _plot(rows, args.y_metric, not args.no_theory, args.log_log, args.output_dir)
 
 
 if __name__ == "__main__":

@@ -3,12 +3,16 @@ from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from pathlib import Path
+from typing import List, Optional
 from optimization_framework.experiments.run_experiment import main
+from optimization_framework.experiments import comparison
 from optimization_framework.problems import tsp
 import json
 import csv
 import io
 from datetime import datetime
+
+DEFAULT_ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "ACO", "P-ACO"]
 
 app = FastAPI()
 
@@ -57,6 +61,66 @@ def run_experiment(request: RunRequest):
         tsp_instance=request.tsp_instance
     )
     return result
+
+
+class CompareRequest(BaseModel):
+    problem: str = "onemax"
+    algorithms: List[str] = DEFAULT_ALGORITHMS
+    seeds: int = 20
+    bit_length: int = 50
+    max_iterations: int = 100000
+    tsp_instance: Optional[str] = None
+
+
+@app.post("/compare")
+def compare_experiment(request: CompareRequest):
+    """Convergence comparison: per-algorithm stats + averaged convergence curves."""
+    # Guardrails to keep live computation responsive.
+    seeds = max(1, min(request.seeds, 100))
+    bit_length = max(2, min(request.bit_length, 2000))
+    algorithms = request.algorithms or DEFAULT_ALGORITHMS
+    try:
+        return comparison.compare(
+            problem=request.problem,
+            algorithms=algorithms,
+            seeds=seeds,
+            bit_length=bit_length,
+            max_iterations=request.max_iterations,
+            tsp_instance=request.tsp_instance,
+        )
+    except Exception as e:
+        return {"error": str(e)}
+
+
+class ScalingRequest(BaseModel):
+    problem: str = "onemax"
+    algorithms: List[str] = DEFAULT_ALGORITHMS
+    max_size: int = 100
+    steps: int = 10
+    seeds: int = 10
+    max_iterations: int = 150000
+    y_metric: str = "fitness_evaluations"
+
+
+@app.post("/scaling")
+def scaling_experiment(request: ScalingRequest):
+    """Performance/scaling comparison: averaged metric vs. problem size (bitstring)."""
+    seeds = max(1, min(request.seeds, 100))
+    max_size = max(2, min(request.max_size, 1000))
+    steps = max(1, min(request.steps, max_size))
+    algorithms = request.algorithms or DEFAULT_ALGORITHMS
+    try:
+        return comparison.scaling(
+            problem=request.problem,
+            algorithms=algorithms,
+            max_size=max_size,
+            steps=steps,
+            seeds=seeds,
+            max_iterations=request.max_iterations,
+            y_metric=request.y_metric,
+        )
+    except Exception as e:
+        return {"error": str(e)}
 
 @app.get("/export-csv")
 def export_csv():

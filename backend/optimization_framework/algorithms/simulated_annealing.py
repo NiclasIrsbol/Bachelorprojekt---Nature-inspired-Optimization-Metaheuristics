@@ -5,9 +5,7 @@ from optimization_framework.problems.tsp import tour_cost
 
 
 # Bitstrings
-def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=None, max_iterations=None):
-    if prob is None:
-        prob = 1 / bit_length
+def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, max_iterations=None):
     iterations = 0
 
     current = gaoperators.generateSingleBitstring(bit_length)
@@ -24,7 +22,7 @@ def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, prob=
         if max_iterations is not None and iterations >= max_iterations:
             break
         iterations += 1
-        neighbor = gaoperators.mutation(current, prob)
+        neighbor = gaoperators.mutationSA(current)
         neighbor_fit = fitness_fn(neighbor)
         fitness_evaluations += 1
         delta = neighbor_fit - current_fit

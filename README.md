@@ -321,36 +321,56 @@ Download experiment results in CSV format.
 
 ## Running Experiments
 
+> The in-app comparison/scaling views are for **interactive exploration** (a handful of seeds, small sizes). For thesis-grade figures use the CLI batch/scaling commands below with higher seed counts and document the seed count + iteration cap.
+
 ### Via Frontend
-1. Select a problem (OneMax, LeadingOnes, or TSP)
-2. Choose an algorithm
-3. Adjust parameters (optional)
-4. Click "Run Experiment"
-5. View real-time results and visualizations
+1. **Single run** — pick problem, algorithm, parameters, then **Run**.
+2. **Convergence comparison** — runs all five algorithms over multiple seeds at a fixed size; highlights the selected algorithm and shows a stats table (fitness evaluations on bitstrings, best cost + gap % on TSP). The size control adapts to the problem: **bit length (n)** for bitstring problems, **max iterations** for TSP. Averaged curves are placed on a shared **fitness-evaluation** x-axis, so algorithms that spend many evaluations per iteration (e.g. (μ+λ) EA, ACO/P-ACO) are positioned fairly.
+3. **Performance comparison (scaling)** — bitstring only: averages fitness evaluations vs. problem size with exact theory overlays (`e·n·ln n − 1.89n` on OneMax, `0.859·n²` on LeadingOnes, `n·ln n` for RLS / SA at T₀=0).
+
+### Batch experiments (CLI, thesis figures)
+```bash
+cd backend
+# Multi-seed batch → output/batch/raw_results.csv, curves.json
+python -m optimization_framework.experiments.batch_runner --seeds 30 --bit-length 50
+
+# Summary stats, Wilcoxon matrices, box plots, convergence PNGs
+python -m optimization_framework.experiments.batch_analysis
+
+# Problem size vs. fitness evaluations (small + large presets, cap 150000)
+python -m optimization_framework.experiments.scaling_experiment --preset small --seeds 20
+python -m optimization_framework.experiments.scaling_experiment --log-log  # optional log-log axes
+
+# Parameter sweeps (SA cooling, MMAS ρ, MMAS α/β on TSP) + random baseline
+python -m optimization_framework.experiments.param_study --study sa-cooling --seeds 10
+```
+
+Re-run batch/scaling after algorithm fixes; older files under `output/batch/` may be stale.
 
 ### Via API
 ```bash
-# Example: Run (μ+λ) EA on OneMax
+# Single run
 curl -X POST http://localhost:8000/run \
   -H "Content-Type: application/json" \
-  -d '{
-    "problem": "onemax",
-    "algorithm": "(μ+λ) EA",
-    "params": {"bit_length": 20, "mu_size": 20, "lambda_size": 40}
-  }'
+  -d '{"problem": "onemax", "algorithm": "(1+1) EA", "params": {"bit_length": 50}}'
 
-# Example: Run SA on TSP
-curl -X POST http://localhost:8000/run \
+# Convergence comparison, bitstring (uses bit_length as problem size)
+curl -X POST http://localhost:8000/compare \
   -H "Content-Type: application/json" \
-  -d '{
-    "problem": "tsp",
-    "algorithm": "Simulated Annealing",
-    "params": {"cooling": 0.995, "T0": 500},
-    "tsp_instance": "berlin52.tsp"
-  }'
+  -d '{"problem": "onemax", "seeds": 20, "bit_length": 50}'
+
+# Convergence comparison, TSP (uses max_iterations, not bit_length)
+curl -X POST http://localhost:8000/compare \
+  -H "Content-Type: application/json" \
+  -d '{"problem": "tsp", "seeds": 10, "max_iterations": 50000, "tsp_instance": "burma14"}'
+
+# Scaling comparison (bitstring only)
+curl -X POST http://localhost:8000/scaling \
+  -H "Content-Type: application/json" \
+  -d '{"problem": "onemax", "max_size": 100, "steps": 10, "seeds": 10}'
 ```
 
-### Via CLI
+### Via CLI (single run)
 ```bash
 cd backend
 python -m optimization_framework.experiments.run_experiment onemax "(μ+λ) EA"
@@ -386,5 +406,7 @@ Test files:
 - `test_leadingones.py` - LeadingOnes problem and algorithm tests
 - `test_SA.py` - Simulated Annealing tests
 - `test_ACO.py` - ACO and P-ACO tests
+- `test_gaoperators.py` - SA single-bit neighborhood and (μ+λ) λ offspring count
+- `test_comparison.py` - convergence/scaling aggregation: evaluation-based x-axis, metadata, theory overlays, TSP scaling rejection
 
-**Last Updated:** May 2026
+**Last Updated:** June 2026

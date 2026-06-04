@@ -70,13 +70,14 @@ class TestSimulatedAnnealingBitstring:
         assert len(best1) == 8
         assert len(best2) == 8
 
-    def test_mutation_probability(self):
-        """Different mutation probabilities should work."""
-        for prob in [0.01, 0.05, 0.1]:
-            best, _, _, _, _, _, _ = simulated_annealing(
-                fitnessOnemax, bit_length=8, prob=prob
-            )
-            assert len(best) == 8
+    def test_single_bit_flip_neighborhood(self):
+        """Bitstring SA uses exactly one random bit flip per step."""
+        from optimization_framework.operators import gaoperators
+
+        bit = "0" * 16
+        for _ in range(100):
+            neighbor = gaoperators.mutationSA(bit)
+            assert sum(a != b for a, b in zip(bit, neighbor)) == 1
 
     def test_fitness_history_structure(self):
         """Fitness history should match iteration count."""

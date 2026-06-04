@@ -101,3 +101,33 @@ def get_tsp_instances_metadata():
 def tour_cost(tour, distance_matrix):
     n = len(tour)
     return sum(distance_matrix[tour[i]][tour[(i + 1) % n]] for i in range(n))
+
+
+# Published optimal tour lengths for TSPLIB instances (integer-rounded weights,
+# as used here). Source: TSPLIB optimal-solutions tables. Instances not listed
+# return None from get_optimum/gap_percent.
+TSPLIB_OPTIMA = {
+    "burma14": 3323, "ulysses16": 6859, "ulysses22": 7013, "att48": 10628,
+    "eil51": 426, "berlin52": 7542, "st70": 675, "eil76": 538, "pr76": 108159,
+    "rat99": 1211, "kroA100": 21282, "kroB100": 22141, "kroC100": 20749,
+    "kroD100": 21294, "kroE100": 22068, "rd100": 7910, "eil101": 629,
+    "lin105": 14379, "pr107": 44303, "pr124": 59030, "bier127": 118282,
+    "ch130": 6110, "pr136": 96772, "pr144": 58537, "ch150": 6528,
+    "kroA150": 26524, "kroB150": 26130, "pr152": 73682, "u159": 42080,
+    "rat195": 2323, "d198": 15780, "kroA200": 29368, "kroB200": 29437,
+    "ts225": 126643, "tsp225": 3916, "pr226": 80369, "gil262": 2378,
+    "pr264": 49135, "a280": 2579, "pr299": 48191,
+}
+
+
+def get_optimum(instance_name):
+    """Return the known optimal tour length for an instance, or None if unknown."""
+    return TSPLIB_OPTIMA.get(instance_name)
+
+
+def gap_percent(cost, instance_name):
+    """Percentage above the known optimum: (cost - opt) / opt * 100, or None."""
+    opt = TSPLIB_OPTIMA.get(instance_name)
+    if opt is None or opt <= 0:
+        return None
+    return (cost - opt) / opt * 100.0

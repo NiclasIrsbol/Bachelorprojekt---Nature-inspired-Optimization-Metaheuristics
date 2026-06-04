@@ -1,13 +1,26 @@
 import { useEffect, useState, useCallback } from "react";
 import "./App.css";
-import ControlPanel from "./components/ControlPanel";
+import ControlPanel, { type ExperimentType } from "./components/ControlPanel";
 import FitnessChart from "./components/FitnessChart";
 import MetricsPanel from "./components/MetricsPanel";
 import PopulationPanel from "./components/PopulationPanel";
 import ParametersPanel, { getDefaultParams } from "./components/ParametersPanel";
 import TSPInstanceSelector from "./components/TSPInstanceSelector";
+import ComparisonPanel, {
+  type CompareData,
+  type ScalingData,
+} from "./components/ComparisonPanel";
+import ComparisonSettings from "./components/ComparisonSettings";
 
 const API_BASE = "http://localhost:8000";
+
+const ALL_ALGORITHMS = [
+  "(1+1) EA",
+  "(μ+λ) EA",
+  "Simulated Annealing",
+  "ACO",
+  "P-ACO",
+];
 
 type Theme = "dark" | "light";
 
@@ -58,10 +71,25 @@ export default function App() {
   const [params, setParams] = useState<Record<string, number>>(() => getDefaultParams("(μ+λ) EA"));
   const [tspInstance, setTspInstance] = useState<string | null>(null);
 
+  const [experimentType, setExperimentType] = useState<ExperimentType>("single");
+  const [compareData, setCompareData] = useState<CompareData | null>(null);
+  const [scalingData, setScalingData] = useState<ScalingData | null>(null);
+  const [seeds, setSeeds] = useState(20);
+  const [bitLength, setBitLength] = useState(50);
+  const [maxIterations, setMaxIterations] = useState(50000);
+  const [maxSize, setMaxSize] = useState(100);
+  const [steps, setSteps] = useState(10);
+
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (problem === "tsp" && experimentType === "scaling") {
+      setExperimentType("convergence");
+    }
+  }, [problem, experimentType]);
 
   const runExperiment = useCallback(() => {
     setLoading(true);
@@ -95,6 +123,86 @@ export default function App() {
       });
   }, [problem, algorithm, params, tspInstance]);
 
+  const runComparison = useCallback(() => {
+    setLoading(true);
+    setError(null);
+    const payload: any = {
+      problem,
+      algorithms: ALL_ALGORITHMS,
+      seeds,
+    };
+    if (problem === "tsp") {
+      payload.max_iterations = maxIterations;
+      if (tspInstance) payload.tsp_instance = tspInstance;
+    } else {
+      payload.bit_length = bitLength;
+    }
+    fetch(`${API_BASE}/compare`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    })
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((json: any) => {
+        if (json && json.error) {
+          setError(json.error);
+          setCompareData(null);
+        } else {
+          setCompareData(json as CompareData);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError("Could not connect to backend. Is the server running?");
+        setLoading(false);
+      });
+  }, [problem, seeds, bitLength, maxIterations, tspInstance]);
+
+  const runScaling = useCallback(() => {
+    setLoading(true);
+    setError(null);
+    fetch(`${API_BASE}/scaling`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        problem,
+        algorithms: ALL_ALGORITHMS,
+        max_size: maxSize,
+        steps,
+        seeds,
+        y_metric: "fitness_evaluations",
+      }),
+    })
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((json: any) => {
+        if (json && json.error) {
+          setError(json.error);
+          setScalingData(null);
+        } else {
+          setScalingData(json as ScalingData);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError("Could not connect to backend. Is the server running?");
+        setLoading(false);
+      });
+  }, [problem, maxSize, steps, seeds]);
+
+  const handleRun = useCallback(() => {
+    if (experimentType === "convergence") runComparison();
+    else if (experimentType === "scaling") runScaling();
+    else runExperiment();
+  }, [experimentType, runComparison, runScaling, runExperiment]);
+
   const toggleTheme = () =>
     setTheme((t) => (t === "dark" ? "light" : "dark"));
 
@@ -125,33 +233,72 @@ export default function App() {
       <ControlPanel
         problem={problem}
         algorithm={algorithm}
+        experimentType={experimentType}
         onProblemChange={setProblem}
         onAlgorithmChange={setAlgorithm}
-        onRun={runExperiment}
+        onExperimentTypeChange={setExperimentType}
+        onRun={handleRun}
         loading={loading}
       />
 
-      <div className={problem === "tsp" ? "paramAndTspWrapper" : ""}>
-        <ParametersPanel algorithm={algorithm} problem={problem} params={params} onChange={setParams} />
+      {experimentType !== "single" && (
+        <ComparisonSettings
+          experimentType={experimentType}
+          problem={problem}
+          seeds={seeds}
+          bitLength={bitLength}
+          maxIterations={maxIterations}
+          maxSize={maxSize}
+          steps={steps}
+          onSeedsChange={setSeeds}
+          onBitLengthChange={setBitLength}
+          onMaxIterationsChange={setMaxIterations}
+          onMaxSizeChange={setMaxSize}
+          onStepsChange={setSteps}
+        />
+      )}
 
-        {problem === "tsp" && (
-          <TSPInstanceSelector
-            selectedInstance={tspInstance}
-            onInstanceChange={setTspInstance}
-          />
-        )}
-      </div>
+      {experimentType === "single" && (
+        <div className={problem === "tsp" ? "paramAndTspWrapper" : ""}>
+          <ParametersPanel algorithm={algorithm} problem={problem} params={params} onChange={setParams} />
+          {problem === "tsp" && (
+            <TSPInstanceSelector
+              selectedInstance={tspInstance}
+              onInstanceChange={setTspInstance}
+            />
+          )}
+        </div>
+      )}
+
+      {experimentType === "convergence" && problem === "tsp" && (
+        <TSPInstanceSelector selectedInstance={tspInstance} onInstanceChange={setTspInstance} />
+      )}
 
       {loading ? (
         <div className="loadingWrap">
           <div className="spinner" />
+          <p style={{ marginTop: 12, color: "var(--text-muted)" }}>
+            Running {seeds} seeds across {ALL_ALGORITHMS.length} algorithms…
+          </p>
         </div>
       ) : error ? (
         <div className="emptyState">
-          <h2>No Data Available</h2>
+          <h2>Error</h2>
           <p>{error}</p>
         </div>
-      ) : population ? (
+      ) : experimentType === "convergence" && compareData ? (
+        <ComparisonPanel
+          mode="convergence"
+          compareData={compareData}
+          selectedAlgorithm={algorithm}
+        />
+      ) : experimentType === "scaling" && scalingData ? (
+        <ComparisonPanel
+          mode="scaling"
+          scalingData={scalingData}
+          selectedAlgorithm={algorithm}
+        />
+      ) : experimentType === "single" && population ? (
         <div className="grid">
           <MetricsPanel
             population={population}
@@ -179,7 +326,11 @@ export default function App() {
       ) : (
         <div className="emptyState">
           <h2>No Experiment Data</h2>
-          <p>Select a problem and click Run to see results.</p>
+          <p>
+            {experimentType === "single"
+              ? "Select a problem and click Run to see results."
+              : "Configure settings above and click Run to compare algorithms."}
+          </p>
         </div>
       )}
     </div>

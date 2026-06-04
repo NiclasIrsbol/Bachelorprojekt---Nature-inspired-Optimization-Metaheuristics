@@ -73,9 +73,22 @@ def mutation(bit, prob):
         for c in bit
     )
 
+def mutationSA(bit):
+    """Single-bit-flip neighborhood for Simulated Annealing.
+
+    Flips exactly one uniformly random bit. This is the correct SA local move -
+    unlike the 1/n bit-flip mutation it never flips multiple bits at once, so the
+    temperature alone controls exploration. With accept-if-not-worse (T=0) this
+    is exactly Randomized Local Search (RLS).
+    """
+    index = random.randint(0, len(bit) - 1)
+    flipped = "0" if bit[index] == "1" else "1"
+    return bit[:index] + flipped + bit[index + 1:]
+
 def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutation_prob, lambda_size=None):
     """Creates the next generation of offsprings using crossover and mutation"""
-    lambda_size = len(population)
+    if lambda_size is None:
+        lambda_size = len(population)
     offsprings = {}
     created = 0
 
