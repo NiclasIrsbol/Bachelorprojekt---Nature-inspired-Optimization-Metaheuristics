@@ -60,7 +60,7 @@ def theoretical_runtime(n: float) -> float:
     """
     if n <= 0:
         return 0
-    return 0.8591*n^2
+    return 0.8591*n**2
 
 
 def run_single_trial(
@@ -262,7 +262,7 @@ def plot_results(aggregated: Dict):
     ax.plot(
         theory_sizes,
         theory_evals,
-        label=r"Theory: $e\,n\ln(n)-1.89n$",
+        label=r"Theory: $0.8591n^2$",
         linestyle="--",
         linewidth=2.5,
         color="#64748b",
