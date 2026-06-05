@@ -265,7 +265,7 @@ export default function FitnessChart({ population, problem, coords, fitnessOverT
             onChange={(e) => setView(e.target.value as ViewType)}
           >
             {hasTourMap && <option value="tour-map">Tour map</option>}
-            {hasCoords && <option value="search-path">Search path</option>}
+            {hasCoords && <option value="search-path">Boolean Hypercube</option>}
             {hasFot && <option value="fitness-chart">Fitness chart</option>}
           </select>
         </div>
