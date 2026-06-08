@@ -53,11 +53,13 @@ from optimization_framework.algorithms.mu_plus_lambda_EA import MuPlusLambdaEA
 from optimization_framework.problems.leadingones import fitnessLeadingOnes
 
 
+REPO_ROOT = Path(__file__).resolve().parents[3]
+
 # Configuration
 PROBLEM_SIZES = [100, 200, 300, 400, 500]
 MAX_ITERATIONS = 6000000
 DEFAULT_SEEDS = 7  # 5 sizes × 3 configs × 7 seeds = 105 total trial runs (~100)
-OUTPUT_DIR = Path("output/scaling_experiments")
+OUTPUT_DIR = REPO_ROOT / "output/scaling_experiments"
 DEFAULT_TOURNAMENT_K = 3
 DEFAULT_CROSSOVER_TYPE = "single_point"  # fixed by MuPlusLambdaEA in the framework
 
@@ -76,6 +78,7 @@ def run_single_trial(
     seed: int,
     max_iterations: int = MAX_ITERATIONS,
     tournament_k: int = DEFAULT_TOURNAMENT_K,
+    crossover_type: str = DEFAULT_CROSSOVER_TYPE,
 ) -> Dict:
     """Run a single framework (μ+λ) EA trial on LeadingOnes(n)."""
     random.seed(seed)
@@ -91,6 +94,7 @@ def run_single_trial(
         tournament_k=tournament_k,
         mutation_prob=1.0 / n,
         max_iterations=max_iterations,
+        crossover_type=crossover_type,
     )
 
     elapsed = time.time() - start_time
@@ -104,7 +108,7 @@ def run_single_trial(
         "lambda": lambda_size,
         "config": None,  # filled by caller
         "tournament_k": tournament_k,
-        "crossover_type": DEFAULT_CROSSOVER_TYPE,
+        "crossover_type": crossover_type,
         "seed": seed,
         "fitness_evaluations": fitness_evals,
         "iterations": iterations,
@@ -119,6 +123,7 @@ def run_experiment(
     sizes: List[int] = None,
     max_iterations: int = MAX_ITERATIONS,
     tournament_k: int = DEFAULT_TOURNAMENT_K,
+    crossover_type: str = DEFAULT_CROSSOVER_TYPE,
 ):
     """Run full scaling experiment across all problem sizes and (μ,λ) configs."""
     if sizes is None:
@@ -132,7 +137,7 @@ def run_experiment(
     print(f"  Problem sizes: {sizes}")
     print(f"  (μ,λ) configs: {list(EA_CONFIGS.keys())}")
     print(f"  Parent selection: tournament k={tournament_k}")
-    print(f"  Crossover: {DEFAULT_CROSSOVER_TYPE}")
+    print(f"  Crossover: {crossover_type}")
     print(f"  Seeds per config: {seeds}")
     print(f"  Max generations: {max_iterations}")
     print()
@@ -148,6 +153,7 @@ def run_experiment(
                 trial = run_single_trial(
                     n, mu_size, lambda_size, seed, max_iterations,
                     tournament_k=tournament_k,
+                    crossover_type=crossover_type,
                 )
                 trial["config"] = config_name
                 all_results.append(trial)
@@ -313,12 +319,17 @@ def main():
         "--tournament-k", type=int, default=DEFAULT_TOURNAMENT_K,
         help=f"Tournament size for parent selection (default: {DEFAULT_TOURNAMENT_K})",
     )
+    parser.add_argument(
+        "--crossover-type", default=DEFAULT_CROSSOVER_TYPE,
+        help=f"Crossover type for bit strings (default: {DEFAULT_CROSSOVER_TYPE})",
+    )
     args = parser.parse_args()
 
     sizes = args.sizes if args.sizes else PROBLEM_SIZES
     all_results, aggregated = run_experiment(
         seeds=args.seeds, sizes=sizes, max_iterations=args.max_iterations,
         tournament_k=args.tournament_k,
+        crossover_type=args.crossover_type,
     )
     save_results(all_results, aggregated)
     plot_results(aggregated, sizes=sizes)

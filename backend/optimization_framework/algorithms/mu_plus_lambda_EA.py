@@ -4,7 +4,22 @@ from optimization_framework.problems.tsp import tour_cost
 
 
 # Bitstrings
-def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tournament_k=3, mutation_prob=None, max_iterations=None):
+def MuPlusLambdaEA(
+    fitness_fn,
+    bit_length=20,
+    mu_size=20,
+    lambda_size=40,
+    tournament_k=3,
+    mutation_prob=None,
+    max_iterations=None,
+    crossover_type="uniform",
+):
+    """GA-style (mu+lambda) EA for bitstring optimisation.
+
+    This is the framework variant used in the application and report
+    experiments: tournament parent selection, configurable crossover,
+    standard bit mutation, and elitist plus-selection.
+    """
     if mutation_prob is None:
         mutation_prob = 1 / bit_length
     iterations = 0
@@ -19,7 +34,15 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tourna
     while best["fitness"] != bit_length:
         if max_iterations is not None and iterations >= max_iterations:
             break
-        population, offspring = gaoperators.createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_size, tournament_k, mutation_prob,)
+        population, offspring = gaoperators.createNextGenerationMuPlusLambda(
+            population,
+            fitness_fn,
+            mu_size,
+            lambda_size,
+            tournament_k,
+            mutation_prob,
+            crossover_type=crossover_type,
+        )
         best = max(population.values(), key=lambda ind: ind["fitness"])
         fitness_evaluations += len(offspring)
         iterations += 1
@@ -27,6 +50,15 @@ def MuPlusLambdaEA(fitness_fn, bit_length=20, mu_size=20, lambda_size=40, tourna
         fitness_over_time.append(best["fitness"])
 
     return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time
+
+
+def MuPlusLambdaGA(*args, **kwargs):
+    """Backward-compatible name for the GA-style (mu+lambda) EA.
+
+    Older experiment scripts use this name when emphasizing that the framework
+    implementation includes crossover. It delegates to ``MuPlusLambdaEA``.
+    """
+    return MuPlusLambdaEA(*args, **kwargs)
 
 # TSP
 def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, tournament_k=3, max_iterations=5000):
@@ -79,4 +111,3 @@ def _tour_to_coords(tour, city_coords):
     if max(tour) >= len(node_ids):
         return []
     return [(city_coords[node_ids[i]][0], city_coords[node_ids[i]][1]) for i in tour]
-

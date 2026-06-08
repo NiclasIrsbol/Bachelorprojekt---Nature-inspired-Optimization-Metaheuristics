@@ -212,9 +212,24 @@ def selectMuBest(parents, offsprings, mu):
     survivors = combined[:mu]
     return {f"Bitstring{i}": ind for i, ind in enumerate(survivors)}
 
-def createNextGenerationMuPlusLambda(population, fitness_fn, mu_size, lambda_size, tournament_k, mutation_prob):
+def createNextGenerationMuPlusLambda(
+    population,
+    fitness_fn,
+    mu_size,
+    lambda_size,
+    tournament_k,
+    mutation_prob,
+    crossover_type="single_point",
+):
     """Create the next generation"""
-    offspring = createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutation_prob, lambda_size=lambda_size,)
+    offspring = createNextGenerationOffsprings(
+        population,
+        fitness_fn,
+        tournament_k,
+        mutation_prob,
+        lambda_size=lambda_size,
+        crossover_type=crossover_type,
+    )
     next_population = selectMuBest(population, offspring, mu=mu_size)
     return next_population, offspring
 

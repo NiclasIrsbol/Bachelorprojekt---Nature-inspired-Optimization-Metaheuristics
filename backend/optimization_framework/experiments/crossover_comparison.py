@@ -18,8 +18,11 @@ generation cap without reaching the optimum are excluded from the mean-evals
 statistic but counted in the success rate.
 
 Output (under output/crossover_comparison):
-  - CSV: crossover_comparison_results.csv      (one row per run)
-  - PNG: crossover_comparison_<problem>.png    (mean evals per crossover, bars)
+  - CSV : crossover_comparison_results.csv             (one row per run)
+  - CSV : crossover_comparison_curve_points.csv        (mean convergence curves)
+  - JSON: crossover_comparison_curve_points.json       (same curve data as JSON)
+  - PNG : crossover_comparison_<problem>.png           (mean evals per crossover, bars)
+  - PNG : crossover_convergence_<problem>.png          (mean fitness over evaluations)
 
 Usage:
     cd backend
@@ -31,6 +34,7 @@ Usage:
 
 import argparse
 import csv
+import json
 import random
 import time
 from pathlib import Path
@@ -59,7 +63,8 @@ DEFAULT_SEEDS = 50
 DEFAULT_MU = 5
 DEFAULT_LAMBDA = 25
 DEFAULT_MAX_ITERATIONS = 200000
-OUTPUT_DIR = Path("output/crossover_comparison")
+REPO_ROOT = Path(__file__).resolve().parents[3]
+OUTPUT_DIR = REPO_ROOT / "output/crossover_comparison"
 
 COLORS = {
     "single_point": "#3b82f6",
@@ -112,6 +117,7 @@ def run_single_trial(
         "final_fitness": final_fitness,
         "reached_optimum": reached_optimum,
         "elapsed_seconds": elapsed,
+        "fitness_history": history,
     }
 
 
@@ -184,10 +190,94 @@ def save_results(all_results: List[Dict]):
         "reached_optimum", "elapsed_seconds",
     ]
     with open(csv_file, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(all_results)
     print(f"Saved raw results to {csv_file}")
+
+
+def build_curve_rows(all_results: List[Dict], max_points: int = 250) -> List[Dict]:
+    """Aggregate run histories into mean convergence curves.
+
+    History index 0 is after the initial population has been evaluated. For a
+    fixed (mu, lambda) configuration, generation i corresponds to approximately
+    ``mu + i * lambda`` fitness evaluations.
+    """
+    grouped = {}
+    for row in all_results:
+        if "fitness_history" not in row:
+            continue
+        key = (row["problem"], row["crossover"])
+        grouped.setdefault(key, []).append(row)
+
+    curve_rows = []
+    for (problem, crossover_type), runs in grouped.items():
+        max_len = max((len(r["fitness_history"]) for r in runs), default=0)
+        if max_len == 0:
+            continue
+
+        point_count = min(max_points, max_len)
+        generation_grid = np.linspace(0, max_len - 1, point_count, dtype=int)
+        generation_grid = sorted(set(int(g) for g in generation_grid))
+
+        mu_size = runs[0]["mu"]
+        lambda_size = runs[0]["lambda"]
+        bit_length = runs[0]["bit_length"]
+
+        for generation in generation_grid:
+            values = [
+                r["fitness_history"][min(generation, len(r["fitness_history"]) - 1)]
+                for r in runs
+            ]
+            curve_rows.append(
+                {
+                    "problem": problem,
+                    "crossover": crossover_type,
+                    "generation": generation,
+                    "fitness_evaluations": int(mu_size + generation * lambda_size),
+                    "mean_fitness": float(np.mean(values)),
+                    "std_fitness": float(np.std(values)),
+                    "min_fitness": float(np.min(values)),
+                    "max_fitness": float(np.max(values)),
+                    "bit_length": bit_length,
+                    "trials": len(runs),
+                }
+            )
+
+    return curve_rows
+
+
+def save_curve_points(all_results: List[Dict], max_points: int = 250):
+    """Save averaged convergence curves as CSV and JSON."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    curve_rows = build_curve_rows(all_results, max_points=max_points)
+
+    csv_file = OUTPUT_DIR / "crossover_comparison_curve_points.csv"
+    json_file = OUTPUT_DIR / "crossover_comparison_curve_points.json"
+    fieldnames = [
+        "problem",
+        "crossover",
+        "generation",
+        "fitness_evaluations",
+        "mean_fitness",
+        "std_fitness",
+        "min_fitness",
+        "max_fitness",
+        "bit_length",
+        "trials",
+    ]
+
+    with open(csv_file, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(curve_rows)
+    print(f"Saved convergence curve points to {csv_file}")
+
+    with open(json_file, "w") as f:
+        json.dump(curve_rows, f, indent=2)
+    print(f"Saved convergence curve points to {json_file}")
+
+    return curve_rows
 
 
 def plot_results(aggregated: Dict):
@@ -229,6 +319,69 @@ def plot_results(aggregated: Dict):
         print(f"Saved plot to {path}")
 
 
+def plot_convergence_curves(all_results: List[Dict], max_points: int = 250):
+    """Plot mean best fitness over fitness evaluations for each crossover."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    curve_rows = build_curve_rows(all_results, max_points=max_points)
+
+    by_problem = {}
+    for row in curve_rows:
+        by_problem.setdefault(row["problem"], {}).setdefault(row["crossover"], []).append(row)
+
+    for problem, by_crossover in by_problem.items():
+        fig, ax = plt.subplots(figsize=(11, 6.5))
+        bit_length = None
+
+        for crossover_type, rows in by_crossover.items():
+            rows = sorted(rows, key=lambda r: r["fitness_evaluations"])
+            x = np.array([r["fitness_evaluations"] for r in rows], dtype=float)
+            mean = np.array([r["mean_fitness"] for r in rows], dtype=float)
+            std = np.array([r["std_fitness"] for r in rows], dtype=float)
+            bit_length = rows[0]["bit_length"]
+            color = COLORS.get(crossover_type, "#888")
+
+            ax.plot(
+                x,
+                mean,
+                label=crossover_type,
+                color=color,
+                linewidth=2.3,
+            )
+            ax.fill_between(
+                x,
+                mean - std,
+                mean + std,
+                color=color,
+                alpha=0.14,
+                linewidth=0,
+            )
+
+        if bit_length is not None:
+            ax.axhline(
+                bit_length,
+                linestyle="--",
+                color="#111827",
+                linewidth=1.2,
+                label=f"Optimum: {bit_length}",
+            )
+
+        ax.set_xlabel("Fitness Evaluations", fontsize=11, fontweight="bold")
+        ax.set_ylabel("Mean Best Fitness", fontsize=11, fontweight="bold")
+        ax.set_title(
+            f"GA-style (μ+λ) on {problem}: Crossover Convergence",
+            fontsize=13,
+            fontweight="bold",
+        )
+        ax.grid(True, alpha=0.3, linestyle=":")
+        ax.legend()
+        fig.tight_layout()
+
+        path = OUTPUT_DIR / f"crossover_convergence_{problem}.png"
+        fig.savefig(path, dpi=250, bbox_inches="tight")
+        plt.close(fig)
+        print(f"Saved convergence plot to {path}")
+
+
 def print_summary(aggregated: Dict):
     print("\n" + "=" * 72)
     print("SUMMARY: Crossover comparison (GA-style (μ+λ))")
@@ -264,6 +417,12 @@ def main():
     parser.add_argument("--mu", type=int, default=DEFAULT_MU)
     parser.add_argument("--lambda-size", type=int, default=DEFAULT_LAMBDA)
     parser.add_argument("--max-iterations", type=int, default=DEFAULT_MAX_ITERATIONS)
+    parser.add_argument(
+        "--curve-points",
+        type=int,
+        default=250,
+        help="Maximum number of points in saved convergence curves",
+    )
     args = parser.parse_args()
 
     all_results, aggregated = run_experiment(
@@ -276,7 +435,9 @@ def main():
         max_iterations=args.max_iterations,
     )
     save_results(all_results)
+    save_curve_points(all_results, max_points=args.curve_points)
     plot_results(aggregated)
+    plot_convergence_curves(all_results, max_points=args.curve_points)
     print_summary(aggregated)
 
 

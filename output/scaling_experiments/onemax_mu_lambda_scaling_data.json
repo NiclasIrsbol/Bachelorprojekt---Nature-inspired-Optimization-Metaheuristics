@@ -1,0 +1,158 @@
+{
+  "(1+1)": {
+    "500": {
+      "mean_evals": 8046.142857142857,
+      "std_evals": 1820.206772286476,
+      "min_evals": 4929.0,
+      "max_evals": 10566.0,
+      "mean_iters": 8045.142857142857,
+      "std_iters": 1820.206772286476,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "1000": {
+      "mean_evals": 15999.57142857143,
+      "std_evals": 4094.7234289001344,
+      "min_evals": 12441.0,
+      "max_evals": 25540.0,
+      "mean_iters": 15998.57142857143,
+      "std_iters": 4094.7234289001344,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "1500": {
+      "mean_evals": 25764.428571428572,
+      "std_evals": 3903.672844062293,
+      "min_evals": 17694.0,
+      "max_evals": 31113.0,
+      "mean_iters": 25763.428571428572,
+      "std_iters": 3903.672844062293,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "2000": {
+      "mean_evals": 35127.42857142857,
+      "std_evals": 5039.189783434375,
+      "min_evals": 26558.0,
+      "max_evals": 41831.0,
+      "mean_iters": 35126.42857142857,
+      "std_iters": 5039.189783434375,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "2500": {
+      "mean_evals": 47099.57142857143,
+      "std_evals": 5666.975430563666,
+      "min_evals": 40146.0,
+      "max_evals": 56310.0,
+      "mean_iters": 47098.57142857143,
+      "std_iters": 5666.975430563666,
+      "success_rate": 1.0,
+      "trials": 7
+    }
+  },
+  "(2+10)": {
+    "500": {
+      "mean_evals": 8589.142857142857,
+      "std_evals": 1352.8986266079032,
+      "min_evals": 6662.0,
+      "max_evals": 10422.0,
+      "mean_iters": 858.7142857142857,
+      "std_iters": 135.28986266079033,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "1000": {
+      "mean_evals": 15873.42857142857,
+      "std_evals": 1347.2345068051554,
+      "min_evals": 14202.0,
+      "max_evals": 17612.0,
+      "mean_iters": 1587.142857142857,
+      "std_iters": 134.72345068051555,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "1500": {
+      "mean_evals": 27656.285714285714,
+      "std_evals": 4767.8262706330615,
+      "min_evals": 22312.0,
+      "max_evals": 35812.0,
+      "mean_iters": 2765.4285714285716,
+      "std_iters": 476.7826270633063,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "2000": {
+      "mean_evals": 45009.142857142855,
+      "std_evals": 6995.685842586363,
+      "min_evals": 35812.0,
+      "max_evals": 55752.0,
+      "mean_iters": 4500.714285714285,
+      "std_iters": 699.5685842586363,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "2500": {
+      "mean_evals": 53629.142857142855,
+      "std_evals": 7297.075175880333,
+      "min_evals": 46722.0,
+      "max_evals": 70432.0,
+      "mean_iters": 5362.714285714285,
+      "std_iters": 729.7075175880332,
+      "success_rate": 1.0,
+      "trials": 7
+    }
+  },
+  "(5+25)": {
+    "500": {
+      "mean_evals": 8940.714285714286,
+      "std_evals": 2226.7792702392726,
+      "min_evals": 6005.0,
+      "max_evals": 13455.0,
+      "mean_iters": 357.42857142857144,
+      "std_iters": 89.0711708095709,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "1000": {
+      "mean_evals": 19544.285714285714,
+      "std_evals": 2216.9339003153314,
+      "min_evals": 16630.0,
+      "max_evals": 23805.0,
+      "mean_iters": 781.5714285714286,
+      "std_iters": 88.67735601261325,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "1500": {
+      "mean_evals": 33808.57142857143,
+      "std_evals": 2855.302979027062,
+      "min_evals": 29155.0,
+      "max_evals": 38255.0,
+      "mean_iters": 1352.142857142857,
+      "std_iters": 114.2121191610825,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "2000": {
+      "mean_evals": 47101.42857142857,
+      "std_evals": 6192.498753841338,
+      "min_evals": 37680.0,
+      "max_evals": 56180.0,
+      "mean_iters": 1883.857142857143,
+      "std_iters": 247.69995015365353,
+      "success_rate": 1.0,
+      "trials": 7
+    },
+    "2500": {
+      "mean_evals": 55701.42857142857,
+      "std_evals": 5523.026935532023,
+      "min_evals": 50230.0,
+      "max_evals": 67230.0,
+      "mean_iters": 2227.8571428571427,
+      "std_iters": 220.9210774212809,
+      "success_rate": 1.0,
+      "trials": 7
+    }
+  }
+}
