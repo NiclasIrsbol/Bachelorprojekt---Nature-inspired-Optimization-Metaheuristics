@@ -3,19 +3,29 @@ from optimization_framework.operators.gaoperators import map_bitstring
 from optimization_framework.problems.tsp import tour_cost
 
 # Bitstrings
-def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=10000):
+def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=10000, num_ants=1):
     """MMAS (Max-Min Ant System) for pseudo-Boolean optimisation.
 
-    1-to-1 implementation of the MMAS pseudocode (Algorithm 4):
+    The default ``num_ants=1`` preserves the original one-construction-per-
+    generation behaviour. With ``num_ants > 1``, each generation constructs a
+    colony of candidates, counts every candidate as one fitness evaluation, keeps
+    the best candidate of the generation, and reinforces the best-so-far solution.
+    Thus the evaluation count is ``num_ants + iterations * num_ants`` unless the
+    optimum is found in the initial colony.
+
+    MMAS pseudocode:
       1: τ_j = 1/2 for all j
-      2: x* = CONSTRUCT(C, τ)
+      2: x* = best of num_ants CONSTRUCT(C, τ)
       3: update pheromone using x*
       6: repeat
-      7:   y = CONSTRUCT(C, τ)
+      7:   y = best of num_ants CONSTRUCT(C, τ)
       8:   if f(y) >= f(x*) then x* = y
       9:   update pheromone using x*
      10: until stop
     """
+    if num_ants < 1:
+        raise ValueError("num_ants must be at least 1")
+
     tau_min = 1 / bit_length
     tau_max = 1 - 1 / bit_length
 
@@ -39,10 +49,20 @@ def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=
             else:
                 pheromone[j] = max((1 - rho) * pheromone[j], tau_min)
 
-    # Line 2: x* = CONSTRUCT(C, τ)
-    best = construct()
-    best_fit = fitness_fn(best)
-    fitness_evaluations += 1
+    def construct_colony_best():
+        colony_best = None
+        colony_best_fit = None
+        for _ in range(num_ants):
+            candidate = construct()
+            candidate_fit = fitness_fn(candidate)
+            if colony_best_fit is None or candidate_fit >= colony_best_fit:
+                colony_best = candidate
+                colony_best_fit = candidate_fit
+        return colony_best, colony_best_fit
+
+    # Line 2: x* = best of num_ants CONSTRUCT(C, τ)
+    best, best_fit = construct_colony_best()
+    fitness_evaluations += num_ants
     fitness_over_time = [best_fit]
     coords.append(map_bitstring(best))
 
@@ -53,10 +73,9 @@ def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=
     while best_fit != bit_length and iterations < max_iterations:
         iterations += 1
 
-        # Line 7: y = CONSTRUCT(C, τ)
-        y = construct()
-        y_fit = fitness_fn(y)
-        fitness_evaluations += 1
+        # Line 7: y = best of num_ants CONSTRUCT(C, τ)
+        y, y_fit = construct_colony_best()
+        fitness_evaluations += num_ants
 
         # Line 8: if f(y) >= f(x*) then x* = y
         if y_fit >= best_fit:
@@ -72,27 +91,53 @@ def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=
     return best, iterations, 0.0, population, fitness_evaluations, coords, fitness_over_time
 
 # TSP
-def ant_colony_optimizationTSP(distance_matrix, city_coords, rho=0.1, max_iterations=1000, alpha=1, beta=2):
+def ant_colony_optimizationTSP(distance_matrix, city_coords, rho=0.1, max_iterations=1000, alpha=1, beta=2,
+                               tau_min=None, tau_max=None, optimum=None, num_ants=1):
     """MMAS* for TSP (Kötzing, Neumann, Röglin, Witt).
+
+    ``num_ants`` controls how many tours are constructed per generation. The
+    default of 1 preserves the historical behaviour. Each constructed tour counts
+    as one fitness evaluation; pheromone is still updated from the best-so-far
+    tour.
 
     Algorithm 1 — MMAS* on G = (V, E):
       1: τ(e) ← 1/|V| for all e ∈ E
-      2: x* ← construct(τ)
+      2: x* ← best of num_ants construct(τ)
       3: update(τ, x*)
       4: while true do
-      5:   x ← construct(τ)
+      5:   x ← best of num_ants construct(τ)
       6:   if f(x) < f(x*) then x* ← x
       7:   τ ← update(τ, x*)
 
     Algorithm 2 — construct: choose edges with prob ∝ τ^α · η^β
     Update: τ'(e) = min{(1-ρ)·τ(e)+ρ, τ_max} if e ∈ E(x*), else max{(1-ρ)·τ(e), τ_min}
+
+    Pheromone bounds: by default τ_min = 1/n, τ_max = 1 - 1/n. Alternatively the
+    caller may supply explicit ``tau_min``/``tau_max``, or pass ``optimum`` (a
+    known/target tour length L*) to use the Stützle & Hoos TSP bounds
+    τ_max = 1/(ρ·L*) and τ_min = τ_max/(2n). When optimum/explicit bounds are
+    given the pheromone is initialised to τ_max (standard MMAS* initialisation);
+    otherwise it keeps the original 1/n initialisation for backward compatibility.
     """
+    if num_ants < 1:
+        raise ValueError("num_ants must be at least 1")
 
     n = len(distance_matrix)
-    tau_min = 1 / n
-    tau_max = 1 - 1 / n
+    custom_bounds = tau_min is not None or tau_max is not None or optimum is not None
 
-    pheromone = [[1 / n] * n for _ in range(n)]
+    if tau_max is None:
+        if optimum is not None and optimum > 0:
+            tau_max = 1.0 / (rho * optimum)
+        else:
+            tau_max = 1 - 1 / n
+    if tau_min is None:
+        if optimum is not None and optimum > 0:
+            tau_min = tau_max / (2 * n)
+        else:
+            tau_min = 1 / n
+
+    init_tau = tau_max if custom_bounds else 1 / n
+    pheromone = [[init_tau] * n for _ in range(n)]
 
     heuristic = [[0.0] * n for _ in range(n)]
     for i in range(n):
@@ -143,9 +188,19 @@ def ant_colony_optimizationTSP(distance_matrix, city_coords, rho=0.1, max_iterat
                 else:
                     pheromone[i][j] = max((1 - rho) * pheromone[i][j], tau_min)
 
-    best_tour = construct()
-    best_cost = tour_cost(best_tour, distance_matrix)
-    fitness_evaluations = 1
+    def construct_colony_best():
+        colony_best_tour = None
+        colony_best_cost = None
+        for _ in range(num_ants):
+            tour = construct()
+            cost = tour_cost(tour, distance_matrix)
+            if colony_best_cost is None or cost < colony_best_cost:
+                colony_best_tour = tour
+                colony_best_cost = cost
+        return colony_best_tour, colony_best_cost
+
+    best_tour, best_cost = construct_colony_best()
+    fitness_evaluations = num_ants
     update_pheromone(best_tour)
 
     cost_over_time = [best_cost]
@@ -153,9 +208,8 @@ def ant_colony_optimizationTSP(distance_matrix, city_coords, rho=0.1, max_iterat
 
     for _ in range(max_iterations):
         iterations += 1
-        x = construct()
-        x_cost = tour_cost(x, distance_matrix)
-        fitness_evaluations += 1
+        x, x_cost = construct_colony_best()
+        fitness_evaluations += num_ants
 
         if x_cost < best_cost:
             best_tour = x
@@ -334,7 +388,7 @@ def population_based_acoTSP(distance_matrix, city_coords, archive_size=10, max_i
     count = [[0] * n for _ in range(n)]
     
     iterations = 0
-    fitness_evaluations = 1
+    fitness_evaluations = 0
     best_cost = float('inf')
     best_tour = None
     

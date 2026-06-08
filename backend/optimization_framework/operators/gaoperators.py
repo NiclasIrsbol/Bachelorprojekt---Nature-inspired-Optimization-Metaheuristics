@@ -1,5 +1,6 @@
 import random
 import math
+from functools import partial
 
 # Bitstrings
 def map_bitstring(x):
@@ -56,17 +57,110 @@ def selectparents(population: dict, tournament_k: int):
     return max(competitors, key=lambda ind: ind["fitness"])
 
 def crossover(parent1, parent2):
-    """Perform single point crossover to generate offsprings."""
+    """Perform single point crossover to generate offsprings.
+
+    A single cut point is chosen uniformly in ``[1, n-1]`` and the tails are
+    swapped. This is the classic single-point bitstring crossover.
+    """
+    if len(parent1) < 2:
+        return parent1, parent2
     crossover_point = random.randint(1, len(parent1) - 1)
     offspring1 = parent1[:crossover_point] + parent2[crossover_point:]
     offspring2 = parent2[:crossover_point] + parent1[crossover_point:]
     return offspring1, offspring2
 
+
+def two_point_crossover(parent1, parent2):
+    """Two-point crossover: swap the middle segment between two cut points.
+
+    Two cut points ``i <= j`` are chosen uniformly in ``[1, n-1]``; the segment
+    ``[i, j)`` is exchanged between the parents. Same signature/return shape as
+    :func:`crossover` (returns two offspring strings).
+    """
+    n = len(parent1)
+    if n < 2:
+        return parent1, parent2
+    i = random.randint(1, n - 1)
+    j = random.randint(1, n - 1)
+    if i > j:
+        i, j = j, i
+    offspring1 = parent1[:i] + parent2[i:j] + parent1[j:]
+    offspring2 = parent2[:i] + parent1[i:j] + parent2[j:]
+    return offspring1, offspring2
+
+
+def uniform_crossover(parent1, parent2):
+    """Uniform crossover: each position is independently inherited from either
+    parent with probability 1/2.
+
+    If both parents are identical, both offspring equal that parent. Same
+    signature/return shape as :func:`crossover` (returns two offspring strings).
+    """
+    offspring1 = []
+    offspring2 = []
+    for a, b in zip(parent1, parent2):
+        if random.random() < 0.5:
+            offspring1.append(a)
+            offspring2.append(b)
+        else:
+            offspring1.append(b)
+            offspring2.append(a)
+    return "".join(offspring1), "".join(offspring2)
+
+
+def k_point_crossover(parent1, parent2, k):
+    """k-point crossover: k distinct cut points, alternating segments.
+
+    Chooses ``k`` distinct cut points uniformly in ``[1, n-1]``, splitting the
+    strings into ``k+1`` segments, and alternates which parent each segment comes
+    from. Generalizes single-point (k=1) and two-point (k=2). Same signature/
+    return shape as :func:`crossover` (returns two offspring strings).
+    """
+    n = len(parent1)
+    if n < 2 or k < 1:
+        return parent1, parent2
+    k = min(k, n - 1)
+    points = sorted(random.sample(range(1, n), k))
+    o1, o2, swap, prev = [], [], False, 0
+    for p in points + [n]:
+        if swap:
+            o1.append(parent2[prev:p]); o2.append(parent1[prev:p])
+        else:
+            o1.append(parent1[prev:p]); o2.append(parent2[prev:p])
+        swap = not swap
+        prev = p
+    return "".join(o1), "".join(o2)
+
+
+# Registry of bitstring crossover operators used by the GA-style (μ+λ) variant
+# and the crossover-comparison experiment.
+CROSSOVER_OPERATORS = {
+    "single_point": crossover,
+    "two_point": two_point_crossover,
+    "three_point": partial(k_point_crossover, k=3),
+    "four_point": partial(k_point_crossover, k=4),
+    "uniform": uniform_crossover,
+}
+
+
+def get_crossover(crossover_type):
+    """Return the crossover function for ``crossover_type``.
+
+    Valid keys are the keys in ``CROSSOVER_OPERATORS``.
+    """
+    try:
+        return CROSSOVER_OPERATORS[crossover_type]
+    except KeyError:
+        raise ValueError(
+            f"Unknown crossover_type {crossover_type!r}; "
+            f"expected one of {sorted(CROSSOVER_OPERATORS)}"
+        )
+
 def mutation(bit, prob):
     """Standard bit-flip mutation: flip each bit independently with probability prob.
 
-    With prob = 1/n this flips one bit in expectation (the canonical (1+1) EA
-    operator), unlike flipping a single bit only with probability prob.
+    With prob = 1/n this flips one bit in expectation, unlike flipping a single
+    bit only with probability prob.
     """
     return "".join(
         ("0" if c == "1" else "1") if random.random() < prob else c
@@ -82,10 +176,17 @@ def mutationSA(bit):
     flipped = "0" if bit[index] == "1" else "1"
     return bit[:index] + flipped + bit[index + 1:]
 
-def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutation_prob, lambda_size=None):
-    """Creates the next generation of offsprings using crossover and mutation"""
+def createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutation_prob, lambda_size=None, crossover_type="single_point"):
+    """Create the next generation of offsprings using crossover and mutation
+    (GA-style path).
+
+    Each offspring pair is produced by tournament-selecting two parents, applying
+    the chosen crossover, then bit-flip mutation. This is used by the GA-style
+    (μ+λ) variant and the crossover-comparison experiment.
+    """
     if lambda_size is None:
         lambda_size = len(population)
+    cross = get_crossover(crossover_type)
     offsprings = {}
     created = 0
 
@@ -93,7 +194,7 @@ def createNextGenerationOffsprings(population, fitness_fn ,tournament_k, mutatio
     for _ in range(pair_count):
         parent1 = selectparents(population, tournament_k)
         parent2 = selectparents(population, tournament_k)
-        offspring1, offspring2 = crossover(parent1["bit"], parent2["bit"])
+        offspring1, offspring2 = cross(parent1["bit"], parent2["bit"])
         offspring1 = mutation(offspring1, mutation_prob)
         offspring2 = mutation(offspring2, mutation_prob)
 
