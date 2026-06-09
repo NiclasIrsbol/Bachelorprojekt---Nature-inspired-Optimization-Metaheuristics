@@ -1,6 +1,6 @@
 import random
 from optimization_framework.operators.gaoperators import map_bitstring
-from optimization_framework.problems.tsp import tour_cost
+from optimization_framework.problems.tsp import tour_cost, tour_to_coords
 
 # Bitstrings
 def ant_colony_optimization(fitness_fn, bit_length=100, rho=0.1, max_iterations=10000, num_ants=1):
@@ -218,18 +218,9 @@ def ant_colony_optimizationTSP(distance_matrix, city_coords, rho=0.1, max_iterat
         update_pheromone(best_tour)
         cost_over_time.append(best_cost)
 
-    tour_coords = _tour_to_coords(best_tour, city_coords)
+    tour_coords = tour_to_coords(best_tour, city_coords)
     population = {"Solution": {"tour": best_tour, "cost": best_cost}}
     return best_tour, iterations, 0.0, population, fitness_evaluations, tour_coords, cost_over_time
-
-def _tour_to_coords(tour, city_coords):
-    """Convert a tour (list of 0-based indices) to (x, y) in tour order."""
-    if not city_coords:
-        return []
-    node_ids = sorted(city_coords.keys())
-    if max(tour) >= len(node_ids):
-        return []
-    return [(city_coords[node_ids[i]][0], city_coords[node_ids[i]][1]) for i in tour]
 
 
 # ============================================================================
@@ -330,8 +321,8 @@ def population_based_aco(fitness_fn, bit_length=100, archive_size=10, max_iterat
         # Update archive: add iteration-best
         archive.append(iter_best)
         archive.sort(key=lambda x: x[1], reverse=True)
-        
-        # Remove oldest if archive exceeds size
+
+        # Quality-based replacement: after sorting by fitness, drop the worst.
         removed = None
         if len(archive) > archive_size:
             removed = archive.pop()
@@ -493,8 +484,8 @@ def population_based_acoTSP(distance_matrix, city_coords, archive_size=10, max_i
         # Update archive
         archive.append(iter_best)
         archive.sort(key=lambda x: x[1])
-        
-        # Remove oldest if exceeds size
+
+        # Quality-based replacement: after sorting by cost, drop the worst.
         removed = None
         if len(archive) > archive_size:
             removed = archive.pop()
@@ -513,6 +504,6 @@ def population_based_acoTSP(distance_matrix, city_coords, archive_size=10, max_i
         
         cost_over_time.append(best_cost)
     
-    tour_coords = _tour_to_coords(best_tour, city_coords)
+    tour_coords = tour_to_coords(best_tour, city_coords)
     population = {"Solution": {"tour": best_tour, "cost": best_cost}}
     return best_tour, iterations, 0.0, population, fitness_evaluations, tour_coords, cost_over_time

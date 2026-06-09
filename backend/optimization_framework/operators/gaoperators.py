@@ -50,7 +50,8 @@ def generatePopulation(length, fitness_fn, size: int = 20):
     return bitstrings
 
 def selectparents(population: dict, tournament_k: int):
-    """Select k parents with best fitness and add to dict."""
+    """Tournament selection: sample ``tournament_k`` individuals and return the
+    fittest one."""
     individuals = list(population.values())
     k = min(max(1, tournament_k), len(individuals))
     competitors = random.sample(individuals, k)
@@ -292,3 +293,15 @@ def three_opt_mutation(ham_cycle, distance_matrix):
 
     best_tour = min(candidates, key=tour_cost)
     return best_tour
+
+
+# Dispatch for the TSP local-search mutation operators. 2-opt is the default;
+# 3-opt explores a larger neighbourhood at higher computational cost (report
+# §7.1.3). Selectable per run via the ``mutation`` parameter of the TSP solvers.
+def tsp_mutation(tour, distance_matrix, kind="2opt"):
+    """Apply the TSP mutation operator selected by ``kind`` ("2opt" or "3opt")."""
+    if kind in ("2opt", "two_opt"):
+        return two_opt_mutation(tour)
+    if kind in ("3opt", "three_opt"):
+        return three_opt_mutation(tour, distance_matrix)
+    raise ValueError(f"Unknown TSP mutation {kind!r}; expected '2opt' or '3opt'")

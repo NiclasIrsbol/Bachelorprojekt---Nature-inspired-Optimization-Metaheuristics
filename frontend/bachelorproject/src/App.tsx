@@ -68,7 +68,7 @@ export default function App() {
   const [theme, setTheme] = useState<Theme>(getStoredTheme);
   const [algorithm, setAlgorithm] = useState("(μ+λ) EA");
   const [problem, setProblem] = useState("onemax");
-  const [params, setParams] = useState<Record<string, number>>(() => getDefaultParams("(μ+λ) EA"));
+  const [params, setParams] = useState<Record<string, number | string>>(() => getDefaultParams("(μ+λ) EA"));
   const [tspInstance, setTspInstance] = useState<string | null>(null);
 
   const [experimentType, setExperimentType] = useState<ExperimentType>("single");

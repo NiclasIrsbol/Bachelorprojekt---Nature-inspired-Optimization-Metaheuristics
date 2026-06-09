@@ -1,6 +1,6 @@
 from optimization_framework.operators import gaoperators
 import random
-from optimization_framework.problems.tsp import tour_cost
+from optimization_framework.problems.tsp import tour_cost, tour_to_coords
 
 
 # Bitstrings
@@ -29,7 +29,6 @@ def MuPlusLambdaEA(
 
     coords = [gaoperators.map_bitstring(best["bit"])]
     fitness_over_time = [best["fitness"]]
-
 
     while best["fitness"] != bit_length:
         if max_iterations is not None and iterations >= max_iterations:
@@ -61,8 +60,7 @@ def MuPlusLambdaGA(*args, **kwargs):
     return MuPlusLambdaEA(*args, **kwargs)
 
 # TSP
-def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, tournament_k=3, max_iterations=5000):
-
+def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, tournament_k=3, max_iterations=5000, mutation="2opt"):
     population = []
     for _ in range(mu_size):
         tour = gaoperators.generate_random_ham_cycle(distance_matrix)
@@ -71,7 +69,7 @@ def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, 
     fitness_evaluations = mu_size
 
     best = min(population, key=lambda ind: ind["cost"])
-    tour_coords = _tour_to_coords(best["tour"], city_coords)
+    tour_coords = tour_to_coords(best["tour"], city_coords)
     cost_over_time = [best["cost"]]
     iterations = 0
 
@@ -85,7 +83,7 @@ def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, 
             p2 = min(competitors, key=lambda ind: ind["cost"])
 
             child_tour = gaoperators.order_crossover(p1["tour"], p2["tour"])
-            child_tour = gaoperators.two_opt_mutation(child_tour)
+            child_tour = gaoperators.tsp_mutation(child_tour, distance_matrix, mutation)
             child_cost = tour_cost(child_tour, distance_matrix)
             fitness_evaluations += 1
             offspring.append({"tour": child_tour, "cost": child_cost})
@@ -95,19 +93,10 @@ def MuPlusLambdaEATSP(distance_matrix, city_coords, mu_size=20, lambda_size=40, 
         population = combined[:mu_size]
         best = population[0]
         cost_over_time.append(best["cost"])
-        tour_coords = _tour_to_coords(best["tour"], city_coords)
+        tour_coords = tour_to_coords(best["tour"], city_coords)
 
     pop_dict = {
         f"Tour{i}": {"tour": ind["tour"], "cost": ind["cost"]}
         for i, ind in enumerate(population)
     }
     return best["tour"], iterations, 0.0, pop_dict, fitness_evaluations, tour_coords, cost_over_time
-
-def _tour_to_coords(tour, city_coords):
-    """Convert a tour (list of 0-based indices) to (x, y) in tour order."""
-    if not city_coords:
-        return []
-    node_ids = sorted(city_coords.keys())
-    if max(tour) >= len(node_ids):
-        return []
-    return [(city_coords[node_ids[i]][0], city_coords[node_ids[i]][1]) for i in tour]

@@ -103,6 +103,22 @@ def tour_cost(tour, distance_matrix):
     return sum(distance_matrix[tour[i]][tour[(i + 1) % n]] for i in range(n))
 
 
+def tour_to_coords(tour, city_coords):
+    """Convert a tour (list of 0-based indices) to (x, y) points in tour order.
+
+    ``city_coords`` maps TSPLIB node ids to (x, y); nodes are taken in sorted-id
+    order, so index ``i`` in the tour maps to the i-th city. Returns ``[]`` if the
+    coordinates are missing or a tour index is out of range. Shared by all TSP
+    solvers for building the tour-map visualization.
+    """
+    if not city_coords:
+        return []
+    node_ids = sorted(city_coords.keys())
+    if max(tour) >= len(node_ids):
+        return []
+    return [(city_coords[node_ids[i]][0], city_coords[node_ids[i]][1]) for i in tour]
+
+
 # Published optimal tour lengths for TSPLIB instances (integer-rounded weights,
 # as used here). Source: TSPLIB optimal-solutions tables. Instances not listed
 # return None from get_optimum/gap_percent.

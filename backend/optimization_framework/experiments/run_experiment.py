@@ -128,24 +128,15 @@ def _run_bitstring(problem_name, algorithm_name, params):
     if not solver:
         raise ValueError(f"Unknown combination: {problem_name} + {algorithm_name}")
 
-    raw = solver(**params) if callable(solver) else solver
-    if not isinstance(raw, tuple):
-        raise TypeError(f"Solver must return a tuple, got {type(raw).__name__}")
-
-    coords = None
-    fitness_over_time = None
-    if len(raw) == 7:
-        best, iterations, temp, population, fitness_evaluations, coords, fitness_over_time = raw
-    elif len(raw) == 6:
-        best, iterations, temp, population, fitness_evaluations, coords = raw
-    elif len(raw) == 5:
-        best, iterations, population, fitness_evaluations, fitness_over_time = raw
-        temp = 0.0
-    elif len(raw) == 4:
-        best, iterations, population, fitness_evaluations = raw
-        temp = 0.0
-    else:
-        raise ValueError(f"Unexpected solver return arity: expected 4-7 values, got {len(raw)}")
+    raw = solver(**params)
+    if not isinstance(raw, tuple) or len(raw) != 7:
+        got = f"{type(raw).__name__} of length {len(raw)}" if isinstance(raw, tuple) else type(raw).__name__
+        raise TypeError(
+            "Bitstring solver must return a 7-tuple "
+            "(best, iterations, temp, population, fitness_evaluations, coords, "
+            f"fitness_over_time), got {got}"
+        )
+    best, iterations, temp, population, fitness_evaluations, coords, fitness_over_time = raw
 
     if not population:
         fitness_fn = FITNESS_FNS.get(problem_name)

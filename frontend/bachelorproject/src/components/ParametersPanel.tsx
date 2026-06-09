@@ -1,13 +1,30 @@
 import { useEffect, useMemo } from "react";
 
+type ParamValue = number | string;
+
 interface ParamDef {
   key: string;
   label: string;
-  default: number;
-  min: number;
-  max: number;
-  step: number;
+  default: ParamValue;
+  // Numeric inputs use min/max/step; enum inputs use options (rendered as a select).
+  min?: number;
+  max?: number;
+  step?: number;
+  options?: { value: string; label: string }[];
 }
+
+// TSP local-search mutation operator selector. Only the trajectory/EA solvers
+// take a mutation operator; the ant-based methods construct tours from pheromone
+// and ignore it, so it is not offered for MMAS-ACO / P-ACO.
+const TSP_MUTATION_PARAM: ParamDef = {
+  key: "mutation",
+  label: "Mutation operator",
+  default: "2opt",
+  options: [
+    { value: "2opt", label: "2-opt" },
+    { value: "3opt", label: "3-opt" },
+  ],
+};
 
 const BITSTRING_PARAMS: Record<string, ParamDef[]> = {
   "(1+1) EA": [
@@ -47,6 +64,7 @@ const BITSTRING_PARAMS: Record<string, ParamDef[]> = {
 const TSP_PARAMS: Record<string, ParamDef[]> = {
   "(1+1) EA": [
     { key: "max_iterations", label: "Max iterations", default: 10000, min: 100, max: 200000, step: 100 },
+    TSP_MUTATION_PARAM,
   ],
 
   "(μ+λ) EA": [
@@ -54,12 +72,14 @@ const TSP_PARAMS: Record<string, ParamDef[]> = {
     { key: "mu_size", label: "μ (parents)", default: 20, min: 2, max: 200, step: 1 },
     { key: "lambda_size", label: "λ (offspring)", default: 40, min: 2, max: 400, step: 1 },
     { key: "tournament_k", label: "Tournament k", default: 3, min: 2, max: 20, step: 1 },
+    TSP_MUTATION_PARAM,
   ],
 
   "Simulated Annealing": [
     { key: "max_iterations", label: "Max iterations", default: 100000, min: 1000, max: 500000, step: 1000 },
     { key: "cooling", label: "Cooling rate", default: 0.9995, min: 0.9, max: 0.99999, step: 0.0001 },
     { key: "T0", label: "Initial temp (T₀)", default: 1000, min: 1, max: 100000, step: 1 },
+    TSP_MUTATION_PARAM,
   ],
 
   "MMAS-ACO": [
@@ -86,9 +106,9 @@ function getParamDefs(algorithm: string, problem: string): ParamDef[] {
   return BITSTRING_PARAMS[algorithm] ?? [];
 }
 
-export function getDefaultParams(algorithm: string, problem = "onemax"): Record<string, number> {
+export function getDefaultParams(algorithm: string, problem = "onemax"): Record<string, ParamValue> {
   const defs = getParamDefs(algorithm, problem);
-  const out: Record<string, number> = {};
+  const out: Record<string, ParamValue> = {};
   for (const d of defs) out[d.key] = d.default;
   return out;
 }
@@ -96,8 +116,8 @@ export function getDefaultParams(algorithm: string, problem = "onemax"): Record<
 interface ParametersPanelProps {
   algorithm: string;
   problem: string;
-  params: Record<string, number>;
-  onChange: (params: Record<string, number>) => void;
+  params: Record<string, ParamValue>;
+  onChange: (params: Record<string, ParamValue>) => void;
 }
 
 export default function ParametersPanel({
@@ -115,7 +135,7 @@ export default function ParametersPanel({
 
   if (defs.length === 0) return null;
 
-  const handleChange = (key: string, value: number) => {
+  const handleChange = (key: string, value: ParamValue) => {
     onChange({ ...params, [key]: value });
   };
 
@@ -128,16 +148,31 @@ export default function ParametersPanel({
             <label className="label" htmlFor={`param-${d.key}`}>
               {d.label}
             </label>
-            <input
-              id={`param-${d.key}`}
-              className="paramInput"
-              type="number"
-              min={d.min}
-              max={d.max}
-              step={d.step}
-              value={params[d.key] ?? d.default}
-              onChange={(e) => handleChange(d.key, Number(e.target.value))}
-            />
+            {d.options ? (
+              <select
+                id={`param-${d.key}`}
+                className="paramInput"
+                value={String(params[d.key] ?? d.default)}
+                onChange={(e) => handleChange(d.key, e.target.value)}
+              >
+                {d.options.map((o) => (
+                  <option key={o.value} value={o.value}>
+                    {o.label}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <input
+                id={`param-${d.key}`}
+                className="paramInput"
+                type="number"
+                min={d.min}
+                max={d.max}
+                step={d.step}
+                value={params[d.key] ?? d.default}
+                onChange={(e) => handleChange(d.key, Number(e.target.value))}
+              />
+            )}
           </div>
         ))}
       </div>

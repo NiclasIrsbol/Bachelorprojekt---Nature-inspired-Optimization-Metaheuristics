@@ -1,11 +1,18 @@
 from optimization_framework.operators import gaoperators
 import math
 import random
-from optimization_framework.problems.tsp import tour_cost
+from optimization_framework.problems.tsp import tour_cost, tour_to_coords
 
 
 # Bitstrings
 def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, max_iterations=None):
+    """Simulated Annealing for bitstring problems.
+
+    Uses the single-bit-flip neighborhood (``mutationSA``): each step flips one
+    uniformly random bit. With ``T -> 0`` this reduces to randomized local
+    search, which is why its empirical runtime tracks the RLS reference rather
+    than the (1+1) EA's standard-bit-mutation runtime.
+    """
     iterations = 0
 
     current = gaoperators.generateSingleBitstring(bit_length)
@@ -28,16 +35,15 @@ def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, max_i
         delta = neighbor_fit - current_fit
         if delta >= 0:
             accept = True
+        elif T <= 0.0:
+            accept = False
         else:
-            if T <= 0.0:
-                accept = False
-            else:
-                accept = (random.random() < math.exp(delta / T))
+            accept = (random.random() < math.exp(delta / T))
         if accept:
-            current = neighbor 
+            current = neighbor
             current_fit = neighbor_fit
             if current_fit > best_fit:
-                best = current 
+                best = current
                 best_fit = current_fit
                 coords.append(gaoperators.map_bitstring(best))
         fitness_over_time.append(best_fit)
@@ -45,8 +51,7 @@ def simulated_annealing(fitness_fn, bit_length=20, cooling=0.99, T0=100.0, max_i
     return best, iterations, T, {}, fitness_evaluations, coords, fitness_over_time
 
 # TSP
-def simulated_annealingTSP(distance_matrix, city_coords, cooling=0.9995, T0=1000.0, max_iterations=100000):
-
+def simulated_annealingTSP(distance_matrix, city_coords, cooling=0.9995, T0=1000.0, max_iterations=100000, mutation="2opt"):
     current = gaoperators.generate_random_ham_cycle(distance_matrix)
     current_cost = tour_cost(current, distance_matrix)
     best = current[:]
@@ -55,12 +60,12 @@ def simulated_annealingTSP(distance_matrix, city_coords, cooling=0.9995, T0=1000
     iterations = 0
     T = float(T0)
 
-    tour_coords = _tour_to_coords(best, city_coords)
+    tour_coords = tour_to_coords(best, city_coords)
     cost_over_time = [best_cost]
 
     for _ in range(max_iterations):
         iterations += 1
-        neighbor = gaoperators.two_opt_mutation(current)
+        neighbor = gaoperators.tsp_mutation(current, distance_matrix, mutation)
         neighbor_cost = tour_cost(neighbor, distance_matrix)
         fitness_evaluations += 1
         delta = neighbor_cost - current_cost
@@ -78,18 +83,9 @@ def simulated_annealingTSP(distance_matrix, city_coords, cooling=0.9995, T0=1000
             if current_cost < best_cost:
                 best = current[:]
                 best_cost = current_cost
-                tour_coords = _tour_to_coords(best, city_coords)
+                tour_coords = tour_to_coords(best, city_coords)
 
         cost_over_time.append(best_cost)
         T *= cooling
 
     return best, iterations, T, {}, fitness_evaluations, tour_coords, cost_over_time
-
-def _tour_to_coords(tour, city_coords):
-    """Convert a tour (list of 0-based indices) to (x, y) in tour order."""
-    if not city_coords:
-        return []
-    node_ids = sorted(city_coords.keys())
-    if max(tour) >= len(node_ids):
-        return []
-    return [(city_coords[node_ids[i]][0], city_coords[node_ids[i]][1]) for i in tour]
