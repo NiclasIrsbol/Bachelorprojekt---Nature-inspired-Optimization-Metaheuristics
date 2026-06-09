@@ -31,7 +31,7 @@ from optimization_framework.problems import tsp
 # --- Defaults -------------------------------------------------------------
 
 BITSTRING_PROBLEMS = ["onemax", "leadingones"]
-ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "ACO", "P-ACO"]
+ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "MMAS-ACO", "P-ACO"]
 
 DEFAULT_SEEDS = 30
 DEFAULT_BIT_LENGTH = 50

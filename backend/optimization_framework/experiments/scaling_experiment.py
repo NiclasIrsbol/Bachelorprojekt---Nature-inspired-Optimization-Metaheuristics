@@ -1,32 +1,31 @@
-"""Scaling experiment: problem size vs. iterations (empirical runtime).
+"""Scaling experiment: problem size vs. empirical runtime.
 
 Sweeps a bitstring problem across several problem sizes (n = bit length),
 runs each algorithm over multiple seeds, and plots how the number of
-iterations to reach the optimum grows with n. This mirrors the figures from
-the previous students' thesis (problem size on x, average iterations on y).
+fitness evaluations needed to reach the optimum grows with n. Fitness
+evaluations are the default metric because they are fairer than iterations when
+comparing single-solution, population-based, and colony-based algorithms.
 
 It produces two variants per problem (like the reference):
   - "small": n = 10, 20, ..., 100
   - "large": n = 100, 200, ..., 1000
 
-Algorithms without their own iteration cap (the bitstring (1+1) EA, (mu+lambda)
-EA and SA) are capped via ``--max-iterations`` so large sizes stay feasible and
-the cap "plateau" (as in the reference) becomes visible. Runs that hit the cap
-without reaching the optimum are still included in the averages, exactly so the
-plateau shows up.
+All algorithms are capped via ``--max-iterations`` so large sizes stay feasible.
+Runs that hit the cap without reaching the optimum are still included in the
+averages and marked in the CSV through ``reached_optimum``.
 
 Reuses the seeded single-run helper from ``batch_runner`` for reproducibility.
 
 Outputs (under the output dir):
   - ``scaling_results.csv``            one row per run
-  - ``scaling_<problem>_<sizeset>.png`` mean iterations vs. size per algorithm
+  - ``scaling_<problem>_<sizeset>.png`` mean metric vs. size per algorithm
 
 Usage:
     cd backend
     # both presets, all algorithms
     python -m optimization_framework.experiments.scaling_experiment
-    # just the small range with more seeds for a smooth curve
-    python -m optimization_framework.experiments.scaling_experiment --preset small --seeds 50
+    # report-sized bitstring comparison
+    python -m optimization_framework.experiments.scaling_experiment --preset small --seeds 30
     # custom sizes
     python -m optimization_framework.experiments.scaling_experiment --sizes 10 50 100 200
 """
@@ -45,14 +44,14 @@ import numpy as np
 from optimization_framework.experiments.batch_runner import _run_bitstring
 
 BITSTRING_PROBLEMS = ["onemax", "leadingones"]
-ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "ACO", "P-ACO"]
+ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "MMAS-ACO", "P-ACO"]
 
 SMALL_SIZES = list(range(10, 101, 10))      # 10, 20, ..., 100
 LARGE_SIZES = list(range(100, 1001, 100))   # 100, 200, ..., 1000
 
 DEFAULT_SEEDS = 20
 DEFAULT_MAX_ITERATIONS = 150000             # matches the reference cap
-DEFAULT_OUTPUT_DIR = "output/batch"
+DEFAULT_OUTPUT_DIR = "output/algorithm_comparison_scaling"
 SCALING_RESULTS_FILE = "scaling_results.csv"
 
 RESULT_FIELDNAMES = [
@@ -200,7 +199,7 @@ def _resolve_size_sets(args):
 
 def _parse_args():
     parser = argparse.ArgumentParser(
-        description="Plot problem size vs. iterations (empirical runtime scaling)."
+        description="Plot problem size vs. empirical runtime scaling."
     )
     parser.add_argument("--problems", nargs="+", default=BITSTRING_PROBLEMS)
     parser.add_argument("--algorithms", nargs="+", default=ALGORITHMS)
@@ -229,7 +228,8 @@ def _parse_args():
         choices=["iterations", "fitness_evaluations"],
         default="fitness_evaluations",
         help="Comparison metric. Default is fitness_evaluations, which is fair "
-        "across algorithms (\u03bc+\u03bb EA and P-ACO do many evaluations per iteration).",
+        "across algorithms because population- and colony-based methods do "
+        "many evaluations per iteration.",
     )
     parser.add_argument(
         "--no-theory",

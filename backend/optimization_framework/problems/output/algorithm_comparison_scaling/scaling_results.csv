@@ -1,0 +1,4001 @@
+problem,algorithm,size_set,size,seed,iterations,fitness_evaluations,reached_optimum
+onemax,(1+1) EA,small,10,0,27,28,True
+onemax,(1+1) EA,small,10,1,36,37,True
+onemax,(1+1) EA,small,10,2,36,37,True
+onemax,(1+1) EA,small,10,3,37,38,True
+onemax,(1+1) EA,small,10,4,55,56,True
+onemax,(1+1) EA,small,10,5,59,60,True
+onemax,(1+1) EA,small,10,6,70,71,True
+onemax,(1+1) EA,small,10,7,22,23,True
+onemax,(1+1) EA,small,10,8,48,49,True
+onemax,(1+1) EA,small,10,9,25,26,True
+onemax,(1+1) EA,small,10,10,84,85,True
+onemax,(1+1) EA,small,10,11,38,39,True
+onemax,(1+1) EA,small,10,12,22,23,True
+onemax,(1+1) EA,small,10,13,35,36,True
+onemax,(1+1) EA,small,10,14,50,51,True
+onemax,(1+1) EA,small,10,15,34,35,True
+onemax,(1+1) EA,small,10,16,19,20,True
+onemax,(1+1) EA,small,10,17,29,30,True
+onemax,(1+1) EA,small,10,18,62,63,True
+onemax,(1+1) EA,small,10,19,94,95,True
+onemax,(1+1) EA,small,20,0,93,94,True
+onemax,(1+1) EA,small,20,1,112,113,True
+onemax,(1+1) EA,small,20,2,79,80,True
+onemax,(1+1) EA,small,20,3,183,184,True
+onemax,(1+1) EA,small,20,4,76,77,True
+onemax,(1+1) EA,small,20,5,53,54,True
+onemax,(1+1) EA,small,20,6,148,149,True
+onemax,(1+1) EA,small,20,7,81,82,True
+onemax,(1+1) EA,small,20,8,108,109,True
+onemax,(1+1) EA,small,20,9,65,66,True
+onemax,(1+1) EA,small,20,10,123,124,True
+onemax,(1+1) EA,small,20,11,188,189,True
+onemax,(1+1) EA,small,20,12,77,78,True
+onemax,(1+1) EA,small,20,13,55,56,True
+onemax,(1+1) EA,small,20,14,83,84,True
+onemax,(1+1) EA,small,20,15,202,203,True
+onemax,(1+1) EA,small,20,16,56,57,True
+onemax,(1+1) EA,small,20,17,92,93,True
+onemax,(1+1) EA,small,20,18,149,150,True
+onemax,(1+1) EA,small,20,19,534,535,True
+onemax,(1+1) EA,small,30,0,515,516,True
+onemax,(1+1) EA,small,30,1,312,313,True
+onemax,(1+1) EA,small,30,2,235,236,True
+onemax,(1+1) EA,small,30,3,124,125,True
+onemax,(1+1) EA,small,30,4,197,198,True
+onemax,(1+1) EA,small,30,5,401,402,True
+onemax,(1+1) EA,small,30,6,218,219,True
+onemax,(1+1) EA,small,30,7,283,284,True
+onemax,(1+1) EA,small,30,8,228,229,True
+onemax,(1+1) EA,small,30,9,148,149,True
+onemax,(1+1) EA,small,30,10,325,326,True
+onemax,(1+1) EA,small,30,11,218,219,True
+onemax,(1+1) EA,small,30,12,204,205,True
+onemax,(1+1) EA,small,30,13,262,263,True
+onemax,(1+1) EA,small,30,14,159,160,True
+onemax,(1+1) EA,small,30,15,514,515,True
+onemax,(1+1) EA,small,30,16,124,125,True
+onemax,(1+1) EA,small,30,17,203,204,True
+onemax,(1+1) EA,small,30,18,320,321,True
+onemax,(1+1) EA,small,30,19,90,91,True
+onemax,(1+1) EA,small,40,0,406,407,True
+onemax,(1+1) EA,small,40,1,362,363,True
+onemax,(1+1) EA,small,40,2,279,280,True
+onemax,(1+1) EA,small,40,3,303,304,True
+onemax,(1+1) EA,small,40,4,632,633,True
+onemax,(1+1) EA,small,40,5,328,329,True
+onemax,(1+1) EA,small,40,6,176,177,True
+onemax,(1+1) EA,small,40,7,320,321,True
+onemax,(1+1) EA,small,40,8,466,467,True
+onemax,(1+1) EA,small,40,9,136,137,True
+onemax,(1+1) EA,small,40,10,221,222,True
+onemax,(1+1) EA,small,40,11,445,446,True
+onemax,(1+1) EA,small,40,12,286,287,True
+onemax,(1+1) EA,small,40,13,186,187,True
+onemax,(1+1) EA,small,40,14,189,190,True
+onemax,(1+1) EA,small,40,15,305,306,True
+onemax,(1+1) EA,small,40,16,368,369,True
+onemax,(1+1) EA,small,40,17,156,157,True
+onemax,(1+1) EA,small,40,18,158,159,True
+onemax,(1+1) EA,small,40,19,219,220,True
+onemax,(1+1) EA,small,50,0,578,579,True
+onemax,(1+1) EA,small,50,1,821,822,True
+onemax,(1+1) EA,small,50,2,551,552,True
+onemax,(1+1) EA,small,50,3,451,452,True
+onemax,(1+1) EA,small,50,4,417,418,True
+onemax,(1+1) EA,small,50,5,614,615,True
+onemax,(1+1) EA,small,50,6,433,434,True
+onemax,(1+1) EA,small,50,7,407,408,True
+onemax,(1+1) EA,small,50,8,431,432,True
+onemax,(1+1) EA,small,50,9,718,719,True
+onemax,(1+1) EA,small,50,10,446,447,True
+onemax,(1+1) EA,small,50,11,772,773,True
+onemax,(1+1) EA,small,50,12,424,425,True
+onemax,(1+1) EA,small,50,13,559,560,True
+onemax,(1+1) EA,small,50,14,561,562,True
+onemax,(1+1) EA,small,50,15,699,700,True
+onemax,(1+1) EA,small,50,16,442,443,True
+onemax,(1+1) EA,small,50,17,475,476,True
+onemax,(1+1) EA,small,50,18,424,425,True
+onemax,(1+1) EA,small,50,19,347,348,True
+onemax,(1+1) EA,small,60,0,657,658,True
+onemax,(1+1) EA,small,60,1,638,639,True
+onemax,(1+1) EA,small,60,2,501,502,True
+onemax,(1+1) EA,small,60,3,459,460,True
+onemax,(1+1) EA,small,60,4,923,924,True
+onemax,(1+1) EA,small,60,5,344,345,True
+onemax,(1+1) EA,small,60,6,800,801,True
+onemax,(1+1) EA,small,60,7,553,554,True
+onemax,(1+1) EA,small,60,8,556,557,True
+onemax,(1+1) EA,small,60,9,382,383,True
+onemax,(1+1) EA,small,60,10,640,641,True
+onemax,(1+1) EA,small,60,11,482,483,True
+onemax,(1+1) EA,small,60,12,804,805,True
+onemax,(1+1) EA,small,60,13,334,335,True
+onemax,(1+1) EA,small,60,14,951,952,True
+onemax,(1+1) EA,small,60,15,698,699,True
+onemax,(1+1) EA,small,60,16,1210,1211,True
+onemax,(1+1) EA,small,60,17,320,321,True
+onemax,(1+1) EA,small,60,18,883,884,True
+onemax,(1+1) EA,small,60,19,313,314,True
+onemax,(1+1) EA,small,70,0,800,801,True
+onemax,(1+1) EA,small,70,1,775,776,True
+onemax,(1+1) EA,small,70,2,644,645,True
+onemax,(1+1) EA,small,70,3,589,590,True
+onemax,(1+1) EA,small,70,4,710,711,True
+onemax,(1+1) EA,small,70,5,380,381,True
+onemax,(1+1) EA,small,70,6,574,575,True
+onemax,(1+1) EA,small,70,7,686,687,True
+onemax,(1+1) EA,small,70,8,855,856,True
+onemax,(1+1) EA,small,70,9,731,732,True
+onemax,(1+1) EA,small,70,10,567,568,True
+onemax,(1+1) EA,small,70,11,740,741,True
+onemax,(1+1) EA,small,70,12,1586,1587,True
+onemax,(1+1) EA,small,70,13,278,279,True
+onemax,(1+1) EA,small,70,14,793,794,True
+onemax,(1+1) EA,small,70,15,706,707,True
+onemax,(1+1) EA,small,70,16,409,410,True
+onemax,(1+1) EA,small,70,17,739,740,True
+onemax,(1+1) EA,small,70,18,1164,1165,True
+onemax,(1+1) EA,small,70,19,565,566,True
+onemax,(1+1) EA,small,80,0,971,972,True
+onemax,(1+1) EA,small,80,1,692,693,True
+onemax,(1+1) EA,small,80,2,478,479,True
+onemax,(1+1) EA,small,80,3,933,934,True
+onemax,(1+1) EA,small,80,4,504,505,True
+onemax,(1+1) EA,small,80,5,680,681,True
+onemax,(1+1) EA,small,80,6,1195,1196,True
+onemax,(1+1) EA,small,80,7,475,476,True
+onemax,(1+1) EA,small,80,8,666,667,True
+onemax,(1+1) EA,small,80,9,575,576,True
+onemax,(1+1) EA,small,80,10,332,333,True
+onemax,(1+1) EA,small,80,11,793,794,True
+onemax,(1+1) EA,small,80,12,703,704,True
+onemax,(1+1) EA,small,80,13,712,713,True
+onemax,(1+1) EA,small,80,14,523,524,True
+onemax,(1+1) EA,small,80,15,1235,1236,True
+onemax,(1+1) EA,small,80,16,1377,1378,True
+onemax,(1+1) EA,small,80,17,907,908,True
+onemax,(1+1) EA,small,80,18,465,466,True
+onemax,(1+1) EA,small,80,19,683,684,True
+onemax,(1+1) EA,small,90,0,777,778,True
+onemax,(1+1) EA,small,90,1,544,545,True
+onemax,(1+1) EA,small,90,2,645,646,True
+onemax,(1+1) EA,small,90,3,1049,1050,True
+onemax,(1+1) EA,small,90,4,1028,1029,True
+onemax,(1+1) EA,small,90,5,821,822,True
+onemax,(1+1) EA,small,90,6,603,604,True
+onemax,(1+1) EA,small,90,7,636,637,True
+onemax,(1+1) EA,small,90,8,1800,1801,True
+onemax,(1+1) EA,small,90,9,870,871,True
+onemax,(1+1) EA,small,90,10,1038,1039,True
+onemax,(1+1) EA,small,90,11,934,935,True
+onemax,(1+1) EA,small,90,12,564,565,True
+onemax,(1+1) EA,small,90,13,1487,1488,True
+onemax,(1+1) EA,small,90,14,1451,1452,True
+onemax,(1+1) EA,small,90,15,861,862,True
+onemax,(1+1) EA,small,90,16,1381,1382,True
+onemax,(1+1) EA,small,90,17,780,781,True
+onemax,(1+1) EA,small,90,18,641,642,True
+onemax,(1+1) EA,small,90,19,1648,1649,True
+onemax,(1+1) EA,small,100,0,836,837,True
+onemax,(1+1) EA,small,100,1,1604,1605,True
+onemax,(1+1) EA,small,100,2,1046,1047,True
+onemax,(1+1) EA,small,100,3,2366,2367,True
+onemax,(1+1) EA,small,100,4,1084,1085,True
+onemax,(1+1) EA,small,100,5,1020,1021,True
+onemax,(1+1) EA,small,100,6,1306,1307,True
+onemax,(1+1) EA,small,100,7,1087,1088,True
+onemax,(1+1) EA,small,100,8,844,845,True
+onemax,(1+1) EA,small,100,9,1264,1265,True
+onemax,(1+1) EA,small,100,10,992,993,True
+onemax,(1+1) EA,small,100,11,674,675,True
+onemax,(1+1) EA,small,100,12,1061,1062,True
+onemax,(1+1) EA,small,100,13,767,768,True
+onemax,(1+1) EA,small,100,14,3061,3062,True
+onemax,(1+1) EA,small,100,15,626,627,True
+onemax,(1+1) EA,small,100,16,823,824,True
+onemax,(1+1) EA,small,100,17,1081,1082,True
+onemax,(1+1) EA,small,100,18,909,910,True
+onemax,(1+1) EA,small,100,19,976,977,True
+onemax,(μ+λ) EA,small,10,0,3,140,True
+onemax,(μ+λ) EA,small,10,1,2,100,True
+onemax,(μ+λ) EA,small,10,2,1,60,True
+onemax,(μ+λ) EA,small,10,3,2,100,True
+onemax,(μ+λ) EA,small,10,4,2,100,True
+onemax,(μ+λ) EA,small,10,5,2,100,True
+onemax,(μ+λ) EA,small,10,6,1,60,True
+onemax,(μ+λ) EA,small,10,7,2,100,True
+onemax,(μ+λ) EA,small,10,8,3,140,True
+onemax,(μ+λ) EA,small,10,9,3,140,True
+onemax,(μ+λ) EA,small,10,10,0,20,True
+onemax,(μ+λ) EA,small,10,11,2,100,True
+onemax,(μ+λ) EA,small,10,12,3,140,True
+onemax,(μ+λ) EA,small,10,13,2,100,True
+onemax,(μ+λ) EA,small,10,14,1,60,True
+onemax,(μ+λ) EA,small,10,15,2,100,True
+onemax,(μ+λ) EA,small,10,16,3,140,True
+onemax,(μ+λ) EA,small,10,17,2,100,True
+onemax,(μ+λ) EA,small,10,18,1,60,True
+onemax,(μ+λ) EA,small,10,19,2,100,True
+onemax,(μ+λ) EA,small,20,0,5,220,True
+onemax,(μ+λ) EA,small,20,1,4,180,True
+onemax,(μ+λ) EA,small,20,2,5,220,True
+onemax,(μ+λ) EA,small,20,3,4,180,True
+onemax,(μ+λ) EA,small,20,4,4,180,True
+onemax,(μ+λ) EA,small,20,5,5,220,True
+onemax,(μ+λ) EA,small,20,6,3,140,True
+onemax,(μ+λ) EA,small,20,7,4,180,True
+onemax,(μ+λ) EA,small,20,8,4,180,True
+onemax,(μ+λ) EA,small,20,9,5,220,True
+onemax,(μ+λ) EA,small,20,10,4,180,True
+onemax,(μ+λ) EA,small,20,11,4,180,True
+onemax,(μ+λ) EA,small,20,12,4,180,True
+onemax,(μ+λ) EA,small,20,13,5,220,True
+onemax,(μ+λ) EA,small,20,14,7,300,True
+onemax,(μ+λ) EA,small,20,15,4,180,True
+onemax,(μ+λ) EA,small,20,16,5,220,True
+onemax,(μ+λ) EA,small,20,17,5,220,True
+onemax,(μ+λ) EA,small,20,18,4,180,True
+onemax,(μ+λ) EA,small,20,19,4,180,True
+onemax,(μ+λ) EA,small,30,0,7,300,True
+onemax,(μ+λ) EA,small,30,1,9,380,True
+onemax,(μ+λ) EA,small,30,2,7,300,True
+onemax,(μ+λ) EA,small,30,3,8,340,True
+onemax,(μ+λ) EA,small,30,4,6,260,True
+onemax,(μ+λ) EA,small,30,5,6,260,True
+onemax,(μ+λ) EA,small,30,6,6,260,True
+onemax,(μ+λ) EA,small,30,7,8,340,True
+onemax,(μ+λ) EA,small,30,8,6,260,True
+onemax,(μ+λ) EA,small,30,9,7,300,True
+onemax,(μ+λ) EA,small,30,10,7,300,True
+onemax,(μ+λ) EA,small,30,11,7,300,True
+onemax,(μ+λ) EA,small,30,12,8,340,True
+onemax,(μ+λ) EA,small,30,13,7,300,True
+onemax,(μ+λ) EA,small,30,14,6,260,True
+onemax,(μ+λ) EA,small,30,15,6,260,True
+onemax,(μ+λ) EA,small,30,16,6,260,True
+onemax,(μ+λ) EA,small,30,17,6,260,True
+onemax,(μ+λ) EA,small,30,18,8,340,True
+onemax,(μ+λ) EA,small,30,19,10,420,True
+onemax,(μ+λ) EA,small,40,0,10,420,True
+onemax,(μ+λ) EA,small,40,1,11,460,True
+onemax,(μ+λ) EA,small,40,2,7,300,True
+onemax,(μ+λ) EA,small,40,3,15,620,True
+onemax,(μ+λ) EA,small,40,4,8,340,True
+onemax,(μ+λ) EA,small,40,5,12,500,True
+onemax,(μ+λ) EA,small,40,6,9,380,True
+onemax,(μ+λ) EA,small,40,7,13,540,True
+onemax,(μ+λ) EA,small,40,8,8,340,True
+onemax,(μ+λ) EA,small,40,9,9,380,True
+onemax,(μ+λ) EA,small,40,10,9,380,True
+onemax,(μ+λ) EA,small,40,11,16,660,True
+onemax,(μ+λ) EA,small,40,12,11,460,True
+onemax,(μ+λ) EA,small,40,13,10,420,True
+onemax,(μ+λ) EA,small,40,14,9,380,True
+onemax,(μ+λ) EA,small,40,15,12,500,True
+onemax,(μ+λ) EA,small,40,16,8,340,True
+onemax,(μ+λ) EA,small,40,17,12,500,True
+onemax,(μ+λ) EA,small,40,18,11,460,True
+onemax,(μ+λ) EA,small,40,19,10,420,True
+onemax,(μ+λ) EA,small,50,0,30,1220,True
+onemax,(μ+λ) EA,small,50,1,12,500,True
+onemax,(μ+λ) EA,small,50,2,11,460,True
+onemax,(μ+λ) EA,small,50,3,14,580,True
+onemax,(μ+λ) EA,small,50,4,14,580,True
+onemax,(μ+λ) EA,small,50,5,13,540,True
+onemax,(μ+λ) EA,small,50,6,12,500,True
+onemax,(μ+λ) EA,small,50,7,12,500,True
+onemax,(μ+λ) EA,small,50,8,13,540,True
+onemax,(μ+λ) EA,small,50,9,15,620,True
+onemax,(μ+λ) EA,small,50,10,11,460,True
+onemax,(μ+λ) EA,small,50,11,14,580,True
+onemax,(μ+λ) EA,small,50,12,12,500,True
+onemax,(μ+λ) EA,small,50,13,11,460,True
+onemax,(μ+λ) EA,small,50,14,17,700,True
+onemax,(μ+λ) EA,small,50,15,10,420,True
+onemax,(μ+λ) EA,small,50,16,10,420,True
+onemax,(μ+λ) EA,small,50,17,10,420,True
+onemax,(μ+λ) EA,small,50,18,18,740,True
+onemax,(μ+λ) EA,small,50,19,11,460,True
+onemax,(μ+λ) EA,small,60,0,18,740,True
+onemax,(μ+λ) EA,small,60,1,15,620,True
+onemax,(μ+λ) EA,small,60,2,19,780,True
+onemax,(μ+λ) EA,small,60,3,16,660,True
+onemax,(μ+λ) EA,small,60,4,14,580,True
+onemax,(μ+λ) EA,small,60,5,12,500,True
+onemax,(μ+λ) EA,small,60,6,15,620,True
+onemax,(μ+λ) EA,small,60,7,19,780,True
+onemax,(μ+λ) EA,small,60,8,17,700,True
+onemax,(μ+λ) EA,small,60,9,22,900,True
+onemax,(μ+λ) EA,small,60,10,16,660,True
+onemax,(μ+λ) EA,small,60,11,13,540,True
+onemax,(μ+λ) EA,small,60,12,20,820,True
+onemax,(μ+λ) EA,small,60,13,15,620,True
+onemax,(μ+λ) EA,small,60,14,14,580,True
+onemax,(μ+λ) EA,small,60,15,12,500,True
+onemax,(μ+λ) EA,small,60,16,14,580,True
+onemax,(μ+λ) EA,small,60,17,13,540,True
+onemax,(μ+λ) EA,small,60,18,14,580,True
+onemax,(μ+λ) EA,small,60,19,15,620,True
+onemax,(μ+λ) EA,small,70,0,25,1020,True
+onemax,(μ+λ) EA,small,70,1,20,820,True
+onemax,(μ+λ) EA,small,70,2,14,580,True
+onemax,(μ+λ) EA,small,70,3,20,820,True
+onemax,(μ+λ) EA,small,70,4,19,780,True
+onemax,(μ+λ) EA,small,70,5,17,700,True
+onemax,(μ+λ) EA,small,70,6,14,580,True
+onemax,(μ+λ) EA,small,70,7,19,780,True
+onemax,(μ+λ) EA,small,70,8,14,580,True
+onemax,(μ+λ) EA,small,70,9,20,820,True
+onemax,(μ+λ) EA,small,70,10,16,660,True
+onemax,(μ+λ) EA,small,70,11,15,620,True
+onemax,(μ+λ) EA,small,70,12,29,1180,True
+onemax,(μ+λ) EA,small,70,13,18,740,True
+onemax,(μ+λ) EA,small,70,14,19,780,True
+onemax,(μ+λ) EA,small,70,15,16,660,True
+onemax,(μ+λ) EA,small,70,16,19,780,True
+onemax,(μ+λ) EA,small,70,17,18,740,True
+onemax,(μ+λ) EA,small,70,18,17,700,True
+onemax,(μ+λ) EA,small,70,19,15,620,True
+onemax,(μ+λ) EA,small,80,0,25,1020,True
+onemax,(μ+λ) EA,small,80,1,19,780,True
+onemax,(μ+λ) EA,small,80,2,19,780,True
+onemax,(μ+λ) EA,small,80,3,21,860,True
+onemax,(μ+λ) EA,small,80,4,20,820,True
+onemax,(μ+λ) EA,small,80,5,19,780,True
+onemax,(μ+λ) EA,small,80,6,20,820,True
+onemax,(μ+λ) EA,small,80,7,25,1020,True
+onemax,(μ+λ) EA,small,80,8,21,860,True
+onemax,(μ+λ) EA,small,80,9,23,940,True
+onemax,(μ+λ) EA,small,80,10,23,940,True
+onemax,(μ+λ) EA,small,80,11,20,820,True
+onemax,(μ+λ) EA,small,80,12,21,860,True
+onemax,(μ+λ) EA,small,80,13,22,900,True
+onemax,(μ+λ) EA,small,80,14,30,1220,True
+onemax,(μ+λ) EA,small,80,15,22,900,True
+onemax,(μ+λ) EA,small,80,16,18,740,True
+onemax,(μ+λ) EA,small,80,17,21,860,True
+onemax,(μ+λ) EA,small,80,18,28,1140,True
+onemax,(μ+λ) EA,small,80,19,21,860,True
+onemax,(μ+λ) EA,small,90,0,25,1020,True
+onemax,(μ+λ) EA,small,90,1,39,1580,True
+onemax,(μ+λ) EA,small,90,2,26,1060,True
+onemax,(μ+λ) EA,small,90,3,18,740,True
+onemax,(μ+λ) EA,small,90,4,19,780,True
+onemax,(μ+λ) EA,small,90,5,27,1100,True
+onemax,(μ+λ) EA,small,90,6,41,1660,True
+onemax,(μ+λ) EA,small,90,7,25,1020,True
+onemax,(μ+λ) EA,small,90,8,22,900,True
+onemax,(μ+λ) EA,small,90,9,23,940,True
+onemax,(μ+λ) EA,small,90,10,27,1100,True
+onemax,(μ+λ) EA,small,90,11,26,1060,True
+onemax,(μ+λ) EA,small,90,12,23,940,True
+onemax,(μ+λ) EA,small,90,13,19,780,True
+onemax,(μ+λ) EA,small,90,14,24,980,True
+onemax,(μ+λ) EA,small,90,15,22,900,True
+onemax,(μ+λ) EA,small,90,16,25,1020,True
+onemax,(μ+λ) EA,small,90,17,23,940,True
+onemax,(μ+λ) EA,small,90,18,27,1100,True
+onemax,(μ+λ) EA,small,90,19,23,940,True
+onemax,(μ+λ) EA,small,100,0,21,860,True
+onemax,(μ+λ) EA,small,100,1,36,1460,True
+onemax,(μ+λ) EA,small,100,2,33,1340,True
+onemax,(μ+λ) EA,small,100,3,56,2260,True
+onemax,(μ+λ) EA,small,100,4,35,1420,True
+onemax,(μ+λ) EA,small,100,5,24,980,True
+onemax,(μ+λ) EA,small,100,6,29,1180,True
+onemax,(μ+λ) EA,small,100,7,31,1260,True
+onemax,(μ+λ) EA,small,100,8,27,1100,True
+onemax,(μ+λ) EA,small,100,9,31,1260,True
+onemax,(μ+λ) EA,small,100,10,22,900,True
+onemax,(μ+λ) EA,small,100,11,26,1060,True
+onemax,(μ+λ) EA,small,100,12,41,1660,True
+onemax,(μ+λ) EA,small,100,13,27,1100,True
+onemax,(μ+λ) EA,small,100,14,25,1020,True
+onemax,(μ+λ) EA,small,100,15,30,1220,True
+onemax,(μ+λ) EA,small,100,16,24,980,True
+onemax,(μ+λ) EA,small,100,17,27,1100,True
+onemax,(μ+λ) EA,small,100,18,29,1180,True
+onemax,(μ+λ) EA,small,100,19,26,1060,True
+onemax,Simulated Annealing,small,10,0,567,568,True
+onemax,Simulated Annealing,small,10,1,67,68,True
+onemax,Simulated Annealing,small,10,2,53,54,True
+onemax,Simulated Annealing,small,10,3,496,497,True
+onemax,Simulated Annealing,small,10,4,563,564,True
+onemax,Simulated Annealing,small,10,5,185,186,True
+onemax,Simulated Annealing,small,10,6,185,186,True
+onemax,Simulated Annealing,small,10,7,546,547,True
+onemax,Simulated Annealing,small,10,8,438,439,True
+onemax,Simulated Annealing,small,10,9,510,511,True
+onemax,Simulated Annealing,small,10,10,485,486,True
+onemax,Simulated Annealing,small,10,11,334,335,True
+onemax,Simulated Annealing,small,10,12,56,57,True
+onemax,Simulated Annealing,small,10,13,233,234,True
+onemax,Simulated Annealing,small,10,14,462,463,True
+onemax,Simulated Annealing,small,10,15,456,457,True
+onemax,Simulated Annealing,small,10,16,133,134,True
+onemax,Simulated Annealing,small,10,17,358,359,True
+onemax,Simulated Annealing,small,10,18,401,402,True
+onemax,Simulated Annealing,small,10,19,485,486,True
+onemax,Simulated Annealing,small,20,0,643,644,True
+onemax,Simulated Annealing,small,20,1,586,587,True
+onemax,Simulated Annealing,small,20,2,589,590,True
+onemax,Simulated Annealing,small,20,3,537,538,True
+onemax,Simulated Annealing,small,20,4,593,594,True
+onemax,Simulated Annealing,small,20,5,624,625,True
+onemax,Simulated Annealing,small,20,6,608,609,True
+onemax,Simulated Annealing,small,20,7,589,590,True
+onemax,Simulated Annealing,small,20,8,534,535,True
+onemax,Simulated Annealing,small,20,9,550,551,True
+onemax,Simulated Annealing,small,20,10,608,609,True
+onemax,Simulated Annealing,small,20,11,553,554,True
+onemax,Simulated Annealing,small,20,12,613,614,True
+onemax,Simulated Annealing,small,20,13,574,575,True
+onemax,Simulated Annealing,small,20,14,601,602,True
+onemax,Simulated Annealing,small,20,15,566,567,True
+onemax,Simulated Annealing,small,20,16,572,573,True
+onemax,Simulated Annealing,small,20,17,527,528,True
+onemax,Simulated Annealing,small,20,18,575,576,True
+onemax,Simulated Annealing,small,20,19,575,576,True
+onemax,Simulated Annealing,small,30,0,646,647,True
+onemax,Simulated Annealing,small,30,1,647,648,True
+onemax,Simulated Annealing,small,30,2,648,649,True
+onemax,Simulated Annealing,small,30,3,658,659,True
+onemax,Simulated Annealing,small,30,4,592,593,True
+onemax,Simulated Annealing,small,30,5,639,640,True
+onemax,Simulated Annealing,small,30,6,644,645,True
+onemax,Simulated Annealing,small,30,7,679,680,True
+onemax,Simulated Annealing,small,30,8,635,636,True
+onemax,Simulated Annealing,small,30,9,658,659,True
+onemax,Simulated Annealing,small,30,10,639,640,True
+onemax,Simulated Annealing,small,30,11,593,594,True
+onemax,Simulated Annealing,small,30,12,630,631,True
+onemax,Simulated Annealing,small,30,13,648,649,True
+onemax,Simulated Annealing,small,30,14,797,798,True
+onemax,Simulated Annealing,small,30,15,649,650,True
+onemax,Simulated Annealing,small,30,16,611,612,True
+onemax,Simulated Annealing,small,30,17,748,749,True
+onemax,Simulated Annealing,small,30,18,656,657,True
+onemax,Simulated Annealing,small,30,19,617,618,True
+onemax,Simulated Annealing,small,40,0,601,602,True
+onemax,Simulated Annealing,small,40,1,779,780,True
+onemax,Simulated Annealing,small,40,2,765,766,True
+onemax,Simulated Annealing,small,40,3,632,633,True
+onemax,Simulated Annealing,small,40,4,588,589,True
+onemax,Simulated Annealing,small,40,5,643,644,True
+onemax,Simulated Annealing,small,40,6,729,730,True
+onemax,Simulated Annealing,small,40,7,674,675,True
+onemax,Simulated Annealing,small,40,8,666,667,True
+onemax,Simulated Annealing,small,40,9,685,686,True
+onemax,Simulated Annealing,small,40,10,649,650,True
+onemax,Simulated Annealing,small,40,11,598,599,True
+onemax,Simulated Annealing,small,40,12,637,638,True
+onemax,Simulated Annealing,small,40,13,684,685,True
+onemax,Simulated Annealing,small,40,14,690,691,True
+onemax,Simulated Annealing,small,40,15,616,617,True
+onemax,Simulated Annealing,small,40,16,611,612,True
+onemax,Simulated Annealing,small,40,17,669,670,True
+onemax,Simulated Annealing,small,40,18,624,625,True
+onemax,Simulated Annealing,small,40,19,645,646,True
+onemax,Simulated Annealing,small,50,0,766,767,True
+onemax,Simulated Annealing,small,50,1,783,784,True
+onemax,Simulated Annealing,small,50,2,736,737,True
+onemax,Simulated Annealing,small,50,3,649,650,True
+onemax,Simulated Annealing,small,50,4,693,694,True
+onemax,Simulated Annealing,small,50,5,621,622,True
+onemax,Simulated Annealing,small,50,6,818,819,True
+onemax,Simulated Annealing,small,50,7,780,781,True
+onemax,Simulated Annealing,small,50,8,635,636,True
+onemax,Simulated Annealing,small,50,9,857,858,True
+onemax,Simulated Annealing,small,50,10,771,772,True
+onemax,Simulated Annealing,small,50,11,628,629,True
+onemax,Simulated Annealing,small,50,12,699,700,True
+onemax,Simulated Annealing,small,50,13,653,654,True
+onemax,Simulated Annealing,small,50,14,676,677,True
+onemax,Simulated Annealing,small,50,15,723,724,True
+onemax,Simulated Annealing,small,50,16,721,722,True
+onemax,Simulated Annealing,small,50,17,635,636,True
+onemax,Simulated Annealing,small,50,18,673,674,True
+onemax,Simulated Annealing,small,50,19,673,674,True
+onemax,Simulated Annealing,small,60,0,660,661,True
+onemax,Simulated Annealing,small,60,1,784,785,True
+onemax,Simulated Annealing,small,60,2,701,702,True
+onemax,Simulated Annealing,small,60,3,797,798,True
+onemax,Simulated Annealing,small,60,4,807,808,True
+onemax,Simulated Annealing,small,60,5,667,668,True
+onemax,Simulated Annealing,small,60,6,674,675,True
+onemax,Simulated Annealing,small,60,7,812,813,True
+onemax,Simulated Annealing,small,60,8,838,839,True
+onemax,Simulated Annealing,small,60,9,795,796,True
+onemax,Simulated Annealing,small,60,10,674,675,True
+onemax,Simulated Annealing,small,60,11,709,710,True
+onemax,Simulated Annealing,small,60,12,887,888,True
+onemax,Simulated Annealing,small,60,13,759,760,True
+onemax,Simulated Annealing,small,60,14,626,627,True
+onemax,Simulated Annealing,small,60,15,723,724,True
+onemax,Simulated Annealing,small,60,16,682,683,True
+onemax,Simulated Annealing,small,60,17,636,637,True
+onemax,Simulated Annealing,small,60,18,635,636,True
+onemax,Simulated Annealing,small,60,19,665,666,True
+onemax,Simulated Annealing,small,70,0,825,826,True
+onemax,Simulated Annealing,small,70,1,801,802,True
+onemax,Simulated Annealing,small,70,2,830,831,True
+onemax,Simulated Annealing,small,70,3,800,801,True
+onemax,Simulated Annealing,small,70,4,794,795,True
+onemax,Simulated Annealing,small,70,5,806,807,True
+onemax,Simulated Annealing,small,70,6,830,831,True
+onemax,Simulated Annealing,small,70,7,752,753,True
+onemax,Simulated Annealing,small,70,8,803,804,True
+onemax,Simulated Annealing,small,70,9,715,716,True
+onemax,Simulated Annealing,small,70,10,844,845,True
+onemax,Simulated Annealing,small,70,11,731,732,True
+onemax,Simulated Annealing,small,70,12,742,743,True
+onemax,Simulated Annealing,small,70,13,736,737,True
+onemax,Simulated Annealing,small,70,14,794,795,True
+onemax,Simulated Annealing,small,70,15,674,675,True
+onemax,Simulated Annealing,small,70,16,691,692,True
+onemax,Simulated Annealing,small,70,17,816,817,True
+onemax,Simulated Annealing,small,70,18,722,723,True
+onemax,Simulated Annealing,small,70,19,992,993,True
+onemax,Simulated Annealing,small,80,0,918,919,True
+onemax,Simulated Annealing,small,80,1,938,939,True
+onemax,Simulated Annealing,small,80,2,721,722,True
+onemax,Simulated Annealing,small,80,3,918,919,True
+onemax,Simulated Annealing,small,80,4,785,786,True
+onemax,Simulated Annealing,small,80,5,752,753,True
+onemax,Simulated Annealing,small,80,6,846,847,True
+onemax,Simulated Annealing,small,80,7,768,769,True
+onemax,Simulated Annealing,small,80,8,803,804,True
+onemax,Simulated Annealing,small,80,9,1142,1143,True
+onemax,Simulated Annealing,small,80,10,757,758,True
+onemax,Simulated Annealing,small,80,11,854,855,True
+onemax,Simulated Annealing,small,80,12,792,793,True
+onemax,Simulated Annealing,small,80,13,715,716,True
+onemax,Simulated Annealing,small,80,14,830,831,True
+onemax,Simulated Annealing,small,80,15,833,834,True
+onemax,Simulated Annealing,small,80,16,769,770,True
+onemax,Simulated Annealing,small,80,17,779,780,True
+onemax,Simulated Annealing,small,80,18,860,861,True
+onemax,Simulated Annealing,small,80,19,784,785,True
+onemax,Simulated Annealing,small,90,0,776,777,True
+onemax,Simulated Annealing,small,90,1,957,958,True
+onemax,Simulated Annealing,small,90,2,834,835,True
+onemax,Simulated Annealing,small,90,3,1016,1017,True
+onemax,Simulated Annealing,small,90,4,759,760,True
+onemax,Simulated Annealing,small,90,5,899,900,True
+onemax,Simulated Annealing,small,90,6,854,855,True
+onemax,Simulated Annealing,small,90,7,1069,1070,True
+onemax,Simulated Annealing,small,90,8,1009,1010,True
+onemax,Simulated Annealing,small,90,9,926,927,True
+onemax,Simulated Annealing,small,90,10,875,876,True
+onemax,Simulated Annealing,small,90,11,751,752,True
+onemax,Simulated Annealing,small,90,12,846,847,True
+onemax,Simulated Annealing,small,90,13,821,822,True
+onemax,Simulated Annealing,small,90,14,835,836,True
+onemax,Simulated Annealing,small,90,15,806,807,True
+onemax,Simulated Annealing,small,90,16,801,802,True
+onemax,Simulated Annealing,small,90,17,865,866,True
+onemax,Simulated Annealing,small,90,18,821,822,True
+onemax,Simulated Annealing,small,90,19,779,780,True
+onemax,Simulated Annealing,small,100,0,1144,1145,True
+onemax,Simulated Annealing,small,100,1,1118,1119,True
+onemax,Simulated Annealing,small,100,2,756,757,True
+onemax,Simulated Annealing,small,100,3,797,798,True
+onemax,Simulated Annealing,small,100,4,1168,1169,True
+onemax,Simulated Annealing,small,100,5,748,749,True
+onemax,Simulated Annealing,small,100,6,1116,1117,True
+onemax,Simulated Annealing,small,100,7,997,998,True
+onemax,Simulated Annealing,small,100,8,924,925,True
+onemax,Simulated Annealing,small,100,9,1030,1031,True
+onemax,Simulated Annealing,small,100,10,740,741,True
+onemax,Simulated Annealing,small,100,11,882,883,True
+onemax,Simulated Annealing,small,100,12,881,882,True
+onemax,Simulated Annealing,small,100,13,748,749,True
+onemax,Simulated Annealing,small,100,14,906,907,True
+onemax,Simulated Annealing,small,100,15,1033,1034,True
+onemax,Simulated Annealing,small,100,16,1039,1040,True
+onemax,Simulated Annealing,small,100,17,846,847,True
+onemax,Simulated Annealing,small,100,18,918,919,True
+onemax,Simulated Annealing,small,100,19,819,820,True
+onemax,MMAS-ACO,small,10,0,43,44,True
+onemax,MMAS-ACO,small,10,1,37,38,True
+onemax,MMAS-ACO,small,10,2,35,36,True
+onemax,MMAS-ACO,small,10,3,37,38,True
+onemax,MMAS-ACO,small,10,4,37,38,True
+onemax,MMAS-ACO,small,10,5,58,59,True
+onemax,MMAS-ACO,small,10,6,30,31,True
+onemax,MMAS-ACO,small,10,7,37,38,True
+onemax,MMAS-ACO,small,10,8,58,59,True
+onemax,MMAS-ACO,small,10,9,19,20,True
+onemax,MMAS-ACO,small,10,10,34,35,True
+onemax,MMAS-ACO,small,10,11,25,26,True
+onemax,MMAS-ACO,small,10,12,49,50,True
+onemax,MMAS-ACO,small,10,13,13,14,True
+onemax,MMAS-ACO,small,10,14,94,95,True
+onemax,MMAS-ACO,small,10,15,52,53,True
+onemax,MMAS-ACO,small,10,16,19,20,True
+onemax,MMAS-ACO,small,10,17,32,33,True
+onemax,MMAS-ACO,small,10,18,44,45,True
+onemax,MMAS-ACO,small,10,19,16,17,True
+onemax,MMAS-ACO,small,20,0,74,75,True
+onemax,MMAS-ACO,small,20,1,107,108,True
+onemax,MMAS-ACO,small,20,2,65,66,True
+onemax,MMAS-ACO,small,20,3,68,69,True
+onemax,MMAS-ACO,small,20,4,162,163,True
+onemax,MMAS-ACO,small,20,5,87,88,True
+onemax,MMAS-ACO,small,20,6,60,61,True
+onemax,MMAS-ACO,small,20,7,48,49,True
+onemax,MMAS-ACO,small,20,8,105,106,True
+onemax,MMAS-ACO,small,20,9,56,57,True
+onemax,MMAS-ACO,small,20,10,58,59,True
+onemax,MMAS-ACO,small,20,11,115,116,True
+onemax,MMAS-ACO,small,20,12,80,81,True
+onemax,MMAS-ACO,small,20,13,101,102,True
+onemax,MMAS-ACO,small,20,14,197,198,True
+onemax,MMAS-ACO,small,20,15,148,149,True
+onemax,MMAS-ACO,small,20,16,45,46,True
+onemax,MMAS-ACO,small,20,17,109,110,True
+onemax,MMAS-ACO,small,20,18,116,117,True
+onemax,MMAS-ACO,small,20,19,35,36,True
+onemax,MMAS-ACO,small,30,0,470,471,True
+onemax,MMAS-ACO,small,30,1,229,230,True
+onemax,MMAS-ACO,small,30,2,155,156,True
+onemax,MMAS-ACO,small,30,3,201,202,True
+onemax,MMAS-ACO,small,30,4,139,140,True
+onemax,MMAS-ACO,small,30,5,265,266,True
+onemax,MMAS-ACO,small,30,6,118,119,True
+onemax,MMAS-ACO,small,30,7,136,137,True
+onemax,MMAS-ACO,small,30,8,146,147,True
+onemax,MMAS-ACO,small,30,9,139,140,True
+onemax,MMAS-ACO,small,30,10,229,230,True
+onemax,MMAS-ACO,small,30,11,222,223,True
+onemax,MMAS-ACO,small,30,12,210,211,True
+onemax,MMAS-ACO,small,30,13,199,200,True
+onemax,MMAS-ACO,small,30,14,143,144,True
+onemax,MMAS-ACO,small,30,15,126,127,True
+onemax,MMAS-ACO,small,30,16,172,173,True
+onemax,MMAS-ACO,small,30,17,112,113,True
+onemax,MMAS-ACO,small,30,18,232,233,True
+onemax,MMAS-ACO,small,30,19,98,99,True
+onemax,MMAS-ACO,small,40,0,260,261,True
+onemax,MMAS-ACO,small,40,1,337,338,True
+onemax,MMAS-ACO,small,40,2,235,236,True
+onemax,MMAS-ACO,small,40,3,384,385,True
+onemax,MMAS-ACO,small,40,4,320,321,True
+onemax,MMAS-ACO,small,40,5,136,137,True
+onemax,MMAS-ACO,small,40,6,481,482,True
+onemax,MMAS-ACO,small,40,7,279,280,True
+onemax,MMAS-ACO,small,40,8,260,261,True
+onemax,MMAS-ACO,small,40,9,159,160,True
+onemax,MMAS-ACO,small,40,10,259,260,True
+onemax,MMAS-ACO,small,40,11,383,384,True
+onemax,MMAS-ACO,small,40,12,135,136,True
+onemax,MMAS-ACO,small,40,13,216,217,True
+onemax,MMAS-ACO,small,40,14,408,409,True
+onemax,MMAS-ACO,small,40,15,134,135,True
+onemax,MMAS-ACO,small,40,16,304,305,True
+onemax,MMAS-ACO,small,40,17,243,244,True
+onemax,MMAS-ACO,small,40,18,279,280,True
+onemax,MMAS-ACO,small,40,19,148,149,True
+onemax,MMAS-ACO,small,50,0,327,328,True
+onemax,MMAS-ACO,small,50,1,345,346,True
+onemax,MMAS-ACO,small,50,2,603,604,True
+onemax,MMAS-ACO,small,50,3,258,259,True
+onemax,MMAS-ACO,small,50,4,377,378,True
+onemax,MMAS-ACO,small,50,5,351,352,True
+onemax,MMAS-ACO,small,50,6,225,226,True
+onemax,MMAS-ACO,small,50,7,315,316,True
+onemax,MMAS-ACO,small,50,8,291,292,True
+onemax,MMAS-ACO,small,50,9,336,337,True
+onemax,MMAS-ACO,small,50,10,302,303,True
+onemax,MMAS-ACO,small,50,11,319,320,True
+onemax,MMAS-ACO,small,50,12,220,221,True
+onemax,MMAS-ACO,small,50,13,434,435,True
+onemax,MMAS-ACO,small,50,14,302,303,True
+onemax,MMAS-ACO,small,50,15,520,521,True
+onemax,MMAS-ACO,small,50,16,413,414,True
+onemax,MMAS-ACO,small,50,17,303,304,True
+onemax,MMAS-ACO,small,50,18,324,325,True
+onemax,MMAS-ACO,small,50,19,689,690,True
+onemax,MMAS-ACO,small,60,0,382,383,True
+onemax,MMAS-ACO,small,60,1,472,473,True
+onemax,MMAS-ACO,small,60,2,522,523,True
+onemax,MMAS-ACO,small,60,3,312,313,True
+onemax,MMAS-ACO,small,60,4,495,496,True
+onemax,MMAS-ACO,small,60,5,317,318,True
+onemax,MMAS-ACO,small,60,6,341,342,True
+onemax,MMAS-ACO,small,60,7,504,505,True
+onemax,MMAS-ACO,small,60,8,273,274,True
+onemax,MMAS-ACO,small,60,9,305,306,True
+onemax,MMAS-ACO,small,60,10,647,648,True
+onemax,MMAS-ACO,small,60,11,481,482,True
+onemax,MMAS-ACO,small,60,12,636,637,True
+onemax,MMAS-ACO,small,60,13,337,338,True
+onemax,MMAS-ACO,small,60,14,425,426,True
+onemax,MMAS-ACO,small,60,15,376,377,True
+onemax,MMAS-ACO,small,60,16,389,390,True
+onemax,MMAS-ACO,small,60,17,324,325,True
+onemax,MMAS-ACO,small,60,18,596,597,True
+onemax,MMAS-ACO,small,60,19,267,268,True
+onemax,MMAS-ACO,small,70,0,631,632,True
+onemax,MMAS-ACO,small,70,1,358,359,True
+onemax,MMAS-ACO,small,70,2,652,653,True
+onemax,MMAS-ACO,small,70,3,590,591,True
+onemax,MMAS-ACO,small,70,4,443,444,True
+onemax,MMAS-ACO,small,70,5,338,339,True
+onemax,MMAS-ACO,small,70,6,623,624,True
+onemax,MMAS-ACO,small,70,7,429,430,True
+onemax,MMAS-ACO,small,70,8,472,473,True
+onemax,MMAS-ACO,small,70,9,510,511,True
+onemax,MMAS-ACO,small,70,10,418,419,True
+onemax,MMAS-ACO,small,70,11,387,388,True
+onemax,MMAS-ACO,small,70,12,476,477,True
+onemax,MMAS-ACO,small,70,13,593,594,True
+onemax,MMAS-ACO,small,70,14,403,404,True
+onemax,MMAS-ACO,small,70,15,427,428,True
+onemax,MMAS-ACO,small,70,16,415,416,True
+onemax,MMAS-ACO,small,70,17,433,434,True
+onemax,MMAS-ACO,small,70,18,477,478,True
+onemax,MMAS-ACO,small,70,19,393,394,True
+onemax,MMAS-ACO,small,80,0,611,612,True
+onemax,MMAS-ACO,small,80,1,458,459,True
+onemax,MMAS-ACO,small,80,2,720,721,True
+onemax,MMAS-ACO,small,80,3,459,460,True
+onemax,MMAS-ACO,small,80,4,616,617,True
+onemax,MMAS-ACO,small,80,5,534,535,True
+onemax,MMAS-ACO,small,80,6,686,687,True
+onemax,MMAS-ACO,small,80,7,539,540,True
+onemax,MMAS-ACO,small,80,8,595,596,True
+onemax,MMAS-ACO,small,80,9,604,605,True
+onemax,MMAS-ACO,small,80,10,943,944,True
+onemax,MMAS-ACO,small,80,11,465,466,True
+onemax,MMAS-ACO,small,80,12,436,437,True
+onemax,MMAS-ACO,small,80,13,513,514,True
+onemax,MMAS-ACO,small,80,14,544,545,True
+onemax,MMAS-ACO,small,80,15,468,469,True
+onemax,MMAS-ACO,small,80,16,722,723,True
+onemax,MMAS-ACO,small,80,17,790,791,True
+onemax,MMAS-ACO,small,80,18,507,508,True
+onemax,MMAS-ACO,small,80,19,589,590,True
+onemax,MMAS-ACO,small,90,0,875,876,True
+onemax,MMAS-ACO,small,90,1,565,566,True
+onemax,MMAS-ACO,small,90,2,699,700,True
+onemax,MMAS-ACO,small,90,3,758,759,True
+onemax,MMAS-ACO,small,90,4,720,721,True
+onemax,MMAS-ACO,small,90,5,563,564,True
+onemax,MMAS-ACO,small,90,6,539,540,True
+onemax,MMAS-ACO,small,90,7,526,527,True
+onemax,MMAS-ACO,small,90,8,868,869,True
+onemax,MMAS-ACO,small,90,9,656,657,True
+onemax,MMAS-ACO,small,90,10,759,760,True
+onemax,MMAS-ACO,small,90,11,474,475,True
+onemax,MMAS-ACO,small,90,12,617,618,True
+onemax,MMAS-ACO,small,90,13,836,837,True
+onemax,MMAS-ACO,small,90,14,692,693,True
+onemax,MMAS-ACO,small,90,15,659,660,True
+onemax,MMAS-ACO,small,90,16,639,640,True
+onemax,MMAS-ACO,small,90,17,699,700,True
+onemax,MMAS-ACO,small,90,18,1027,1028,True
+onemax,MMAS-ACO,small,90,19,456,457,True
+onemax,MMAS-ACO,small,100,0,709,710,True
+onemax,MMAS-ACO,small,100,1,1003,1004,True
+onemax,MMAS-ACO,small,100,2,788,789,True
+onemax,MMAS-ACO,small,100,3,631,632,True
+onemax,MMAS-ACO,small,100,4,719,720,True
+onemax,MMAS-ACO,small,100,5,1574,1575,True
+onemax,MMAS-ACO,small,100,6,785,786,True
+onemax,MMAS-ACO,small,100,7,474,475,True
+onemax,MMAS-ACO,small,100,8,760,761,True
+onemax,MMAS-ACO,small,100,9,587,588,True
+onemax,MMAS-ACO,small,100,10,893,894,True
+onemax,MMAS-ACO,small,100,11,631,632,True
+onemax,MMAS-ACO,small,100,12,1106,1107,True
+onemax,MMAS-ACO,small,100,13,1040,1041,True
+onemax,MMAS-ACO,small,100,14,540,541,True
+onemax,MMAS-ACO,small,100,15,862,863,True
+onemax,MMAS-ACO,small,100,16,601,602,True
+onemax,MMAS-ACO,small,100,17,774,775,True
+onemax,MMAS-ACO,small,100,18,686,687,True
+onemax,MMAS-ACO,small,100,19,815,816,True
+onemax,P-ACO,small,10,0,2,90,True
+onemax,P-ACO,small,10,1,3,120,True
+onemax,P-ACO,small,10,2,4,150,True
+onemax,P-ACO,small,10,3,4,150,True
+onemax,P-ACO,small,10,4,4,150,True
+onemax,P-ACO,small,10,5,3,120,True
+onemax,P-ACO,small,10,6,2,90,True
+onemax,P-ACO,small,10,7,1,60,True
+onemax,P-ACO,small,10,8,2,90,True
+onemax,P-ACO,small,10,9,4,150,True
+onemax,P-ACO,small,10,10,2,90,True
+onemax,P-ACO,small,10,11,2,90,True
+onemax,P-ACO,small,10,12,3,120,True
+onemax,P-ACO,small,10,13,4,150,True
+onemax,P-ACO,small,10,14,3,120,True
+onemax,P-ACO,small,10,15,2,90,True
+onemax,P-ACO,small,10,16,1,60,True
+onemax,P-ACO,small,10,17,1,60,True
+onemax,P-ACO,small,10,18,3,120,True
+onemax,P-ACO,small,10,19,3,120,True
+onemax,P-ACO,small,20,0,5,180,True
+onemax,P-ACO,small,20,1,7,240,True
+onemax,P-ACO,small,20,2,7,240,True
+onemax,P-ACO,small,20,3,7,240,True
+onemax,P-ACO,small,20,4,7,240,True
+onemax,P-ACO,small,20,5,4,150,True
+onemax,P-ACO,small,20,6,6,210,True
+onemax,P-ACO,small,20,7,7,240,True
+onemax,P-ACO,small,20,8,4,150,True
+onemax,P-ACO,small,20,9,10,330,True
+onemax,P-ACO,small,20,10,6,210,True
+onemax,P-ACO,small,20,11,4,150,True
+onemax,P-ACO,small,20,12,5,180,True
+onemax,P-ACO,small,20,13,10,330,True
+onemax,P-ACO,small,20,14,5,180,True
+onemax,P-ACO,small,20,15,5,180,True
+onemax,P-ACO,small,20,16,4,150,True
+onemax,P-ACO,small,20,17,5,180,True
+onemax,P-ACO,small,20,18,3,120,True
+onemax,P-ACO,small,20,19,5,180,True
+onemax,P-ACO,small,30,0,7,240,True
+onemax,P-ACO,small,30,1,9,300,True
+onemax,P-ACO,small,30,2,9,300,True
+onemax,P-ACO,small,30,3,6,210,True
+onemax,P-ACO,small,30,4,7,240,True
+onemax,P-ACO,small,30,5,6,210,True
+onemax,P-ACO,small,30,6,9,300,True
+onemax,P-ACO,small,30,7,8,270,True
+onemax,P-ACO,small,30,8,7,240,True
+onemax,P-ACO,small,30,9,7,240,True
+onemax,P-ACO,small,30,10,9,300,True
+onemax,P-ACO,small,30,11,9,300,True
+onemax,P-ACO,small,30,12,8,270,True
+onemax,P-ACO,small,30,13,8,270,True
+onemax,P-ACO,small,30,14,7,240,True
+onemax,P-ACO,small,30,15,10,330,True
+onemax,P-ACO,small,30,16,7,240,True
+onemax,P-ACO,small,30,17,9,300,True
+onemax,P-ACO,small,30,18,8,270,True
+onemax,P-ACO,small,30,19,5,180,True
+onemax,P-ACO,small,40,0,8,270,True
+onemax,P-ACO,small,40,1,9,300,True
+onemax,P-ACO,small,40,2,12,390,True
+onemax,P-ACO,small,40,3,9,300,True
+onemax,P-ACO,small,40,4,8,270,True
+onemax,P-ACO,small,40,5,11,360,True
+onemax,P-ACO,small,40,6,7,240,True
+onemax,P-ACO,small,40,7,7,240,True
+onemax,P-ACO,small,40,8,10,330,True
+onemax,P-ACO,small,40,9,10,330,True
+onemax,P-ACO,small,40,10,10,330,True
+onemax,P-ACO,small,40,11,9,300,True
+onemax,P-ACO,small,40,12,10,330,True
+onemax,P-ACO,small,40,13,8,270,True
+onemax,P-ACO,small,40,14,9,300,True
+onemax,P-ACO,small,40,15,7,240,True
+onemax,P-ACO,small,40,16,9,300,True
+onemax,P-ACO,small,40,17,8,270,True
+onemax,P-ACO,small,40,18,9,300,True
+onemax,P-ACO,small,40,19,10,330,True
+onemax,P-ACO,small,50,0,10,330,True
+onemax,P-ACO,small,50,1,11,360,True
+onemax,P-ACO,small,50,2,13,420,True
+onemax,P-ACO,small,50,3,10,330,True
+onemax,P-ACO,small,50,4,12,390,True
+onemax,P-ACO,small,50,5,11,360,True
+onemax,P-ACO,small,50,6,11,360,True
+onemax,P-ACO,small,50,7,11,360,True
+onemax,P-ACO,small,50,8,12,390,True
+onemax,P-ACO,small,50,9,14,450,True
+onemax,P-ACO,small,50,10,12,390,True
+onemax,P-ACO,small,50,11,11,360,True
+onemax,P-ACO,small,50,12,13,420,True
+onemax,P-ACO,small,50,13,8,270,True
+onemax,P-ACO,small,50,14,11,360,True
+onemax,P-ACO,small,50,15,11,360,True
+onemax,P-ACO,small,50,16,9,300,True
+onemax,P-ACO,small,50,17,12,390,True
+onemax,P-ACO,small,50,18,11,360,True
+onemax,P-ACO,small,50,19,12,390,True
+onemax,P-ACO,small,60,0,14,450,True
+onemax,P-ACO,small,60,1,13,420,True
+onemax,P-ACO,small,60,2,12,390,True
+onemax,P-ACO,small,60,3,12,390,True
+onemax,P-ACO,small,60,4,12,390,True
+onemax,P-ACO,small,60,5,15,480,True
+onemax,P-ACO,small,60,6,12,390,True
+onemax,P-ACO,small,60,7,13,420,True
+onemax,P-ACO,small,60,8,10,330,True
+onemax,P-ACO,small,60,9,12,390,True
+onemax,P-ACO,small,60,10,12,390,True
+onemax,P-ACO,small,60,11,13,420,True
+onemax,P-ACO,small,60,12,11,360,True
+onemax,P-ACO,small,60,13,13,420,True
+onemax,P-ACO,small,60,14,12,390,True
+onemax,P-ACO,small,60,15,15,480,True
+onemax,P-ACO,small,60,16,12,390,True
+onemax,P-ACO,small,60,17,10,330,True
+onemax,P-ACO,small,60,18,13,420,True
+onemax,P-ACO,small,60,19,13,420,True
+onemax,P-ACO,small,70,0,14,450,True
+onemax,P-ACO,small,70,1,15,480,True
+onemax,P-ACO,small,70,2,15,480,True
+onemax,P-ACO,small,70,3,13,420,True
+onemax,P-ACO,small,70,4,13,420,True
+onemax,P-ACO,small,70,5,14,450,True
+onemax,P-ACO,small,70,6,13,420,True
+onemax,P-ACO,small,70,7,14,450,True
+onemax,P-ACO,small,70,8,13,420,True
+onemax,P-ACO,small,70,9,16,510,True
+onemax,P-ACO,small,70,10,11,360,True
+onemax,P-ACO,small,70,11,14,450,True
+onemax,P-ACO,small,70,12,16,510,True
+onemax,P-ACO,small,70,13,12,390,True
+onemax,P-ACO,small,70,14,16,510,True
+onemax,P-ACO,small,70,15,14,450,True
+onemax,P-ACO,small,70,16,11,360,True
+onemax,P-ACO,small,70,17,12,390,True
+onemax,P-ACO,small,70,18,12,390,True
+onemax,P-ACO,small,70,19,12,390,True
+onemax,P-ACO,small,80,0,13,420,True
+onemax,P-ACO,small,80,1,18,570,True
+onemax,P-ACO,small,80,2,15,480,True
+onemax,P-ACO,small,80,3,14,450,True
+onemax,P-ACO,small,80,4,15,480,True
+onemax,P-ACO,small,80,5,15,480,True
+onemax,P-ACO,small,80,6,13,420,True
+onemax,P-ACO,small,80,7,15,480,True
+onemax,P-ACO,small,80,8,14,450,True
+onemax,P-ACO,small,80,9,15,480,True
+onemax,P-ACO,small,80,10,15,480,True
+onemax,P-ACO,small,80,11,13,420,True
+onemax,P-ACO,small,80,12,15,480,True
+onemax,P-ACO,small,80,13,12,390,True
+onemax,P-ACO,small,80,14,14,450,True
+onemax,P-ACO,small,80,15,14,450,True
+onemax,P-ACO,small,80,16,16,510,True
+onemax,P-ACO,small,80,17,14,450,True
+onemax,P-ACO,small,80,18,15,480,True
+onemax,P-ACO,small,80,19,11,360,True
+onemax,P-ACO,small,90,0,17,540,True
+onemax,P-ACO,small,90,1,16,510,True
+onemax,P-ACO,small,90,2,16,510,True
+onemax,P-ACO,small,90,3,15,480,True
+onemax,P-ACO,small,90,4,14,450,True
+onemax,P-ACO,small,90,5,17,540,True
+onemax,P-ACO,small,90,6,14,450,True
+onemax,P-ACO,small,90,7,14,450,True
+onemax,P-ACO,small,90,8,16,510,True
+onemax,P-ACO,small,90,9,16,510,True
+onemax,P-ACO,small,90,10,14,450,True
+onemax,P-ACO,small,90,11,17,540,True
+onemax,P-ACO,small,90,12,18,570,True
+onemax,P-ACO,small,90,13,15,480,True
+onemax,P-ACO,small,90,14,12,390,True
+onemax,P-ACO,small,90,15,15,480,True
+onemax,P-ACO,small,90,16,15,480,True
+onemax,P-ACO,small,90,17,16,510,True
+onemax,P-ACO,small,90,18,14,450,True
+onemax,P-ACO,small,90,19,18,570,True
+onemax,P-ACO,small,100,0,17,540,True
+onemax,P-ACO,small,100,1,17,540,True
+onemax,P-ACO,small,100,2,17,540,True
+onemax,P-ACO,small,100,3,17,540,True
+onemax,P-ACO,small,100,4,18,570,True
+onemax,P-ACO,small,100,5,17,540,True
+onemax,P-ACO,small,100,6,16,510,True
+onemax,P-ACO,small,100,7,16,510,True
+onemax,P-ACO,small,100,8,18,570,True
+onemax,P-ACO,small,100,9,18,570,True
+onemax,P-ACO,small,100,10,16,510,True
+onemax,P-ACO,small,100,11,17,540,True
+onemax,P-ACO,small,100,12,16,510,True
+onemax,P-ACO,small,100,13,17,540,True
+onemax,P-ACO,small,100,14,18,570,True
+onemax,P-ACO,small,100,15,20,630,True
+onemax,P-ACO,small,100,16,15,480,True
+onemax,P-ACO,small,100,17,15,480,True
+onemax,P-ACO,small,100,18,18,570,True
+onemax,P-ACO,small,100,19,19,600,True
+leadingones,(1+1) EA,small,10,0,64,65,True
+leadingones,(1+1) EA,small,10,1,79,80,True
+leadingones,(1+1) EA,small,10,2,79,80,True
+leadingones,(1+1) EA,small,10,3,126,127,True
+leadingones,(1+1) EA,small,10,4,63,64,True
+leadingones,(1+1) EA,small,10,5,35,36,True
+leadingones,(1+1) EA,small,10,6,125,126,True
+leadingones,(1+1) EA,small,10,7,79,80,True
+leadingones,(1+1) EA,small,10,8,191,192,True
+leadingones,(1+1) EA,small,10,9,120,121,True
+leadingones,(1+1) EA,small,10,10,29,30,True
+leadingones,(1+1) EA,small,10,11,51,52,True
+leadingones,(1+1) EA,small,10,12,279,280,True
+leadingones,(1+1) EA,small,10,13,64,65,True
+leadingones,(1+1) EA,small,10,14,141,142,True
+leadingones,(1+1) EA,small,10,15,34,35,True
+leadingones,(1+1) EA,small,10,16,80,81,True
+leadingones,(1+1) EA,small,10,17,118,119,True
+leadingones,(1+1) EA,small,10,18,70,71,True
+leadingones,(1+1) EA,small,10,19,112,113,True
+leadingones,(1+1) EA,small,20,0,284,285,True
+leadingones,(1+1) EA,small,20,1,321,322,True
+leadingones,(1+1) EA,small,20,2,413,414,True
+leadingones,(1+1) EA,small,20,3,454,455,True
+leadingones,(1+1) EA,small,20,4,392,393,True
+leadingones,(1+1) EA,small,20,5,58,59,True
+leadingones,(1+1) EA,small,20,6,292,293,True
+leadingones,(1+1) EA,small,20,7,334,335,True
+leadingones,(1+1) EA,small,20,8,306,307,True
+leadingones,(1+1) EA,small,20,9,649,650,True
+leadingones,(1+1) EA,small,20,10,458,459,True
+leadingones,(1+1) EA,small,20,11,557,558,True
+leadingones,(1+1) EA,small,20,12,298,299,True
+leadingones,(1+1) EA,small,20,13,431,432,True
+leadingones,(1+1) EA,small,20,14,479,480,True
+leadingones,(1+1) EA,small,20,15,604,605,True
+leadingones,(1+1) EA,small,20,16,430,431,True
+leadingones,(1+1) EA,small,20,17,92,93,True
+leadingones,(1+1) EA,small,20,18,203,204,True
+leadingones,(1+1) EA,small,20,19,231,232,True
+leadingones,(1+1) EA,small,30,0,931,932,True
+leadingones,(1+1) EA,small,30,1,788,789,True
+leadingones,(1+1) EA,small,30,2,741,742,True
+leadingones,(1+1) EA,small,30,3,452,453,True
+leadingones,(1+1) EA,small,30,4,785,786,True
+leadingones,(1+1) EA,small,30,5,752,753,True
+leadingones,(1+1) EA,small,30,6,786,787,True
+leadingones,(1+1) EA,small,30,7,743,744,True
+leadingones,(1+1) EA,small,30,8,867,868,True
+leadingones,(1+1) EA,small,30,9,923,924,True
+leadingones,(1+1) EA,small,30,10,418,419,True
+leadingones,(1+1) EA,small,30,11,727,728,True
+leadingones,(1+1) EA,small,30,12,777,778,True
+leadingones,(1+1) EA,small,30,13,676,677,True
+leadingones,(1+1) EA,small,30,14,617,618,True
+leadingones,(1+1) EA,small,30,15,987,988,True
+leadingones,(1+1) EA,small,30,16,694,695,True
+leadingones,(1+1) EA,small,30,17,399,400,True
+leadingones,(1+1) EA,small,30,18,985,986,True
+leadingones,(1+1) EA,small,30,19,956,957,True
+leadingones,(1+1) EA,small,40,0,1766,1767,True
+leadingones,(1+1) EA,small,40,1,2486,2487,True
+leadingones,(1+1) EA,small,40,2,1388,1389,True
+leadingones,(1+1) EA,small,40,3,938,939,True
+leadingones,(1+1) EA,small,40,4,1252,1253,True
+leadingones,(1+1) EA,small,40,5,1607,1608,True
+leadingones,(1+1) EA,small,40,6,1824,1825,True
+leadingones,(1+1) EA,small,40,7,1611,1612,True
+leadingones,(1+1) EA,small,40,8,1002,1003,True
+leadingones,(1+1) EA,small,40,9,1152,1153,True
+leadingones,(1+1) EA,small,40,10,1423,1424,True
+leadingones,(1+1) EA,small,40,11,2568,2569,True
+leadingones,(1+1) EA,small,40,12,1551,1552,True
+leadingones,(1+1) EA,small,40,13,1361,1362,True
+leadingones,(1+1) EA,small,40,14,1293,1294,True
+leadingones,(1+1) EA,small,40,15,2087,2088,True
+leadingones,(1+1) EA,small,40,16,1104,1105,True
+leadingones,(1+1) EA,small,40,17,1292,1293,True
+leadingones,(1+1) EA,small,40,18,1380,1381,True
+leadingones,(1+1) EA,small,40,19,1811,1812,True
+leadingones,(1+1) EA,small,50,0,1834,1835,True
+leadingones,(1+1) EA,small,50,1,1826,1827,True
+leadingones,(1+1) EA,small,50,2,1614,1615,True
+leadingones,(1+1) EA,small,50,3,2068,2069,True
+leadingones,(1+1) EA,small,50,4,944,945,True
+leadingones,(1+1) EA,small,50,5,1227,1228,True
+leadingones,(1+1) EA,small,50,6,1844,1845,True
+leadingones,(1+1) EA,small,50,7,1588,1589,True
+leadingones,(1+1) EA,small,50,8,2990,2991,True
+leadingones,(1+1) EA,small,50,9,1654,1655,True
+leadingones,(1+1) EA,small,50,10,2108,2109,True
+leadingones,(1+1) EA,small,50,11,2191,2192,True
+leadingones,(1+1) EA,small,50,12,2131,2132,True
+leadingones,(1+1) EA,small,50,13,1520,1521,True
+leadingones,(1+1) EA,small,50,14,1760,1761,True
+leadingones,(1+1) EA,small,50,15,1802,1803,True
+leadingones,(1+1) EA,small,50,16,1454,1455,True
+leadingones,(1+1) EA,small,50,17,1580,1581,True
+leadingones,(1+1) EA,small,50,18,2911,2912,True
+leadingones,(1+1) EA,small,50,19,1882,1883,True
+leadingones,(1+1) EA,small,60,0,2505,2506,True
+leadingones,(1+1) EA,small,60,1,3305,3306,True
+leadingones,(1+1) EA,small,60,2,2578,2579,True
+leadingones,(1+1) EA,small,60,3,2761,2762,True
+leadingones,(1+1) EA,small,60,4,2744,2745,True
+leadingones,(1+1) EA,small,60,5,3980,3981,True
+leadingones,(1+1) EA,small,60,6,1640,1641,True
+leadingones,(1+1) EA,small,60,7,2497,2498,True
+leadingones,(1+1) EA,small,60,8,3916,3917,True
+leadingones,(1+1) EA,small,60,9,2232,2233,True
+leadingones,(1+1) EA,small,60,10,1794,1795,True
+leadingones,(1+1) EA,small,60,11,3420,3421,True
+leadingones,(1+1) EA,small,60,12,2113,2114,True
+leadingones,(1+1) EA,small,60,13,3444,3445,True
+leadingones,(1+1) EA,small,60,14,4094,4095,True
+leadingones,(1+1) EA,small,60,15,3506,3507,True
+leadingones,(1+1) EA,small,60,16,3830,3831,True
+leadingones,(1+1) EA,small,60,17,2265,2266,True
+leadingones,(1+1) EA,small,60,18,3870,3871,True
+leadingones,(1+1) EA,small,60,19,4279,4280,True
+leadingones,(1+1) EA,small,70,0,5053,5054,True
+leadingones,(1+1) EA,small,70,1,4814,4815,True
+leadingones,(1+1) EA,small,70,2,4117,4118,True
+leadingones,(1+1) EA,small,70,3,3247,3248,True
+leadingones,(1+1) EA,small,70,4,5182,5183,True
+leadingones,(1+1) EA,small,70,5,3869,3870,True
+leadingones,(1+1) EA,small,70,6,5051,5052,True
+leadingones,(1+1) EA,small,70,7,3518,3519,True
+leadingones,(1+1) EA,small,70,8,3685,3686,True
+leadingones,(1+1) EA,small,70,9,4048,4049,True
+leadingones,(1+1) EA,small,70,10,3578,3579,True
+leadingones,(1+1) EA,small,70,11,4107,4108,True
+leadingones,(1+1) EA,small,70,12,4803,4804,True
+leadingones,(1+1) EA,small,70,13,4670,4671,True
+leadingones,(1+1) EA,small,70,14,3904,3905,True
+leadingones,(1+1) EA,small,70,15,4858,4859,True
+leadingones,(1+1) EA,small,70,16,3161,3162,True
+leadingones,(1+1) EA,small,70,17,4540,4541,True
+leadingones,(1+1) EA,small,70,18,4844,4845,True
+leadingones,(1+1) EA,small,70,19,3751,3752,True
+leadingones,(1+1) EA,small,80,0,4369,4370,True
+leadingones,(1+1) EA,small,80,1,4201,4202,True
+leadingones,(1+1) EA,small,80,2,4999,5000,True
+leadingones,(1+1) EA,small,80,3,5683,5684,True
+leadingones,(1+1) EA,small,80,4,5273,5274,True
+leadingones,(1+1) EA,small,80,5,6162,6163,True
+leadingones,(1+1) EA,small,80,6,5954,5955,True
+leadingones,(1+1) EA,small,80,7,4973,4974,True
+leadingones,(1+1) EA,small,80,8,3872,3873,True
+leadingones,(1+1) EA,small,80,9,4857,4858,True
+leadingones,(1+1) EA,small,80,10,7172,7173,True
+leadingones,(1+1) EA,small,80,11,5471,5472,True
+leadingones,(1+1) EA,small,80,12,4525,4526,True
+leadingones,(1+1) EA,small,80,13,5744,5745,True
+leadingones,(1+1) EA,small,80,14,4879,4880,True
+leadingones,(1+1) EA,small,80,15,6164,6165,True
+leadingones,(1+1) EA,small,80,16,4174,4175,True
+leadingones,(1+1) EA,small,80,17,4616,4617,True
+leadingones,(1+1) EA,small,80,18,6696,6697,True
+leadingones,(1+1) EA,small,80,19,5213,5214,True
+leadingones,(1+1) EA,small,90,0,7389,7390,True
+leadingones,(1+1) EA,small,90,1,5617,5618,True
+leadingones,(1+1) EA,small,90,2,7451,7452,True
+leadingones,(1+1) EA,small,90,3,4998,4999,True
+leadingones,(1+1) EA,small,90,4,9356,9357,True
+leadingones,(1+1) EA,small,90,5,5644,5645,True
+leadingones,(1+1) EA,small,90,6,8557,8558,True
+leadingones,(1+1) EA,small,90,7,7401,7402,True
+leadingones,(1+1) EA,small,90,8,6154,6155,True
+leadingones,(1+1) EA,small,90,9,5740,5741,True
+leadingones,(1+1) EA,small,90,10,7137,7138,True
+leadingones,(1+1) EA,small,90,11,6576,6577,True
+leadingones,(1+1) EA,small,90,12,8903,8904,True
+leadingones,(1+1) EA,small,90,13,7772,7773,True
+leadingones,(1+1) EA,small,90,14,7997,7998,True
+leadingones,(1+1) EA,small,90,15,7417,7418,True
+leadingones,(1+1) EA,small,90,16,6433,6434,True
+leadingones,(1+1) EA,small,90,17,5119,5120,True
+leadingones,(1+1) EA,small,90,18,4867,4868,True
+leadingones,(1+1) EA,small,90,19,5798,5799,True
+leadingones,(1+1) EA,small,100,0,8053,8054,True
+leadingones,(1+1) EA,small,100,1,9995,9996,True
+leadingones,(1+1) EA,small,100,2,9882,9883,True
+leadingones,(1+1) EA,small,100,3,11629,11630,True
+leadingones,(1+1) EA,small,100,4,7529,7530,True
+leadingones,(1+1) EA,small,100,5,9497,9498,True
+leadingones,(1+1) EA,small,100,6,10554,10555,True
+leadingones,(1+1) EA,small,100,7,10027,10028,True
+leadingones,(1+1) EA,small,100,8,9350,9351,True
+leadingones,(1+1) EA,small,100,9,8985,8986,True
+leadingones,(1+1) EA,small,100,10,8412,8413,True
+leadingones,(1+1) EA,small,100,11,6375,6376,True
+leadingones,(1+1) EA,small,100,12,8129,8130,True
+leadingones,(1+1) EA,small,100,13,6966,6967,True
+leadingones,(1+1) EA,small,100,14,7005,7006,True
+leadingones,(1+1) EA,small,100,15,6095,6096,True
+leadingones,(1+1) EA,small,100,16,7914,7915,True
+leadingones,(1+1) EA,small,100,17,6325,6326,True
+leadingones,(1+1) EA,small,100,18,7165,7166,True
+leadingones,(1+1) EA,small,100,19,12324,12325,True
+leadingones,(μ+λ) EA,small,10,0,3,140,True
+leadingones,(μ+λ) EA,small,10,1,4,180,True
+leadingones,(μ+λ) EA,small,10,2,1,60,True
+leadingones,(μ+λ) EA,small,10,3,4,180,True
+leadingones,(μ+λ) EA,small,10,4,2,100,True
+leadingones,(μ+λ) EA,small,10,5,3,140,True
+leadingones,(μ+λ) EA,small,10,6,2,100,True
+leadingones,(μ+λ) EA,small,10,7,5,220,True
+leadingones,(μ+λ) EA,small,10,8,3,140,True
+leadingones,(μ+λ) EA,small,10,9,2,100,True
+leadingones,(μ+λ) EA,small,10,10,0,20,True
+leadingones,(μ+λ) EA,small,10,11,6,260,True
+leadingones,(μ+λ) EA,small,10,12,4,180,True
+leadingones,(μ+λ) EA,small,10,13,12,500,True
+leadingones,(μ+λ) EA,small,10,14,3,140,True
+leadingones,(μ+λ) EA,small,10,15,3,140,True
+leadingones,(μ+λ) EA,small,10,16,3,140,True
+leadingones,(μ+λ) EA,small,10,17,7,300,True
+leadingones,(μ+λ) EA,small,10,18,6,260,True
+leadingones,(μ+λ) EA,small,10,19,4,180,True
+leadingones,(μ+λ) EA,small,20,0,15,620,True
+leadingones,(μ+λ) EA,small,20,1,10,420,True
+leadingones,(μ+λ) EA,small,20,2,10,420,True
+leadingones,(μ+λ) EA,small,20,3,12,500,True
+leadingones,(μ+λ) EA,small,20,4,16,660,True
+leadingones,(μ+λ) EA,small,20,5,12,500,True
+leadingones,(μ+λ) EA,small,20,6,7,300,True
+leadingones,(μ+λ) EA,small,20,7,14,580,True
+leadingones,(μ+λ) EA,small,20,8,11,460,True
+leadingones,(μ+λ) EA,small,20,9,13,540,True
+leadingones,(μ+λ) EA,small,20,10,17,700,True
+leadingones,(μ+λ) EA,small,20,11,25,1020,True
+leadingones,(μ+λ) EA,small,20,12,9,380,True
+leadingones,(μ+λ) EA,small,20,13,10,420,True
+leadingones,(μ+λ) EA,small,20,14,12,500,True
+leadingones,(μ+λ) EA,small,20,15,10,420,True
+leadingones,(μ+λ) EA,small,20,16,20,820,True
+leadingones,(μ+λ) EA,small,20,17,15,620,True
+leadingones,(μ+λ) EA,small,20,18,9,380,True
+leadingones,(μ+λ) EA,small,20,19,14,580,True
+leadingones,(μ+λ) EA,small,30,0,31,1260,True
+leadingones,(μ+λ) EA,small,30,1,20,820,True
+leadingones,(μ+λ) EA,small,30,2,25,1020,True
+leadingones,(μ+λ) EA,small,30,3,18,740,True
+leadingones,(μ+λ) EA,small,30,4,32,1300,True
+leadingones,(μ+λ) EA,small,30,5,32,1300,True
+leadingones,(μ+λ) EA,small,30,6,40,1620,True
+leadingones,(μ+λ) EA,small,30,7,35,1420,True
+leadingones,(μ+λ) EA,small,30,8,23,940,True
+leadingones,(μ+λ) EA,small,30,9,31,1260,True
+leadingones,(μ+λ) EA,small,30,10,35,1420,True
+leadingones,(μ+λ) EA,small,30,11,28,1140,True
+leadingones,(μ+λ) EA,small,30,12,31,1260,True
+leadingones,(μ+λ) EA,small,30,13,28,1140,True
+leadingones,(μ+λ) EA,small,30,14,23,940,True
+leadingones,(μ+λ) EA,small,30,15,13,540,True
+leadingones,(μ+λ) EA,small,30,16,18,740,True
+leadingones,(μ+λ) EA,small,30,17,30,1220,True
+leadingones,(μ+λ) EA,small,30,18,14,580,True
+leadingones,(μ+λ) EA,small,30,19,38,1540,True
+leadingones,(μ+λ) EA,small,40,0,60,2420,True
+leadingones,(μ+λ) EA,small,40,1,56,2260,True
+leadingones,(μ+λ) EA,small,40,2,35,1420,True
+leadingones,(μ+λ) EA,small,40,3,53,2140,True
+leadingones,(μ+λ) EA,small,40,4,27,1100,True
+leadingones,(μ+λ) EA,small,40,5,43,1740,True
+leadingones,(μ+λ) EA,small,40,6,41,1660,True
+leadingones,(μ+λ) EA,small,40,7,61,2460,True
+leadingones,(μ+λ) EA,small,40,8,23,940,True
+leadingones,(μ+λ) EA,small,40,9,34,1380,True
+leadingones,(μ+λ) EA,small,40,10,47,1900,True
+leadingones,(μ+λ) EA,small,40,11,37,1500,True
+leadingones,(μ+λ) EA,small,40,12,27,1100,True
+leadingones,(μ+λ) EA,small,40,13,60,2420,True
+leadingones,(μ+λ) EA,small,40,14,38,1540,True
+leadingones,(μ+λ) EA,small,40,15,47,1900,True
+leadingones,(μ+λ) EA,small,40,16,44,1780,True
+leadingones,(μ+λ) EA,small,40,17,55,2220,True
+leadingones,(μ+λ) EA,small,40,18,52,2100,True
+leadingones,(μ+λ) EA,small,40,19,45,1820,True
+leadingones,(μ+λ) EA,small,50,0,63,2540,True
+leadingones,(μ+λ) EA,small,50,1,65,2620,True
+leadingones,(μ+λ) EA,small,50,2,65,2620,True
+leadingones,(μ+λ) EA,small,50,3,64,2580,True
+leadingones,(μ+λ) EA,small,50,4,57,2300,True
+leadingones,(μ+λ) EA,small,50,5,44,1780,True
+leadingones,(μ+λ) EA,small,50,6,73,2940,True
+leadingones,(μ+λ) EA,small,50,7,100,4020,True
+leadingones,(μ+λ) EA,small,50,8,85,3420,True
+leadingones,(μ+λ) EA,small,50,9,52,2100,True
+leadingones,(μ+λ) EA,small,50,10,64,2580,True
+leadingones,(μ+λ) EA,small,50,11,107,4300,True
+leadingones,(μ+λ) EA,small,50,12,63,2540,True
+leadingones,(μ+λ) EA,small,50,13,55,2220,True
+leadingones,(μ+λ) EA,small,50,14,87,3500,True
+leadingones,(μ+λ) EA,small,50,15,50,2020,True
+leadingones,(μ+λ) EA,small,50,16,74,2980,True
+leadingones,(μ+λ) EA,small,50,17,69,2780,True
+leadingones,(μ+λ) EA,small,50,18,66,2660,True
+leadingones,(μ+λ) EA,small,50,19,74,2980,True
+leadingones,(μ+λ) EA,small,60,0,117,4700,True
+leadingones,(μ+λ) EA,small,60,1,110,4420,True
+leadingones,(μ+λ) EA,small,60,2,87,3500,True
+leadingones,(μ+λ) EA,small,60,3,106,4260,True
+leadingones,(μ+λ) EA,small,60,4,110,4420,True
+leadingones,(μ+λ) EA,small,60,5,105,4220,True
+leadingones,(μ+λ) EA,small,60,6,90,3620,True
+leadingones,(μ+λ) EA,small,60,7,88,3540,True
+leadingones,(μ+λ) EA,small,60,8,91,3660,True
+leadingones,(μ+λ) EA,small,60,9,107,4300,True
+leadingones,(μ+λ) EA,small,60,10,119,4780,True
+leadingones,(μ+λ) EA,small,60,11,91,3660,True
+leadingones,(μ+λ) EA,small,60,12,103,4140,True
+leadingones,(μ+λ) EA,small,60,13,95,3820,True
+leadingones,(μ+λ) EA,small,60,14,85,3420,True
+leadingones,(μ+λ) EA,small,60,15,112,4500,True
+leadingones,(μ+λ) EA,small,60,16,108,4340,True
+leadingones,(μ+λ) EA,small,60,17,107,4300,True
+leadingones,(μ+λ) EA,small,60,18,86,3460,True
+leadingones,(μ+λ) EA,small,60,19,64,2580,True
+leadingones,(μ+λ) EA,small,70,0,162,6500,True
+leadingones,(μ+λ) EA,small,70,1,107,4300,True
+leadingones,(μ+λ) EA,small,70,2,100,4020,True
+leadingones,(μ+λ) EA,small,70,3,145,5820,True
+leadingones,(μ+λ) EA,small,70,4,115,4620,True
+leadingones,(μ+λ) EA,small,70,5,129,5180,True
+leadingones,(μ+λ) EA,small,70,6,152,6100,True
+leadingones,(μ+λ) EA,small,70,7,135,5420,True
+leadingones,(μ+λ) EA,small,70,8,147,5900,True
+leadingones,(μ+λ) EA,small,70,9,136,5460,True
+leadingones,(μ+λ) EA,small,70,10,149,5980,True
+leadingones,(μ+λ) EA,small,70,11,119,4780,True
+leadingones,(μ+λ) EA,small,70,12,121,4860,True
+leadingones,(μ+λ) EA,small,70,13,142,5700,True
+leadingones,(μ+λ) EA,small,70,14,130,5220,True
+leadingones,(μ+λ) EA,small,70,15,138,5540,True
+leadingones,(μ+λ) EA,small,70,16,139,5580,True
+leadingones,(μ+λ) EA,small,70,17,159,6380,True
+leadingones,(μ+λ) EA,small,70,18,106,4260,True
+leadingones,(μ+λ) EA,small,70,19,123,4940,True
+leadingones,(μ+λ) EA,small,80,0,156,6260,True
+leadingones,(μ+λ) EA,small,80,1,214,8580,True
+leadingones,(μ+λ) EA,small,80,2,156,6260,True
+leadingones,(μ+λ) EA,small,80,3,107,4300,True
+leadingones,(μ+λ) EA,small,80,4,164,6580,True
+leadingones,(μ+λ) EA,small,80,5,232,9300,True
+leadingones,(μ+λ) EA,small,80,6,167,6700,True
+leadingones,(μ+λ) EA,small,80,7,156,6260,True
+leadingones,(μ+λ) EA,small,80,8,133,5340,True
+leadingones,(μ+λ) EA,small,80,9,185,7420,True
+leadingones,(μ+λ) EA,small,80,10,205,8220,True
+leadingones,(μ+λ) EA,small,80,11,135,5420,True
+leadingones,(μ+λ) EA,small,80,12,141,5660,True
+leadingones,(μ+λ) EA,small,80,13,208,8340,True
+leadingones,(μ+λ) EA,small,80,14,162,6500,True
+leadingones,(μ+λ) EA,small,80,15,142,5700,True
+leadingones,(μ+λ) EA,small,80,16,140,5620,True
+leadingones,(μ+λ) EA,small,80,17,187,7500,True
+leadingones,(μ+λ) EA,small,80,18,153,6140,True
+leadingones,(μ+λ) EA,small,80,19,147,5900,True
+leadingones,(μ+λ) EA,small,90,0,171,6860,True
+leadingones,(μ+λ) EA,small,90,1,154,6180,True
+leadingones,(μ+λ) EA,small,90,2,227,9100,True
+leadingones,(μ+λ) EA,small,90,3,239,9580,True
+leadingones,(μ+λ) EA,small,90,4,192,7700,True
+leadingones,(μ+λ) EA,small,90,5,207,8300,True
+leadingones,(μ+λ) EA,small,90,6,211,8460,True
+leadingones,(μ+λ) EA,small,90,7,172,6900,True
+leadingones,(μ+λ) EA,small,90,8,199,7980,True
+leadingones,(μ+λ) EA,small,90,9,241,9660,True
+leadingones,(μ+λ) EA,small,90,10,204,8180,True
+leadingones,(μ+λ) EA,small,90,11,153,6140,True
+leadingones,(μ+λ) EA,small,90,12,281,11260,True
+leadingones,(μ+λ) EA,small,90,13,203,8140,True
+leadingones,(μ+λ) EA,small,90,14,193,7740,True
+leadingones,(μ+λ) EA,small,90,15,162,6500,True
+leadingones,(μ+λ) EA,small,90,16,185,7420,True
+leadingones,(μ+λ) EA,small,90,17,305,12220,True
+leadingones,(μ+λ) EA,small,90,18,215,8620,True
+leadingones,(μ+λ) EA,small,90,19,205,8220,True
+leadingones,(μ+λ) EA,small,100,0,245,9820,True
+leadingones,(μ+λ) EA,small,100,1,265,10620,True
+leadingones,(μ+λ) EA,small,100,2,202,8100,True
+leadingones,(μ+λ) EA,small,100,3,241,9660,True
+leadingones,(μ+λ) EA,small,100,4,306,12260,True
+leadingones,(μ+λ) EA,small,100,5,257,10300,True
+leadingones,(μ+λ) EA,small,100,6,233,9340,True
+leadingones,(μ+λ) EA,small,100,7,201,8060,True
+leadingones,(μ+λ) EA,small,100,8,249,9980,True
+leadingones,(μ+λ) EA,small,100,9,226,9060,True
+leadingones,(μ+λ) EA,small,100,10,226,9060,True
+leadingones,(μ+λ) EA,small,100,11,192,7700,True
+leadingones,(μ+λ) EA,small,100,12,261,10460,True
+leadingones,(μ+λ) EA,small,100,13,229,9180,True
+leadingones,(μ+λ) EA,small,100,14,351,14060,True
+leadingones,(μ+λ) EA,small,100,15,252,10100,True
+leadingones,(μ+λ) EA,small,100,16,226,9060,True
+leadingones,(μ+λ) EA,small,100,17,258,10340,True
+leadingones,(μ+λ) EA,small,100,18,237,9500,True
+leadingones,(μ+λ) EA,small,100,19,229,9180,True
+leadingones,Simulated Annealing,small,10,0,349,350,True
+leadingones,Simulated Annealing,small,10,1,492,493,True
+leadingones,Simulated Annealing,small,10,2,474,475,True
+leadingones,Simulated Annealing,small,10,3,369,370,True
+leadingones,Simulated Annealing,small,10,4,100,101,True
+leadingones,Simulated Annealing,small,10,5,457,458,True
+leadingones,Simulated Annealing,small,10,6,458,459,True
+leadingones,Simulated Annealing,small,10,7,50,51,True
+leadingones,Simulated Annealing,small,10,8,159,160,True
+leadingones,Simulated Annealing,small,10,9,403,404,True
+leadingones,Simulated Annealing,small,10,10,449,450,True
+leadingones,Simulated Annealing,small,10,11,347,348,True
+leadingones,Simulated Annealing,small,10,12,148,149,True
+leadingones,Simulated Annealing,small,10,13,472,473,True
+leadingones,Simulated Annealing,small,10,14,522,523,True
+leadingones,Simulated Annealing,small,10,15,149,150,True
+leadingones,Simulated Annealing,small,10,16,36,37,True
+leadingones,Simulated Annealing,small,10,17,357,358,True
+leadingones,Simulated Annealing,small,10,18,355,356,True
+leadingones,Simulated Annealing,small,10,19,355,356,True
+leadingones,Simulated Annealing,small,20,0,645,646,True
+leadingones,Simulated Annealing,small,20,1,640,641,True
+leadingones,Simulated Annealing,small,20,2,429,430,True
+leadingones,Simulated Annealing,small,20,3,565,566,True
+leadingones,Simulated Annealing,small,20,4,567,568,True
+leadingones,Simulated Annealing,small,20,5,640,641,True
+leadingones,Simulated Annealing,small,20,6,625,626,True
+leadingones,Simulated Annealing,small,20,7,656,657,True
+leadingones,Simulated Annealing,small,20,8,663,664,True
+leadingones,Simulated Annealing,small,20,9,639,640,True
+leadingones,Simulated Annealing,small,20,10,554,555,True
+leadingones,Simulated Annealing,small,20,11,623,624,True
+leadingones,Simulated Annealing,small,20,12,434,435,True
+leadingones,Simulated Annealing,small,20,13,760,761,True
+leadingones,Simulated Annealing,small,20,14,648,649,True
+leadingones,Simulated Annealing,small,20,15,743,744,True
+leadingones,Simulated Annealing,small,20,16,582,583,True
+leadingones,Simulated Annealing,small,20,17,687,688,True
+leadingones,Simulated Annealing,small,20,18,601,602,True
+leadingones,Simulated Annealing,small,20,19,429,430,True
+leadingones,Simulated Annealing,small,30,0,847,848,True
+leadingones,Simulated Annealing,small,30,1,826,827,True
+leadingones,Simulated Annealing,small,30,2,956,957,True
+leadingones,Simulated Annealing,small,30,3,1575,1576,True
+leadingones,Simulated Annealing,small,30,4,1046,1047,True
+leadingones,Simulated Annealing,small,30,5,997,998,True
+leadingones,Simulated Annealing,small,30,6,892,893,True
+leadingones,Simulated Annealing,small,30,7,732,733,True
+leadingones,Simulated Annealing,small,30,8,826,827,True
+leadingones,Simulated Annealing,small,30,9,856,857,True
+leadingones,Simulated Annealing,small,30,10,729,730,True
+leadingones,Simulated Annealing,small,30,11,1069,1070,True
+leadingones,Simulated Annealing,small,30,12,782,783,True
+leadingones,Simulated Annealing,small,30,13,809,810,True
+leadingones,Simulated Annealing,small,30,14,969,970,True
+leadingones,Simulated Annealing,small,30,15,960,961,True
+leadingones,Simulated Annealing,small,30,16,830,831,True
+leadingones,Simulated Annealing,small,30,17,1013,1014,True
+leadingones,Simulated Annealing,small,30,18,753,754,True
+leadingones,Simulated Annealing,small,30,19,822,823,True
+leadingones,Simulated Annealing,small,40,0,1321,1322,True
+leadingones,Simulated Annealing,small,40,1,1433,1434,True
+leadingones,Simulated Annealing,small,40,2,827,828,True
+leadingones,Simulated Annealing,small,40,3,1328,1329,True
+leadingones,Simulated Annealing,small,40,4,878,879,True
+leadingones,Simulated Annealing,small,40,5,986,987,True
+leadingones,Simulated Annealing,small,40,6,1208,1209,True
+leadingones,Simulated Annealing,small,40,7,1388,1389,True
+leadingones,Simulated Annealing,small,40,8,1199,1200,True
+leadingones,Simulated Annealing,small,40,9,1341,1342,True
+leadingones,Simulated Annealing,small,40,10,1181,1182,True
+leadingones,Simulated Annealing,small,40,11,1028,1029,True
+leadingones,Simulated Annealing,small,40,12,895,896,True
+leadingones,Simulated Annealing,small,40,13,1317,1318,True
+leadingones,Simulated Annealing,small,40,14,1164,1165,True
+leadingones,Simulated Annealing,small,40,15,1298,1299,True
+leadingones,Simulated Annealing,small,40,16,1111,1112,True
+leadingones,Simulated Annealing,small,40,17,967,968,True
+leadingones,Simulated Annealing,small,40,18,1446,1447,True
+leadingones,Simulated Annealing,small,40,19,1334,1335,True
+leadingones,Simulated Annealing,small,50,0,1852,1853,True
+leadingones,Simulated Annealing,small,50,1,1621,1622,True
+leadingones,Simulated Annealing,small,50,2,1686,1687,True
+leadingones,Simulated Annealing,small,50,3,1554,1555,True
+leadingones,Simulated Annealing,small,50,4,1689,1690,True
+leadingones,Simulated Annealing,small,50,5,1855,1856,True
+leadingones,Simulated Annealing,small,50,6,1582,1583,True
+leadingones,Simulated Annealing,small,50,7,2037,2038,True
+leadingones,Simulated Annealing,small,50,8,1735,1736,True
+leadingones,Simulated Annealing,small,50,9,1760,1761,True
+leadingones,Simulated Annealing,small,50,10,1538,1539,True
+leadingones,Simulated Annealing,small,50,11,1945,1946,True
+leadingones,Simulated Annealing,small,50,12,1644,1645,True
+leadingones,Simulated Annealing,small,50,13,1297,1298,True
+leadingones,Simulated Annealing,small,50,14,1406,1407,True
+leadingones,Simulated Annealing,small,50,15,1889,1890,True
+leadingones,Simulated Annealing,small,50,16,2091,2092,True
+leadingones,Simulated Annealing,small,50,17,1434,1435,True
+leadingones,Simulated Annealing,small,50,18,1490,1491,True
+leadingones,Simulated Annealing,small,50,19,1745,1746,True
+leadingones,Simulated Annealing,small,60,0,2095,2096,True
+leadingones,Simulated Annealing,small,60,1,2139,2140,True
+leadingones,Simulated Annealing,small,60,2,1686,1687,True
+leadingones,Simulated Annealing,small,60,3,2257,2258,True
+leadingones,Simulated Annealing,small,60,4,1815,1816,True
+leadingones,Simulated Annealing,small,60,5,2195,2196,True
+leadingones,Simulated Annealing,small,60,6,2344,2345,True
+leadingones,Simulated Annealing,small,60,7,2517,2518,True
+leadingones,Simulated Annealing,small,60,8,2135,2136,True
+leadingones,Simulated Annealing,small,60,9,1597,1598,True
+leadingones,Simulated Annealing,small,60,10,2306,2307,True
+leadingones,Simulated Annealing,small,60,11,2875,2876,True
+leadingones,Simulated Annealing,small,60,12,2150,2151,True
+leadingones,Simulated Annealing,small,60,13,1648,1649,True
+leadingones,Simulated Annealing,small,60,14,1576,1577,True
+leadingones,Simulated Annealing,small,60,15,2493,2494,True
+leadingones,Simulated Annealing,small,60,16,2581,2582,True
+leadingones,Simulated Annealing,small,60,17,2029,2030,True
+leadingones,Simulated Annealing,small,60,18,2150,2151,True
+leadingones,Simulated Annealing,small,60,19,1770,1771,True
+leadingones,Simulated Annealing,small,70,0,3544,3545,True
+leadingones,Simulated Annealing,small,70,1,2542,2543,True
+leadingones,Simulated Annealing,small,70,2,3573,3574,True
+leadingones,Simulated Annealing,small,70,3,2839,2840,True
+leadingones,Simulated Annealing,small,70,4,2246,2247,True
+leadingones,Simulated Annealing,small,70,5,2919,2920,True
+leadingones,Simulated Annealing,small,70,6,2616,2617,True
+leadingones,Simulated Annealing,small,70,7,2291,2292,True
+leadingones,Simulated Annealing,small,70,8,4163,4164,True
+leadingones,Simulated Annealing,small,70,9,2433,2434,True
+leadingones,Simulated Annealing,small,70,10,3145,3146,True
+leadingones,Simulated Annealing,small,70,11,3329,3330,True
+leadingones,Simulated Annealing,small,70,12,2272,2273,True
+leadingones,Simulated Annealing,small,70,13,3002,3003,True
+leadingones,Simulated Annealing,small,70,14,3054,3055,True
+leadingones,Simulated Annealing,small,70,15,2553,2554,True
+leadingones,Simulated Annealing,small,70,16,3324,3325,True
+leadingones,Simulated Annealing,small,70,17,2838,2839,True
+leadingones,Simulated Annealing,small,70,18,2253,2254,True
+leadingones,Simulated Annealing,small,70,19,3105,3106,True
+leadingones,Simulated Annealing,small,80,0,3206,3207,True
+leadingones,Simulated Annealing,small,80,1,3559,3560,True
+leadingones,Simulated Annealing,small,80,2,4282,4283,True
+leadingones,Simulated Annealing,small,80,3,3240,3241,True
+leadingones,Simulated Annealing,small,80,4,3624,3625,True
+leadingones,Simulated Annealing,small,80,5,4203,4204,True
+leadingones,Simulated Annealing,small,80,6,3874,3875,True
+leadingones,Simulated Annealing,small,80,7,3090,3091,True
+leadingones,Simulated Annealing,small,80,8,3274,3275,True
+leadingones,Simulated Annealing,small,80,9,2871,2872,True
+leadingones,Simulated Annealing,small,80,10,3711,3712,True
+leadingones,Simulated Annealing,small,80,11,4110,4111,True
+leadingones,Simulated Annealing,small,80,12,4036,4037,True
+leadingones,Simulated Annealing,small,80,13,3575,3576,True
+leadingones,Simulated Annealing,small,80,14,3251,3252,True
+leadingones,Simulated Annealing,small,80,15,3274,3275,True
+leadingones,Simulated Annealing,small,80,16,4291,4292,True
+leadingones,Simulated Annealing,small,80,17,3374,3375,True
+leadingones,Simulated Annealing,small,80,18,2706,2707,True
+leadingones,Simulated Annealing,small,80,19,3475,3476,True
+leadingones,Simulated Annealing,small,90,0,4083,4084,True
+leadingones,Simulated Annealing,small,90,1,5205,5206,True
+leadingones,Simulated Annealing,small,90,2,5337,5338,True
+leadingones,Simulated Annealing,small,90,3,5899,5900,True
+leadingones,Simulated Annealing,small,90,4,4360,4361,True
+leadingones,Simulated Annealing,small,90,5,4792,4793,True
+leadingones,Simulated Annealing,small,90,6,3505,3506,True
+leadingones,Simulated Annealing,small,90,7,3696,3697,True
+leadingones,Simulated Annealing,small,90,8,5643,5644,True
+leadingones,Simulated Annealing,small,90,9,4503,4504,True
+leadingones,Simulated Annealing,small,90,10,3090,3091,True
+leadingones,Simulated Annealing,small,90,11,6743,6744,True
+leadingones,Simulated Annealing,small,90,12,4753,4754,True
+leadingones,Simulated Annealing,small,90,13,4959,4960,True
+leadingones,Simulated Annealing,small,90,14,4753,4754,True
+leadingones,Simulated Annealing,small,90,15,3553,3554,True
+leadingones,Simulated Annealing,small,90,16,3202,3203,True
+leadingones,Simulated Annealing,small,90,17,3733,3734,True
+leadingones,Simulated Annealing,small,90,18,4433,4434,True
+leadingones,Simulated Annealing,small,90,19,3814,3815,True
+leadingones,Simulated Annealing,small,100,0,5804,5805,True
+leadingones,Simulated Annealing,small,100,1,6013,6014,True
+leadingones,Simulated Annealing,small,100,2,5185,5186,True
+leadingones,Simulated Annealing,small,100,3,5180,5181,True
+leadingones,Simulated Annealing,small,100,4,4367,4368,True
+leadingones,Simulated Annealing,small,100,5,5405,5406,True
+leadingones,Simulated Annealing,small,100,6,5461,5462,True
+leadingones,Simulated Annealing,small,100,7,5126,5127,True
+leadingones,Simulated Annealing,small,100,8,5326,5327,True
+leadingones,Simulated Annealing,small,100,9,5146,5147,True
+leadingones,Simulated Annealing,small,100,10,4602,4603,True
+leadingones,Simulated Annealing,small,100,11,5168,5169,True
+leadingones,Simulated Annealing,small,100,12,5902,5903,True
+leadingones,Simulated Annealing,small,100,13,4351,4352,True
+leadingones,Simulated Annealing,small,100,14,5141,5142,True
+leadingones,Simulated Annealing,small,100,15,5190,5191,True
+leadingones,Simulated Annealing,small,100,16,5120,5121,True
+leadingones,Simulated Annealing,small,100,17,4020,4021,True
+leadingones,Simulated Annealing,small,100,18,6046,6047,True
+leadingones,Simulated Annealing,small,100,19,4878,4879,True
+leadingones,MMAS-ACO,small,10,0,124,125,True
+leadingones,MMAS-ACO,small,10,1,38,39,True
+leadingones,MMAS-ACO,small,10,2,52,53,True
+leadingones,MMAS-ACO,small,10,3,53,54,True
+leadingones,MMAS-ACO,small,10,4,161,162,True
+leadingones,MMAS-ACO,small,10,5,84,85,True
+leadingones,MMAS-ACO,small,10,6,72,73,True
+leadingones,MMAS-ACO,small,10,7,37,38,True
+leadingones,MMAS-ACO,small,10,8,116,117,True
+leadingones,MMAS-ACO,small,10,9,66,67,True
+leadingones,MMAS-ACO,small,10,10,34,35,True
+leadingones,MMAS-ACO,small,10,11,121,122,True
+leadingones,MMAS-ACO,small,10,12,49,50,True
+leadingones,MMAS-ACO,small,10,13,13,14,True
+leadingones,MMAS-ACO,small,10,14,122,123,True
+leadingones,MMAS-ACO,small,10,15,103,104,True
+leadingones,MMAS-ACO,small,10,16,64,65,True
+leadingones,MMAS-ACO,small,10,17,147,148,True
+leadingones,MMAS-ACO,small,10,18,51,52,True
+leadingones,MMAS-ACO,small,10,19,19,20,True
+leadingones,MMAS-ACO,small,20,0,292,293,True
+leadingones,MMAS-ACO,small,20,1,385,386,True
+leadingones,MMAS-ACO,small,20,2,522,523,True
+leadingones,MMAS-ACO,small,20,3,555,556,True
+leadingones,MMAS-ACO,small,20,4,283,284,True
+leadingones,MMAS-ACO,small,20,5,368,369,True
+leadingones,MMAS-ACO,small,20,6,182,183,True
+leadingones,MMAS-ACO,small,20,7,165,166,True
+leadingones,MMAS-ACO,small,20,8,397,398,True
+leadingones,MMAS-ACO,small,20,9,318,319,True
+leadingones,MMAS-ACO,small,20,10,331,332,True
+leadingones,MMAS-ACO,small,20,11,543,544,True
+leadingones,MMAS-ACO,small,20,12,613,614,True
+leadingones,MMAS-ACO,small,20,13,101,102,True
+leadingones,MMAS-ACO,small,20,14,165,166,True
+leadingones,MMAS-ACO,small,20,15,212,213,True
+leadingones,MMAS-ACO,small,20,16,217,218,True
+leadingones,MMAS-ACO,small,20,17,203,204,True
+leadingones,MMAS-ACO,small,20,18,332,333,True
+leadingones,MMAS-ACO,small,20,19,360,361,True
+leadingones,MMAS-ACO,small,30,0,456,457,True
+leadingones,MMAS-ACO,small,30,1,850,851,True
+leadingones,MMAS-ACO,small,30,2,927,928,True
+leadingones,MMAS-ACO,small,30,3,779,780,True
+leadingones,MMAS-ACO,small,30,4,696,697,True
+leadingones,MMAS-ACO,small,30,5,623,624,True
+leadingones,MMAS-ACO,small,30,6,1051,1052,True
+leadingones,MMAS-ACO,small,30,7,383,384,True
+leadingones,MMAS-ACO,small,30,8,701,702,True
+leadingones,MMAS-ACO,small,30,9,888,889,True
+leadingones,MMAS-ACO,small,30,10,832,833,True
+leadingones,MMAS-ACO,small,30,11,734,735,True
+leadingones,MMAS-ACO,small,30,12,607,608,True
+leadingones,MMAS-ACO,small,30,13,496,497,True
+leadingones,MMAS-ACO,small,30,14,983,984,True
+leadingones,MMAS-ACO,small,30,15,763,764,True
+leadingones,MMAS-ACO,small,30,16,607,608,True
+leadingones,MMAS-ACO,small,30,17,1124,1125,True
+leadingones,MMAS-ACO,small,30,18,1077,1078,True
+leadingones,MMAS-ACO,small,30,19,543,544,True
+leadingones,MMAS-ACO,small,40,0,545,546,True
+leadingones,MMAS-ACO,small,40,1,1692,1693,True
+leadingones,MMAS-ACO,small,40,2,1826,1827,True
+leadingones,MMAS-ACO,small,40,3,811,812,True
+leadingones,MMAS-ACO,small,40,4,2365,2366,True
+leadingones,MMAS-ACO,small,40,5,970,971,True
+leadingones,MMAS-ACO,small,40,6,990,991,True
+leadingones,MMAS-ACO,small,40,7,1298,1299,True
+leadingones,MMAS-ACO,small,40,8,1694,1695,True
+leadingones,MMAS-ACO,small,40,9,1735,1736,True
+leadingones,MMAS-ACO,small,40,10,1009,1010,True
+leadingones,MMAS-ACO,small,40,11,1455,1456,True
+leadingones,MMAS-ACO,small,40,12,1629,1630,True
+leadingones,MMAS-ACO,small,40,13,1021,1022,True
+leadingones,MMAS-ACO,small,40,14,1252,1253,True
+leadingones,MMAS-ACO,small,40,15,700,701,True
+leadingones,MMAS-ACO,small,40,16,879,880,True
+leadingones,MMAS-ACO,small,40,17,1049,1050,True
+leadingones,MMAS-ACO,small,40,18,2233,2234,True
+leadingones,MMAS-ACO,small,40,19,1479,1480,True
+leadingones,MMAS-ACO,small,50,0,2403,2404,True
+leadingones,MMAS-ACO,small,50,1,1674,1675,True
+leadingones,MMAS-ACO,small,50,2,1813,1814,True
+leadingones,MMAS-ACO,small,50,3,1896,1897,True
+leadingones,MMAS-ACO,small,50,4,2137,2138,True
+leadingones,MMAS-ACO,small,50,5,1686,1687,True
+leadingones,MMAS-ACO,small,50,6,2170,2171,True
+leadingones,MMAS-ACO,small,50,7,3159,3160,True
+leadingones,MMAS-ACO,small,50,8,2108,2109,True
+leadingones,MMAS-ACO,small,50,9,1444,1445,True
+leadingones,MMAS-ACO,small,50,10,1785,1786,True
+leadingones,MMAS-ACO,small,50,11,1832,1833,True
+leadingones,MMAS-ACO,small,50,12,2030,2031,True
+leadingones,MMAS-ACO,small,50,13,1915,1916,True
+leadingones,MMAS-ACO,small,50,14,1725,1726,True
+leadingones,MMAS-ACO,small,50,15,1943,1944,True
+leadingones,MMAS-ACO,small,50,16,2239,2240,True
+leadingones,MMAS-ACO,small,50,17,2182,2183,True
+leadingones,MMAS-ACO,small,50,18,2180,2181,True
+leadingones,MMAS-ACO,small,50,19,2437,2438,True
+leadingones,MMAS-ACO,small,60,0,2582,2583,True
+leadingones,MMAS-ACO,small,60,1,2027,2028,True
+leadingones,MMAS-ACO,small,60,2,3233,3234,True
+leadingones,MMAS-ACO,small,60,3,3156,3157,True
+leadingones,MMAS-ACO,small,60,4,3256,3257,True
+leadingones,MMAS-ACO,small,60,5,2405,2406,True
+leadingones,MMAS-ACO,small,60,6,4287,4288,True
+leadingones,MMAS-ACO,small,60,7,3088,3089,True
+leadingones,MMAS-ACO,small,60,8,2599,2600,True
+leadingones,MMAS-ACO,small,60,9,2415,2416,True
+leadingones,MMAS-ACO,small,60,10,3642,3643,True
+leadingones,MMAS-ACO,small,60,11,2057,2058,True
+leadingones,MMAS-ACO,small,60,12,3388,3389,True
+leadingones,MMAS-ACO,small,60,13,2709,2710,True
+leadingones,MMAS-ACO,small,60,14,2340,2341,True
+leadingones,MMAS-ACO,small,60,15,2167,2168,True
+leadingones,MMAS-ACO,small,60,16,3072,3073,True
+leadingones,MMAS-ACO,small,60,17,3643,3644,True
+leadingones,MMAS-ACO,small,60,18,2343,2344,True
+leadingones,MMAS-ACO,small,60,19,1837,1838,True
+leadingones,MMAS-ACO,small,70,0,5772,5773,True
+leadingones,MMAS-ACO,small,70,1,3749,3750,True
+leadingones,MMAS-ACO,small,70,2,2983,2984,True
+leadingones,MMAS-ACO,small,70,3,4078,4079,True
+leadingones,MMAS-ACO,small,70,4,3701,3702,True
+leadingones,MMAS-ACO,small,70,5,3605,3606,True
+leadingones,MMAS-ACO,small,70,6,6523,6524,True
+leadingones,MMAS-ACO,small,70,7,4226,4227,True
+leadingones,MMAS-ACO,small,70,8,3463,3464,True
+leadingones,MMAS-ACO,small,70,9,3018,3019,True
+leadingones,MMAS-ACO,small,70,10,4547,4548,True
+leadingones,MMAS-ACO,small,70,11,3487,3488,True
+leadingones,MMAS-ACO,small,70,12,3669,3670,True
+leadingones,MMAS-ACO,small,70,13,5430,5431,True
+leadingones,MMAS-ACO,small,70,14,2414,2415,True
+leadingones,MMAS-ACO,small,70,15,2204,2205,True
+leadingones,MMAS-ACO,small,70,16,4496,4497,True
+leadingones,MMAS-ACO,small,70,17,5492,5493,True
+leadingones,MMAS-ACO,small,70,18,2782,2783,True
+leadingones,MMAS-ACO,small,70,19,2623,2624,True
+leadingones,MMAS-ACO,small,80,0,4232,4233,True
+leadingones,MMAS-ACO,small,80,1,3802,3803,True
+leadingones,MMAS-ACO,small,80,2,5232,5233,True
+leadingones,MMAS-ACO,small,80,3,3966,3967,True
+leadingones,MMAS-ACO,small,80,4,5110,5111,True
+leadingones,MMAS-ACO,small,80,5,6906,6907,True
+leadingones,MMAS-ACO,small,80,6,6642,6643,True
+leadingones,MMAS-ACO,small,80,7,6593,6594,True
+leadingones,MMAS-ACO,small,80,8,3401,3402,True
+leadingones,MMAS-ACO,small,80,9,4170,4171,True
+leadingones,MMAS-ACO,small,80,10,5319,5320,True
+leadingones,MMAS-ACO,small,80,11,5313,5314,True
+leadingones,MMAS-ACO,small,80,12,3955,3956,True
+leadingones,MMAS-ACO,small,80,13,4602,4603,True
+leadingones,MMAS-ACO,small,80,14,3789,3790,True
+leadingones,MMAS-ACO,small,80,15,5630,5631,True
+leadingones,MMAS-ACO,small,80,16,4115,4116,True
+leadingones,MMAS-ACO,small,80,17,4186,4187,True
+leadingones,MMAS-ACO,small,80,18,7462,7463,True
+leadingones,MMAS-ACO,small,80,19,4510,4511,True
+leadingones,MMAS-ACO,small,90,0,5732,5733,True
+leadingones,MMAS-ACO,small,90,1,6769,6770,True
+leadingones,MMAS-ACO,small,90,2,8972,8973,True
+leadingones,MMAS-ACO,small,90,3,6478,6479,True
+leadingones,MMAS-ACO,small,90,4,6755,6756,True
+leadingones,MMAS-ACO,small,90,5,4552,4553,True
+leadingones,MMAS-ACO,small,90,6,7933,7934,True
+leadingones,MMAS-ACO,small,90,7,5247,5248,True
+leadingones,MMAS-ACO,small,90,8,7039,7040,True
+leadingones,MMAS-ACO,small,90,9,5355,5356,True
+leadingones,MMAS-ACO,small,90,10,5809,5810,True
+leadingones,MMAS-ACO,small,90,11,5543,5544,True
+leadingones,MMAS-ACO,small,90,12,6757,6758,True
+leadingones,MMAS-ACO,small,90,13,5520,5521,True
+leadingones,MMAS-ACO,small,90,14,8397,8398,True
+leadingones,MMAS-ACO,small,90,15,5808,5809,True
+leadingones,MMAS-ACO,small,90,16,6208,6209,True
+leadingones,MMAS-ACO,small,90,17,7281,7282,True
+leadingones,MMAS-ACO,small,90,18,7733,7734,True
+leadingones,MMAS-ACO,small,90,19,6076,6077,True
+leadingones,MMAS-ACO,small,100,0,9507,9508,True
+leadingones,MMAS-ACO,small,100,1,6710,6711,True
+leadingones,MMAS-ACO,small,100,2,11108,11109,True
+leadingones,MMAS-ACO,small,100,3,8486,8487,True
+leadingones,MMAS-ACO,small,100,4,6537,6538,True
+leadingones,MMAS-ACO,small,100,5,8803,8804,True
+leadingones,MMAS-ACO,small,100,6,6650,6651,True
+leadingones,MMAS-ACO,small,100,7,7184,7185,True
+leadingones,MMAS-ACO,small,100,8,9093,9094,True
+leadingones,MMAS-ACO,small,100,9,7149,7150,True
+leadingones,MMAS-ACO,small,100,10,8138,8139,True
+leadingones,MMAS-ACO,small,100,11,7452,7453,True
+leadingones,MMAS-ACO,small,100,12,9963,9964,True
+leadingones,MMAS-ACO,small,100,13,5127,5128,True
+leadingones,MMAS-ACO,small,100,14,7051,7052,True
+leadingones,MMAS-ACO,small,100,15,8334,8335,True
+leadingones,MMAS-ACO,small,100,16,8288,8289,True
+leadingones,MMAS-ACO,small,100,17,9874,9875,True
+leadingones,MMAS-ACO,small,100,18,8606,8607,True
+leadingones,MMAS-ACO,small,100,19,9082,9083,True
+leadingones,P-ACO,small,10,0,8,270,True
+leadingones,P-ACO,small,10,1,8,270,True
+leadingones,P-ACO,small,10,2,6,210,True
+leadingones,P-ACO,small,10,3,6,210,True
+leadingones,P-ACO,small,10,4,7,240,True
+leadingones,P-ACO,small,10,5,6,210,True
+leadingones,P-ACO,small,10,6,3,120,True
+leadingones,P-ACO,small,10,7,9,300,True
+leadingones,P-ACO,small,10,8,3,120,True
+leadingones,P-ACO,small,10,9,9,300,True
+leadingones,P-ACO,small,10,10,6,210,True
+leadingones,P-ACO,small,10,11,8,270,True
+leadingones,P-ACO,small,10,12,3,120,True
+leadingones,P-ACO,small,10,13,10,330,True
+leadingones,P-ACO,small,10,14,3,120,True
+leadingones,P-ACO,small,10,15,2,90,True
+leadingones,P-ACO,small,10,16,6,210,True
+leadingones,P-ACO,small,10,17,2,90,True
+leadingones,P-ACO,small,10,18,9,300,True
+leadingones,P-ACO,small,10,19,5,180,True
+leadingones,P-ACO,small,20,0,7,240,True
+leadingones,P-ACO,small,20,1,17,540,True
+leadingones,P-ACO,small,20,2,17,540,True
+leadingones,P-ACO,small,20,3,11,360,True
+leadingones,P-ACO,small,20,4,12,390,True
+leadingones,P-ACO,small,20,5,7,240,True
+leadingones,P-ACO,small,20,6,15,480,True
+leadingones,P-ACO,small,20,7,12,390,True
+leadingones,P-ACO,small,20,8,10,330,True
+leadingones,P-ACO,small,20,9,12,390,True
+leadingones,P-ACO,small,20,10,6,210,True
+leadingones,P-ACO,small,20,11,12,390,True
+leadingones,P-ACO,small,20,12,13,420,True
+leadingones,P-ACO,small,20,13,11,360,True
+leadingones,P-ACO,small,20,14,8,270,True
+leadingones,P-ACO,small,20,15,6,210,True
+leadingones,P-ACO,small,20,16,8,270,True
+leadingones,P-ACO,small,20,17,11,360,True
+leadingones,P-ACO,small,20,18,14,450,True
+leadingones,P-ACO,small,20,19,11,360,True
+leadingones,P-ACO,small,30,0,15,480,True
+leadingones,P-ACO,small,30,1,19,600,True
+leadingones,P-ACO,small,30,2,15,480,True
+leadingones,P-ACO,small,30,3,20,630,True
+leadingones,P-ACO,small,30,4,14,450,True
+leadingones,P-ACO,small,30,5,13,420,True
+leadingones,P-ACO,small,30,6,12,390,True
+leadingones,P-ACO,small,30,7,14,450,True
+leadingones,P-ACO,small,30,8,14,450,True
+leadingones,P-ACO,small,30,9,16,510,True
+leadingones,P-ACO,small,30,10,15,480,True
+leadingones,P-ACO,small,30,11,15,480,True
+leadingones,P-ACO,small,30,12,19,600,True
+leadingones,P-ACO,small,30,13,12,390,True
+leadingones,P-ACO,small,30,14,10,330,True
+leadingones,P-ACO,small,30,15,17,540,True
+leadingones,P-ACO,small,30,16,12,390,True
+leadingones,P-ACO,small,30,17,13,420,True
+leadingones,P-ACO,small,30,18,12,390,True
+leadingones,P-ACO,small,30,19,16,510,True
+leadingones,P-ACO,small,40,0,28,870,True
+leadingones,P-ACO,small,40,1,19,600,True
+leadingones,P-ACO,small,40,2,21,660,True
+leadingones,P-ACO,small,40,3,18,570,True
+leadingones,P-ACO,small,40,4,15,480,True
+leadingones,P-ACO,small,40,5,19,600,True
+leadingones,P-ACO,small,40,6,19,600,True
+leadingones,P-ACO,small,40,7,17,540,True
+leadingones,P-ACO,small,40,8,17,540,True
+leadingones,P-ACO,small,40,9,17,540,True
+leadingones,P-ACO,small,40,10,21,660,True
+leadingones,P-ACO,small,40,11,15,480,True
+leadingones,P-ACO,small,40,12,20,630,True
+leadingones,P-ACO,small,40,13,18,570,True
+leadingones,P-ACO,small,40,14,17,540,True
+leadingones,P-ACO,small,40,15,15,480,True
+leadingones,P-ACO,small,40,16,15,480,True
+leadingones,P-ACO,small,40,17,22,690,True
+leadingones,P-ACO,small,40,18,21,660,True
+leadingones,P-ACO,small,40,19,22,690,True
+leadingones,P-ACO,small,50,0,22,690,True
+leadingones,P-ACO,small,50,1,22,690,True
+leadingones,P-ACO,small,50,2,15,480,True
+leadingones,P-ACO,small,50,3,17,540,True
+leadingones,P-ACO,small,50,4,23,720,True
+leadingones,P-ACO,small,50,5,22,690,True
+leadingones,P-ACO,small,50,6,17,540,True
+leadingones,P-ACO,small,50,7,29,900,True
+leadingones,P-ACO,small,50,8,24,750,True
+leadingones,P-ACO,small,50,9,25,780,True
+leadingones,P-ACO,small,50,10,25,780,True
+leadingones,P-ACO,small,50,11,21,660,True
+leadingones,P-ACO,small,50,12,26,810,True
+leadingones,P-ACO,small,50,13,19,600,True
+leadingones,P-ACO,small,50,14,19,600,True
+leadingones,P-ACO,small,50,15,25,780,True
+leadingones,P-ACO,small,50,16,23,720,True
+leadingones,P-ACO,small,50,17,17,540,True
+leadingones,P-ACO,small,50,18,24,750,True
+leadingones,P-ACO,small,50,19,15,480,True
+leadingones,P-ACO,small,60,0,23,720,True
+leadingones,P-ACO,small,60,1,25,780,True
+leadingones,P-ACO,small,60,2,26,810,True
+leadingones,P-ACO,small,60,3,26,810,True
+leadingones,P-ACO,small,60,4,21,660,True
+leadingones,P-ACO,small,60,5,22,690,True
+leadingones,P-ACO,small,60,6,27,840,True
+leadingones,P-ACO,small,60,7,24,750,True
+leadingones,P-ACO,small,60,8,23,720,True
+leadingones,P-ACO,small,60,9,28,870,True
+leadingones,P-ACO,small,60,10,28,870,True
+leadingones,P-ACO,small,60,11,22,690,True
+leadingones,P-ACO,small,60,12,29,900,True
+leadingones,P-ACO,small,60,13,26,810,True
+leadingones,P-ACO,small,60,14,19,600,True
+leadingones,P-ACO,small,60,15,23,720,True
+leadingones,P-ACO,small,60,16,27,840,True
+leadingones,P-ACO,small,60,17,16,510,True
+leadingones,P-ACO,small,60,18,27,840,True
+leadingones,P-ACO,small,60,19,23,720,True
+leadingones,P-ACO,small,70,0,23,720,True
+leadingones,P-ACO,small,70,1,22,690,True
+leadingones,P-ACO,small,70,2,25,780,True
+leadingones,P-ACO,small,70,3,25,780,True
+leadingones,P-ACO,small,70,4,27,840,True
+leadingones,P-ACO,small,70,5,29,900,True
+leadingones,P-ACO,small,70,6,23,720,True
+leadingones,P-ACO,small,70,7,31,960,True
+leadingones,P-ACO,small,70,8,24,750,True
+leadingones,P-ACO,small,70,9,22,690,True
+leadingones,P-ACO,small,70,10,25,780,True
+leadingones,P-ACO,small,70,11,25,780,True
+leadingones,P-ACO,small,70,12,26,810,True
+leadingones,P-ACO,small,70,13,25,780,True
+leadingones,P-ACO,small,70,14,22,690,True
+leadingones,P-ACO,small,70,15,28,870,True
+leadingones,P-ACO,small,70,16,28,870,True
+leadingones,P-ACO,small,70,17,25,780,True
+leadingones,P-ACO,small,70,18,25,780,True
+leadingones,P-ACO,small,70,19,23,720,True
+leadingones,P-ACO,small,80,0,27,840,True
+leadingones,P-ACO,small,80,1,27,840,True
+leadingones,P-ACO,small,80,2,32,990,True
+leadingones,P-ACO,small,80,3,23,720,True
+leadingones,P-ACO,small,80,4,25,780,True
+leadingones,P-ACO,small,80,5,25,780,True
+leadingones,P-ACO,small,80,6,30,930,True
+leadingones,P-ACO,small,80,7,24,750,True
+leadingones,P-ACO,small,80,8,27,840,True
+leadingones,P-ACO,small,80,9,31,960,True
+leadingones,P-ACO,small,80,10,32,990,True
+leadingones,P-ACO,small,80,11,23,720,True
+leadingones,P-ACO,small,80,12,23,720,True
+leadingones,P-ACO,small,80,13,31,960,True
+leadingones,P-ACO,small,80,14,31,960,True
+leadingones,P-ACO,small,80,15,24,750,True
+leadingones,P-ACO,small,80,16,31,960,True
+leadingones,P-ACO,small,80,17,31,960,True
+leadingones,P-ACO,small,80,18,29,900,True
+leadingones,P-ACO,small,80,19,26,810,True
+leadingones,P-ACO,small,90,0,30,930,True
+leadingones,P-ACO,small,90,1,31,960,True
+leadingones,P-ACO,small,90,2,26,810,True
+leadingones,P-ACO,small,90,3,36,1110,True
+leadingones,P-ACO,small,90,4,27,840,True
+leadingones,P-ACO,small,90,5,34,1050,True
+leadingones,P-ACO,small,90,6,32,990,True
+leadingones,P-ACO,small,90,7,30,930,True
+leadingones,P-ACO,small,90,8,35,1080,True
+leadingones,P-ACO,small,90,9,28,870,True
+leadingones,P-ACO,small,90,10,33,1020,True
+leadingones,P-ACO,small,90,11,25,780,True
+leadingones,P-ACO,small,90,12,27,840,True
+leadingones,P-ACO,small,90,13,33,1020,True
+leadingones,P-ACO,small,90,14,26,810,True
+leadingones,P-ACO,small,90,15,28,870,True
+leadingones,P-ACO,small,90,16,27,840,True
+leadingones,P-ACO,small,90,17,27,840,True
+leadingones,P-ACO,small,90,18,33,1020,True
+leadingones,P-ACO,small,90,19,32,990,True
+leadingones,P-ACO,small,100,0,30,930,True
+leadingones,P-ACO,small,100,1,35,1080,True
+leadingones,P-ACO,small,100,2,31,960,True
+leadingones,P-ACO,small,100,3,31,960,True
+leadingones,P-ACO,small,100,4,32,990,True
+leadingones,P-ACO,small,100,5,32,990,True
+leadingones,P-ACO,small,100,6,30,930,True
+leadingones,P-ACO,small,100,7,23,720,True
+leadingones,P-ACO,small,100,8,34,1050,True
+leadingones,P-ACO,small,100,9,30,930,True
+leadingones,P-ACO,small,100,10,35,1080,True
+leadingones,P-ACO,small,100,11,33,1020,True
+leadingones,P-ACO,small,100,12,32,990,True
+leadingones,P-ACO,small,100,13,30,930,True
+leadingones,P-ACO,small,100,14,32,990,True
+leadingones,P-ACO,small,100,15,30,930,True
+leadingones,P-ACO,small,100,16,34,1050,True
+leadingones,P-ACO,small,100,17,24,750,True
+leadingones,P-ACO,small,100,18,32,990,True
+leadingones,P-ACO,small,100,19,29,900,True
+onemax,(1+1) EA,large,100,0,836,837,True
+onemax,(1+1) EA,large,100,1,1604,1605,True
+onemax,(1+1) EA,large,100,2,1046,1047,True
+onemax,(1+1) EA,large,100,3,2366,2367,True
+onemax,(1+1) EA,large,100,4,1084,1085,True
+onemax,(1+1) EA,large,100,5,1020,1021,True
+onemax,(1+1) EA,large,100,6,1306,1307,True
+onemax,(1+1) EA,large,100,7,1087,1088,True
+onemax,(1+1) EA,large,100,8,844,845,True
+onemax,(1+1) EA,large,100,9,1264,1265,True
+onemax,(1+1) EA,large,100,10,992,993,True
+onemax,(1+1) EA,large,100,11,674,675,True
+onemax,(1+1) EA,large,100,12,1061,1062,True
+onemax,(1+1) EA,large,100,13,767,768,True
+onemax,(1+1) EA,large,100,14,3061,3062,True
+onemax,(1+1) EA,large,100,15,626,627,True
+onemax,(1+1) EA,large,100,16,823,824,True
+onemax,(1+1) EA,large,100,17,1081,1082,True
+onemax,(1+1) EA,large,100,18,909,910,True
+onemax,(1+1) EA,large,100,19,976,977,True
+onemax,(1+1) EA,large,200,0,1970,1971,True
+onemax,(1+1) EA,large,200,1,2923,2924,True
+onemax,(1+1) EA,large,200,2,2292,2293,True
+onemax,(1+1) EA,large,200,3,2257,2258,True
+onemax,(1+1) EA,large,200,4,2361,2362,True
+onemax,(1+1) EA,large,200,5,1887,1888,True
+onemax,(1+1) EA,large,200,6,1701,1702,True
+onemax,(1+1) EA,large,200,7,3357,3358,True
+onemax,(1+1) EA,large,200,8,2122,2123,True
+onemax,(1+1) EA,large,200,9,2408,2409,True
+onemax,(1+1) EA,large,200,10,2578,2579,True
+onemax,(1+1) EA,large,200,11,1971,1972,True
+onemax,(1+1) EA,large,200,12,1920,1921,True
+onemax,(1+1) EA,large,200,13,2530,2531,True
+onemax,(1+1) EA,large,200,14,2234,2235,True
+onemax,(1+1) EA,large,200,15,1728,1729,True
+onemax,(1+1) EA,large,200,16,2260,2261,True
+onemax,(1+1) EA,large,200,17,2461,2462,True
+onemax,(1+1) EA,large,200,18,2362,2363,True
+onemax,(1+1) EA,large,200,19,4716,4717,True
+onemax,(1+1) EA,large,300,0,4662,4663,True
+onemax,(1+1) EA,large,300,1,3647,3648,True
+onemax,(1+1) EA,large,300,2,4917,4918,True
+onemax,(1+1) EA,large,300,3,3736,3737,True
+onemax,(1+1) EA,large,300,4,3794,3795,True
+onemax,(1+1) EA,large,300,5,3294,3295,True
+onemax,(1+1) EA,large,300,6,5138,5139,True
+onemax,(1+1) EA,large,300,7,2695,2696,True
+onemax,(1+1) EA,large,300,8,3805,3806,True
+onemax,(1+1) EA,large,300,9,4200,4201,True
+onemax,(1+1) EA,large,300,10,3219,3220,True
+onemax,(1+1) EA,large,300,11,4807,4808,True
+onemax,(1+1) EA,large,300,12,3107,3108,True
+onemax,(1+1) EA,large,300,13,3874,3875,True
+onemax,(1+1) EA,large,300,14,3499,3500,True
+onemax,(1+1) EA,large,300,15,3749,3750,True
+onemax,(1+1) EA,large,300,16,4926,4927,True
+onemax,(1+1) EA,large,300,17,2685,2686,True
+onemax,(1+1) EA,large,300,18,3086,3087,True
+onemax,(1+1) EA,large,300,19,5703,5704,True
+onemax,(1+1) EA,large,400,0,6827,6828,True
+onemax,(1+1) EA,large,400,1,4609,4610,True
+onemax,(1+1) EA,large,400,2,5527,5528,True
+onemax,(1+1) EA,large,400,3,5289,5290,True
+onemax,(1+1) EA,large,400,4,5238,5239,True
+onemax,(1+1) EA,large,400,5,5944,5945,True
+onemax,(1+1) EA,large,400,6,10695,10696,True
+onemax,(1+1) EA,large,400,7,8306,8307,True
+onemax,(1+1) EA,large,400,8,4991,4992,True
+onemax,(1+1) EA,large,400,9,7544,7545,True
+onemax,(1+1) EA,large,400,10,6471,6472,True
+onemax,(1+1) EA,large,400,11,5122,5123,True
+onemax,(1+1) EA,large,400,12,4610,4611,True
+onemax,(1+1) EA,large,400,13,5235,5236,True
+onemax,(1+1) EA,large,400,14,7049,7050,True
+onemax,(1+1) EA,large,400,15,5332,5333,True
+onemax,(1+1) EA,large,400,16,6649,6650,True
+onemax,(1+1) EA,large,400,17,4552,4553,True
+onemax,(1+1) EA,large,400,18,5641,5642,True
+onemax,(1+1) EA,large,400,19,7337,7338,True
+onemax,(1+1) EA,large,500,0,7087,7088,True
+onemax,(1+1) EA,large,500,1,6969,6970,True
+onemax,(1+1) EA,large,500,2,6147,6148,True
+onemax,(1+1) EA,large,500,3,6900,6901,True
+onemax,(1+1) EA,large,500,4,8793,8794,True
+onemax,(1+1) EA,large,500,5,8687,8688,True
+onemax,(1+1) EA,large,500,6,6788,6789,True
+onemax,(1+1) EA,large,500,7,8757,8758,True
+onemax,(1+1) EA,large,500,8,7853,7854,True
+onemax,(1+1) EA,large,500,9,5398,5399,True
+onemax,(1+1) EA,large,500,10,6660,6661,True
+onemax,(1+1) EA,large,500,11,10473,10474,True
+onemax,(1+1) EA,large,500,12,7930,7931,True
+onemax,(1+1) EA,large,500,13,7284,7285,True
+onemax,(1+1) EA,large,500,14,7035,7036,True
+onemax,(1+1) EA,large,500,15,5590,5591,True
+onemax,(1+1) EA,large,500,16,5773,5774,True
+onemax,(1+1) EA,large,500,17,5702,5703,True
+onemax,(1+1) EA,large,500,18,6305,6306,True
+onemax,(1+1) EA,large,500,19,7093,7094,True
+onemax,(1+1) EA,large,600,0,9949,9950,True
+onemax,(1+1) EA,large,600,1,7362,7363,True
+onemax,(1+1) EA,large,600,2,11107,11108,True
+onemax,(1+1) EA,large,600,3,9561,9562,True
+onemax,(1+1) EA,large,600,4,10149,10150,True
+onemax,(1+1) EA,large,600,5,10270,10271,True
+onemax,(1+1) EA,large,600,6,12053,12054,True
+onemax,(1+1) EA,large,600,7,8075,8076,True
+onemax,(1+1) EA,large,600,8,12421,12422,True
+onemax,(1+1) EA,large,600,9,7339,7340,True
+onemax,(1+1) EA,large,600,10,7875,7876,True
+onemax,(1+1) EA,large,600,11,13137,13138,True
+onemax,(1+1) EA,large,600,12,9504,9505,True
+onemax,(1+1) EA,large,600,13,9070,9071,True
+onemax,(1+1) EA,large,600,14,9303,9304,True
+onemax,(1+1) EA,large,600,15,7723,7724,True
+onemax,(1+1) EA,large,600,16,9881,9882,True
+onemax,(1+1) EA,large,600,17,9211,9212,True
+onemax,(1+1) EA,large,600,18,11407,11408,True
+onemax,(1+1) EA,large,600,19,6450,6451,True
+onemax,(1+1) EA,large,700,0,10701,10702,True
+onemax,(1+1) EA,large,700,1,10825,10826,True
+onemax,(1+1) EA,large,700,2,9611,9612,True
+onemax,(1+1) EA,large,700,3,10192,10193,True
+onemax,(1+1) EA,large,700,4,10843,10844,True
+onemax,(1+1) EA,large,700,5,18942,18943,True
+onemax,(1+1) EA,large,700,6,8883,8884,True
+onemax,(1+1) EA,large,700,7,9711,9712,True
+onemax,(1+1) EA,large,700,8,10433,10434,True
+onemax,(1+1) EA,large,700,9,15338,15339,True
+onemax,(1+1) EA,large,700,10,11632,11633,True
+onemax,(1+1) EA,large,700,11,9935,9936,True
+onemax,(1+1) EA,large,700,12,10013,10014,True
+onemax,(1+1) EA,large,700,13,14402,14403,True
+onemax,(1+1) EA,large,700,14,14590,14591,True
+onemax,(1+1) EA,large,700,15,11073,11074,True
+onemax,(1+1) EA,large,700,16,12060,12061,True
+onemax,(1+1) EA,large,700,17,10960,10961,True
+onemax,(1+1) EA,large,700,18,12145,12146,True
+onemax,(1+1) EA,large,700,19,12999,13000,True
+onemax,(1+1) EA,large,800,0,12258,12259,True
+onemax,(1+1) EA,large,800,1,14496,14497,True
+onemax,(1+1) EA,large,800,2,13453,13454,True
+onemax,(1+1) EA,large,800,3,13750,13751,True
+onemax,(1+1) EA,large,800,4,11166,11167,True
+onemax,(1+1) EA,large,800,5,10298,10299,True
+onemax,(1+1) EA,large,800,6,14325,14326,True
+onemax,(1+1) EA,large,800,7,13052,13053,True
+onemax,(1+1) EA,large,800,8,9518,9519,True
+onemax,(1+1) EA,large,800,9,11765,11766,True
+onemax,(1+1) EA,large,800,10,15816,15817,True
+onemax,(1+1) EA,large,800,11,11612,11613,True
+onemax,(1+1) EA,large,800,12,14532,14533,True
+onemax,(1+1) EA,large,800,13,13773,13774,True
+onemax,(1+1) EA,large,800,14,18147,18148,True
+onemax,(1+1) EA,large,800,15,16717,16718,True
+onemax,(1+1) EA,large,800,16,14732,14733,True
+onemax,(1+1) EA,large,800,17,11357,11358,True
+onemax,(1+1) EA,large,800,18,15550,15551,True
+onemax,(1+1) EA,large,800,19,13856,13857,True
+onemax,(1+1) EA,large,900,0,12613,12614,True
+onemax,(1+1) EA,large,900,1,14766,14767,True
+onemax,(1+1) EA,large,900,2,12948,12949,True
+onemax,(1+1) EA,large,900,3,18713,18714,True
+onemax,(1+1) EA,large,900,4,12932,12933,True
+onemax,(1+1) EA,large,900,5,16296,16297,True
+onemax,(1+1) EA,large,900,6,13853,13854,True
+onemax,(1+1) EA,large,900,7,16589,16590,True
+onemax,(1+1) EA,large,900,8,12085,12086,True
+onemax,(1+1) EA,large,900,9,11507,11508,True
+onemax,(1+1) EA,large,900,10,18937,18938,True
+onemax,(1+1) EA,large,900,11,14326,14327,True
+onemax,(1+1) EA,large,900,12,13720,13721,True
+onemax,(1+1) EA,large,900,13,12701,12702,True
+onemax,(1+1) EA,large,900,14,22677,22678,True
+onemax,(1+1) EA,large,900,15,11109,11110,True
+onemax,(1+1) EA,large,900,16,17722,17723,True
+onemax,(1+1) EA,large,900,17,16903,16904,True
+onemax,(1+1) EA,large,900,18,13707,13708,True
+onemax,(1+1) EA,large,900,19,15693,15694,True
+onemax,(1+1) EA,large,1000,0,17483,17484,True
+onemax,(1+1) EA,large,1000,1,17062,17063,True
+onemax,(1+1) EA,large,1000,2,13866,13867,True
+onemax,(1+1) EA,large,1000,3,13231,13232,True
+onemax,(1+1) EA,large,1000,4,17648,17649,True
+onemax,(1+1) EA,large,1000,5,14108,14109,True
+onemax,(1+1) EA,large,1000,6,16702,16703,True
+onemax,(1+1) EA,large,1000,7,21025,21026,True
+onemax,(1+1) EA,large,1000,8,11643,11644,True
+onemax,(1+1) EA,large,1000,9,11814,11815,True
+onemax,(1+1) EA,large,1000,10,20158,20159,True
+onemax,(1+1) EA,large,1000,11,16055,16056,True
+onemax,(1+1) EA,large,1000,12,14907,14908,True
+onemax,(1+1) EA,large,1000,13,16979,16980,True
+onemax,(1+1) EA,large,1000,14,16792,16793,True
+onemax,(1+1) EA,large,1000,15,11646,11647,True
+onemax,(1+1) EA,large,1000,16,19059,19060,True
+onemax,(1+1) EA,large,1000,17,14637,14638,True
+onemax,(1+1) EA,large,1000,18,24552,24553,True
+onemax,(1+1) EA,large,1000,19,17312,17313,True
+onemax,(μ+λ) EA,large,100,0,21,860,True
+onemax,(μ+λ) EA,large,100,1,36,1460,True
+onemax,(μ+λ) EA,large,100,2,33,1340,True
+onemax,(μ+λ) EA,large,100,3,56,2260,True
+onemax,(μ+λ) EA,large,100,4,35,1420,True
+onemax,(μ+λ) EA,large,100,5,24,980,True
+onemax,(μ+λ) EA,large,100,6,29,1180,True
+onemax,(μ+λ) EA,large,100,7,31,1260,True
+onemax,(μ+λ) EA,large,100,8,27,1100,True
+onemax,(μ+λ) EA,large,100,9,31,1260,True
+onemax,(μ+λ) EA,large,100,10,22,900,True
+onemax,(μ+λ) EA,large,100,11,26,1060,True
+onemax,(μ+λ) EA,large,100,12,41,1660,True
+onemax,(μ+λ) EA,large,100,13,27,1100,True
+onemax,(μ+λ) EA,large,100,14,25,1020,True
+onemax,(μ+λ) EA,large,100,15,30,1220,True
+onemax,(μ+λ) EA,large,100,16,24,980,True
+onemax,(μ+λ) EA,large,100,17,27,1100,True
+onemax,(μ+λ) EA,large,100,18,29,1180,True
+onemax,(μ+λ) EA,large,100,19,26,1060,True
+onemax,(μ+λ) EA,large,200,0,66,2660,True
+onemax,(μ+λ) EA,large,200,1,65,2620,True
+onemax,(μ+λ) EA,large,200,2,54,2180,True
+onemax,(μ+λ) EA,large,200,3,59,2380,True
+onemax,(μ+λ) EA,large,200,4,60,2420,True
+onemax,(μ+λ) EA,large,200,5,57,2300,True
+onemax,(μ+λ) EA,large,200,6,82,3300,True
+onemax,(μ+λ) EA,large,200,7,79,3180,True
+onemax,(μ+λ) EA,large,200,8,64,2580,True
+onemax,(μ+λ) EA,large,200,9,94,3780,True
+onemax,(μ+λ) EA,large,200,10,90,3620,True
+onemax,(μ+λ) EA,large,200,11,51,2060,True
+onemax,(μ+λ) EA,large,200,12,74,2980,True
+onemax,(μ+λ) EA,large,200,13,58,2340,True
+onemax,(μ+λ) EA,large,200,14,57,2300,True
+onemax,(μ+λ) EA,large,200,15,73,2940,True
+onemax,(μ+λ) EA,large,200,16,56,2260,True
+onemax,(μ+λ) EA,large,200,17,84,3380,True
+onemax,(μ+λ) EA,large,200,18,60,2420,True
+onemax,(μ+λ) EA,large,200,19,74,2980,True
+onemax,(μ+λ) EA,large,300,0,165,6620,True
+onemax,(μ+λ) EA,large,300,1,91,3660,True
+onemax,(μ+λ) EA,large,300,2,98,3940,True
+onemax,(μ+λ) EA,large,300,3,137,5500,True
+onemax,(μ+λ) EA,large,300,4,146,5860,True
+onemax,(μ+λ) EA,large,300,5,142,5700,True
+onemax,(μ+λ) EA,large,300,6,107,4300,True
+onemax,(μ+λ) EA,large,300,7,103,4140,True
+onemax,(μ+λ) EA,large,300,8,97,3900,True
+onemax,(μ+λ) EA,large,300,9,139,5580,True
+onemax,(μ+λ) EA,large,300,10,104,4180,True
+onemax,(μ+λ) EA,large,300,11,150,6020,True
+onemax,(μ+λ) EA,large,300,12,133,5340,True
+onemax,(μ+λ) EA,large,300,13,131,5260,True
+onemax,(μ+λ) EA,large,300,14,93,3740,True
+onemax,(μ+λ) EA,large,300,15,113,4540,True
+onemax,(μ+λ) EA,large,300,16,118,4740,True
+onemax,(μ+λ) EA,large,300,17,113,4540,True
+onemax,(μ+λ) EA,large,300,18,103,4140,True
+onemax,(μ+λ) EA,large,300,19,114,4580,True
+onemax,(μ+λ) EA,large,400,0,138,5540,True
+onemax,(μ+λ) EA,large,400,1,154,6180,True
+onemax,(μ+λ) EA,large,400,2,131,5260,True
+onemax,(μ+λ) EA,large,400,3,135,5420,True
+onemax,(μ+λ) EA,large,400,4,139,5580,True
+onemax,(μ+λ) EA,large,400,5,122,4900,True
+onemax,(μ+λ) EA,large,400,6,147,5900,True
+onemax,(μ+λ) EA,large,400,7,155,6220,True
+onemax,(μ+λ) EA,large,400,8,110,4420,True
+onemax,(μ+λ) EA,large,400,9,139,5580,True
+onemax,(μ+λ) EA,large,400,10,177,7100,True
+onemax,(μ+λ) EA,large,400,11,143,5740,True
+onemax,(μ+λ) EA,large,400,12,179,7180,True
+onemax,(μ+λ) EA,large,400,13,177,7100,True
+onemax,(μ+λ) EA,large,400,14,151,6060,True
+onemax,(μ+λ) EA,large,400,15,146,5860,True
+onemax,(μ+λ) EA,large,400,16,177,7100,True
+onemax,(μ+λ) EA,large,400,17,137,5500,True
+onemax,(μ+λ) EA,large,400,18,185,7420,True
+onemax,(μ+λ) EA,large,400,19,149,5980,True
+onemax,(μ+λ) EA,large,500,0,350,14020,True
+onemax,(μ+λ) EA,large,500,1,207,8300,True
+onemax,(μ+λ) EA,large,500,2,218,8740,True
+onemax,(μ+λ) EA,large,500,3,171,6860,True
+onemax,(μ+λ) EA,large,500,4,296,11860,True
+onemax,(μ+λ) EA,large,500,5,167,6700,True
+onemax,(μ+λ) EA,large,500,6,161,6460,True
+onemax,(μ+λ) EA,large,500,7,196,7860,True
+onemax,(μ+λ) EA,large,500,8,146,5860,True
+onemax,(μ+λ) EA,large,500,9,241,9660,True
+onemax,(μ+λ) EA,large,500,10,281,11260,True
+onemax,(μ+λ) EA,large,500,11,244,9780,True
+onemax,(μ+λ) EA,large,500,12,246,9860,True
+onemax,(μ+λ) EA,large,500,13,277,11100,True
+onemax,(μ+λ) EA,large,500,14,170,6820,True
+onemax,(μ+λ) EA,large,500,15,173,6940,True
+onemax,(μ+λ) EA,large,500,16,284,11380,True
+onemax,(μ+λ) EA,large,500,17,257,10300,True
+onemax,(μ+λ) EA,large,500,18,343,13740,True
+onemax,(μ+λ) EA,large,500,19,290,11620,True
+onemax,(μ+λ) EA,large,600,0,309,12380,True
+onemax,(μ+λ) EA,large,600,1,232,9300,True
+onemax,(μ+λ) EA,large,600,2,258,10340,True
+onemax,(μ+λ) EA,large,600,3,282,11300,True
+onemax,(μ+λ) EA,large,600,4,330,13220,True
+onemax,(μ+λ) EA,large,600,5,221,8860,True
+onemax,(μ+λ) EA,large,600,6,274,10980,True
+onemax,(μ+λ) EA,large,600,7,276,11060,True
+onemax,(μ+λ) EA,large,600,8,395,15820,True
+onemax,(μ+λ) EA,large,600,9,215,8620,True
+onemax,(μ+λ) EA,large,600,10,249,9980,True
+onemax,(μ+λ) EA,large,600,11,328,13140,True
+onemax,(μ+λ) EA,large,600,12,298,11940,True
+onemax,(μ+λ) EA,large,600,13,277,11100,True
+onemax,(μ+λ) EA,large,600,14,247,9900,True
+onemax,(μ+λ) EA,large,600,15,316,12660,True
+onemax,(μ+λ) EA,large,600,16,232,9300,True
+onemax,(μ+λ) EA,large,600,17,200,8020,True
+onemax,(μ+λ) EA,large,600,18,276,11060,True
+onemax,(μ+λ) EA,large,600,19,244,9780,True
+onemax,(μ+λ) EA,large,700,0,283,11340,True
+onemax,(μ+λ) EA,large,700,1,391,15660,True
+onemax,(μ+λ) EA,large,700,2,320,12820,True
+onemax,(μ+λ) EA,large,700,3,292,11700,True
+onemax,(μ+λ) EA,large,700,4,358,14340,True
+onemax,(μ+λ) EA,large,700,5,327,13100,True
+onemax,(μ+λ) EA,large,700,6,355,14220,True
+onemax,(μ+λ) EA,large,700,7,289,11580,True
+onemax,(μ+λ) EA,large,700,8,274,10980,True
+onemax,(μ+λ) EA,large,700,9,281,11260,True
+onemax,(μ+λ) EA,large,700,10,261,10460,True
+onemax,(μ+λ) EA,large,700,11,276,11060,True
+onemax,(μ+λ) EA,large,700,12,258,10340,True
+onemax,(μ+λ) EA,large,700,13,272,10900,True
+onemax,(μ+λ) EA,large,700,14,297,11900,True
+onemax,(μ+λ) EA,large,700,15,429,17180,True
+onemax,(μ+λ) EA,large,700,16,383,15340,True
+onemax,(μ+λ) EA,large,700,17,320,12820,True
+onemax,(μ+λ) EA,large,700,18,323,12940,True
+onemax,(μ+λ) EA,large,700,19,292,11700,True
+onemax,(μ+λ) EA,large,800,0,347,13900,True
+onemax,(μ+λ) EA,large,800,1,369,14780,True
+onemax,(μ+λ) EA,large,800,2,344,13780,True
+onemax,(μ+λ) EA,large,800,3,332,13300,True
+onemax,(μ+λ) EA,large,800,4,338,13540,True
+onemax,(μ+λ) EA,large,800,5,420,16820,True
+onemax,(μ+λ) EA,large,800,6,361,14460,True
+onemax,(μ+λ) EA,large,800,7,453,18140,True
+onemax,(μ+λ) EA,large,800,8,524,20980,True
+onemax,(μ+λ) EA,large,800,9,306,12260,True
+onemax,(μ+λ) EA,large,800,10,310,12420,True
+onemax,(μ+λ) EA,large,800,11,309,12380,True
+onemax,(μ+λ) EA,large,800,12,319,12780,True
+onemax,(μ+λ) EA,large,800,13,334,13380,True
+onemax,(μ+λ) EA,large,800,14,499,19980,True
+onemax,(μ+λ) EA,large,800,15,364,14580,True
+onemax,(μ+λ) EA,large,800,16,428,17140,True
+onemax,(μ+λ) EA,large,800,17,319,12780,True
+onemax,(μ+λ) EA,large,800,18,407,16300,True
+onemax,(μ+λ) EA,large,800,19,346,13860,True
+onemax,(μ+λ) EA,large,900,0,371,14860,True
+onemax,(μ+λ) EA,large,900,1,350,14020,True
+onemax,(μ+λ) EA,large,900,2,323,12940,True
+onemax,(μ+λ) EA,large,900,3,426,17060,True
+onemax,(μ+λ) EA,large,900,4,398,15940,True
+onemax,(μ+λ) EA,large,900,5,361,14460,True
+onemax,(μ+λ) EA,large,900,6,364,14580,True
+onemax,(μ+λ) EA,large,900,7,471,18860,True
+onemax,(μ+λ) EA,large,900,8,415,16620,True
+onemax,(μ+λ) EA,large,900,9,502,20100,True
+onemax,(μ+λ) EA,large,900,10,526,21060,True
+onemax,(μ+λ) EA,large,900,11,490,19620,True
+onemax,(μ+λ) EA,large,900,12,362,14500,True
+onemax,(μ+λ) EA,large,900,13,380,15220,True
+onemax,(μ+λ) EA,large,900,14,394,15780,True
+onemax,(μ+λ) EA,large,900,15,437,17500,True
+onemax,(μ+λ) EA,large,900,16,474,18980,True
+onemax,(μ+λ) EA,large,900,17,325,13020,True
+onemax,(μ+λ) EA,large,900,18,458,18340,True
+onemax,(μ+λ) EA,large,900,19,348,13940,True
+onemax,(μ+λ) EA,large,1000,0,593,23740,True
+onemax,(μ+λ) EA,large,1000,1,553,22140,True
+onemax,(μ+λ) EA,large,1000,2,472,18900,True
+onemax,(μ+λ) EA,large,1000,3,559,22380,True
+onemax,(μ+λ) EA,large,1000,4,388,15540,True
+onemax,(μ+λ) EA,large,1000,5,582,23300,True
+onemax,(μ+λ) EA,large,1000,6,513,20540,True
+onemax,(μ+λ) EA,large,1000,7,493,19740,True
+onemax,(μ+λ) EA,large,1000,8,407,16300,True
+onemax,(μ+λ) EA,large,1000,9,480,19220,True
+onemax,(μ+λ) EA,large,1000,10,497,19900,True
+onemax,(μ+λ) EA,large,1000,11,666,26660,True
+onemax,(μ+λ) EA,large,1000,12,642,25700,True
+onemax,(μ+λ) EA,large,1000,13,597,23900,True
+onemax,(μ+λ) EA,large,1000,14,582,23300,True
+onemax,(μ+λ) EA,large,1000,15,561,22460,True
+onemax,(μ+λ) EA,large,1000,16,540,21620,True
+onemax,(μ+λ) EA,large,1000,17,380,15220,True
+onemax,(μ+λ) EA,large,1000,18,456,18260,True
+onemax,(μ+λ) EA,large,1000,19,477,19100,True
+onemax,Simulated Annealing,large,100,0,1144,1145,True
+onemax,Simulated Annealing,large,100,1,1118,1119,True
+onemax,Simulated Annealing,large,100,2,756,757,True
+onemax,Simulated Annealing,large,100,3,797,798,True
+onemax,Simulated Annealing,large,100,4,1168,1169,True
+onemax,Simulated Annealing,large,100,5,748,749,True
+onemax,Simulated Annealing,large,100,6,1116,1117,True
+onemax,Simulated Annealing,large,100,7,997,998,True
+onemax,Simulated Annealing,large,100,8,924,925,True
+onemax,Simulated Annealing,large,100,9,1030,1031,True
+onemax,Simulated Annealing,large,100,10,740,741,True
+onemax,Simulated Annealing,large,100,11,882,883,True
+onemax,Simulated Annealing,large,100,12,881,882,True
+onemax,Simulated Annealing,large,100,13,748,749,True
+onemax,Simulated Annealing,large,100,14,906,907,True
+onemax,Simulated Annealing,large,100,15,1033,1034,True
+onemax,Simulated Annealing,large,100,16,1039,1040,True
+onemax,Simulated Annealing,large,100,17,846,847,True
+onemax,Simulated Annealing,large,100,18,918,919,True
+onemax,Simulated Annealing,large,100,19,819,820,True
+onemax,Simulated Annealing,large,200,0,1485,1486,True
+onemax,Simulated Annealing,large,200,1,1807,1808,True
+onemax,Simulated Annealing,large,200,2,1322,1323,True
+onemax,Simulated Annealing,large,200,3,1465,1466,True
+onemax,Simulated Annealing,large,200,4,1620,1621,True
+onemax,Simulated Annealing,large,200,5,1386,1387,True
+onemax,Simulated Annealing,large,200,6,1229,1230,True
+onemax,Simulated Annealing,large,200,7,1318,1319,True
+onemax,Simulated Annealing,large,200,8,1524,1525,True
+onemax,Simulated Annealing,large,200,9,1394,1395,True
+onemax,Simulated Annealing,large,200,10,1259,1260,True
+onemax,Simulated Annealing,large,200,11,1531,1532,True
+onemax,Simulated Annealing,large,200,12,1241,1242,True
+onemax,Simulated Annealing,large,200,13,1342,1343,True
+onemax,Simulated Annealing,large,200,14,1271,1272,True
+onemax,Simulated Annealing,large,200,15,1274,1275,True
+onemax,Simulated Annealing,large,200,16,1441,1442,True
+onemax,Simulated Annealing,large,200,17,1504,1505,True
+onemax,Simulated Annealing,large,200,18,1429,1430,True
+onemax,Simulated Annealing,large,200,19,1445,1446,True
+onemax,Simulated Annealing,large,300,0,1808,1809,True
+onemax,Simulated Annealing,large,300,1,1851,1852,True
+onemax,Simulated Annealing,large,300,2,1713,1714,True
+onemax,Simulated Annealing,large,300,3,2065,2066,True
+onemax,Simulated Annealing,large,300,4,3117,3118,True
+onemax,Simulated Annealing,large,300,5,1952,1953,True
+onemax,Simulated Annealing,large,300,6,2570,2571,True
+onemax,Simulated Annealing,large,300,7,1682,1683,True
+onemax,Simulated Annealing,large,300,8,1932,1933,True
+onemax,Simulated Annealing,large,300,9,3174,3175,True
+onemax,Simulated Annealing,large,300,10,1789,1790,True
+onemax,Simulated Annealing,large,300,11,2091,2092,True
+onemax,Simulated Annealing,large,300,12,2004,2005,True
+onemax,Simulated Annealing,large,300,13,2395,2396,True
+onemax,Simulated Annealing,large,300,14,1838,1839,True
+onemax,Simulated Annealing,large,300,15,2117,2118,True
+onemax,Simulated Annealing,large,300,16,1829,1830,True
+onemax,Simulated Annealing,large,300,17,1633,1634,True
+onemax,Simulated Annealing,large,300,18,1748,1749,True
+onemax,Simulated Annealing,large,300,19,2626,2627,True
+onemax,Simulated Annealing,large,400,0,2811,2812,True
+onemax,Simulated Annealing,large,400,1,2709,2710,True
+onemax,Simulated Annealing,large,400,2,3035,3036,True
+onemax,Simulated Annealing,large,400,3,2311,2312,True
+onemax,Simulated Annealing,large,400,4,2447,2448,True
+onemax,Simulated Annealing,large,400,5,4029,4030,True
+onemax,Simulated Annealing,large,400,6,2209,2210,True
+onemax,Simulated Annealing,large,400,7,2288,2289,True
+onemax,Simulated Annealing,large,400,8,1997,1998,True
+onemax,Simulated Annealing,large,400,9,2210,2211,True
+onemax,Simulated Annealing,large,400,10,2900,2901,True
+onemax,Simulated Annealing,large,400,11,2161,2162,True
+onemax,Simulated Annealing,large,400,12,2509,2510,True
+onemax,Simulated Annealing,large,400,13,1879,1880,True
+onemax,Simulated Annealing,large,400,14,3035,3036,True
+onemax,Simulated Annealing,large,400,15,2546,2547,True
+onemax,Simulated Annealing,large,400,16,2793,2794,True
+onemax,Simulated Annealing,large,400,17,2594,2595,True
+onemax,Simulated Annealing,large,400,18,2788,2789,True
+onemax,Simulated Annealing,large,400,19,2316,2317,True
+onemax,Simulated Annealing,large,500,0,3528,3529,True
+onemax,Simulated Annealing,large,500,1,3422,3423,True
+onemax,Simulated Annealing,large,500,2,3485,3486,True
+onemax,Simulated Annealing,large,500,3,3683,3684,True
+onemax,Simulated Annealing,large,500,4,3980,3981,True
+onemax,Simulated Annealing,large,500,5,3212,3213,True
+onemax,Simulated Annealing,large,500,6,3111,3112,True
+onemax,Simulated Annealing,large,500,7,3500,3501,True
+onemax,Simulated Annealing,large,500,8,3413,3414,True
+onemax,Simulated Annealing,large,500,9,4058,4059,True
+onemax,Simulated Annealing,large,500,10,3308,3309,True
+onemax,Simulated Annealing,large,500,11,3748,3749,True
+onemax,Simulated Annealing,large,500,12,2510,2511,True
+onemax,Simulated Annealing,large,500,13,4305,4306,True
+onemax,Simulated Annealing,large,500,14,2703,2704,True
+onemax,Simulated Annealing,large,500,15,3012,3013,True
+onemax,Simulated Annealing,large,500,16,3187,3188,True
+onemax,Simulated Annealing,large,500,17,2781,2782,True
+onemax,Simulated Annealing,large,500,18,3294,3295,True
+onemax,Simulated Annealing,large,500,19,2872,2873,True
+onemax,Simulated Annealing,large,600,0,3716,3717,True
+onemax,Simulated Annealing,large,600,1,4216,4217,True
+onemax,Simulated Annealing,large,600,2,5247,5248,True
+onemax,Simulated Annealing,large,600,3,3823,3824,True
+onemax,Simulated Annealing,large,600,4,5239,5240,True
+onemax,Simulated Annealing,large,600,5,3708,3709,True
+onemax,Simulated Annealing,large,600,6,3205,3206,True
+onemax,Simulated Annealing,large,600,7,4023,4024,True
+onemax,Simulated Annealing,large,600,8,4405,4406,True
+onemax,Simulated Annealing,large,600,9,5132,5133,True
+onemax,Simulated Annealing,large,600,10,4751,4752,True
+onemax,Simulated Annealing,large,600,11,4832,4833,True
+onemax,Simulated Annealing,large,600,12,4802,4803,True
+onemax,Simulated Annealing,large,600,13,3792,3793,True
+onemax,Simulated Annealing,large,600,14,4461,4462,True
+onemax,Simulated Annealing,large,600,15,4160,4161,True
+onemax,Simulated Annealing,large,600,16,5914,5915,True
+onemax,Simulated Annealing,large,600,17,4346,4347,True
+onemax,Simulated Annealing,large,600,18,4234,4235,True
+onemax,Simulated Annealing,large,600,19,6150,6151,True
+onemax,Simulated Annealing,large,700,0,5283,5284,True
+onemax,Simulated Annealing,large,700,1,5482,5483,True
+onemax,Simulated Annealing,large,700,2,4896,4897,True
+onemax,Simulated Annealing,large,700,3,4420,4421,True
+onemax,Simulated Annealing,large,700,4,3212,3213,True
+onemax,Simulated Annealing,large,700,5,5812,5813,True
+onemax,Simulated Annealing,large,700,6,3867,3868,True
+onemax,Simulated Annealing,large,700,7,4691,4692,True
+onemax,Simulated Annealing,large,700,8,5971,5972,True
+onemax,Simulated Annealing,large,700,9,5791,5792,True
+onemax,Simulated Annealing,large,700,10,3855,3856,True
+onemax,Simulated Annealing,large,700,11,5110,5111,True
+onemax,Simulated Annealing,large,700,12,3858,3859,True
+onemax,Simulated Annealing,large,700,13,6383,6384,True
+onemax,Simulated Annealing,large,700,14,4067,4068,True
+onemax,Simulated Annealing,large,700,15,4406,4407,True
+onemax,Simulated Annealing,large,700,16,3967,3968,True
+onemax,Simulated Annealing,large,700,17,4658,4659,True
+onemax,Simulated Annealing,large,700,18,4711,4712,True
+onemax,Simulated Annealing,large,700,19,4657,4658,True
+onemax,Simulated Annealing,large,800,0,6270,6271,True
+onemax,Simulated Annealing,large,800,1,4568,4569,True
+onemax,Simulated Annealing,large,800,2,4664,4665,True
+onemax,Simulated Annealing,large,800,3,4897,4898,True
+onemax,Simulated Annealing,large,800,4,7445,7446,True
+onemax,Simulated Annealing,large,800,5,6919,6920,True
+onemax,Simulated Annealing,large,800,6,4596,4597,True
+onemax,Simulated Annealing,large,800,7,5394,5395,True
+onemax,Simulated Annealing,large,800,8,6265,6266,True
+onemax,Simulated Annealing,large,800,9,5170,5171,True
+onemax,Simulated Annealing,large,800,10,7129,7130,True
+onemax,Simulated Annealing,large,800,11,5128,5129,True
+onemax,Simulated Annealing,large,800,12,4423,4424,True
+onemax,Simulated Annealing,large,800,13,6680,6681,True
+onemax,Simulated Annealing,large,800,14,5373,5374,True
+onemax,Simulated Annealing,large,800,15,4568,4569,True
+onemax,Simulated Annealing,large,800,16,5207,5208,True
+onemax,Simulated Annealing,large,800,17,6022,6023,True
+onemax,Simulated Annealing,large,800,18,6869,6870,True
+onemax,Simulated Annealing,large,800,19,8620,8621,True
+onemax,Simulated Annealing,large,900,0,6490,6491,True
+onemax,Simulated Annealing,large,900,1,4557,4558,True
+onemax,Simulated Annealing,large,900,2,7383,7384,True
+onemax,Simulated Annealing,large,900,3,5998,5999,True
+onemax,Simulated Annealing,large,900,4,4417,4418,True
+onemax,Simulated Annealing,large,900,5,7403,7404,True
+onemax,Simulated Annealing,large,900,6,5987,5988,True
+onemax,Simulated Annealing,large,900,7,8279,8280,True
+onemax,Simulated Annealing,large,900,8,6180,6181,True
+onemax,Simulated Annealing,large,900,9,4682,4683,True
+onemax,Simulated Annealing,large,900,10,7127,7128,True
+onemax,Simulated Annealing,large,900,11,5576,5577,True
+onemax,Simulated Annealing,large,900,12,6598,6599,True
+onemax,Simulated Annealing,large,900,13,4919,4920,True
+onemax,Simulated Annealing,large,900,14,5732,5733,True
+onemax,Simulated Annealing,large,900,15,6930,6931,True
+onemax,Simulated Annealing,large,900,16,5680,5681,True
+onemax,Simulated Annealing,large,900,17,6052,6053,True
+onemax,Simulated Annealing,large,900,18,5102,5103,True
+onemax,Simulated Annealing,large,900,19,6125,6126,True
+onemax,Simulated Annealing,large,1000,0,7280,7281,True
+onemax,Simulated Annealing,large,1000,1,8067,8068,True
+onemax,Simulated Annealing,large,1000,2,9303,9304,True
+onemax,Simulated Annealing,large,1000,3,6167,6168,True
+onemax,Simulated Annealing,large,1000,4,8707,8708,True
+onemax,Simulated Annealing,large,1000,5,5595,5596,True
+onemax,Simulated Annealing,large,1000,6,7081,7082,True
+onemax,Simulated Annealing,large,1000,7,6299,6300,True
+onemax,Simulated Annealing,large,1000,8,7239,7240,True
+onemax,Simulated Annealing,large,1000,9,9008,9009,True
+onemax,Simulated Annealing,large,1000,10,8559,8560,True
+onemax,Simulated Annealing,large,1000,11,5410,5411,True
+onemax,Simulated Annealing,large,1000,12,7160,7161,True
+onemax,Simulated Annealing,large,1000,13,7985,7986,True
+onemax,Simulated Annealing,large,1000,14,6001,6002,True
+onemax,Simulated Annealing,large,1000,15,6711,6712,True
+onemax,Simulated Annealing,large,1000,16,5987,5988,True
+onemax,Simulated Annealing,large,1000,17,7390,7391,True
+onemax,Simulated Annealing,large,1000,18,7278,7279,True
+onemax,Simulated Annealing,large,1000,19,9141,9142,True
+onemax,MMAS-ACO,large,100,0,709,710,True
+onemax,MMAS-ACO,large,100,1,1003,1004,True
+onemax,MMAS-ACO,large,100,2,788,789,True
+onemax,MMAS-ACO,large,100,3,631,632,True
+onemax,MMAS-ACO,large,100,4,719,720,True
+onemax,MMAS-ACO,large,100,5,1574,1575,True
+onemax,MMAS-ACO,large,100,6,785,786,True
+onemax,MMAS-ACO,large,100,7,474,475,True
+onemax,MMAS-ACO,large,100,8,760,761,True
+onemax,MMAS-ACO,large,100,9,587,588,True
+onemax,MMAS-ACO,large,100,10,893,894,True
+onemax,MMAS-ACO,large,100,11,631,632,True
+onemax,MMAS-ACO,large,100,12,1106,1107,True
+onemax,MMAS-ACO,large,100,13,1040,1041,True
+onemax,MMAS-ACO,large,100,14,540,541,True
+onemax,MMAS-ACO,large,100,15,862,863,True
+onemax,MMAS-ACO,large,100,16,601,602,True
+onemax,MMAS-ACO,large,100,17,774,775,True
+onemax,MMAS-ACO,large,100,18,686,687,True
+onemax,MMAS-ACO,large,100,19,815,816,True
+onemax,MMAS-ACO,large,200,0,1589,1590,True
+onemax,MMAS-ACO,large,200,1,1502,1503,True
+onemax,MMAS-ACO,large,200,2,1152,1153,True
+onemax,MMAS-ACO,large,200,3,2161,2162,True
+onemax,MMAS-ACO,large,200,4,1629,1630,True
+onemax,MMAS-ACO,large,200,5,2203,2204,True
+onemax,MMAS-ACO,large,200,6,1281,1282,True
+onemax,MMAS-ACO,large,200,7,1928,1929,True
+onemax,MMAS-ACO,large,200,8,1747,1748,True
+onemax,MMAS-ACO,large,200,9,1687,1688,True
+onemax,MMAS-ACO,large,200,10,2102,2103,True
+onemax,MMAS-ACO,large,200,11,1486,1487,True
+onemax,MMAS-ACO,large,200,12,1549,1550,True
+onemax,MMAS-ACO,large,200,13,2139,2140,True
+onemax,MMAS-ACO,large,200,14,1596,1597,True
+onemax,MMAS-ACO,large,200,15,1317,1318,True
+onemax,MMAS-ACO,large,200,16,2047,2048,True
+onemax,MMAS-ACO,large,200,17,1480,1481,True
+onemax,MMAS-ACO,large,200,18,1502,1503,True
+onemax,MMAS-ACO,large,200,19,1103,1104,True
+onemax,MMAS-ACO,large,300,0,2350,2351,True
+onemax,MMAS-ACO,large,300,1,3429,3430,True
+onemax,MMAS-ACO,large,300,2,2675,2676,True
+onemax,MMAS-ACO,large,300,3,2760,2761,True
+onemax,MMAS-ACO,large,300,4,4088,4089,True
+onemax,MMAS-ACO,large,300,5,2203,2204,True
+onemax,MMAS-ACO,large,300,6,3164,3165,True
+onemax,MMAS-ACO,large,300,7,4134,4135,True
+onemax,MMAS-ACO,large,300,8,4092,4093,True
+onemax,MMAS-ACO,large,300,9,2848,2849,True
+onemax,MMAS-ACO,large,300,10,3898,3899,True
+onemax,MMAS-ACO,large,300,11,3128,3129,True
+onemax,MMAS-ACO,large,300,12,3448,3449,True
+onemax,MMAS-ACO,large,300,13,2879,2880,True
+onemax,MMAS-ACO,large,300,14,2510,2511,True
+onemax,MMAS-ACO,large,300,15,2628,2629,True
+onemax,MMAS-ACO,large,300,16,2904,2905,True
+onemax,MMAS-ACO,large,300,17,2238,2239,True
+onemax,MMAS-ACO,large,300,18,3208,3209,True
+onemax,MMAS-ACO,large,300,19,3265,3266,True
+onemax,MMAS-ACO,large,400,0,3832,3833,True
+onemax,MMAS-ACO,large,400,1,3291,3292,True
+onemax,MMAS-ACO,large,400,2,3930,3931,True
+onemax,MMAS-ACO,large,400,3,3710,3711,True
+onemax,MMAS-ACO,large,400,4,5435,5436,True
+onemax,MMAS-ACO,large,400,5,3471,3472,True
+onemax,MMAS-ACO,large,400,6,4250,4251,True
+onemax,MMAS-ACO,large,400,7,4344,4345,True
+onemax,MMAS-ACO,large,400,8,6258,6259,True
+onemax,MMAS-ACO,large,400,9,3472,3473,True
+onemax,MMAS-ACO,large,400,10,2828,2829,True
+onemax,MMAS-ACO,large,400,11,3974,3975,True
+onemax,MMAS-ACO,large,400,12,3364,3365,True
+onemax,MMAS-ACO,large,400,13,3059,3060,True
+onemax,MMAS-ACO,large,400,14,3805,3806,True
+onemax,MMAS-ACO,large,400,15,4803,4804,True
+onemax,MMAS-ACO,large,400,16,4630,4631,True
+onemax,MMAS-ACO,large,400,17,4123,4124,True
+onemax,MMAS-ACO,large,400,18,4272,4273,True
+onemax,MMAS-ACO,large,400,19,3154,3155,True
+onemax,MMAS-ACO,large,500,0,4876,4877,True
+onemax,MMAS-ACO,large,500,1,6624,6625,True
+onemax,MMAS-ACO,large,500,2,4812,4813,True
+onemax,MMAS-ACO,large,500,3,6040,6041,True
+onemax,MMAS-ACO,large,500,4,4173,4174,True
+onemax,MMAS-ACO,large,500,5,5459,5460,True
+onemax,MMAS-ACO,large,500,6,4147,4148,True
+onemax,MMAS-ACO,large,500,7,8284,8285,True
+onemax,MMAS-ACO,large,500,8,5820,5821,True
+onemax,MMAS-ACO,large,500,9,5473,5474,True
+onemax,MMAS-ACO,large,500,10,6431,6432,True
+onemax,MMAS-ACO,large,500,11,5424,5425,True
+onemax,MMAS-ACO,large,500,12,6224,6225,True
+onemax,MMAS-ACO,large,500,13,4411,4412,True
+onemax,MMAS-ACO,large,500,14,4914,4915,True
+onemax,MMAS-ACO,large,500,15,5587,5588,True
+onemax,MMAS-ACO,large,500,16,4777,4778,True
+onemax,MMAS-ACO,large,500,17,5153,5154,True
+onemax,MMAS-ACO,large,500,18,4929,4930,True
+onemax,MMAS-ACO,large,500,19,6473,6474,True
+onemax,MMAS-ACO,large,600,0,6862,6863,True
+onemax,MMAS-ACO,large,600,1,6387,6388,True
+onemax,MMAS-ACO,large,600,2,6981,6982,True
+onemax,MMAS-ACO,large,600,3,5644,5645,True
+onemax,MMAS-ACO,large,600,4,4395,4396,True
+onemax,MMAS-ACO,large,600,5,5475,5476,True
+onemax,MMAS-ACO,large,600,6,6409,6410,True
+onemax,MMAS-ACO,large,600,7,6950,6951,True
+onemax,MMAS-ACO,large,600,8,6278,6279,True
+onemax,MMAS-ACO,large,600,9,6601,6602,True
+onemax,MMAS-ACO,large,600,10,6008,6009,True
+onemax,MMAS-ACO,large,600,11,6246,6247,True
+onemax,MMAS-ACO,large,600,12,7498,7499,True
+onemax,MMAS-ACO,large,600,13,5524,5525,True
+onemax,MMAS-ACO,large,600,14,8393,8394,True
+onemax,MMAS-ACO,large,600,15,6424,6425,True
+onemax,MMAS-ACO,large,600,16,8471,8472,True
+onemax,MMAS-ACO,large,600,17,4837,4838,True
+onemax,MMAS-ACO,large,600,18,6060,6061,True
+onemax,MMAS-ACO,large,600,19,5474,5475,True
+onemax,MMAS-ACO,large,700,0,9630,9631,True
+onemax,MMAS-ACO,large,700,1,8650,8651,True
+onemax,MMAS-ACO,large,700,2,12472,12473,True
+onemax,MMAS-ACO,large,700,3,7891,7892,True
+onemax,MMAS-ACO,large,700,4,7733,7734,True
+onemax,MMAS-ACO,large,700,5,5749,5750,True
+onemax,MMAS-ACO,large,700,6,8544,8545,True
+onemax,MMAS-ACO,large,700,7,7725,7726,True
+onemax,MMAS-ACO,large,700,8,8170,8171,True
+onemax,MMAS-ACO,large,700,9,6954,6955,True
+onemax,MMAS-ACO,large,700,10,8071,8072,True
+onemax,MMAS-ACO,large,700,11,8058,8059,True
+onemax,MMAS-ACO,large,700,12,7622,7623,True
+onemax,MMAS-ACO,large,700,13,7137,7138,True
+onemax,MMAS-ACO,large,700,14,7296,7297,True
+onemax,MMAS-ACO,large,700,15,7294,7295,True
+onemax,MMAS-ACO,large,700,16,7313,7314,True
+onemax,MMAS-ACO,large,700,17,9654,9655,True
+onemax,MMAS-ACO,large,700,18,7895,7896,True
+onemax,MMAS-ACO,large,700,19,6433,6434,True
+onemax,MMAS-ACO,large,800,0,7324,7325,True
+onemax,MMAS-ACO,large,800,1,7283,7284,True
+onemax,MMAS-ACO,large,800,2,13839,13840,True
+onemax,MMAS-ACO,large,800,3,7357,7358,True
+onemax,MMAS-ACO,large,800,4,7807,7808,True
+onemax,MMAS-ACO,large,800,5,8167,8168,True
+onemax,MMAS-ACO,large,800,6,6761,6762,True
+onemax,MMAS-ACO,large,800,7,10343,10344,True
+onemax,MMAS-ACO,large,800,8,9619,9620,True
+onemax,MMAS-ACO,large,800,9,8154,8155,True
+onemax,MMAS-ACO,large,800,10,9184,9185,True
+onemax,MMAS-ACO,large,800,11,8137,8138,True
+onemax,MMAS-ACO,large,800,12,9865,9866,True
+onemax,MMAS-ACO,large,800,13,8407,8408,True
+onemax,MMAS-ACO,large,800,14,8895,8896,True
+onemax,MMAS-ACO,large,800,15,11244,11245,True
+onemax,MMAS-ACO,large,800,16,10044,10045,True
+onemax,MMAS-ACO,large,800,17,8155,8156,True
+onemax,MMAS-ACO,large,800,18,9068,9069,True
+onemax,MMAS-ACO,large,800,19,8534,8535,True
+onemax,MMAS-ACO,large,900,0,10247,10248,True
+onemax,MMAS-ACO,large,900,1,13215,13216,True
+onemax,MMAS-ACO,large,900,2,7695,7696,True
+onemax,MMAS-ACO,large,900,3,11182,11183,True
+onemax,MMAS-ACO,large,900,4,11588,11589,True
+onemax,MMAS-ACO,large,900,5,11081,11082,True
+onemax,MMAS-ACO,large,900,6,10199,10200,True
+onemax,MMAS-ACO,large,900,7,10520,10521,True
+onemax,MMAS-ACO,large,900,8,11923,11924,True
+onemax,MMAS-ACO,large,900,9,12634,12635,True
+onemax,MMAS-ACO,large,900,10,11795,11796,True
+onemax,MMAS-ACO,large,900,11,9295,9296,True
+onemax,MMAS-ACO,large,900,12,12441,12442,True
+onemax,MMAS-ACO,large,900,13,9734,9735,True
+onemax,MMAS-ACO,large,900,14,8965,8966,True
+onemax,MMAS-ACO,large,900,15,9520,9521,True
+onemax,MMAS-ACO,large,900,16,19733,19734,True
+onemax,MMAS-ACO,large,900,17,9622,9623,True
+onemax,MMAS-ACO,large,900,18,14409,14410,True
+onemax,MMAS-ACO,large,900,19,10154,10155,True
+onemax,MMAS-ACO,large,1000,0,12444,12445,True
+onemax,MMAS-ACO,large,1000,1,9705,9706,True
+onemax,MMAS-ACO,large,1000,2,11476,11477,True
+onemax,MMAS-ACO,large,1000,3,11976,11977,True
+onemax,MMAS-ACO,large,1000,4,12451,12452,True
+onemax,MMAS-ACO,large,1000,5,10886,10887,True
+onemax,MMAS-ACO,large,1000,6,10837,10838,True
+onemax,MMAS-ACO,large,1000,7,14050,14051,True
+onemax,MMAS-ACO,large,1000,8,18790,18791,True
+onemax,MMAS-ACO,large,1000,9,18982,18983,True
+onemax,MMAS-ACO,large,1000,10,12679,12680,True
+onemax,MMAS-ACO,large,1000,11,13883,13884,True
+onemax,MMAS-ACO,large,1000,12,12336,12337,True
+onemax,MMAS-ACO,large,1000,13,11941,11942,True
+onemax,MMAS-ACO,large,1000,14,10208,10209,True
+onemax,MMAS-ACO,large,1000,15,11594,11595,True
+onemax,MMAS-ACO,large,1000,16,10116,10117,True
+onemax,MMAS-ACO,large,1000,17,12413,12414,True
+onemax,MMAS-ACO,large,1000,18,9567,9568,True
+onemax,MMAS-ACO,large,1000,19,10438,10439,True
+onemax,P-ACO,large,100,0,17,540,True
+onemax,P-ACO,large,100,1,17,540,True
+onemax,P-ACO,large,100,2,17,540,True
+onemax,P-ACO,large,100,3,17,540,True
+onemax,P-ACO,large,100,4,18,570,True
+onemax,P-ACO,large,100,5,17,540,True
+onemax,P-ACO,large,100,6,16,510,True
+onemax,P-ACO,large,100,7,16,510,True
+onemax,P-ACO,large,100,8,18,570,True
+onemax,P-ACO,large,100,9,18,570,True
+onemax,P-ACO,large,100,10,16,510,True
+onemax,P-ACO,large,100,11,17,540,True
+onemax,P-ACO,large,100,12,16,510,True
+onemax,P-ACO,large,100,13,17,540,True
+onemax,P-ACO,large,100,14,18,570,True
+onemax,P-ACO,large,100,15,20,630,True
+onemax,P-ACO,large,100,16,15,480,True
+onemax,P-ACO,large,100,17,15,480,True
+onemax,P-ACO,large,100,18,18,570,True
+onemax,P-ACO,large,100,19,19,600,True
+onemax,P-ACO,large,200,0,27,840,True
+onemax,P-ACO,large,200,1,22,690,True
+onemax,P-ACO,large,200,2,23,720,True
+onemax,P-ACO,large,200,3,22,690,True
+onemax,P-ACO,large,200,4,24,750,True
+onemax,P-ACO,large,200,5,24,750,True
+onemax,P-ACO,large,200,6,21,660,True
+onemax,P-ACO,large,200,7,22,690,True
+onemax,P-ACO,large,200,8,23,720,True
+onemax,P-ACO,large,200,9,23,720,True
+onemax,P-ACO,large,200,10,24,750,True
+onemax,P-ACO,large,200,11,24,750,True
+onemax,P-ACO,large,200,12,24,750,True
+onemax,P-ACO,large,200,13,27,840,True
+onemax,P-ACO,large,200,14,22,690,True
+onemax,P-ACO,large,200,15,22,690,True
+onemax,P-ACO,large,200,16,23,720,True
+onemax,P-ACO,large,200,17,24,750,True
+onemax,P-ACO,large,200,18,25,780,True
+onemax,P-ACO,large,200,19,24,750,True
+onemax,P-ACO,large,300,0,29,900,True
+onemax,P-ACO,large,300,1,29,900,True
+onemax,P-ACO,large,300,2,30,930,True
+onemax,P-ACO,large,300,3,26,810,True
+onemax,P-ACO,large,300,4,29,900,True
+onemax,P-ACO,large,300,5,30,930,True
+onemax,P-ACO,large,300,6,29,900,True
+onemax,P-ACO,large,300,7,28,870,True
+onemax,P-ACO,large,300,8,30,930,True
+onemax,P-ACO,large,300,9,30,930,True
+onemax,P-ACO,large,300,10,32,990,True
+onemax,P-ACO,large,300,11,26,810,True
+onemax,P-ACO,large,300,12,28,870,True
+onemax,P-ACO,large,300,13,28,870,True
+onemax,P-ACO,large,300,14,25,780,True
+onemax,P-ACO,large,300,15,27,840,True
+onemax,P-ACO,large,300,16,27,840,True
+onemax,P-ACO,large,300,17,29,900,True
+onemax,P-ACO,large,300,18,26,810,True
+onemax,P-ACO,large,300,19,29,900,True
+onemax,P-ACO,large,400,0,34,1050,True
+onemax,P-ACO,large,400,1,32,990,True
+onemax,P-ACO,large,400,2,32,990,True
+onemax,P-ACO,large,400,3,31,960,True
+onemax,P-ACO,large,400,4,32,990,True
+onemax,P-ACO,large,400,5,31,960,True
+onemax,P-ACO,large,400,6,31,960,True
+onemax,P-ACO,large,400,7,30,930,True
+onemax,P-ACO,large,400,8,32,990,True
+onemax,P-ACO,large,400,9,33,1020,True
+onemax,P-ACO,large,400,10,31,960,True
+onemax,P-ACO,large,400,11,33,1020,True
+onemax,P-ACO,large,400,12,33,1020,True
+onemax,P-ACO,large,400,13,33,1020,True
+onemax,P-ACO,large,400,14,32,990,True
+onemax,P-ACO,large,400,15,29,900,True
+onemax,P-ACO,large,400,16,31,960,True
+onemax,P-ACO,large,400,17,30,930,True
+onemax,P-ACO,large,400,18,33,1020,True
+onemax,P-ACO,large,400,19,32,990,True
+onemax,P-ACO,large,500,0,36,1110,True
+onemax,P-ACO,large,500,1,34,1050,True
+onemax,P-ACO,large,500,2,36,1110,True
+onemax,P-ACO,large,500,3,35,1080,True
+onemax,P-ACO,large,500,4,32,990,True
+onemax,P-ACO,large,500,5,34,1050,True
+onemax,P-ACO,large,500,6,34,1050,True
+onemax,P-ACO,large,500,7,34,1050,True
+onemax,P-ACO,large,500,8,35,1080,True
+onemax,P-ACO,large,500,9,35,1080,True
+onemax,P-ACO,large,500,10,36,1110,True
+onemax,P-ACO,large,500,11,33,1020,True
+onemax,P-ACO,large,500,12,37,1140,True
+onemax,P-ACO,large,500,13,35,1080,True
+onemax,P-ACO,large,500,14,32,990,True
+onemax,P-ACO,large,500,15,34,1050,True
+onemax,P-ACO,large,500,16,34,1050,True
+onemax,P-ACO,large,500,17,34,1050,True
+onemax,P-ACO,large,500,18,36,1110,True
+onemax,P-ACO,large,500,19,34,1050,True
+onemax,P-ACO,large,600,0,35,1080,True
+onemax,P-ACO,large,600,1,37,1140,True
+onemax,P-ACO,large,600,2,40,1230,True
+onemax,P-ACO,large,600,3,38,1170,True
+onemax,P-ACO,large,600,4,37,1140,True
+onemax,P-ACO,large,600,5,39,1200,True
+onemax,P-ACO,large,600,6,38,1170,True
+onemax,P-ACO,large,600,7,37,1140,True
+onemax,P-ACO,large,600,8,39,1200,True
+onemax,P-ACO,large,600,9,37,1140,True
+onemax,P-ACO,large,600,10,38,1170,True
+onemax,P-ACO,large,600,11,35,1080,True
+onemax,P-ACO,large,600,12,36,1110,True
+onemax,P-ACO,large,600,13,37,1140,True
+onemax,P-ACO,large,600,14,39,1200,True
+onemax,P-ACO,large,600,15,39,1200,True
+onemax,P-ACO,large,600,16,37,1140,True
+onemax,P-ACO,large,600,17,36,1110,True
+onemax,P-ACO,large,600,18,37,1140,True
+onemax,P-ACO,large,600,19,35,1080,True
+onemax,P-ACO,large,700,0,39,1200,True
+onemax,P-ACO,large,700,1,38,1170,True
+onemax,P-ACO,large,700,2,41,1260,True
+onemax,P-ACO,large,700,3,39,1200,True
+onemax,P-ACO,large,700,4,41,1260,True
+onemax,P-ACO,large,700,5,40,1230,True
+onemax,P-ACO,large,700,6,38,1170,True
+onemax,P-ACO,large,700,7,39,1200,True
+onemax,P-ACO,large,700,8,41,1260,True
+onemax,P-ACO,large,700,9,39,1200,True
+onemax,P-ACO,large,700,10,43,1320,True
+onemax,P-ACO,large,700,11,39,1200,True
+onemax,P-ACO,large,700,12,38,1170,True
+onemax,P-ACO,large,700,13,41,1260,True
+onemax,P-ACO,large,700,14,40,1230,True
+onemax,P-ACO,large,700,15,39,1200,True
+onemax,P-ACO,large,700,16,39,1200,True
+onemax,P-ACO,large,700,17,40,1230,True
+onemax,P-ACO,large,700,18,38,1170,True
+onemax,P-ACO,large,700,19,38,1170,True
+onemax,P-ACO,large,800,0,44,1350,True
+onemax,P-ACO,large,800,1,43,1320,True
+onemax,P-ACO,large,800,2,39,1200,True
+onemax,P-ACO,large,800,3,42,1290,True
+onemax,P-ACO,large,800,4,43,1320,True
+onemax,P-ACO,large,800,5,41,1260,True
+onemax,P-ACO,large,800,6,41,1260,True
+onemax,P-ACO,large,800,7,40,1230,True
+onemax,P-ACO,large,800,8,40,1230,True
+onemax,P-ACO,large,800,9,40,1230,True
+onemax,P-ACO,large,800,10,41,1260,True
+onemax,P-ACO,large,800,11,41,1260,True
+onemax,P-ACO,large,800,12,37,1140,True
+onemax,P-ACO,large,800,13,40,1230,True
+onemax,P-ACO,large,800,14,44,1350,True
+onemax,P-ACO,large,800,15,44,1350,True
+onemax,P-ACO,large,800,16,38,1170,True
+onemax,P-ACO,large,800,17,42,1290,True
+onemax,P-ACO,large,800,18,43,1320,True
+onemax,P-ACO,large,800,19,43,1320,True
+onemax,P-ACO,large,900,0,40,1230,True
+onemax,P-ACO,large,900,1,43,1320,True
+onemax,P-ACO,large,900,2,42,1290,True
+onemax,P-ACO,large,900,3,42,1290,True
+onemax,P-ACO,large,900,4,42,1290,True
+onemax,P-ACO,large,900,5,42,1290,True
+onemax,P-ACO,large,900,6,45,1380,True
+onemax,P-ACO,large,900,7,41,1260,True
+onemax,P-ACO,large,900,8,43,1320,True
+onemax,P-ACO,large,900,9,43,1320,True
+onemax,P-ACO,large,900,10,45,1380,True
+onemax,P-ACO,large,900,11,43,1320,True
+onemax,P-ACO,large,900,12,39,1200,True
+onemax,P-ACO,large,900,13,40,1230,True
+onemax,P-ACO,large,900,14,44,1350,True
+onemax,P-ACO,large,900,15,43,1320,True
+onemax,P-ACO,large,900,16,41,1260,True
+onemax,P-ACO,large,900,17,43,1320,True
+onemax,P-ACO,large,900,18,41,1260,True
+onemax,P-ACO,large,900,19,43,1320,True
+onemax,P-ACO,large,1000,0,48,1470,True
+onemax,P-ACO,large,1000,1,45,1380,True
+onemax,P-ACO,large,1000,2,43,1320,True
+onemax,P-ACO,large,1000,3,44,1350,True
+onemax,P-ACO,large,1000,4,42,1290,True
+onemax,P-ACO,large,1000,5,46,1410,True
+onemax,P-ACO,large,1000,6,45,1380,True
+onemax,P-ACO,large,1000,7,44,1350,True
+onemax,P-ACO,large,1000,8,47,1440,True
+onemax,P-ACO,large,1000,9,46,1410,True
+onemax,P-ACO,large,1000,10,43,1320,True
+onemax,P-ACO,large,1000,11,44,1350,True
+onemax,P-ACO,large,1000,12,46,1410,True
+onemax,P-ACO,large,1000,13,43,1320,True
+onemax,P-ACO,large,1000,14,45,1380,True
+onemax,P-ACO,large,1000,15,43,1320,True
+onemax,P-ACO,large,1000,16,44,1350,True
+onemax,P-ACO,large,1000,17,44,1350,True
+onemax,P-ACO,large,1000,18,42,1290,True
+onemax,P-ACO,large,1000,19,46,1410,True
+leadingones,(1+1) EA,large,100,0,8053,8054,True
+leadingones,(1+1) EA,large,100,1,9995,9996,True
+leadingones,(1+1) EA,large,100,2,9882,9883,True
+leadingones,(1+1) EA,large,100,3,11629,11630,True
+leadingones,(1+1) EA,large,100,4,7529,7530,True
+leadingones,(1+1) EA,large,100,5,9497,9498,True
+leadingones,(1+1) EA,large,100,6,10554,10555,True
+leadingones,(1+1) EA,large,100,7,10027,10028,True
+leadingones,(1+1) EA,large,100,8,9350,9351,True
+leadingones,(1+1) EA,large,100,9,8985,8986,True
+leadingones,(1+1) EA,large,100,10,8412,8413,True
+leadingones,(1+1) EA,large,100,11,6375,6376,True
+leadingones,(1+1) EA,large,100,12,8129,8130,True
+leadingones,(1+1) EA,large,100,13,6966,6967,True
+leadingones,(1+1) EA,large,100,14,7005,7006,True
+leadingones,(1+1) EA,large,100,15,6095,6096,True
+leadingones,(1+1) EA,large,100,16,7914,7915,True
+leadingones,(1+1) EA,large,100,17,6325,6326,True
+leadingones,(1+1) EA,large,100,18,7165,7166,True
+leadingones,(1+1) EA,large,100,19,12324,12325,True
+leadingones,(1+1) EA,large,200,0,38734,38735,True
+leadingones,(1+1) EA,large,200,1,34430,34431,True
+leadingones,(1+1) EA,large,200,2,35551,35552,True
+leadingones,(1+1) EA,large,200,3,29475,29476,True
+leadingones,(1+1) EA,large,200,4,30268,30269,True
+leadingones,(1+1) EA,large,200,5,37286,37287,True
+leadingones,(1+1) EA,large,200,6,34897,34898,True
+leadingones,(1+1) EA,large,200,7,38236,38237,True
+leadingones,(1+1) EA,large,200,8,35240,35241,True
+leadingones,(1+1) EA,large,200,9,31632,31633,True
+leadingones,(1+1) EA,large,200,10,37605,37606,True
+leadingones,(1+1) EA,large,200,11,45186,45187,True
+leadingones,(1+1) EA,large,200,12,32367,32368,True
+leadingones,(1+1) EA,large,200,13,34228,34229,True
+leadingones,(1+1) EA,large,200,14,41118,41119,True
+leadingones,(1+1) EA,large,200,15,30424,30425,True
+leadingones,(1+1) EA,large,200,16,28697,28698,True
+leadingones,(1+1) EA,large,200,17,36220,36221,True
+leadingones,(1+1) EA,large,200,18,34217,34218,True
+leadingones,(1+1) EA,large,200,19,38928,38929,True
+leadingones,(1+1) EA,large,300,0,79674,79675,True
+leadingones,(1+1) EA,large,300,1,84478,84479,True
+leadingones,(1+1) EA,large,300,2,74889,74890,True
+leadingones,(1+1) EA,large,300,3,79244,79245,True
+leadingones,(1+1) EA,large,300,4,66526,66527,True
+leadingones,(1+1) EA,large,300,5,87573,87574,True
+leadingones,(1+1) EA,large,300,6,90560,90561,True
+leadingones,(1+1) EA,large,300,7,74695,74696,True
+leadingones,(1+1) EA,large,300,8,80074,80075,True
+leadingones,(1+1) EA,large,300,9,74546,74547,True
+leadingones,(1+1) EA,large,300,10,101675,101676,True
+leadingones,(1+1) EA,large,300,11,70993,70994,True
+leadingones,(1+1) EA,large,300,12,72221,72222,True
+leadingones,(1+1) EA,large,300,13,75739,75740,True
+leadingones,(1+1) EA,large,300,14,70399,70400,True
+leadingones,(1+1) EA,large,300,15,64424,64425,True
+leadingones,(1+1) EA,large,300,16,72746,72747,True
+leadingones,(1+1) EA,large,300,17,68733,68734,True
+leadingones,(1+1) EA,large,300,18,74140,74141,True
+leadingones,(1+1) EA,large,300,19,80600,80601,True
+leadingones,(1+1) EA,large,400,0,127501,127502,True
+leadingones,(1+1) EA,large,400,1,114795,114796,True
+leadingones,(1+1) EA,large,400,2,143430,143431,True
+leadingones,(1+1) EA,large,400,3,120532,120533,True
+leadingones,(1+1) EA,large,400,4,150000,150001,False
+leadingones,(1+1) EA,large,400,5,150000,150001,False
+leadingones,(1+1) EA,large,400,6,143938,143939,True
+leadingones,(1+1) EA,large,400,7,130491,130492,True
+leadingones,(1+1) EA,large,400,8,110250,110251,True
+leadingones,(1+1) EA,large,400,9,131490,131491,True
+leadingones,(1+1) EA,large,400,10,150000,150001,False
+leadingones,(1+1) EA,large,400,11,150000,150001,False
+leadingones,(1+1) EA,large,400,12,130843,130844,True
+leadingones,(1+1) EA,large,400,13,150000,150001,False
+leadingones,(1+1) EA,large,400,14,146429,146430,True
+leadingones,(1+1) EA,large,400,15,142608,142609,True
+leadingones,(1+1) EA,large,400,16,126601,126602,True
+leadingones,(1+1) EA,large,400,17,140682,140683,True
+leadingones,(1+1) EA,large,400,18,136337,136338,True
+leadingones,(1+1) EA,large,400,19,145044,145045,True
+leadingones,(1+1) EA,large,500,0,150000,150001,False
+leadingones,(1+1) EA,large,500,1,150000,150001,False
+leadingones,(1+1) EA,large,500,2,150000,150001,False
+leadingones,(1+1) EA,large,500,3,150000,150001,False
+leadingones,(1+1) EA,large,500,4,150000,150001,False
+leadingones,(1+1) EA,large,500,5,150000,150001,False
+leadingones,(1+1) EA,large,500,6,150000,150001,False
+leadingones,(1+1) EA,large,500,7,150000,150001,False
+leadingones,(1+1) EA,large,500,8,150000,150001,False
+leadingones,(1+1) EA,large,500,9,150000,150001,False
+leadingones,(1+1) EA,large,500,10,150000,150001,False
+leadingones,(1+1) EA,large,500,11,150000,150001,False
+leadingones,(1+1) EA,large,500,12,150000,150001,False
+leadingones,(1+1) EA,large,500,13,150000,150001,False
+leadingones,(1+1) EA,large,500,14,150000,150001,False
+leadingones,(1+1) EA,large,500,15,150000,150001,False
+leadingones,(1+1) EA,large,500,16,150000,150001,False
+leadingones,(1+1) EA,large,500,17,150000,150001,False
+leadingones,(1+1) EA,large,500,18,150000,150001,False
+leadingones,(1+1) EA,large,500,19,150000,150001,False
+leadingones,(1+1) EA,large,600,0,150000,150001,False
+leadingones,(1+1) EA,large,600,1,150000,150001,False
+leadingones,(1+1) EA,large,600,2,150000,150001,False
+leadingones,(1+1) EA,large,600,3,150000,150001,False
+leadingones,(1+1) EA,large,600,4,150000,150001,False
+leadingones,(1+1) EA,large,600,5,150000,150001,False
+leadingones,(1+1) EA,large,600,6,150000,150001,False
+leadingones,(1+1) EA,large,600,7,150000,150001,False
+leadingones,(1+1) EA,large,600,8,150000,150001,False
+leadingones,(1+1) EA,large,600,9,150000,150001,False
+leadingones,(1+1) EA,large,600,10,150000,150001,False
+leadingones,(1+1) EA,large,600,11,150000,150001,False
+leadingones,(1+1) EA,large,600,12,150000,150001,False
+leadingones,(1+1) EA,large,600,13,150000,150001,False
+leadingones,(1+1) EA,large,600,14,150000,150001,False
+leadingones,(1+1) EA,large,600,15,150000,150001,False
+leadingones,(1+1) EA,large,600,16,150000,150001,False
+leadingones,(1+1) EA,large,600,17,150000,150001,False
+leadingones,(1+1) EA,large,600,18,150000,150001,False
+leadingones,(1+1) EA,large,600,19,150000,150001,False
+leadingones,(1+1) EA,large,700,0,150000,150001,False
+leadingones,(1+1) EA,large,700,1,150000,150001,False
+leadingones,(1+1) EA,large,700,2,150000,150001,False
+leadingones,(1+1) EA,large,700,3,150000,150001,False
+leadingones,(1+1) EA,large,700,4,150000,150001,False
+leadingones,(1+1) EA,large,700,5,150000,150001,False
+leadingones,(1+1) EA,large,700,6,150000,150001,False
+leadingones,(1+1) EA,large,700,7,150000,150001,False
+leadingones,(1+1) EA,large,700,8,150000,150001,False
+leadingones,(1+1) EA,large,700,9,150000,150001,False
+leadingones,(1+1) EA,large,700,10,150000,150001,False
+leadingones,(1+1) EA,large,700,11,150000,150001,False
+leadingones,(1+1) EA,large,700,12,150000,150001,False
+leadingones,(1+1) EA,large,700,13,150000,150001,False
+leadingones,(1+1) EA,large,700,14,150000,150001,False
+leadingones,(1+1) EA,large,700,15,150000,150001,False
+leadingones,(1+1) EA,large,700,16,150000,150001,False
+leadingones,(1+1) EA,large,700,17,150000,150001,False
+leadingones,(1+1) EA,large,700,18,150000,150001,False
+leadingones,(1+1) EA,large,700,19,150000,150001,False
+leadingones,(1+1) EA,large,800,0,150000,150001,False
+leadingones,(1+1) EA,large,800,1,150000,150001,False
+leadingones,(1+1) EA,large,800,2,150000,150001,False
+leadingones,(1+1) EA,large,800,3,150000,150001,False
+leadingones,(1+1) EA,large,800,4,150000,150001,False
+leadingones,(1+1) EA,large,800,5,150000,150001,False
+leadingones,(1+1) EA,large,800,6,150000,150001,False
+leadingones,(1+1) EA,large,800,7,150000,150001,False
+leadingones,(1+1) EA,large,800,8,150000,150001,False
+leadingones,(1+1) EA,large,800,9,150000,150001,False
+leadingones,(1+1) EA,large,800,10,150000,150001,False
+leadingones,(1+1) EA,large,800,11,150000,150001,False
+leadingones,(1+1) EA,large,800,12,150000,150001,False
+leadingones,(1+1) EA,large,800,13,150000,150001,False
+leadingones,(1+1) EA,large,800,14,150000,150001,False
+leadingones,(1+1) EA,large,800,15,150000,150001,False
+leadingones,(1+1) EA,large,800,16,150000,150001,False
+leadingones,(1+1) EA,large,800,17,150000,150001,False
+leadingones,(1+1) EA,large,800,18,150000,150001,False
+leadingones,(1+1) EA,large,800,19,150000,150001,False
+leadingones,(1+1) EA,large,900,0,150000,150001,False
+leadingones,(1+1) EA,large,900,1,150000,150001,False
+leadingones,(1+1) EA,large,900,2,150000,150001,False
+leadingones,(1+1) EA,large,900,3,150000,150001,False
+leadingones,(1+1) EA,large,900,4,150000,150001,False
+leadingones,(1+1) EA,large,900,5,150000,150001,False
+leadingones,(1+1) EA,large,900,6,150000,150001,False
+leadingones,(1+1) EA,large,900,7,150000,150001,False
+leadingones,(1+1) EA,large,900,8,150000,150001,False
+leadingones,(1+1) EA,large,900,9,150000,150001,False
+leadingones,(1+1) EA,large,900,10,150000,150001,False
+leadingones,(1+1) EA,large,900,11,150000,150001,False
+leadingones,(1+1) EA,large,900,12,150000,150001,False
+leadingones,(1+1) EA,large,900,13,150000,150001,False
+leadingones,(1+1) EA,large,900,14,150000,150001,False
+leadingones,(1+1) EA,large,900,15,150000,150001,False
+leadingones,(1+1) EA,large,900,16,150000,150001,False
+leadingones,(1+1) EA,large,900,17,150000,150001,False
+leadingones,(1+1) EA,large,900,18,150000,150001,False
+leadingones,(1+1) EA,large,900,19,150000,150001,False
+leadingones,(1+1) EA,large,1000,0,150000,150001,False
+leadingones,(1+1) EA,large,1000,1,150000,150001,False
+leadingones,(1+1) EA,large,1000,2,150000,150001,False
+leadingones,(1+1) EA,large,1000,3,150000,150001,False
+leadingones,(1+1) EA,large,1000,4,150000,150001,False
+leadingones,(1+1) EA,large,1000,5,150000,150001,False
+leadingones,(1+1) EA,large,1000,6,150000,150001,False
+leadingones,(1+1) EA,large,1000,7,150000,150001,False
+leadingones,(1+1) EA,large,1000,8,150000,150001,False
+leadingones,(1+1) EA,large,1000,9,150000,150001,False
+leadingones,(1+1) EA,large,1000,10,150000,150001,False
+leadingones,(1+1) EA,large,1000,11,150000,150001,False
+leadingones,(1+1) EA,large,1000,12,150000,150001,False
+leadingones,(1+1) EA,large,1000,13,150000,150001,False
+leadingones,(1+1) EA,large,1000,14,150000,150001,False
+leadingones,(1+1) EA,large,1000,15,150000,150001,False
+leadingones,(1+1) EA,large,1000,16,150000,150001,False
+leadingones,(1+1) EA,large,1000,17,150000,150001,False
+leadingones,(1+1) EA,large,1000,18,150000,150001,False
+leadingones,(1+1) EA,large,1000,19,150000,150001,False
+leadingones,(μ+λ) EA,large,100,0,245,9820,True
+leadingones,(μ+λ) EA,large,100,1,265,10620,True
+leadingones,(μ+λ) EA,large,100,2,202,8100,True
+leadingones,(μ+λ) EA,large,100,3,241,9660,True
+leadingones,(μ+λ) EA,large,100,4,306,12260,True
+leadingones,(μ+λ) EA,large,100,5,257,10300,True
+leadingones,(μ+λ) EA,large,100,6,233,9340,True
+leadingones,(μ+λ) EA,large,100,7,201,8060,True
+leadingones,(μ+λ) EA,large,100,8,249,9980,True
+leadingones,(μ+λ) EA,large,100,9,226,9060,True
+leadingones,(μ+λ) EA,large,100,10,226,9060,True
+leadingones,(μ+λ) EA,large,100,11,192,7700,True
+leadingones,(μ+λ) EA,large,100,12,261,10460,True
+leadingones,(μ+λ) EA,large,100,13,229,9180,True
+leadingones,(μ+λ) EA,large,100,14,351,14060,True
+leadingones,(μ+λ) EA,large,100,15,252,10100,True
+leadingones,(μ+λ) EA,large,100,16,226,9060,True
+leadingones,(μ+λ) EA,large,100,17,258,10340,True
+leadingones,(μ+λ) EA,large,100,18,237,9500,True
+leadingones,(μ+λ) EA,large,100,19,229,9180,True
+leadingones,(μ+λ) EA,large,200,0,891,35660,True
+leadingones,(μ+λ) EA,large,200,1,1212,48500,True
+leadingones,(μ+λ) EA,large,200,2,1113,44540,True
+leadingones,(μ+λ) EA,large,200,3,766,30660,True
+leadingones,(μ+λ) EA,large,200,4,949,37980,True
+leadingones,(μ+λ) EA,large,200,5,938,37540,True
+leadingones,(μ+λ) EA,large,200,6,947,37900,True
+leadingones,(μ+λ) EA,large,200,7,1121,44860,True
+leadingones,(μ+λ) EA,large,200,8,808,32340,True
+leadingones,(μ+λ) EA,large,200,9,977,39100,True
+leadingones,(μ+λ) EA,large,200,10,1061,42460,True
+leadingones,(μ+λ) EA,large,200,11,1066,42660,True
+leadingones,(μ+λ) EA,large,200,12,1031,41260,True
+leadingones,(μ+λ) EA,large,200,13,955,38220,True
+leadingones,(μ+λ) EA,large,200,14,1107,44300,True
+leadingones,(μ+λ) EA,large,200,15,829,33180,True
+leadingones,(μ+λ) EA,large,200,16,987,39500,True
+leadingones,(μ+λ) EA,large,200,17,1062,42500,True
+leadingones,(μ+λ) EA,large,200,18,840,33620,True
+leadingones,(μ+λ) EA,large,200,19,1016,40660,True
+leadingones,(μ+λ) EA,large,300,0,1549,61980,True
+leadingones,(μ+λ) EA,large,300,1,2021,80860,True
+leadingones,(μ+λ) EA,large,300,2,1907,76300,True
+leadingones,(μ+λ) EA,large,300,3,2007,80300,True
+leadingones,(μ+λ) EA,large,300,4,1657,66300,True
+leadingones,(μ+λ) EA,large,300,5,2000,80020,True
+leadingones,(μ+λ) EA,large,300,6,2172,86900,True
+leadingones,(μ+λ) EA,large,300,7,2036,81460,True
+leadingones,(μ+λ) EA,large,300,8,1958,78340,True
+leadingones,(μ+λ) EA,large,300,9,2122,84900,True
+leadingones,(μ+λ) EA,large,300,10,2204,88180,True
+leadingones,(μ+λ) EA,large,300,11,2025,81020,True
+leadingones,(μ+λ) EA,large,300,12,2144,85780,True
+leadingones,(μ+λ) EA,large,300,13,2010,80420,True
+leadingones,(μ+λ) EA,large,300,14,2264,90580,True
+leadingones,(μ+λ) EA,large,300,15,2210,88420,True
+leadingones,(μ+λ) EA,large,300,16,2273,90940,True
+leadingones,(μ+λ) EA,large,300,17,2084,83380,True
+leadingones,(μ+λ) EA,large,300,18,2312,92500,True
+leadingones,(μ+λ) EA,large,300,19,2125,85020,True
+leadingones,(μ+λ) EA,large,400,0,3650,146020,True
+leadingones,(μ+λ) EA,large,400,1,3876,155060,True
+leadingones,(μ+λ) EA,large,400,2,4023,160940,True
+leadingones,(μ+λ) EA,large,400,3,3839,153580,True
+leadingones,(μ+λ) EA,large,400,4,3763,150540,True
+leadingones,(μ+λ) EA,large,400,5,2960,118420,True
+leadingones,(μ+λ) EA,large,400,6,3945,157820,True
+leadingones,(μ+λ) EA,large,400,7,3464,138580,True
+leadingones,(μ+λ) EA,large,400,8,3324,132980,True
+leadingones,(μ+λ) EA,large,400,9,4102,164100,True
+leadingones,(μ+λ) EA,large,400,10,3617,144700,True
+leadingones,(μ+λ) EA,large,400,11,2930,117220,True
+leadingones,(μ+λ) EA,large,400,12,3821,152860,True
+leadingones,(μ+λ) EA,large,400,13,3360,134420,True
+leadingones,(μ+λ) EA,large,400,14,3957,158300,True
+leadingones,(μ+λ) EA,large,400,15,3988,159540,True
+leadingones,(μ+λ) EA,large,400,16,3420,136820,True
+leadingones,(μ+λ) EA,large,400,17,3534,141380,True
+leadingones,(μ+λ) EA,large,400,18,3342,133700,True
+leadingones,(μ+λ) EA,large,400,19,2964,118580,True
+leadingones,(μ+λ) EA,large,500,0,5621,224860,True
+leadingones,(μ+λ) EA,large,500,1,5920,236820,True
+leadingones,(μ+λ) EA,large,500,2,5675,227020,True
+leadingones,(μ+λ) EA,large,500,3,5723,228940,True
+leadingones,(μ+λ) EA,large,500,4,4434,177380,True
+leadingones,(μ+λ) EA,large,500,5,5373,214940,True
+leadingones,(μ+λ) EA,large,500,6,6143,245740,True
+leadingones,(μ+λ) EA,large,500,7,5818,232740,True
+leadingones,(μ+λ) EA,large,500,8,5452,218100,True
+leadingones,(μ+λ) EA,large,500,9,6208,248340,True
+leadingones,(μ+λ) EA,large,500,10,4986,199460,True
+leadingones,(μ+λ) EA,large,500,11,5761,230460,True
+leadingones,(μ+λ) EA,large,500,12,6059,242380,True
+leadingones,(μ+λ) EA,large,500,13,6145,245820,True
+leadingones,(μ+λ) EA,large,500,14,5626,225060,True
+leadingones,(μ+λ) EA,large,500,15,5855,234220,True
+leadingones,(μ+λ) EA,large,500,16,5788,231540,True
+leadingones,(μ+λ) EA,large,500,17,5847,233900,True
+leadingones,(μ+λ) EA,large,500,18,5345,213820,True
+leadingones,(μ+λ) EA,large,500,19,5491,219660,True
+leadingones,(μ+λ) EA,large,600,0,7137,285500,True
+leadingones,(μ+λ) EA,large,600,1,8084,323380,True
+leadingones,(μ+λ) EA,large,600,2,7723,308940,True
+leadingones,(μ+λ) EA,large,600,3,8152,326100,True
+leadingones,(μ+λ) EA,large,600,4,8095,323820,True
+leadingones,(μ+λ) EA,large,600,5,8522,340900,True
+leadingones,(μ+λ) EA,large,600,6,6911,276460,True
+leadingones,(μ+λ) EA,large,600,7,8690,347620,True
+leadingones,(μ+λ) EA,large,600,8,8013,320540,True
+leadingones,(μ+λ) EA,large,600,9,8568,342740,True
+leadingones,(μ+λ) EA,large,600,10,8106,324260,True
+leadingones,(μ+λ) EA,large,600,11,7920,316820,True
+leadingones,(μ+λ) EA,large,600,12,7370,294820,True
+leadingones,(μ+λ) EA,large,600,13,7854,314180,True
+leadingones,(μ+λ) EA,large,600,14,7799,311980,True
+leadingones,(μ+λ) EA,large,600,15,9185,367420,True
+leadingones,(μ+λ) EA,large,600,16,6962,278500,True
+leadingones,(μ+λ) EA,large,600,17,8449,337980,True
+leadingones,(μ+λ) EA,large,600,18,7440,297620,True
+leadingones,(μ+λ) EA,large,600,19,8083,323340,True
+leadingones,(μ+λ) EA,large,700,0,11831,473260,True
+leadingones,(μ+λ) EA,large,700,1,12825,513020,True
+leadingones,(μ+λ) EA,large,700,2,10856,434260,True
+leadingones,(μ+λ) EA,large,700,3,11580,463220,True
+leadingones,(μ+λ) EA,large,700,4,9870,394820,True
+leadingones,(μ+λ) EA,large,700,5,8897,355900,True
+leadingones,(μ+λ) EA,large,700,6,10622,424900,True
+leadingones,(μ+λ) EA,large,700,7,11739,469580,True
+leadingones,(μ+λ) EA,large,700,8,10390,415620,True
+leadingones,(μ+λ) EA,large,700,9,11308,452340,True
+leadingones,(μ+λ) EA,large,700,10,10972,438900,True
+leadingones,(μ+λ) EA,large,700,11,11394,455780,True
+leadingones,(μ+λ) EA,large,700,12,10217,408700,True
+leadingones,(μ+λ) EA,large,700,13,10215,408620,True
+leadingones,(μ+λ) EA,large,700,14,11428,457140,True
+leadingones,(μ+λ) EA,large,700,15,10071,402860,True
+leadingones,(μ+λ) EA,large,700,16,9937,397500,True
+leadingones,(μ+λ) EA,large,700,17,10148,405940,True
+leadingones,(μ+λ) EA,large,700,18,10810,432420,True
+leadingones,(μ+λ) EA,large,700,19,10752,430100,True
+leadingones,(μ+λ) EA,large,800,0,14097,563900,True
+leadingones,(μ+λ) EA,large,800,1,14076,563060,True
+leadingones,(μ+λ) EA,large,800,2,13418,536740,True
+leadingones,(μ+λ) EA,large,800,3,13111,524460,True
+leadingones,(μ+λ) EA,large,800,4,15390,615620,True
+leadingones,(μ+λ) EA,large,800,5,14805,592220,True
+leadingones,(μ+λ) EA,large,800,6,13201,528060,True
+leadingones,(μ+λ) EA,large,800,7,13770,550820,True
+leadingones,(μ+λ) EA,large,800,8,15602,624100,True
+leadingones,(μ+λ) EA,large,800,9,15154,606180,True
+leadingones,(μ+λ) EA,large,800,10,12570,502820,True
+leadingones,(μ+λ) EA,large,800,11,13623,544940,True
+leadingones,(μ+λ) EA,large,800,12,12792,511700,True
+leadingones,(μ+λ) EA,large,800,13,13731,549260,True
+leadingones,(μ+λ) EA,large,800,14,13482,539300,True
+leadingones,(μ+λ) EA,large,800,15,14007,560300,True
+leadingones,(μ+λ) EA,large,800,16,13228,529140,True
+leadingones,(μ+λ) EA,large,800,17,13164,526580,True
+leadingones,(μ+λ) EA,large,800,18,13736,549460,True
+leadingones,(μ+λ) EA,large,800,19,14404,576180,True
+leadingones,(μ+λ) EA,large,900,0,17907,716300,True
+leadingones,(μ+λ) EA,large,900,1,16828,673140,True
+leadingones,(μ+λ) EA,large,900,2,15642,625700,True
+leadingones,(μ+λ) EA,large,900,3,17630,705220,True
+leadingones,(μ+λ) EA,large,900,4,15232,609300,True
+leadingones,(μ+λ) EA,large,900,5,17729,709180,True
+leadingones,(μ+λ) EA,large,900,6,19336,773460,True
+leadingones,(μ+λ) EA,large,900,7,16796,671860,True
+leadingones,(μ+λ) EA,large,900,8,17149,685980,True
+leadingones,(μ+λ) EA,large,900,9,16891,675660,True
+leadingones,(μ+λ) EA,large,900,10,17967,718700,True
+leadingones,(μ+λ) EA,large,900,11,17256,690260,True
+leadingones,(μ+λ) EA,large,900,12,16737,669500,True
+leadingones,(μ+λ) EA,large,900,13,18267,730700,True
+leadingones,(μ+λ) EA,large,900,14,17345,693820,True
+leadingones,(μ+λ) EA,large,900,15,19412,776500,True
+leadingones,(μ+λ) EA,large,900,16,16507,660300,True
+leadingones,(μ+λ) EA,large,900,17,18303,732140,True
+leadingones,(μ+λ) EA,large,900,18,17661,706460,True
+leadingones,(μ+λ) EA,large,900,19,18088,723540,True
+leadingones,(μ+λ) EA,large,1000,0,23572,942900,True
+leadingones,(μ+λ) EA,large,1000,1,23071,922860,True
+leadingones,(μ+λ) EA,large,1000,2,21499,859980,True
+leadingones,(μ+λ) EA,large,1000,3,22293,891740,True
+leadingones,(μ+λ) EA,large,1000,4,21907,876300,True
+leadingones,(μ+λ) EA,large,1000,5,19355,774220,True
+leadingones,(μ+λ) EA,large,1000,6,22478,899140,True
+leadingones,(μ+λ) EA,large,1000,7,21363,854540,True
+leadingones,(μ+λ) EA,large,1000,8,20939,837580,True
+leadingones,(μ+λ) EA,large,1000,9,21927,877100,True
+leadingones,(μ+λ) EA,large,1000,10,20882,835300,True
+leadingones,(μ+λ) EA,large,1000,11,21850,874020,True
+leadingones,(μ+λ) EA,large,1000,12,21698,867940,True
+leadingones,(μ+λ) EA,large,1000,13,20698,827940,True
+leadingones,(μ+λ) EA,large,1000,14,20263,810540,True
+leadingones,(μ+λ) EA,large,1000,15,22879,915180,True
+leadingones,(μ+λ) EA,large,1000,16,20998,839940,True
+leadingones,(μ+λ) EA,large,1000,17,20966,838660,True
+leadingones,(μ+λ) EA,large,1000,18,19281,771260,True
+leadingones,(μ+λ) EA,large,1000,19,20280,811220,True
+leadingones,Simulated Annealing,large,100,0,5804,5805,True
+leadingones,Simulated Annealing,large,100,1,6013,6014,True
+leadingones,Simulated Annealing,large,100,2,5185,5186,True
+leadingones,Simulated Annealing,large,100,3,5180,5181,True
+leadingones,Simulated Annealing,large,100,4,4367,4368,True
+leadingones,Simulated Annealing,large,100,5,5405,5406,True
+leadingones,Simulated Annealing,large,100,6,5461,5462,True
+leadingones,Simulated Annealing,large,100,7,5126,5127,True
+leadingones,Simulated Annealing,large,100,8,5326,5327,True
+leadingones,Simulated Annealing,large,100,9,5146,5147,True
+leadingones,Simulated Annealing,large,100,10,4602,4603,True
+leadingones,Simulated Annealing,large,100,11,5168,5169,True
+leadingones,Simulated Annealing,large,100,12,5902,5903,True
+leadingones,Simulated Annealing,large,100,13,4351,4352,True
+leadingones,Simulated Annealing,large,100,14,5141,5142,True
+leadingones,Simulated Annealing,large,100,15,5190,5191,True
+leadingones,Simulated Annealing,large,100,16,5120,5121,True
+leadingones,Simulated Annealing,large,100,17,4020,4021,True
+leadingones,Simulated Annealing,large,100,18,6046,6047,True
+leadingones,Simulated Annealing,large,100,19,4878,4879,True
+leadingones,Simulated Annealing,large,200,0,20659,20660,True
+leadingones,Simulated Annealing,large,200,1,24563,24564,True
+leadingones,Simulated Annealing,large,200,2,20136,20137,True
+leadingones,Simulated Annealing,large,200,3,16637,16638,True
+leadingones,Simulated Annealing,large,200,4,22307,22308,True
+leadingones,Simulated Annealing,large,200,5,18465,18466,True
+leadingones,Simulated Annealing,large,200,6,21971,21972,True
+leadingones,Simulated Annealing,large,200,7,23690,23691,True
+leadingones,Simulated Annealing,large,200,8,18190,18191,True
+leadingones,Simulated Annealing,large,200,9,21067,21068,True
+leadingones,Simulated Annealing,large,200,10,21367,21368,True
+leadingones,Simulated Annealing,large,200,11,20865,20866,True
+leadingones,Simulated Annealing,large,200,12,21447,21448,True
+leadingones,Simulated Annealing,large,200,13,21360,21361,True
+leadingones,Simulated Annealing,large,200,14,17594,17595,True
+leadingones,Simulated Annealing,large,200,15,17591,17592,True
+leadingones,Simulated Annealing,large,200,16,19971,19972,True
+leadingones,Simulated Annealing,large,200,17,21044,21045,True
+leadingones,Simulated Annealing,large,200,18,20432,20433,True
+leadingones,Simulated Annealing,large,200,19,20088,20089,True
+leadingones,Simulated Annealing,large,300,0,34214,34215,True
+leadingones,Simulated Annealing,large,300,1,44940,44941,True
+leadingones,Simulated Annealing,large,300,2,50484,50485,True
+leadingones,Simulated Annealing,large,300,3,46809,46810,True
+leadingones,Simulated Annealing,large,300,4,42309,42310,True
+leadingones,Simulated Annealing,large,300,5,43450,43451,True
+leadingones,Simulated Annealing,large,300,6,42748,42749,True
+leadingones,Simulated Annealing,large,300,7,43264,43265,True
+leadingones,Simulated Annealing,large,300,8,40067,40068,True
+leadingones,Simulated Annealing,large,300,9,49922,49923,True
+leadingones,Simulated Annealing,large,300,10,44600,44601,True
+leadingones,Simulated Annealing,large,300,11,46606,46607,True
+leadingones,Simulated Annealing,large,300,12,42511,42512,True
+leadingones,Simulated Annealing,large,300,13,54816,54817,True
+leadingones,Simulated Annealing,large,300,14,53286,53287,True
+leadingones,Simulated Annealing,large,300,15,48769,48770,True
+leadingones,Simulated Annealing,large,300,16,42695,42696,True
+leadingones,Simulated Annealing,large,300,17,40903,40904,True
+leadingones,Simulated Annealing,large,300,18,38570,38571,True
+leadingones,Simulated Annealing,large,300,19,46597,46598,True
+leadingones,Simulated Annealing,large,400,0,82574,82575,True
+leadingones,Simulated Annealing,large,400,1,82003,82004,True
+leadingones,Simulated Annealing,large,400,2,72403,72404,True
+leadingones,Simulated Annealing,large,400,3,77250,77251,True
+leadingones,Simulated Annealing,large,400,4,88475,88476,True
+leadingones,Simulated Annealing,large,400,5,83127,83128,True
+leadingones,Simulated Annealing,large,400,6,78696,78697,True
+leadingones,Simulated Annealing,large,400,7,95315,95316,True
+leadingones,Simulated Annealing,large,400,8,62941,62942,True
+leadingones,Simulated Annealing,large,400,9,79838,79839,True
+leadingones,Simulated Annealing,large,400,10,85827,85828,True
+leadingones,Simulated Annealing,large,400,11,70386,70387,True
+leadingones,Simulated Annealing,large,400,12,81141,81142,True
+leadingones,Simulated Annealing,large,400,13,83324,83325,True
+leadingones,Simulated Annealing,large,400,14,91459,91460,True
+leadingones,Simulated Annealing,large,400,15,87650,87651,True
+leadingones,Simulated Annealing,large,400,16,77258,77259,True
+leadingones,Simulated Annealing,large,400,17,75365,75366,True
+leadingones,Simulated Annealing,large,400,18,84941,84942,True
+leadingones,Simulated Annealing,large,400,19,73134,73135,True
+leadingones,Simulated Annealing,large,500,0,127822,127823,True
+leadingones,Simulated Annealing,large,500,1,132234,132235,True
+leadingones,Simulated Annealing,large,500,2,129330,129331,True
+leadingones,Simulated Annealing,large,500,3,126088,126089,True
+leadingones,Simulated Annealing,large,500,4,139050,139051,True
+leadingones,Simulated Annealing,large,500,5,121744,121745,True
+leadingones,Simulated Annealing,large,500,6,124499,124500,True
+leadingones,Simulated Annealing,large,500,7,124648,124649,True
+leadingones,Simulated Annealing,large,500,8,135432,135433,True
+leadingones,Simulated Annealing,large,500,9,127070,127071,True
+leadingones,Simulated Annealing,large,500,10,140195,140196,True
+leadingones,Simulated Annealing,large,500,11,119394,119395,True
+leadingones,Simulated Annealing,large,500,12,125880,125881,True
+leadingones,Simulated Annealing,large,500,13,123331,123332,True
+leadingones,Simulated Annealing,large,500,14,135566,135567,True
+leadingones,Simulated Annealing,large,500,15,129385,129386,True
+leadingones,Simulated Annealing,large,500,16,135706,135707,True
+leadingones,Simulated Annealing,large,500,17,144441,144442,True
+leadingones,Simulated Annealing,large,500,18,124953,124954,True
+leadingones,Simulated Annealing,large,500,19,119871,119872,True
+leadingones,Simulated Annealing,large,600,0,150000,150001,False
+leadingones,Simulated Annealing,large,600,1,150000,150001,False
+leadingones,Simulated Annealing,large,600,2,150000,150001,False
+leadingones,Simulated Annealing,large,600,3,150000,150001,False
+leadingones,Simulated Annealing,large,600,4,150000,150001,False
+leadingones,Simulated Annealing,large,600,5,150000,150001,False
+leadingones,Simulated Annealing,large,600,6,150000,150001,False
+leadingones,Simulated Annealing,large,600,7,150000,150001,False
+leadingones,Simulated Annealing,large,600,8,150000,150001,False
+leadingones,Simulated Annealing,large,600,9,150000,150001,False
+leadingones,Simulated Annealing,large,600,10,150000,150001,False
+leadingones,Simulated Annealing,large,600,11,150000,150001,False
+leadingones,Simulated Annealing,large,600,12,150000,150001,False
+leadingones,Simulated Annealing,large,600,13,150000,150001,False
+leadingones,Simulated Annealing,large,600,14,150000,150001,False
+leadingones,Simulated Annealing,large,600,15,150000,150001,False
+leadingones,Simulated Annealing,large,600,16,150000,150001,False
+leadingones,Simulated Annealing,large,600,17,150000,150001,False
+leadingones,Simulated Annealing,large,600,18,150000,150001,False
+leadingones,Simulated Annealing,large,600,19,150000,150001,False
+leadingones,Simulated Annealing,large,700,0,150000,150001,False
+leadingones,Simulated Annealing,large,700,1,150000,150001,False
+leadingones,Simulated Annealing,large,700,2,150000,150001,False
+leadingones,Simulated Annealing,large,700,3,150000,150001,False
+leadingones,Simulated Annealing,large,700,4,150000,150001,False
+leadingones,Simulated Annealing,large,700,5,150000,150001,False
+leadingones,Simulated Annealing,large,700,6,150000,150001,False
+leadingones,Simulated Annealing,large,700,7,150000,150001,False
+leadingones,Simulated Annealing,large,700,8,150000,150001,False
+leadingones,Simulated Annealing,large,700,9,150000,150001,False
+leadingones,Simulated Annealing,large,700,10,150000,150001,False
+leadingones,Simulated Annealing,large,700,11,150000,150001,False
+leadingones,Simulated Annealing,large,700,12,150000,150001,False
+leadingones,Simulated Annealing,large,700,13,150000,150001,False
+leadingones,Simulated Annealing,large,700,14,150000,150001,False
+leadingones,Simulated Annealing,large,700,15,150000,150001,False
+leadingones,Simulated Annealing,large,700,16,150000,150001,False
+leadingones,Simulated Annealing,large,700,17,150000,150001,False
+leadingones,Simulated Annealing,large,700,18,150000,150001,False
+leadingones,Simulated Annealing,large,700,19,150000,150001,False
+leadingones,Simulated Annealing,large,800,0,150000,150001,False
+leadingones,Simulated Annealing,large,800,1,150000,150001,False
+leadingones,Simulated Annealing,large,800,2,150000,150001,False
+leadingones,Simulated Annealing,large,800,3,150000,150001,False
+leadingones,Simulated Annealing,large,800,4,150000,150001,False
+leadingones,Simulated Annealing,large,800,5,150000,150001,False
+leadingones,Simulated Annealing,large,800,6,150000,150001,False
+leadingones,Simulated Annealing,large,800,7,150000,150001,False
+leadingones,Simulated Annealing,large,800,8,150000,150001,False
+leadingones,Simulated Annealing,large,800,9,150000,150001,False
+leadingones,Simulated Annealing,large,800,10,150000,150001,False
+leadingones,Simulated Annealing,large,800,11,150000,150001,False
+leadingones,Simulated Annealing,large,800,12,150000,150001,False
+leadingones,Simulated Annealing,large,800,13,150000,150001,False
+leadingones,Simulated Annealing,large,800,14,150000,150001,False
+leadingones,Simulated Annealing,large,800,15,150000,150001,False
+leadingones,Simulated Annealing,large,800,16,150000,150001,False
+leadingones,Simulated Annealing,large,800,17,150000,150001,False
+leadingones,Simulated Annealing,large,800,18,150000,150001,False
+leadingones,Simulated Annealing,large,800,19,150000,150001,False
+leadingones,Simulated Annealing,large,900,0,150000,150001,False
+leadingones,Simulated Annealing,large,900,1,150000,150001,False
+leadingones,Simulated Annealing,large,900,2,150000,150001,False
+leadingones,Simulated Annealing,large,900,3,150000,150001,False
+leadingones,Simulated Annealing,large,900,4,150000,150001,False
+leadingones,Simulated Annealing,large,900,5,150000,150001,False
+leadingones,Simulated Annealing,large,900,6,150000,150001,False
+leadingones,Simulated Annealing,large,900,7,150000,150001,False
+leadingones,Simulated Annealing,large,900,8,150000,150001,False
+leadingones,Simulated Annealing,large,900,9,150000,150001,False
+leadingones,Simulated Annealing,large,900,10,150000,150001,False
+leadingones,Simulated Annealing,large,900,11,150000,150001,False
+leadingones,Simulated Annealing,large,900,12,150000,150001,False
+leadingones,Simulated Annealing,large,900,13,150000,150001,False
+leadingones,Simulated Annealing,large,900,14,150000,150001,False
+leadingones,Simulated Annealing,large,900,15,150000,150001,False
+leadingones,Simulated Annealing,large,900,16,150000,150001,False
+leadingones,Simulated Annealing,large,900,17,150000,150001,False
+leadingones,Simulated Annealing,large,900,18,150000,150001,False
+leadingones,Simulated Annealing,large,900,19,150000,150001,False
+leadingones,Simulated Annealing,large,1000,0,150000,150001,False
+leadingones,Simulated Annealing,large,1000,1,150000,150001,False
+leadingones,Simulated Annealing,large,1000,2,150000,150001,False
+leadingones,Simulated Annealing,large,1000,3,150000,150001,False
+leadingones,Simulated Annealing,large,1000,4,150000,150001,False
+leadingones,Simulated Annealing,large,1000,5,150000,150001,False
+leadingones,Simulated Annealing,large,1000,6,150000,150001,False
+leadingones,Simulated Annealing,large,1000,7,150000,150001,False
+leadingones,Simulated Annealing,large,1000,8,150000,150001,False
+leadingones,Simulated Annealing,large,1000,9,150000,150001,False
+leadingones,Simulated Annealing,large,1000,10,150000,150001,False
+leadingones,Simulated Annealing,large,1000,11,150000,150001,False
+leadingones,Simulated Annealing,large,1000,12,150000,150001,False
+leadingones,Simulated Annealing,large,1000,13,150000,150001,False
+leadingones,Simulated Annealing,large,1000,14,150000,150001,False
+leadingones,Simulated Annealing,large,1000,15,150000,150001,False
+leadingones,Simulated Annealing,large,1000,16,150000,150001,False
+leadingones,Simulated Annealing,large,1000,17,150000,150001,False
+leadingones,Simulated Annealing,large,1000,18,150000,150001,False
+leadingones,Simulated Annealing,large,1000,19,150000,150001,False
+leadingones,MMAS-ACO,large,100,0,9507,9508,True
+leadingones,MMAS-ACO,large,100,1,6710,6711,True
+leadingones,MMAS-ACO,large,100,2,11108,11109,True
+leadingones,MMAS-ACO,large,100,3,8486,8487,True
+leadingones,MMAS-ACO,large,100,4,6537,6538,True
+leadingones,MMAS-ACO,large,100,5,8803,8804,True
+leadingones,MMAS-ACO,large,100,6,6650,6651,True
+leadingones,MMAS-ACO,large,100,7,7184,7185,True
+leadingones,MMAS-ACO,large,100,8,9093,9094,True
+leadingones,MMAS-ACO,large,100,9,7149,7150,True
+leadingones,MMAS-ACO,large,100,10,8138,8139,True
+leadingones,MMAS-ACO,large,100,11,7452,7453,True
+leadingones,MMAS-ACO,large,100,12,9963,9964,True
+leadingones,MMAS-ACO,large,100,13,5127,5128,True
+leadingones,MMAS-ACO,large,100,14,7051,7052,True
+leadingones,MMAS-ACO,large,100,15,8334,8335,True
+leadingones,MMAS-ACO,large,100,16,8288,8289,True
+leadingones,MMAS-ACO,large,100,17,9874,9875,True
+leadingones,MMAS-ACO,large,100,18,8606,8607,True
+leadingones,MMAS-ACO,large,100,19,9082,9083,True
+leadingones,MMAS-ACO,large,200,0,38620,38621,True
+leadingones,MMAS-ACO,large,200,1,28415,28416,True
+leadingones,MMAS-ACO,large,200,2,32017,32018,True
+leadingones,MMAS-ACO,large,200,3,27584,27585,True
+leadingones,MMAS-ACO,large,200,4,30875,30876,True
+leadingones,MMAS-ACO,large,200,5,29590,29591,True
+leadingones,MMAS-ACO,large,200,6,31107,31108,True
+leadingones,MMAS-ACO,large,200,7,32794,32795,True
+leadingones,MMAS-ACO,large,200,8,33123,33124,True
+leadingones,MMAS-ACO,large,200,9,33510,33511,True
+leadingones,MMAS-ACO,large,200,10,39868,39869,True
+leadingones,MMAS-ACO,large,200,11,36590,36591,True
+leadingones,MMAS-ACO,large,200,12,35411,35412,True
+leadingones,MMAS-ACO,large,200,13,29252,29253,True
+leadingones,MMAS-ACO,large,200,14,25286,25287,True
+leadingones,MMAS-ACO,large,200,15,36716,36717,True
+leadingones,MMAS-ACO,large,200,16,30698,30699,True
+leadingones,MMAS-ACO,large,200,17,41123,41124,True
+leadingones,MMAS-ACO,large,200,18,33171,33172,True
+leadingones,MMAS-ACO,large,200,19,31785,31786,True
+leadingones,MMAS-ACO,large,300,0,82142,82143,True
+leadingones,MMAS-ACO,large,300,1,69553,69554,True
+leadingones,MMAS-ACO,large,300,2,86354,86355,True
+leadingones,MMAS-ACO,large,300,3,75290,75291,True
+leadingones,MMAS-ACO,large,300,4,84987,84988,True
+leadingones,MMAS-ACO,large,300,5,73265,73266,True
+leadingones,MMAS-ACO,large,300,6,81317,81318,True
+leadingones,MMAS-ACO,large,300,7,78948,78949,True
+leadingones,MMAS-ACO,large,300,8,76352,76353,True
+leadingones,MMAS-ACO,large,300,9,78854,78855,True
+leadingones,MMAS-ACO,large,300,10,85970,85971,True
+leadingones,MMAS-ACO,large,300,11,63178,63179,True
+leadingones,MMAS-ACO,large,300,12,75862,75863,True
+leadingones,MMAS-ACO,large,300,13,74710,74711,True
+leadingones,MMAS-ACO,large,300,14,71116,71117,True
+leadingones,MMAS-ACO,large,300,15,69309,69310,True
+leadingones,MMAS-ACO,large,300,16,83630,83631,True
+leadingones,MMAS-ACO,large,300,17,85753,85754,True
+leadingones,MMAS-ACO,large,300,18,77981,77982,True
+leadingones,MMAS-ACO,large,300,19,93969,93970,True
+leadingones,MMAS-ACO,large,400,0,130461,130462,True
+leadingones,MMAS-ACO,large,400,1,120530,120531,True
+leadingones,MMAS-ACO,large,400,2,121644,121645,True
+leadingones,MMAS-ACO,large,400,3,128902,128903,True
+leadingones,MMAS-ACO,large,400,4,143915,143916,True
+leadingones,MMAS-ACO,large,400,5,119218,119219,True
+leadingones,MMAS-ACO,large,400,6,134761,134762,True
+leadingones,MMAS-ACO,large,400,7,146675,146676,True
+leadingones,MMAS-ACO,large,400,8,126008,126009,True
+leadingones,MMAS-ACO,large,400,9,138667,138668,True
+leadingones,MMAS-ACO,large,400,10,108772,108773,True
+leadingones,MMAS-ACO,large,400,11,140141,140142,True
+leadingones,MMAS-ACO,large,400,12,132146,132147,True
+leadingones,MMAS-ACO,large,400,13,139402,139403,True
+leadingones,MMAS-ACO,large,400,14,137511,137512,True
+leadingones,MMAS-ACO,large,400,15,113615,113616,True
+leadingones,MMAS-ACO,large,400,16,122888,122889,True
+leadingones,MMAS-ACO,large,400,17,135967,135968,True
+leadingones,MMAS-ACO,large,400,18,114853,114854,True
+leadingones,MMAS-ACO,large,400,19,132499,132500,True
+leadingones,MMAS-ACO,large,500,0,150000,150001,False
+leadingones,MMAS-ACO,large,500,1,150000,150001,False
+leadingones,MMAS-ACO,large,500,2,150000,150001,False
+leadingones,MMAS-ACO,large,500,3,150000,150001,False
+leadingones,MMAS-ACO,large,500,4,150000,150001,False
+leadingones,MMAS-ACO,large,500,5,150000,150001,False
+leadingones,MMAS-ACO,large,500,6,150000,150001,False
+leadingones,MMAS-ACO,large,500,7,150000,150001,False
+leadingones,MMAS-ACO,large,500,8,150000,150001,False
+leadingones,MMAS-ACO,large,500,9,150000,150001,False
+leadingones,MMAS-ACO,large,500,10,150000,150001,False
+leadingones,MMAS-ACO,large,500,11,150000,150001,False
+leadingones,MMAS-ACO,large,500,12,150000,150001,False
+leadingones,MMAS-ACO,large,500,13,150000,150001,False
+leadingones,MMAS-ACO,large,500,14,150000,150001,False
+leadingones,MMAS-ACO,large,500,15,150000,150001,False
+leadingones,MMAS-ACO,large,500,16,150000,150001,False
+leadingones,MMAS-ACO,large,500,17,150000,150001,False
+leadingones,MMAS-ACO,large,500,18,150000,150001,False
+leadingones,MMAS-ACO,large,500,19,150000,150001,False
+leadingones,MMAS-ACO,large,600,0,150000,150001,False
+leadingones,MMAS-ACO,large,600,1,150000,150001,False
+leadingones,MMAS-ACO,large,600,2,150000,150001,False
+leadingones,MMAS-ACO,large,600,3,150000,150001,False
+leadingones,MMAS-ACO,large,600,4,150000,150001,False
+leadingones,MMAS-ACO,large,600,5,150000,150001,False
+leadingones,MMAS-ACO,large,600,6,150000,150001,False
+leadingones,MMAS-ACO,large,600,7,150000,150001,False
+leadingones,MMAS-ACO,large,600,8,150000,150001,False
+leadingones,MMAS-ACO,large,600,9,150000,150001,False
+leadingones,MMAS-ACO,large,600,10,150000,150001,False
+leadingones,MMAS-ACO,large,600,11,150000,150001,False
+leadingones,MMAS-ACO,large,600,12,150000,150001,False
+leadingones,MMAS-ACO,large,600,13,150000,150001,False
+leadingones,MMAS-ACO,large,600,14,150000,150001,False
+leadingones,MMAS-ACO,large,600,15,150000,150001,False
+leadingones,MMAS-ACO,large,600,16,150000,150001,False
+leadingones,MMAS-ACO,large,600,17,150000,150001,False
+leadingones,MMAS-ACO,large,600,18,150000,150001,False
+leadingones,MMAS-ACO,large,600,19,150000,150001,False
+leadingones,MMAS-ACO,large,700,0,150000,150001,False
+leadingones,MMAS-ACO,large,700,1,150000,150001,False
+leadingones,MMAS-ACO,large,700,2,150000,150001,False
+leadingones,MMAS-ACO,large,700,3,150000,150001,False
+leadingones,MMAS-ACO,large,700,4,150000,150001,False
+leadingones,MMAS-ACO,large,700,5,150000,150001,False
+leadingones,MMAS-ACO,large,700,6,150000,150001,False
+leadingones,MMAS-ACO,large,700,7,150000,150001,False
+leadingones,MMAS-ACO,large,700,8,150000,150001,False
+leadingones,MMAS-ACO,large,700,9,150000,150001,False
+leadingones,MMAS-ACO,large,700,10,150000,150001,False
+leadingones,MMAS-ACO,large,700,11,150000,150001,False
+leadingones,MMAS-ACO,large,700,12,150000,150001,False
+leadingones,MMAS-ACO,large,700,13,150000,150001,False
+leadingones,MMAS-ACO,large,700,14,150000,150001,False
+leadingones,MMAS-ACO,large,700,15,150000,150001,False
+leadingones,MMAS-ACO,large,700,16,150000,150001,False
+leadingones,MMAS-ACO,large,700,17,150000,150001,False
+leadingones,MMAS-ACO,large,700,18,150000,150001,False
+leadingones,MMAS-ACO,large,700,19,150000,150001,False
+leadingones,MMAS-ACO,large,800,0,150000,150001,False
+leadingones,MMAS-ACO,large,800,1,150000,150001,False
+leadingones,MMAS-ACO,large,800,2,150000,150001,False
+leadingones,MMAS-ACO,large,800,3,150000,150001,False
+leadingones,MMAS-ACO,large,800,4,150000,150001,False
+leadingones,MMAS-ACO,large,800,5,150000,150001,False
+leadingones,MMAS-ACO,large,800,6,150000,150001,False
+leadingones,MMAS-ACO,large,800,7,150000,150001,False
+leadingones,MMAS-ACO,large,800,8,150000,150001,False
+leadingones,MMAS-ACO,large,800,9,150000,150001,False
+leadingones,MMAS-ACO,large,800,10,150000,150001,False
+leadingones,MMAS-ACO,large,800,11,150000,150001,False
+leadingones,MMAS-ACO,large,800,12,150000,150001,False
+leadingones,MMAS-ACO,large,800,13,150000,150001,False
+leadingones,MMAS-ACO,large,800,14,150000,150001,False
+leadingones,MMAS-ACO,large,800,15,150000,150001,False
+leadingones,MMAS-ACO,large,800,16,150000,150001,False
+leadingones,MMAS-ACO,large,800,17,150000,150001,False
+leadingones,MMAS-ACO,large,800,18,150000,150001,False
+leadingones,MMAS-ACO,large,800,19,150000,150001,False
+leadingones,MMAS-ACO,large,900,0,150000,150001,False
+leadingones,MMAS-ACO,large,900,1,150000,150001,False
+leadingones,MMAS-ACO,large,900,2,150000,150001,False
+leadingones,MMAS-ACO,large,900,3,150000,150001,False
+leadingones,MMAS-ACO,large,900,4,150000,150001,False
+leadingones,MMAS-ACO,large,900,5,150000,150001,False
+leadingones,MMAS-ACO,large,900,6,150000,150001,False
+leadingones,MMAS-ACO,large,900,7,150000,150001,False
+leadingones,MMAS-ACO,large,900,8,150000,150001,False
+leadingones,MMAS-ACO,large,900,9,150000,150001,False
+leadingones,MMAS-ACO,large,900,10,150000,150001,False
+leadingones,MMAS-ACO,large,900,11,150000,150001,False
+leadingones,MMAS-ACO,large,900,12,150000,150001,False
+leadingones,MMAS-ACO,large,900,13,150000,150001,False
+leadingones,MMAS-ACO,large,900,14,150000,150001,False
+leadingones,MMAS-ACO,large,900,15,150000,150001,False
+leadingones,MMAS-ACO,large,900,16,150000,150001,False
+leadingones,MMAS-ACO,large,900,17,150000,150001,False
+leadingones,MMAS-ACO,large,900,18,150000,150001,False
+leadingones,MMAS-ACO,large,900,19,150000,150001,False
+leadingones,MMAS-ACO,large,1000,0,150000,150001,False
+leadingones,MMAS-ACO,large,1000,1,150000,150001,False
+leadingones,MMAS-ACO,large,1000,2,150000,150001,False
+leadingones,MMAS-ACO,large,1000,3,150000,150001,False
+leadingones,MMAS-ACO,large,1000,4,150000,150001,False
+leadingones,MMAS-ACO,large,1000,5,150000,150001,False
+leadingones,MMAS-ACO,large,1000,6,150000,150001,False
+leadingones,MMAS-ACO,large,1000,7,150000,150001,False
+leadingones,MMAS-ACO,large,1000,8,150000,150001,False
+leadingones,MMAS-ACO,large,1000,9,150000,150001,False
+leadingones,MMAS-ACO,large,1000,10,150000,150001,False
+leadingones,MMAS-ACO,large,1000,11,150000,150001,False
+leadingones,MMAS-ACO,large,1000,12,150000,150001,False
+leadingones,MMAS-ACO,large,1000,13,150000,150001,False
+leadingones,MMAS-ACO,large,1000,14,150000,150001,False
+leadingones,MMAS-ACO,large,1000,15,150000,150001,False
+leadingones,MMAS-ACO,large,1000,16,150000,150001,False
+leadingones,MMAS-ACO,large,1000,17,150000,150001,False
+leadingones,MMAS-ACO,large,1000,18,150000,150001,False
+leadingones,MMAS-ACO,large,1000,19,150000,150001,False
+leadingones,P-ACO,large,100,0,30,930,True
+leadingones,P-ACO,large,100,1,35,1080,True
+leadingones,P-ACO,large,100,2,31,960,True
+leadingones,P-ACO,large,100,3,31,960,True
+leadingones,P-ACO,large,100,4,32,990,True
+leadingones,P-ACO,large,100,5,32,990,True
+leadingones,P-ACO,large,100,6,30,930,True
+leadingones,P-ACO,large,100,7,23,720,True
+leadingones,P-ACO,large,100,8,34,1050,True
+leadingones,P-ACO,large,100,9,30,930,True
+leadingones,P-ACO,large,100,10,35,1080,True
+leadingones,P-ACO,large,100,11,33,1020,True
+leadingones,P-ACO,large,100,12,32,990,True
+leadingones,P-ACO,large,100,13,30,930,True
+leadingones,P-ACO,large,100,14,32,990,True
+leadingones,P-ACO,large,100,15,30,930,True
+leadingones,P-ACO,large,100,16,34,1050,True
+leadingones,P-ACO,large,100,17,24,750,True
+leadingones,P-ACO,large,100,18,32,990,True
+leadingones,P-ACO,large,100,19,29,900,True
+leadingones,P-ACO,large,200,0,46,1410,True
+leadingones,P-ACO,large,200,1,46,1410,True
+leadingones,P-ACO,large,200,2,39,1200,True
+leadingones,P-ACO,large,200,3,44,1350,True
+leadingones,P-ACO,large,200,4,44,1350,True
+leadingones,P-ACO,large,200,5,37,1140,True
+leadingones,P-ACO,large,200,6,40,1230,True
+leadingones,P-ACO,large,200,7,41,1260,True
+leadingones,P-ACO,large,200,8,44,1350,True
+leadingones,P-ACO,large,200,9,38,1170,True
+leadingones,P-ACO,large,200,10,44,1350,True
+leadingones,P-ACO,large,200,11,45,1380,True
+leadingones,P-ACO,large,200,12,38,1170,True
+leadingones,P-ACO,large,200,13,47,1440,True
+leadingones,P-ACO,large,200,14,42,1290,True
+leadingones,P-ACO,large,200,15,47,1440,True
+leadingones,P-ACO,large,200,16,40,1230,True
+leadingones,P-ACO,large,200,17,39,1200,True
+leadingones,P-ACO,large,200,18,46,1410,True
+leadingones,P-ACO,large,200,19,35,1080,True
+leadingones,P-ACO,large,300,0,50,1530,True
+leadingones,P-ACO,large,300,1,55,1680,True
+leadingones,P-ACO,large,300,2,52,1590,True
+leadingones,P-ACO,large,300,3,56,1710,True
+leadingones,P-ACO,large,300,4,50,1530,True
+leadingones,P-ACO,large,300,5,49,1500,True
+leadingones,P-ACO,large,300,6,47,1440,True
+leadingones,P-ACO,large,300,7,49,1500,True
+leadingones,P-ACO,large,300,8,50,1530,True
+leadingones,P-ACO,large,300,9,50,1530,True
+leadingones,P-ACO,large,300,10,52,1590,True
+leadingones,P-ACO,large,300,11,49,1500,True
+leadingones,P-ACO,large,300,12,51,1560,True
+leadingones,P-ACO,large,300,13,53,1620,True
+leadingones,P-ACO,large,300,14,48,1470,True
+leadingones,P-ACO,large,300,15,43,1320,True
+leadingones,P-ACO,large,300,16,55,1680,True
+leadingones,P-ACO,large,300,17,47,1440,True
+leadingones,P-ACO,large,300,18,44,1350,True
+leadingones,P-ACO,large,300,19,50,1530,True
+leadingones,P-ACO,large,400,0,54,1650,True
+leadingones,P-ACO,large,400,1,54,1650,True
+leadingones,P-ACO,large,400,2,61,1860,True
+leadingones,P-ACO,large,400,3,58,1770,True
+leadingones,P-ACO,large,400,4,53,1620,True
+leadingones,P-ACO,large,400,5,53,1620,True
+leadingones,P-ACO,large,400,6,52,1590,True
+leadingones,P-ACO,large,400,7,61,1860,True
+leadingones,P-ACO,large,400,8,59,1800,True
+leadingones,P-ACO,large,400,9,58,1770,True
+leadingones,P-ACO,large,400,10,56,1710,True
+leadingones,P-ACO,large,400,11,58,1770,True
+leadingones,P-ACO,large,400,12,61,1860,True
+leadingones,P-ACO,large,400,13,59,1800,True
+leadingones,P-ACO,large,400,14,54,1650,True
+leadingones,P-ACO,large,400,15,50,1530,True
+leadingones,P-ACO,large,400,16,51,1560,True
+leadingones,P-ACO,large,400,17,59,1800,True
+leadingones,P-ACO,large,400,18,57,1740,True
+leadingones,P-ACO,large,400,19,53,1620,True
+leadingones,P-ACO,large,500,0,58,1770,True
+leadingones,P-ACO,large,500,1,59,1800,True
+leadingones,P-ACO,large,500,2,55,1680,True
+leadingones,P-ACO,large,500,3,65,1980,True
+leadingones,P-ACO,large,500,4,60,1830,True
+leadingones,P-ACO,large,500,5,60,1830,True
+leadingones,P-ACO,large,500,6,59,1800,True
+leadingones,P-ACO,large,500,7,57,1740,True
+leadingones,P-ACO,large,500,8,58,1770,True
+leadingones,P-ACO,large,500,9,58,1770,True
+leadingones,P-ACO,large,500,10,59,1800,True
+leadingones,P-ACO,large,500,11,54,1650,True
+leadingones,P-ACO,large,500,12,57,1740,True
+leadingones,P-ACO,large,500,13,58,1770,True
+leadingones,P-ACO,large,500,14,63,1920,True
+leadingones,P-ACO,large,500,15,65,1980,True
+leadingones,P-ACO,large,500,16,63,1920,True
+leadingones,P-ACO,large,500,17,60,1830,True
+leadingones,P-ACO,large,500,18,56,1710,True
+leadingones,P-ACO,large,500,19,53,1620,True
+leadingones,P-ACO,large,600,0,63,1920,True
+leadingones,P-ACO,large,600,1,65,1980,True
+leadingones,P-ACO,large,600,2,62,1890,True
+leadingones,P-ACO,large,600,3,62,1890,True
+leadingones,P-ACO,large,600,4,61,1860,True
+leadingones,P-ACO,large,600,5,65,1980,True
+leadingones,P-ACO,large,600,6,59,1800,True
+leadingones,P-ACO,large,600,7,63,1920,True
+leadingones,P-ACO,large,600,8,62,1890,True
+leadingones,P-ACO,large,600,9,60,1830,True
+leadingones,P-ACO,large,600,10,59,1800,True
+leadingones,P-ACO,large,600,11,75,2280,True
+leadingones,P-ACO,large,600,12,61,1860,True
+leadingones,P-ACO,large,600,13,67,2040,True
+leadingones,P-ACO,large,600,14,63,1920,True
+leadingones,P-ACO,large,600,15,62,1890,True
+leadingones,P-ACO,large,600,16,64,1950,True
+leadingones,P-ACO,large,600,17,64,1950,True
+leadingones,P-ACO,large,600,18,66,2010,True
+leadingones,P-ACO,large,600,19,60,1830,True
+leadingones,P-ACO,large,700,0,66,2010,True
+leadingones,P-ACO,large,700,1,68,2070,True
+leadingones,P-ACO,large,700,2,64,1950,True
+leadingones,P-ACO,large,700,3,65,1980,True
+leadingones,P-ACO,large,700,4,67,2040,True
+leadingones,P-ACO,large,700,5,64,1950,True
+leadingones,P-ACO,large,700,6,68,2070,True
+leadingones,P-ACO,large,700,7,62,1890,True
+leadingones,P-ACO,large,700,8,66,2010,True
+leadingones,P-ACO,large,700,9,68,2070,True
+leadingones,P-ACO,large,700,10,70,2130,True
+leadingones,P-ACO,large,700,11,68,2070,True
+leadingones,P-ACO,large,700,12,70,2130,True
+leadingones,P-ACO,large,700,13,66,2010,True
+leadingones,P-ACO,large,700,14,65,1980,True
+leadingones,P-ACO,large,700,15,68,2070,True
+leadingones,P-ACO,large,700,16,64,1950,True
+leadingones,P-ACO,large,700,17,65,1980,True
+leadingones,P-ACO,large,700,18,65,1980,True
+leadingones,P-ACO,large,700,19,70,2130,True
+leadingones,P-ACO,large,800,0,68,2070,True
+leadingones,P-ACO,large,800,1,69,2100,True
+leadingones,P-ACO,large,800,2,59,1800,True
+leadingones,P-ACO,large,800,3,71,2160,True
+leadingones,P-ACO,large,800,4,66,2010,True
+leadingones,P-ACO,large,800,5,63,1920,True
+leadingones,P-ACO,large,800,6,74,2250,True
+leadingones,P-ACO,large,800,7,70,2130,True
+leadingones,P-ACO,large,800,8,76,2310,True
+leadingones,P-ACO,large,800,9,73,2220,True
+leadingones,P-ACO,large,800,10,68,2070,True
+leadingones,P-ACO,large,800,11,72,2190,True
+leadingones,P-ACO,large,800,12,69,2100,True
+leadingones,P-ACO,large,800,13,74,2250,True
+leadingones,P-ACO,large,800,14,71,2160,True
+leadingones,P-ACO,large,800,15,67,2040,True
+leadingones,P-ACO,large,800,16,58,1770,True
+leadingones,P-ACO,large,800,17,66,2010,True
+leadingones,P-ACO,large,800,18,71,2160,True
+leadingones,P-ACO,large,800,19,65,1980,True
+leadingones,P-ACO,large,900,0,71,2160,True
+leadingones,P-ACO,large,900,1,71,2160,True
+leadingones,P-ACO,large,900,2,73,2220,True
+leadingones,P-ACO,large,900,3,66,2010,True
+leadingones,P-ACO,large,900,4,64,1950,True
+leadingones,P-ACO,large,900,5,73,2220,True
+leadingones,P-ACO,large,900,6,67,2040,True
+leadingones,P-ACO,large,900,7,76,2310,True
+leadingones,P-ACO,large,900,8,79,2400,True
+leadingones,P-ACO,large,900,9,67,2040,True
+leadingones,P-ACO,large,900,10,73,2220,True
+leadingones,P-ACO,large,900,11,72,2190,True
+leadingones,P-ACO,large,900,12,64,1950,True
+leadingones,P-ACO,large,900,13,72,2190,True
+leadingones,P-ACO,large,900,14,80,2430,True
+leadingones,P-ACO,large,900,15,69,2100,True
+leadingones,P-ACO,large,900,16,76,2310,True
+leadingones,P-ACO,large,900,17,76,2310,True
+leadingones,P-ACO,large,900,18,77,2340,True
+leadingones,P-ACO,large,900,19,70,2130,True
+leadingones,P-ACO,large,1000,0,74,2250,True
+leadingones,P-ACO,large,1000,1,75,2280,True
+leadingones,P-ACO,large,1000,2,67,2040,True
+leadingones,P-ACO,large,1000,3,66,2010,True
+leadingones,P-ACO,large,1000,4,77,2340,True
+leadingones,P-ACO,large,1000,5,70,2130,True
+leadingones,P-ACO,large,1000,6,68,2070,True
+leadingones,P-ACO,large,1000,7,72,2190,True
+leadingones,P-ACO,large,1000,8,76,2310,True
+leadingones,P-ACO,large,1000,9,72,2190,True
+leadingones,P-ACO,large,1000,10,78,2370,True
+leadingones,P-ACO,large,1000,11,67,2040,True
+leadingones,P-ACO,large,1000,12,66,2010,True
+leadingones,P-ACO,large,1000,13,75,2280,True
+leadingones,P-ACO,large,1000,14,70,2130,True
+leadingones,P-ACO,large,1000,15,72,2190,True
+leadingones,P-ACO,large,1000,16,65,1980,True
+leadingones,P-ACO,large,1000,17,68,2070,True
+leadingones,P-ACO,large,1000,18,74,2250,True
+leadingones,P-ACO,large,1000,19,77,2340,True

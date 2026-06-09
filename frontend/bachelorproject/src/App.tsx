@@ -18,7 +18,7 @@ const ALL_ALGORITHMS = [
   "(1+1) EA",
   "(μ+λ) EA",
   "Simulated Annealing",
-  "ACO",
+  "MMAS-ACO",
   "P-ACO",
 ];
 

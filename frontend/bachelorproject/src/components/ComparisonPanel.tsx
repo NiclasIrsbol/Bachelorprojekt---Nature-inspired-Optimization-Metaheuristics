@@ -60,6 +60,7 @@ const ALGO_COLORS: Record<string, string> = {
   "(1+1) EA": "#60a5fa",
   "(μ+λ) EA": "#f59e0b",
   "Simulated Annealing": "#a78bfa",
+  "MMAS-ACO": "#34d399",
   ACO: "#34d399",
   "P-ACO": "#f472b6",
 };

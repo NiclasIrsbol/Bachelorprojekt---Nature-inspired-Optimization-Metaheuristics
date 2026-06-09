@@ -16,11 +16,13 @@ SOLVERS = {
     ("onemax", "(μ+λ) EA"): partial(mu_plus_lambda_EA.MuPlusLambdaEA, onemax.fitnessOnemax),
     ("onemax", "(1+1) EA"): partial(one_plus_one_EA.OnePlusOneEA, onemax.fitnessOnemax),
     ("onemax", "Simulated Annealing"): partial(simulated_annealing.simulated_annealing, onemax.fitnessOnemax),
+    ("onemax", "MMAS-ACO"): partial(ant_optimization_problem.ant_colony_optimization, onemax.fitnessOnemax),
     ("onemax", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, onemax.fitnessOnemax),
     ("onemax", "P-ACO"): partial(ant_optimization_problem.population_based_aco, onemax.fitnessOnemax),
     ("leadingones", "(μ+λ) EA"): partial(mu_plus_lambda_EA.MuPlusLambdaEA, leadingones.fitnessLeadingOnes),
     ("leadingones", "(1+1) EA"): partial(one_plus_one_EA.OnePlusOneEA, leadingones.fitnessLeadingOnes),
     ("leadingones", "Simulated Annealing"): partial(simulated_annealing.simulated_annealing, leadingones.fitnessLeadingOnes),
+    ("leadingones", "MMAS-ACO"): partial(ant_optimization_problem.ant_colony_optimization, leadingones.fitnessLeadingOnes),
     ("leadingones", "ACO"): partial(ant_optimization_problem.ant_colony_optimization, leadingones.fitnessLeadingOnes),
     ("leadingones", "P-ACO"): partial(ant_optimization_problem.population_based_aco, leadingones.fitnessLeadingOnes),
 }
@@ -29,6 +31,7 @@ TSP_SOLVERS = {
     "(1+1) EA": one_plus_one_EA.OnePlusOneEATSP,
     "Simulated Annealing": simulated_annealing.simulated_annealingTSP,
     "(μ+λ) EA": mu_plus_lambda_EA.MuPlusLambdaEATSP,
+    "MMAS-ACO": ant_optimization_problem.ant_colony_optimizationTSP,
     "ACO": ant_optimization_problem.ant_colony_optimizationTSP,
     "P-ACO": ant_optimization_problem.population_based_acoTSP,
 }
@@ -37,7 +40,8 @@ DISPLAY_NAMES = {
     "(μ+λ) EA": "(μ+λ) EA",
     "(1+1) EA": "(1+1) EA",
     "Simulated Annealing": "Simulated Annealing",
-    "ACO": "ACO",
+    "MMAS-ACO": "MMAS-ACO",
+    "ACO": "MMAS-ACO",
     "P-ACO": "P-ACO",
 }
 
@@ -45,11 +49,13 @@ THEORETICAL_RUNTIME = {
     ("onemax", "(μ+λ) EA"): "O(n log n)",
     ("onemax", "(1+1) EA"): "O(n log n)",
     ("onemax", "Simulated Annealing"): "O(n log n)",
+    ("onemax", "MMAS-ACO"): "O(n log n)",
     ("onemax", "ACO"): "O(n log n)",
     ("onemax", "P-ACO"): "O(n log n)",
     ("leadingones", "(μ+λ) EA"): "O(n²)",
     ("leadingones", "(1+1) EA"): "O(n²)",
     ("leadingones", "Simulated Annealing"): "O(n²)",
+    ("leadingones", "MMAS-ACO"): "O(n² log n)",
     ("leadingones", "ACO"): "O(n² log n)",
     ("leadingones", "P-ACO"): "O(n² log n)",
 }

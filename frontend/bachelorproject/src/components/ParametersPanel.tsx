@@ -29,7 +29,7 @@ const BITSTRING_PARAMS: Record<string, ParamDef[]> = {
     { key: "T0", label: "Initial temp (T₀)", default: 100, min: 1, max: 10000, step: 1 },
   ],
 
-  "ACO": [
+  "MMAS-ACO": [
     { key: "bit_length", label: "Bit length", default: 100, min: 2, max: 1000, step: 1 },
     { key: "rho", label: "Evaporation (ρ)", default: 0.1, min: 0.01, max: 1, step: 0.01 },
     { key: "max_iterations", label: "Max iterations", default: 10000, min: 100, max: 100000, step: 100 },
@@ -62,7 +62,7 @@ const TSP_PARAMS: Record<string, ParamDef[]> = {
     { key: "T0", label: "Initial temp (T₀)", default: 1000, min: 1, max: 100000, step: 1 },
   ],
 
-  "ACO": [
+  "MMAS-ACO": [
     { key: "max_iterations", label: "Max iterations", default: 1000, min: 100, max: 50000, step: 100 },
     { key: "rho", label: "Evaporation (ρ)", default: 0.1, min: 0.01, max: 1, step: 0.01 },
     { key: "alpha", label: "α (pheromone)", default: 1, min: 0.1, max: 5, step: 0.1 },

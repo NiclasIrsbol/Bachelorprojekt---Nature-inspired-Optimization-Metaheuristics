@@ -27,11 +27,12 @@ def _aggregate_by_evaluations(runs, max_points=200):
 
     Each run's curve index ``i`` is mapped to ``i * evals_per_iter`` actual
     fitness evaluations - this is exact for algorithms with a constant number of
-    evaluations per iteration ((1+1) EA = 1, (mu+lambda) EA = lambda, ACO/P-ACO
-    = ants per iteration). Runs are then forward-filled onto a shared evaluation
-    grid (a finished run holds its final, converged value) and averaged. This is
-    fairer than averaging by iteration index, because algorithms that spend many
-    evaluations per iteration are placed correctly on the x-axis.
+    evaluations per iteration ((1+1) EA = 1, (mu+lambda) EA = lambda,
+    MMAS-ACO/P-ACO = ants per iteration). Runs are then forward-filled onto a
+    shared evaluation grid (a finished run holds its final, converged value) and
+    averaged. This is fairer than averaging by iteration index, because
+    algorithms that spend many evaluations per iteration are placed correctly on
+    the x-axis.
     """
     series = []
     for curve, epi in runs:

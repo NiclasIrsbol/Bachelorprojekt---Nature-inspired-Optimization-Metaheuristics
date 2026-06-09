@@ -12,7 +12,7 @@ import csv
 import io
 from datetime import datetime
 
-DEFAULT_ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "ACO", "P-ACO"]
+DEFAULT_ALGORITHMS = ["(1+1) EA", "(μ+λ) EA", "Simulated Annealing", "MMAS-ACO", "P-ACO"]
 
 app = FastAPI()
 
