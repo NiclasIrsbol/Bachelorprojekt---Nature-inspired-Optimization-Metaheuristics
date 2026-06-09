@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type ParamValue = number | string;
 
@@ -128,8 +128,14 @@ export default function ParametersPanel({
 }: ParametersPanelProps) {
   const defs = useMemo(() => getParamDefs(algorithm, problem), [algorithm, problem]);
 
+  // Raw text for number fields while they are being edited. This lets a field be
+  // momentarily empty (so deleting a value does not snap it to 0) while the
+  // parent `params` stays numeric. Reset whenever the field set changes.
+  const [draft, setDraft] = useState<Record<string, string>>({});
+
   useEffect(() => {
     onChange(getDefaultParams(algorithm, problem));
+    setDraft({});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [algorithm, problem]);
 
@@ -137,6 +143,27 @@ export default function ParametersPanel({
 
   const handleChange = (key: string, value: ParamValue) => {
     onChange({ ...params, [key]: value });
+  };
+
+  const handleNumberInput = (key: string, raw: string) => {
+    setDraft((prev) => ({ ...prev, [key]: raw }));
+    // Only push a real number to the parent; an empty/partial entry stays local.
+    if (raw !== "" && !Number.isNaN(Number(raw))) {
+      handleChange(key, Number(raw));
+    }
+  };
+
+  const handleNumberBlur = (def: ParamDef) => {
+    const raw = draft[def.key];
+    // Left empty or invalid on blur -> fall back to the default.
+    if (raw === "" || (raw !== undefined && Number.isNaN(Number(raw)))) {
+      handleChange(def.key, def.default);
+    }
+    setDraft((prev) => {
+      const next = { ...prev };
+      delete next[def.key];
+      return next;
+    });
   };
 
   return (
@@ -169,8 +196,9 @@ export default function ParametersPanel({
                 min={d.min}
                 max={d.max}
                 step={d.step}
-                value={params[d.key] ?? d.default}
-                onChange={(e) => handleChange(d.key, Number(e.target.value))}
+                value={d.key in draft ? draft[d.key] : (params[d.key] ?? d.default)}
+                onChange={(e) => handleNumberInput(d.key, e.target.value)}
+                onBlur={() => handleNumberBlur(d)}
               />
             )}
           </div>

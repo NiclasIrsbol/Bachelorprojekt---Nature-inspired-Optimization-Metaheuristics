@@ -277,9 +277,6 @@ export default function App() {
       {loading ? (
         <div className="loadingWrap">
           <div className="spinner" />
-          <p style={{ marginTop: 12, color: "var(--text-muted)" }}>
-            Running {seeds} seeds across {ALL_ALGORITHMS.length} algorithms…
-          </p>
         </div>
       ) : error ? (
         <div className="emptyState">
