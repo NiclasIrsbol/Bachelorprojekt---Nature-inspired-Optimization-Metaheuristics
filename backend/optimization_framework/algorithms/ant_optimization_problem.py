@@ -1,4 +1,5 @@
-@author: Andrej Kitanovski
+# @author: Andrej Kitanovski
+
 import random
 from optimization_framework.operators.gaoperators import map_bitstring
 from optimization_framework.problems.tsp import tour_cost, tour_to_coords
