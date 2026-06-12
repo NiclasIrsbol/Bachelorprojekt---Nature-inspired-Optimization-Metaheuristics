@@ -1,3 +1,4 @@
+// @author: Niclas Søe Irsbøl
 import { useState } from "react";
 import {
   BarChart,

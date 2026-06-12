@@ -1,3 +1,5 @@
+# @author: Andrej Kitanovski
+
 """Integration tests for the orchestration layer (run_experiment.main).
 
 These exercise the central dispatch that maps (problem, algorithm) names to the

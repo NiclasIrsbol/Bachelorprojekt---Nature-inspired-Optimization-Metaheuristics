@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """Scaling experiment: problem size vs. empirical runtime.
 
 Sweeps a bitstring problem across several problem sizes (n = bit length),

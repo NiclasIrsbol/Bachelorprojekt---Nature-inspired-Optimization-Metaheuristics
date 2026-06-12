@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 from optimization_framework.operators import gaoperators
 from optimization_framework.problems.tsp import tour_cost, tour_to_coords
 

@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 import matplotlib
 matplotlib.use("Agg")
 

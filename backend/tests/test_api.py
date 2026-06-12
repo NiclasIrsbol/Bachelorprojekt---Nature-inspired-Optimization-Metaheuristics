@@ -1,3 +1,5 @@
+# @author: Andrej Kitanovski
+
 """Endpoint tests for the FastAPI layer using Starlette's TestClient.
 
 Report §5.1.2 / §5.3.3 state the API can be tested separately from the frontend;

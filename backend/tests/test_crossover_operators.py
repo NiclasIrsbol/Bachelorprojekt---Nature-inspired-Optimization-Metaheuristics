@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """Tests for the bitstring crossover operators used by the GA-style (μ+λ) EA."""
 import random
 

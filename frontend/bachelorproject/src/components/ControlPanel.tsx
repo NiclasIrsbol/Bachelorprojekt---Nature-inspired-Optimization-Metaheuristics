@@ -1,3 +1,5 @@
+// @authors: Andrej Kitanovski and Niclas Søe Irsbøl
+
 export type ExperimentType = "single" | "convergence" | "scaling";
 
 interface ControlPanelProps {

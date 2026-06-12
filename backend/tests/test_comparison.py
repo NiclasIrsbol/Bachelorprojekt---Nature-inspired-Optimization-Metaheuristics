@@ -1,3 +1,5 @@
+# @author: Andrej Kitanovski
+
 """Tests for the in-app comparison aggregation (comparison.compare / scaling)."""
 import pytest
 

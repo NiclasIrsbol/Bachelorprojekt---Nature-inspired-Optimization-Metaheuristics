@@ -1,3 +1,5 @@
+# @authors: Andrej Kitanovski, Niclas Søe Irsbøl
+"""Single-run experiment entry point for the optimization framework"""
 from optimization_framework.problems import onemax, leadingones, tsp
 from optimization_framework.algorithms import (
     simulated_annealing, mu_plus_lambda_EA, one_plus_one_EA, ant_optimization_problem,

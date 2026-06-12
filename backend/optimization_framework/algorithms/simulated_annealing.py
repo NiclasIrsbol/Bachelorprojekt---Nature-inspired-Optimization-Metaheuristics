@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 from optimization_framework.operators import gaoperators
 import math
 import random

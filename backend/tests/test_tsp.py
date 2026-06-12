@@ -1,3 +1,5 @@
+# @author: Andrej Kitanovski
+
 """Unit tests for the TSP problem helpers (tour cost, optima, coord mapping)."""
 
 import pytest

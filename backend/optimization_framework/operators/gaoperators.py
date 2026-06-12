@@ -1,7 +1,10 @@
+# @authors: Andrej Kitanovski, Niclas Søe Irsbøl - see individual functions for specific authorship
+
 import random
 import math
 from functools import partial
 
+# @author: Niclas Søe Irsbøl
 # Bitstrings
 def map_bitstring(x):
     if isinstance(x, str):
@@ -35,11 +38,13 @@ def map_bitstring(x):
         X = (b - a) * (score - lowestScore) / (highestScore - lowestScore) + a
     return (X, Y)
 
+# @author: Niclas Søe Irsbøl
 def generateSingleBitstring(length):
     """Create a single bitstring of size length."""
     bit = "".join(random.choice("01") for _ in range(length))
     return bit
 
+# @author: Niclas Søe Irsbøl
 def generatePopulation(length, fitness_fn, size: int = 20):
     """Create an initial population of `size` individuals."""
     bitstrings = {}
@@ -49,6 +54,7 @@ def generatePopulation(length, fitness_fn, size: int = 20):
         bitstrings[f"Bitstring{i}"] = {"bit": bit, "fitness": fitness}
     return bitstrings
 
+# @author: Niclas Søe Irsbøl
 def selectparents(population: dict, tournament_k: int):
     """Tournament selection: sample ``tournament_k`` individuals and return the
     fittest one."""
@@ -57,6 +63,7 @@ def selectparents(population: dict, tournament_k: int):
     competitors = random.sample(individuals, k)
     return max(competitors, key=lambda ind: ind["fitness"])
 
+# @author: Niclas Søe Irsbøl
 def crossover(parent1, parent2):
     """Perform single point crossover to generate offsprings.
 
@@ -70,7 +77,7 @@ def crossover(parent1, parent2):
     offspring2 = parent2[:crossover_point] + parent1[crossover_point:]
     return offspring1, offspring2
 
-
+# @author: Andrej Kitanovski
 def two_point_crossover(parent1, parent2):
     """Two-point crossover: swap the middle segment between two cut points.
 
@@ -89,7 +96,7 @@ def two_point_crossover(parent1, parent2):
     offspring2 = parent2[:i] + parent1[i:j] + parent2[j:]
     return offspring1, offspring2
 
-
+# @author: Andrej Kitanovski
 def uniform_crossover(parent1, parent2):
     """Uniform crossover: each position is independently inherited from either
     parent with probability 1/2.
@@ -108,7 +115,7 @@ def uniform_crossover(parent1, parent2):
             offspring2.append(a)
     return "".join(offspring1), "".join(offspring2)
 
-
+# @author: Andrej Kitanovski
 def k_point_crossover(parent1, parent2, k):
     """k-point crossover: k distinct cut points, alternating segments.
 
@@ -143,7 +150,7 @@ CROSSOVER_OPERATORS = {
     "uniform": uniform_crossover,
 }
 
-
+# @author: Andrej Kitanovski
 def get_crossover(crossover_type):
     """Return the crossover function for ``crossover_type``.
 
@@ -157,6 +164,7 @@ def get_crossover(crossover_type):
             f"expected one of {sorted(CROSSOVER_OPERATORS)}"
         )
 
+# @author: Niclas Søe Irsbøl
 def mutation(bit, prob):
     """Standard bit-flip mutation: flip each bit independently with probability prob.
 
@@ -168,6 +176,7 @@ def mutation(bit, prob):
         for c in bit
     )
 
+# @author: Niclas Søe Irsbøl
 def mutationSA(bit):
     """Single-bit-flip neighborhood for Simulated Annealing.
 
@@ -177,6 +186,7 @@ def mutationSA(bit):
     flipped = "0" if bit[index] == "1" else "1"
     return bit[:index] + flipped + bit[index + 1:]
 
+# @author: Niclas Søe Irsbøl
 def createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutation_prob, lambda_size=None, crossover_type="single_point"):
     """Create the next generation of offsprings using crossover and mutation
     (GA-style path).
@@ -206,6 +216,7 @@ def createNextGenerationOffsprings(population, fitness_fn, tournament_k, mutatio
             created += 1
     return offsprings
 
+# @author: Niclas Søe Irsbøl
 def selectMuBest(parents, offsprings, mu):
     """Select mu best parents based on fitness"""
     combined = list(parents.values()) + list(offsprings.values())
@@ -213,6 +224,7 @@ def selectMuBest(parents, offsprings, mu):
     survivors = combined[:mu]
     return {f"Bitstring{i}": ind for i, ind in enumerate(survivors)}
 
+# @author: Niclas Søe Irsbøl
 def createNextGenerationMuPlusLambda(
     population,
     fitness_fn,
@@ -234,6 +246,7 @@ def createNextGenerationMuPlusLambda(
     next_population = selectMuBest(population, offspring, mu=mu_size)
     return next_population, offspring
 
+# @author: Andrej Kitanovski
 # TSP
 def order_crossover(parent1, parent2):
     """Order Crossover (OX) for permutation-based representations."""
@@ -249,12 +262,14 @@ def order_crossover(parent1, parent2):
             pos += 1
     return child
 
+# @author: Andrej Kitanovski
 def generate_random_ham_cycle(distance_matrix): 
     nodes = list(range(len(distance_matrix)))
     tour = nodes[:]
     random.shuffle(tour)
     return tour
 
+# @author: Niclas Søe Irsbøl
 def two_opt_mutation(ham_cycle):
     n = len(ham_cycle)
     i = random.randint(0, n - 1)
@@ -266,6 +281,7 @@ def two_opt_mutation(ham_cycle):
     new_tour = ham_cycle[:i+1] + ham_cycle[i+1:k+1][::-1] + ham_cycle[k+1:]
     return new_tour
 
+# @author: Niclas Søe Irsbøl
 def three_opt_mutation(ham_cycle, distance_matrix):
     n = len(ham_cycle)
     positions = sorted(random.sample(range(n), 3))
@@ -295,6 +311,7 @@ def three_opt_mutation(ham_cycle, distance_matrix):
     return best_tour
 
 
+# @author: Andrej Kitanovski
 # Dispatch for the TSP local-search mutation operators. 2-opt is the default;
 # 3-opt explores a larger neighbourhood at higher computational cost (report
 # §7.1.3). Selectable per run via the ``mutation`` parameter of the TSP solvers.

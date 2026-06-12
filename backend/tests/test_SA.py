@@ -1,3 +1,5 @@
+# @author: Niclas Søe Irsbøl
+
 """Comprehensive tests for Simulated Annealing algorithm."""
 import pytest
 from optimization_framework.problems.onemax import fitnessOnemax

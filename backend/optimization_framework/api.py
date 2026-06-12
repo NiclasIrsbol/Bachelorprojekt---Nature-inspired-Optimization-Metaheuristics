@@ -1,3 +1,6 @@
+# @author: Andrej Kitanovski, Niclas Søe Irsbøl
+"""API for running experiments and fetching results in the optimization framework."""
+
 from fastapi import FastAPI
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware

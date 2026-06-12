@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """Exact expected-runtime curves for thesis scaling overlays."""
 
 import math

@@ -1,3 +1,4 @@
+// @authors: Andrej Kitanovski and Niclas Søe Irsbøl 
 import { useEffect, useState, useCallback } from "react";
 import "./App.css";
 import ControlPanel, { type ExperimentType } from "./components/ControlPanel";

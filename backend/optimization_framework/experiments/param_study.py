@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """Parameter sensitivity sweeps for thesis figures.
 
 Runs small factorial sweeps (few seeds) and writes CSV + box/bar plots under

@@ -1,3 +1,5 @@
+# @author: Niclas Søe Irsbøl
+
 """Comprehensive tests for LeadingOnes problem and (μ+λ) EA algorithm."""
 import pytest
 from optimization_framework.problems.leadingones import fitnessLeadingOnes

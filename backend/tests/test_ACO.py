@@ -1,3 +1,5 @@
+# @author: Andrej Kitanovski
+
 """Comprehensive tests for ACO algorithms (MMAS and PACO)."""
 import pytest
 from optimization_framework.problems.onemax import fitnessOnemax

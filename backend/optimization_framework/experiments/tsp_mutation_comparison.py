@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 """
 TSP mutation comparison: (1+1) EA on berlin52 with 2-opt vs 3-opt operators.
 """

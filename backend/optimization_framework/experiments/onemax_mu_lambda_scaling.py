@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """
 Scaling experiment: framework (mu+lambda) EA on OneMax across population configs.
 

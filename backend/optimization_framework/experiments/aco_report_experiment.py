@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """
 Full ACO report experiment: MMAS and P-ACO on OneMax, LeadingOnes and berlin52.
 

@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """
 Report section 8.4.1 (MMAS, Bit strings -- LeadingOnes): evaporation-rate sweep.
 

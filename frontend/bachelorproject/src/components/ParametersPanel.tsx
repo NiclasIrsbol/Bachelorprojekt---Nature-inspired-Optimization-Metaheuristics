@@ -1,3 +1,5 @@
+// @author: Niclas Søe Irsbøl
+
 import { useEffect, useMemo, useState } from "react";
 
 type ParamValue = number | string;

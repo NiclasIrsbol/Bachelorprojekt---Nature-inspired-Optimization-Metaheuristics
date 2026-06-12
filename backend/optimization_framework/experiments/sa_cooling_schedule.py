@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 """
 Simulated Annealing cooling schedule comparison.
 

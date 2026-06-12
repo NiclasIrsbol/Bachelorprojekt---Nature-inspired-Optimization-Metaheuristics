@@ -1,3 +1,5 @@
+# @author: Niclas Søe Irsbøl
+
 """Tests for the TSP mutation operators, the 2-opt/3-opt dispatcher, and the
 bit-string projection helper."""
 

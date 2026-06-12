@@ -1,3 +1,4 @@
+// @author: Andrej Kitanovski
 interface Individual {
   bit?: string;
   fitness?: number;

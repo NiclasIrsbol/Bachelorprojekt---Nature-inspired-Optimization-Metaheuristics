@@ -1,3 +1,4 @@
+// @authors: Andrej Kitanovski and Niclas Søe Irsbøl 
 import { useEffect, useState } from "react";
 
 interface TSPInstance {

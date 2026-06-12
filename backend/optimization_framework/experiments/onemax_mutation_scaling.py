@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 """
 Scaling experiment: (1+1) EA on OneMax with varying mutation probabilities.
 

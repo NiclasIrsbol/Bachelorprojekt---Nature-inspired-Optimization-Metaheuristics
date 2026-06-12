@@ -1,3 +1,4 @@
+# @author: Andrej Kitanovski
 """
 TSP experiment: framework (mu+lambda) EA on berlin52.
 

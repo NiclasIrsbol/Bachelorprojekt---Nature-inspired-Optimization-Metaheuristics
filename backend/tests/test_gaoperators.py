@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 """Tests for genetic operators (mutationSA, (μ+λ) λ offspring count)."""
 import random
 

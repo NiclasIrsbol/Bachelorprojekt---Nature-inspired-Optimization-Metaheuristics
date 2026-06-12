@@ -1,3 +1,5 @@
+# @author: Niclas Søe Irsbøl
+
 """Smoke tests for GA-style (mu+lambda) report experiments."""
 
 from optimization_framework.algorithms.mu_plus_lambda_EA import MuPlusLambdaEA, MuPlusLambdaGA

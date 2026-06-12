@@ -1,3 +1,4 @@
+# @author: Niclas Søe Irsbøl
 """
 Scaling experiment: (1+1) EA on LeadingOnes with varying mutation probabilities.
 

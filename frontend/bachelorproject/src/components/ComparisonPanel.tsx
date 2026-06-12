@@ -1,3 +1,5 @@
+// @authors: Andrej Kitanovski and Niclas Søe Irsbøl
+
 import {
   LineChart,
   Line,

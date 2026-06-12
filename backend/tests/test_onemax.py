@@ -1,3 +1,5 @@
+# @author: Niclas Søe Irsbøl
+
 """Comprehensive tests for OneMax problem and (1+1) EA algorithm."""
 import pytest
 from optimization_framework.problems.onemax import fitnessOnemax
