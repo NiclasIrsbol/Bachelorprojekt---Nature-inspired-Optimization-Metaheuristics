@@ -1,6 +1,5 @@
 # Nature-Inspired Optimization Metaheuristics
-
-A comprehensive framework for visualizing, evaluating, and comparing nature-inspired optimization algorithms on various problem domains. This project implements multiple metaheuristic algorithms and benchmarks them on classic optimization problems with an interactive web interface.
+This project was made as a Bachelor Thesis at Technical University of Denmark (DTU), and is a comprehensive framework for visualizing, evaluating, and comparing nature-inspired optimization algorithms on various problem domains. This project implements multiple metaheuristic algorithms and benchmarks them on classic optimization problems with an interactive web interface.
 
 ## Table of Contents
 
